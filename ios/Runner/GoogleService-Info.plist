@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>948317348123-h2pqoqtqvp008m1vtpp6ts15142phlko.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.948317348123-h2pqoqtqvp008m1vtpp6ts15142phlko</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>948317348123-l2juplpc1mfvlrdabn7qfcjma92k09qh.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBfsVeCvC0ourN2xouOaNlD77s0tEQ7l34</string>
+	<key>GCM_SENDER_ID</key>
+	<string>948317348123</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.gameKeeper</string>
+	<key>PROJECT_ID</key>
+	<string>game-keeper-9a86e</string>
+	<key>STORAGE_BUCKET</key>
+	<string>game-keeper-9a86e.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:948317348123:ios:37b329ef17def667e433be</string>
+</dict>
+</plist>

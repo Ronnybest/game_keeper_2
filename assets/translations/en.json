@@ -1,0 +1,61 @@
+{
+    "common": {
+        "buttons": {
+            "continue": "Continue",
+            "start": "Begin!",
+            "back": "Back",
+            "next": "Further",
+            "cancel": "Cancel",
+            "save": "Save",
+            "close": "Close",
+            "add": "Add",
+            "google": "Login with Google",
+            "facebook": "Login with Facebook",
+            "apple": "Sign in with Apple ID",
+            "forgot_pass": "Forgot your password?",
+            "login": "To come in",
+            "already_have": "Already have an account?",
+            "register": "Register"
+        },
+        "errors": {
+            "required": "Obligatory field",
+            "email": "Incorrect email",
+            "password": "The password must contain at least 6 characters",
+            "confirm_password": "Password mismatch",
+            "email_exists": "A user with this email already exists",
+            "password_email_incorrect": "Invalid email or password",
+            "server": "server error",
+            "unknown": "Unknown error",
+            "not_found": "Not found"
+        },
+        "success": {
+            "password_reset": "Password changed successfully",
+            "password_reset_email": "An email with password recovery instructions has been sent to your email.",
+            "add_success": "Successfully added",
+            "update_success": "Updated successfully",
+            "delete_success": "Successfully deleted"
+        }
+    },
+    "auth": {
+        "demo": {
+            "title": {
+                "first": "Do you love computer games and more?",
+                "second": "Do you want to save your achievements and share them with friends?",
+                "third": "Are you constantly looking for new games and want to stay up to date with all the events?"
+            },
+            "subtitle": {
+                "first": "Our library will help you with this!",
+                "second": "Our application allows you to save your achievements and share them with friends!",
+                "third": "We provide you with the opportunity to keep abreast of all events in the world of games!"
+            }
+        },
+        "login": {
+            "title": "Authorization",
+            "email": "Email",
+            "password": "Password",
+            "button": "To come in",
+            "google": "Login with Google",
+            "forget_pass": "Forgot your password?"
+        }
+    }
+}
