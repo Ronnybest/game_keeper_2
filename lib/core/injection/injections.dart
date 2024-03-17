@@ -11,6 +11,5 @@ final getIt = GetIt.instance;
 // )
 @InjectableInit()
 void configureDependencies() {
-  //getIt.registerSingleton<DemoScreenConstants>(DemoScreenConstants());
   getIt.init();
 }

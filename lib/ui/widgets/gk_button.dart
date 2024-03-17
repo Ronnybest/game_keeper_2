@@ -17,12 +17,16 @@ class GKButton extends StatelessWidget {
         onTap.call();
       },
       child: Container(
-        padding: const EdgeInsets.all(10),
-        decoration: BoxDecoration(
-          color: Theme.of(context).primaryColor,
-          borderRadius: BorderRadius.circular(15),
+        padding: const EdgeInsets.symmetric(
+          vertical: 15,
         ),
-        child: child,
+        decoration: BoxDecoration(
+          color: Theme.of(context).colorScheme.onPrimary,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Center(
+          child: child,
+        ),
       ),
     );
   }

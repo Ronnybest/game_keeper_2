@@ -51,10 +51,13 @@
         },
         "login": {
             "title": "Authorization",
+            "welocome_title": "Welcome back! Login to your account or register a new one",
             "email": "Email",
+            "email_hint": "Enter your email",
             "password": "Password",
+            "password_hint": "Enter your password",
             "button": "To come in",
-            "google": "Login with Google",
+            "login_with": "Login with",
             "forget_pass": "Forgot your password?"
         }
     }

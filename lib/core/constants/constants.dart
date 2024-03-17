@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:game_keeper/generated/locale.keys.g.dart';
 import 'package:injectable/injectable.dart';
 
@@ -33,5 +34,59 @@ class DemoScreenConstants {
     const Color(0xFF5CC8FF),
     const Color(0xFFFEFCAD),
     const Color(0xFFFF90BC),
+  ];
+}
+
+@lazySingleton
+class Validators {
+  String? requiredValidator(String? value) {
+    if (value == null || value.isEmpty) {
+      return LocaleKeys.common_errors_required.tr();
+    }
+    return null;
+  }
+
+  String? emailRegexValidator(String? value) {
+    if (value == null || value.isEmpty) {
+      return LocaleKeys.common_errors_required.tr();
+    }
+    if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(value)) {
+      return LocaleKeys.common_errors_email.tr();
+    }
+    return null;
+  }
+
+  String? passwordValidator(String? value) {
+    if (value == null || value.isEmpty) {
+      return LocaleKeys.common_errors_required.tr();
+    }
+    if (value.length < 6) {
+      return LocaleKeys.common_errors_password.tr();
+    }
+    return null;
+  }
+
+  String? confirmPasswordValidator(String? value, String? password) {
+    if (value == null || value.isEmpty) {
+      return LocaleKeys.common_errors_required.tr();
+    }
+    if (value != password) {
+      return LocaleKeys.common_errors_confirm_password.tr();
+    }
+    return null;
+  }
+}
+
+class SharedPrefsConstants {
+  static const String hasSeenDemo = 'hasSeenDemo';
+}
+
+class LoginMethods {
+  static const List<IconData> loginIcons = [
+    FontAwesomeIcons.google,
+    FontAwesomeIcons.facebookF,
+    FontAwesomeIcons.github,
+    FontAwesomeIcons.microsoft,
+    FontAwesomeIcons.xTwitter,
   ];
 }

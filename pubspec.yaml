@@ -27,6 +27,7 @@ dependencies:
   google_fonts: ^6.2.1
   # local storage
   hive: ^4.0.0-dev.2
+  shared_preferences: ^2.2.2
   isar_flutter_libs: ^4.0.0-dev.13
   path_provider: ^2.1.0
   # google sign in
@@ -36,6 +37,12 @@ dependencies:
   smooth_page_indicator: ^1.1.0
   easy_localization: ^3.0.5
   firebase_core: ^2.27.1
+  # monet color A12+
+  dynamic_color: ^1.7.0
+  # flutter screen util
+  flutter_screenutil: ^5.9.0
+  # flutter font awesome
+  font_awesome_flutter: ^10.7.0
   flutter:
     sdk: flutter
 

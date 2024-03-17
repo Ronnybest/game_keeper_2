@@ -1,5 +1,5 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:game_keeper/core/utils/shared_prefs.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -15,6 +15,10 @@ class DemoScreen extends StatefulWidget {
 
   @override
   State<DemoScreen> createState() => _DemoScreenState();
+}
+
+class DemoSharedPrefsValues {
+  static const String showed = 'showed';
 }
 
 class _DemoScreenState extends State<DemoScreen> {
@@ -79,9 +83,15 @@ class _DemoScreenState extends State<DemoScreen> {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: GKButton(
-                onTap: () {
+                onTap: () async {
                   if (_pageController.page == 2) {
-                    AutoRouter.of(context).replace(const AuthRoute());
+                    var prefs = await GetIt.I<SharedPrefencesUtil>()
+                        .sharedPreferencesInit();
+                    prefs.setString(SharedPrefsConstants.hasSeenDemo,
+                        DemoSharedPrefsValues.showed);
+                    if (context.mounted) {
+                      AutoRouter.of(context).replace(const AuthRoute());
+                    }
                   } else {
                     _pageController.nextPage(
                       duration: const Duration(milliseconds: 500),
