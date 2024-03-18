@@ -33,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen>
             var sharedPrefs =
                 await GetIt.I<SharedPrefencesUtil>().sharedPreferencesInit();
             if (mounted) {
-              if (user == null) {
+              if (user != null) {
                 AutoRouter.of(context).replace(const HomeRoute());
               } else if (sharedPrefs
                       .getString(SharedPrefsConstants.hasSeenDemo) ==

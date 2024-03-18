@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 class GKButton extends StatelessWidget {
   const GKButton({
     super.key,
+    this.buttonColor,
     required this.child,
     required this.onTap,
   });
 
+  final Color? buttonColor;
   final Widget child;
   final Function onTap;
 
@@ -21,7 +23,7 @@ class GKButton extends StatelessWidget {
           vertical: 15,
         ),
         decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.onPrimary,
+          color: buttonColor ?? Theme.of(context).colorScheme.onPrimary,
           borderRadius: BorderRadius.circular(20),
         ),
         child: Center(

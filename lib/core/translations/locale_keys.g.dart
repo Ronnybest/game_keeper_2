@@ -45,6 +45,7 @@ abstract class  LocaleKeys {
   static const auth_demo = 'auth.demo';
   static const auth_login_title = 'auth.login.title';
   static const auth_login_welocome_title = 'auth.login.welocome_title';
+  static const auth_login_welocome_subtitle = 'auth.login.welocome_subtitle';
   static const auth_login_email = 'auth.login.email';
   static const auth_login_email_hint = 'auth.login.email_hint';
   static const auth_login_password = 'auth.login.password';
@@ -52,6 +53,8 @@ abstract class  LocaleKeys {
   static const auth_login_button = 'auth.login.button';
   static const auth_login_login_with = 'auth.login.login_with';
   static const auth_login_forget_pass = 'auth.login.forget_pass';
+  static const auth_login_login_or = 'auth.login.login_or';
+  static const auth_login_login_policy = 'auth.login.login_policy';
   static const auth_login = 'auth.login';
   static const auth = 'auth';
 

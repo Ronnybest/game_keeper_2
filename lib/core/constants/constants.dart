@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:game_keeper/generated/locale.keys.g.dart';
+import 'package:game_keeper/core/translations/locale_keys.g.dart';
 import 'package:injectable/injectable.dart';
 
 @lazySingleton

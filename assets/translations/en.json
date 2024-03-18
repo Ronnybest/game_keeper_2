@@ -51,14 +51,17 @@
         },
         "login": {
             "title": "Authorization",
-            "welocome_title": "Welcome back! Login to your account or register a new one",
+            "welocome_title": "Welcome to Game Keeper",
+            "welocome_subtitle": "Login to your account",
             "email": "Email",
             "email_hint": "Enter your email",
             "password": "Password",
             "password_hint": "Enter your password",
             "button": "To come in",
             "login_with": "Login with",
-            "forget_pass": "Forgot your password?"
+            "forget_pass": "Forgot your password?",
+            "login_or": "OR",
+            "login_policy": "By logging in, you agree to the Game Keeper Terms of Service and Privacy Policy" 
         }
     }
 }
