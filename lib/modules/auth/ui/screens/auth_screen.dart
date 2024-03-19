@@ -146,6 +146,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Expanded(
+                        // login button 
                         child: GKButton(
                           buttonColor: Theme.of(context).colorScheme.secondary,
                           child: Text(
@@ -168,12 +169,10 @@ class _AuthScreenState extends State<AuthScreen> {
                         width: 15,
                       ),
                       Expanded(
+                        // register button
                         child: GKButton(
                           onTap: () {
-                            if (_formKey.currentState!.validate() == true) {
-                            } else {
-                              return;
-                            }
+                            AutoRouter.of(context).push(const RegisterEmailRoute());
                           },
                           child: Text(
                             LocaleKeys.common_buttons_register.tr(),
