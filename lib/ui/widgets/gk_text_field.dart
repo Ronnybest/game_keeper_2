@@ -8,11 +8,13 @@ class GKTextField extends StatefulWidget {
     this.hintText,
     this.prefixIcon,
     this.suffixIcon,
+    this.isDisabled = false,
     required this.validator,
     required this.controller,
     this.obscureText = false,
   });
   final bool obscureText;
+  final bool isDisabled;
   final String? placeholder;
   final String? hintText;
   final Widget? prefixIcon;
@@ -88,6 +90,7 @@ class _GKTextFieldState extends State<GKTextField> {
           ),
         ),
         TextFormField(
+          enabled: !widget.isDisabled,
           controller: widget.controller,
           focusNode: _focusNode,
           onChanged: (value) {
@@ -103,14 +106,25 @@ class _GKTextFieldState extends State<GKTextField> {
           },
           obscureText: widget.obscureText,
           style: TextStyle(
-            color: Theme.of(context).colorScheme.onBackground.withOpacity(.9),
+            color: !widget.isDisabled
+                ? Theme.of(context).colorScheme.onBackground.withOpacity(.9)
+                : Theme.of(context).colorScheme.onBackground.withOpacity(.6),
           ),
           decoration: InputDecoration(
+            errorStyle:
+                const TextStyle(height: 0.01, color: Colors.transparent),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(15),
               borderSide: BorderSide(
                 color:
                     Theme.of(context).colorScheme.onBackground.withOpacity(.2),
+              ),
+            ),
+            disabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(15),
+              borderSide: BorderSide(
+                color:
+                    Theme.of(context).colorScheme.onBackground.withOpacity(.1),
               ),
             ),
             errorBorder: OutlineInputBorder(

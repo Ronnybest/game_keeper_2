@@ -56,6 +56,35 @@ abstract class  LocaleKeys {
   static const auth_login_login_or = 'auth.login.login_or';
   static const auth_login_login_policy = 'auth.login.login_policy';
   static const auth_login = 'auth.login';
+  static const auth_register_title = 'auth.register.title';
+  static const auth_register_welocome_title = 'auth.register.welocome_title';
+  static const auth_register_welocome_subtitle = 'auth.register.welocome_subtitle';
+  static const auth_register_email = 'auth.register.email';
+  static const auth_register_email_hint = 'auth.register.email_hint';
+  static const auth_register_password = 'auth.register.password';
+  static const auth_register_password_hint = 'auth.register.password_hint';
+  static const auth_register_confirm_password = 'auth.register.confirm_password';
+  static const auth_register_confirm_password_hint = 'auth.register.confirm_password_hint';
+  static const auth_register_button = 'auth.register.button';
+  static const auth_register_login_with = 'auth.register.login_with';
+  static const auth_register_login_or = 'auth.register.login_or';
+  static const auth_register_login_policy = 'auth.register.login_policy';
+  static const auth_register = 'auth.register';
+  static const auth_forgot_password_app_bar = 'auth.forgot_password.app_bar';
+  static const auth_forgot_password_welocome_title = 'auth.forgot_password.welocome_title';
+  static const auth_forgot_password_email = 'auth.forgot_password.email';
+  static const auth_forgot_password_email_hint = 'auth.forgot_password.email_hint';
+  static const auth_forgot_password_button = 'auth.forgot_password.button';
+  static const auth_forgot_password_check_code_title = 'auth.forgot_password.check_code_title';
+  static const auth_forgot_password_button_go_to_login = 'auth.forgot_password.button_go_to_login';
+  static const auth_forgot_password_check_code_field = 'auth.forgot_password.check_code_field';
+  static const auth_forgot_password_check_code_button = 'auth.forgot_password.check_code_button';
+  static const auth_forgot_password_new_password = 'auth.forgot_password.new_password';
+  static const auth_forgot_password_new_password_hint = 'auth.forgot_password.new_password_hint';
+  static const auth_forgot_password_confirm_password = 'auth.forgot_password.confirm_password';
+  static const auth_forgot_password_confirm_password_hint = 'auth.forgot_password.confirm_password_hint';
+  static const auth_forgot_password_change_password_button = 'auth.forgot_password.change_password_button';
+  static const auth_forgot_password = 'auth.forgot_password';
   static const auth = 'auth';
 
 }

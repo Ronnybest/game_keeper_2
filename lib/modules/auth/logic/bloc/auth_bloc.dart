@@ -29,6 +29,33 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           }
           return null;
         },
+        emailRegister: (_EmailRegister value) async {
+          try {
+            emit(const AuthState.emailRegisterLoading());
+            final user =
+                await FirebaseAuth.instance.createUserWithEmailAndPassword(
+              email: value.login,
+              password: value.pass,
+            );
+            emit(AuthState.emailRegisterLoaded(user.user!));
+          } on FirebaseAuthException catch (e) {
+            emit(
+              AuthState.emailRegisterError(e),
+            );
+          }
+          return null;
+        },
+        emailRestorePassword: (_EmailRestorePassword value) async {
+          try {
+            emit(const AuthState.emailRestorePasswordLoading());
+            await FirebaseAuth.instance
+                .sendPasswordResetEmail(email: value.email);
+            emit(const AuthState.emailRestorePasswordLoaded());
+          } on FirebaseAuthException catch (e) {
+            emit(AuthState.emailRestorePasswordError(e));
+          }
+          return null;
+        },
       ),
     );
   }

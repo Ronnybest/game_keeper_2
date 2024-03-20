@@ -62,6 +62,37 @@
             "forget_pass": "Забыли пароль?",
             "login_or": "ИЛИ",
             "login_policy": "Выполняя вход, вы соглашаетесь с Условиями обслуживания Game Keeper и Политикой конфиденциальности."
+        },
+        "register": {
+            "title": "Регистрация",
+            "welocome_title": "Добро пожаловать в Game Keeper",
+            "welocome_subtitle": "Создайте свой аккаунт бесплатно!",
+            "email": "Электронная почта",
+            "email_hint": "Введите ваш email",
+            "password": "Пароль",
+            "password_hint": "Введите ваш пароль",
+            "confirm_password": "Подтвердите пароль",
+            "confirm_password_hint": "Подтвердите ваш пароль",
+            "button": "Зарегистрироваться",
+            "login_with": "Зарегистрироваться c помощью",
+            "login_or": "ИЛИ",
+            "login_policy": "Регистрируясь, вы соглашаетесь с Условиями обслуживания Game Keeper и Политикой конфиденциальности."
+        },
+        "forgot_password": {
+            "app_bar": "Восстановление пароля",
+            "welocome_title": "Введите ваш email, чтобы восстановить пароль",
+            "email": "Электронная почта",
+            "email_hint": "Введите ваш email",
+            "button": "Восстановить пароль",
+            "check_code_title": "Мы отправили письмо с cсылкой на указанный email. Следуйте инструкциям в письме, чтобы восстановить пароль",
+            "button_go_to_login": "Перейти к авторизации",
+            "check_code_field": "Введите код",
+            "check_code_button": "Проверить код",
+            "new_password": "Новый пароль",
+            "new_password_hint": "Введите новый пароль",
+            "confirm_password": "Подтвердите пароль",
+            "confirm_password_hint": "Подтвердите ваш пароль",
+            "change_password_button": "Изменить пароль"
         }
     }
 }
