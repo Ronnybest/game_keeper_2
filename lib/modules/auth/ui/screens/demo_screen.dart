@@ -99,15 +99,7 @@ class _DemoScreenState extends State<DemoScreen> {
                     );
                   }
                 },
-                child: Center(
-                  child: Text(
-                    _currentButtonText,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                    ),
-                  ),
-                ),
+                text: _currentButtonText
               ),
             ),
           ),

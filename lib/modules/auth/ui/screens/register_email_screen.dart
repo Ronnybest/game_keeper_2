@@ -12,6 +12,16 @@ class RegisterEmailScreen extends StatefulWidget {
 class _RegisterEmailScreenState extends State<RegisterEmailScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(),
+      body: SingleChildScrollView(
+        physics: NeverScrollableScrollPhysics(),
+        child: Column(
+          children: [
+            
+          ],
+        ),
+      ),
+    );
   }
 }

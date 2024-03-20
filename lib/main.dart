@@ -3,12 +3,14 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:game_keeper/core/injection/injections.dart';
 import 'package:game_keeper/core/router/app_router.dart';
 import 'package:game_keeper/core/utils/keyborad_dismisser.dart';
 import 'package:game_keeper/firebase_options.dart';
 import 'package:get_it/get_it.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:loader_overlay/loader_overlay.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -39,30 +41,50 @@ class MainApp extends StatelessWidget {
         designSize: const Size(375, 812),
         child: DynamicColorBuilder(
           builder: (lightDynamic, darkDynamic) {
-            return MaterialApp.router(
-              localizationsDelegates: context.localizationDelegates,
-              supportedLocales: context.supportedLocales,
-              locale: context.locale,
-              themeMode: ThemeMode.system,
-              routerConfig: _appRouter.config(),
-              theme: ThemeData(
-                colorScheme: lightDynamic?.harmonized(),
-                useMaterial3: true,
-                //backgroundColor: lightDynamic?.onBackground,
-                brightness: Brightness.light,
-                textTheme: GoogleFonts.golosTextTextTheme().apply(
-                  bodyColor: lightDynamic?.onSurface,
-                  decorationColor: lightDynamic?.onSurface,
+            return GlobalLoaderOverlay(
+              useDefaultLoading: false,
+              overlayColor: Colors.black26,
+              overlayWidgetBuilder: (progress) {
+                return Center(
+                  child: Container(
+                    width: 80.w,
+                    height: 80.h,
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(214, 0, 0, 0),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: SpinKitDoubleBounce(
+                      color: Colors.white,
+                      size: 30.sp,
+                    ),
+                  ),
+                );
+              },
+              child: MaterialApp.router(
+                localizationsDelegates: context.localizationDelegates,
+                supportedLocales: context.supportedLocales,
+                locale: context.locale,
+                themeMode: ThemeMode.system,
+                routerConfig: _appRouter.config(),
+                theme: ThemeData(
+                  colorScheme: lightDynamic?.harmonized(),
+                  useMaterial3: true,
+                  //backgroundColor: lightDynamic?.onBackground,
+                  brightness: Brightness.light,
+                  textTheme: GoogleFonts.golosTextTextTheme().apply(
+                    bodyColor: lightDynamic?.onSurface,
+                    decorationColor: lightDynamic?.onSurface,
+                  ),
                 ),
-              ),
-              darkTheme: ThemeData(
-                colorScheme: darkDynamic?.harmonized(),
-                useMaterial3: true,
-                //backgroundColor: lightDynamic?.onBackground,
-                brightness: Brightness.dark,
-                textTheme: GoogleFonts.golosTextTextTheme().apply(
-                  bodyColor: darkDynamic?.onSurface,
-                  decorationColor: darkDynamic?.onSurface,
+                darkTheme: ThemeData(
+                  colorScheme: darkDynamic?.harmonized(),
+                  useMaterial3: true,
+                  //backgroundColor: lightDynamic?.onBackground,
+                  brightness: Brightness.dark,
+                  textTheme: GoogleFonts.golosTextTextTheme().apply(
+                    bodyColor: darkDynamic?.onSurface,
+                    decorationColor: darkDynamic?.onSurface,
+                  ),
                 ),
               ),
             );

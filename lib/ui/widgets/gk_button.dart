@@ -3,14 +3,18 @@ import 'package:flutter/material.dart';
 class GKButton extends StatelessWidget {
   const GKButton({
     super.key,
+    this.textColor,
     this.buttonColor,
-    required this.child,
+    this.customChild,
+    required this.text,
     required this.onTap,
   });
 
   final Color? buttonColor;
-  final Widget child;
+  final String text;
+  final Widget? customChild;
   final Function onTap;
+  final Color? textColor;
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +30,17 @@ class GKButton extends StatelessWidget {
           color: buttonColor ?? Theme.of(context).colorScheme.onPrimary,
           borderRadius: BorderRadius.circular(20),
         ),
-        child: Center(
-          child: child,
-        ),
+        child: customChild ??
+            Center(
+              child: Text(
+                text,
+                style: TextStyle(
+                  color: textColor ?? Theme.of(context).colorScheme.onPrimaryContainer,
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
       ),
     );
   }

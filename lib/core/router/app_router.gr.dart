@@ -24,7 +24,7 @@ abstract class $AppRouter extends _i6.RootStackRouter {
     AuthRoute.name: (routeData) {
       return _i6.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i1.AuthScreen(),
+        child: _i6.WrappedRoute(child: const _i1.AuthScreen()),
       );
     },
     DemoRoute.name: (routeData) {
