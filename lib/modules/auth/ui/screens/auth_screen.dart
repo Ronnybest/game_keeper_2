@@ -42,14 +42,13 @@ class _AuthScreenState extends State<AuthScreen> {
   late TextEditingController _passwordController;
   bool obscureText = true;
 
-  Future<void> _loginWithGoogle() async {
+  Future<bool> _loginWithGoogle() async {
     try {
       final user = await GetIt.I<AuthGoogle>().loginWithGoogle();
       if (user != null) {
-        if (mounted) {
-          AutoRouter.of(context).replace(const HomeRoute());
-        }
+        return true;
       }
+      return false;
     } on FirebaseAuthException catch (e) {
       debugPrint(e.toString());
       if (mounted) {
@@ -59,10 +58,10 @@ class _AuthScreenState extends State<AuthScreen> {
           ),
         );
       }
-      return;
+      return false;
     } catch (e) {
       debugPrint(e.toString());
-      return;
+      return false;
     }
   }
 
@@ -279,7 +278,19 @@ class _AuthScreenState extends State<AuthScreen> {
                         children: List.generate(
                           LoginMethods.loginIcons.length,
                           (index) => IconButton(
-                            onPressed: _loginWithGoogle,
+                            onPressed: () async {
+                              if (context.mounted) {
+                                context.loaderOverlay.show();
+                              }
+                              final result = await _loginWithGoogle();
+                              if (context.mounted) {
+                                context.loaderOverlay.hide();
+                                if (result) {
+                                  AutoRouter.of(context)
+                                      .replace(const HomeRoute());
+                                }
+                              }
+                            },
                             icon: FaIcon(
                               LoginMethods.loginIcons[index],
                               size: 24.sp,
