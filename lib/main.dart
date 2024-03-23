@@ -2,15 +2,16 @@ import 'package:dynamic_color/dynamic_color.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:game_keeper/core/injection/injections.dart';
 import 'package:game_keeper/core/router/app_router.dart';
+import 'package:game_keeper/core/utils/custom_loader.dart';
+import 'package:game_keeper/core/utils/fast_cached_image.dart';
 import 'package:game_keeper/core/utils/keyborad_dismisser.dart';
 import 'package:game_keeper/firebase_options.dart';
 import 'package:get_it/get_it.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:loader_overlay/loader_overlay.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,6 +21,8 @@ void main() async {
   configureDependencies();
   await EasyLocalization.ensureInitialized();
   await GetIt.I.allReady();
+  await GetIt.I<FastCachedNetworkInit>().init();
+
   runApp(
     EasyLocalization(
       useOnlyLangCode: true,
@@ -34,6 +37,7 @@ void main() async {
 class MainApp extends StatelessWidget {
   MainApp({super.key});
   final _appRouter = AppRouter();
+
   @override
   Widget build(BuildContext context) {
     return GlobalKeyboardDismisser(
@@ -41,25 +45,7 @@ class MainApp extends StatelessWidget {
         designSize: const Size(375, 812),
         child: DynamicColorBuilder(
           builder: (lightDynamic, darkDynamic) {
-            return GlobalLoaderOverlay(
-              useDefaultLoading: false,
-              overlayColor: Colors.black26,
-              overlayWidgetBuilder: (progress) {
-                return Center(
-                  child: Container(
-                    width: 80.w,
-                    height: 80.h,
-                    decoration: BoxDecoration(
-                      color: const Color.fromARGB(214, 0, 0, 0),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: SpinKitDoubleBounce(
-                      color: Colors.white,
-                      size: 30.sp,
-                    ),
-                  ),
-                );
-              },
+            return GlobalCustomLoader(
               child: MaterialApp.router(
                 localizationsDelegates: context.localizationDelegates,
                 supportedLocales: context.supportedLocales,
@@ -75,6 +61,14 @@ class MainApp extends StatelessWidget {
                     bodyColor: lightDynamic?.onSurface,
                     decorationColor: lightDynamic?.onSurface,
                   ),
+                  appBarTheme: const AppBarTheme(
+                    backgroundColor: Colors.transparent,
+                    elevation: 0,
+                    systemOverlayStyle: SystemUiOverlayStyle(
+                      statusBarColor: Colors.transparent,
+                      statusBarIconBrightness: Brightness.dark,
+                    ),
+                  ),
                 ),
                 darkTheme: ThemeData(
                   colorScheme: darkDynamic?.harmonized(),
@@ -84,6 +78,13 @@ class MainApp extends StatelessWidget {
                   textTheme: GoogleFonts.golosTextTextTheme().apply(
                     bodyColor: darkDynamic?.onSurface,
                     decorationColor: darkDynamic?.onSurface,
+                  ),
+                  appBarTheme: const AppBarTheme(
+                    elevation: 0,
+                    systemOverlayStyle: SystemUiOverlayStyle(
+                      statusBarColor: Colors.transparent,
+                      statusBarIconBrightness: Brightness.light,
+                    ),
                   ),
                 ),
               ),

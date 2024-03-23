@@ -5,7 +5,6 @@ import 'package:game_keeper/core/router/app_router.gr.dart';
   replaceInRouteName: 'Screen,Route',
 )
 class AppRouter extends $AppRouter {
-
   @override
   RouteType get defaultRouteType => const RouteType.adaptive();
 
@@ -13,9 +12,17 @@ class AppRouter extends $AppRouter {
   List<AutoRoute> get routes => [
         AutoRoute(page: SplashRoute.page, initial: true),
         AutoRoute(page: DemoRoute.page),
+        //AutoRoute(page: HomeRoute.page),
         AutoRoute(page: AuthRoute.page),
-        AutoRoute(page: HomeRoute.page),
         AutoRoute(page: RegisterEmailRoute.page),
         AutoRoute(page: RestorePassRoute.page),
+        //AutoRoute(page: TestedRoute.page),
+        AutoRoute(
+          page: GKNavBar.page,
+          children: [
+            AutoRoute(page: HomeRoute.page),
+            AutoRoute(page: TestedRoute.page),
+          ],
+        ),
       ];
 }

@@ -1,14 +1,11 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:game_keeper/core/constants/constants.dart';
 import 'package:game_keeper/core/router/app_router.gr.dart';
 import 'package:game_keeper/generated/locale.keys.g.dart';
 import 'package:game_keeper/modules/auth/logic/bloc/auth_bloc.dart';
-import 'package:game_keeper/modules/auth/logic/utils/auth_google.dart';
 import 'package:game_keeper/modules/auth/ui/widgets/or_widget.dart';
 import 'package:game_keeper/modules/auth/ui/widgets/other_auth_methods.dart';
 import 'package:game_keeper/ui/widgets/gk_button.dart';
@@ -83,7 +80,7 @@ class _AuthScreenState extends State<AuthScreen> {
               },
               emailLoginLoaded: (user) {
                 context.loaderOverlay.hide();
-                AutoRouter.of(context).replace(const HomeRoute());
+                AutoRouter.of(context).replace(GKNavBar());
                 return null;
               },
               emailLoginError: (error) {
@@ -150,7 +147,7 @@ class _AuthScreenState extends State<AuthScreen> {
                           obscureText ? Icons.visibility : Icons.visibility_off,
                         ),
                       ),
-                      validator: GetIt.I<Validators>().passwordValidator,
+                      validator: GetIt.I<Validators>().requiredValidator,
                     ),
                     GestureDetector(
                       onTap: () {

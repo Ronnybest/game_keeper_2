@@ -69,7 +69,7 @@ class _RegisterEmailScreenState extends State<RegisterEmailScreen> {
             emailRegisterLoading: () => context.loaderOverlay.show(),
             emailRegisterLoaded: (user) {
               context.loaderOverlay.hide();
-              AutoRouter.of(context).popAndPush(const HomeRoute());
+              AutoRouter.of(context).popAndPush(GKNavBar());
             },
             emailRegisterError: (error) {
               context.loaderOverlay.hide();

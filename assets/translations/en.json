@@ -36,6 +36,13 @@
             "delete_success": "Successfully deleted"
         }
     },
+    "navbar" : {
+        "home": "Home",
+        "games": "Games",
+        "news": "News",
+        "friends": "Friends",
+        "profile": "Profile"
+    },
     "auth": {
         "demo": {
             "title": {
@@ -85,7 +92,7 @@
             "email_hint": "Enter your email",
             "button": "Restore password",
             "check_code_title": "We have sent an email with a link to the email address you provided. Follow the instructions in the email to reset your password",
-            "button_go_to_login" : "Go to login",
+            "button_go_to_login": "Go to login",
             "check_code_field": "Enter the code",
             "check_code_button": "Check code",
             "new_password": "New password",
@@ -94,5 +101,8 @@
             "confirm_password_hint": "Confirm your password",
             "change_password_button": "Change password"
         }
+    },
+    "home": {
+        "title": "Hello, {name}!"
     }
 }

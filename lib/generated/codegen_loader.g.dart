@@ -75,8 +75,44 @@ class CodegenLoader extends AssetLoader{
       "password_hint": "Enter your password",
       "button": "To come in",
       "login_with": "Login with",
-      "forget_pass": "Forgot your password?"
+      "forget_pass": "Forgot your password?",
+      "login_or": "OR",
+      "login_policy": "By logging in, you agree to the Game Keeper Terms of Service and Privacy Policy"
+    },
+    "register": {
+      "title": "Registration",
+      "welocome_title": "Welcome to Game Keeper",
+      "welocome_subtitle": "Create an account for free!",
+      "email": "Email",
+      "email_hint": "Enter your email",
+      "password": "Password",
+      "password_hint": "Enter your password",
+      "confirm_password": "Confirm password",
+      "confirm_password_hint": "Repeat your password",
+      "button": "Register",
+      "login_with": "Register with",
+      "login_or": "OR",
+      "login_policy": "By registering, you agree to the Game Keeper Terms of Service and Privacy Policy"
+    },
+    "forgot_password": {
+      "app_bar": "Password recovery",
+      "welocome_title": "Enter your email to recover your password",
+      "email": "Email",
+      "email_hint": "Enter your email",
+      "button": "Restore password",
+      "check_code_title": "We have sent an email with a link to the email address you provided. Follow the instructions in the email to reset your password",
+      "button_go_to_login": "Go to login",
+      "check_code_field": "Enter the code",
+      "check_code_button": "Check code",
+      "new_password": "New password",
+      "new_password_hint": "Enter a new password",
+      "confirm_password": "Confirm password",
+      "confirm_password_hint": "Confirm your password",
+      "change_password_button": "Change password"
     }
+  },
+  "home": {
+    "title": "Hello, {name}!"
   }
 };
 static const Map<String,dynamic> ru = {
@@ -140,8 +176,44 @@ static const Map<String,dynamic> ru = {
       "password_hint": "Введите ваш пароль",
       "button": "Войти",
       "login_with": "Войти c помощью",
-      "forget_pass": "Забыли пароль?"
+      "forget_pass": "Забыли пароль?",
+      "login_or": "ИЛИ",
+      "login_policy": "Выполняя вход, вы соглашаетесь с Условиями обслуживания Game Keeper и Политикой конфиденциальности."
+    },
+    "register": {
+      "title": "Регистрация",
+      "welocome_title": "Добро пожаловать в Game Keeper",
+      "welocome_subtitle": "Создайте свой аккаунт бесплатно!",
+      "email": "Электронная почта",
+      "email_hint": "Введите ваш email",
+      "password": "Пароль",
+      "password_hint": "Введите ваш пароль",
+      "confirm_password": "Подтвердите пароль",
+      "confirm_password_hint": "Подтвердите ваш пароль",
+      "button": "Зарегистрироваться",
+      "login_with": "Зарегистрироваться c помощью",
+      "login_or": "ИЛИ",
+      "login_policy": "Регистрируясь, вы соглашаетесь с Условиями обслуживания Game Keeper и Политикой конфиденциальности."
+    },
+    "forgot_password": {
+      "app_bar": "Восстановление пароля",
+      "welocome_title": "Введите ваш email, чтобы восстановить пароль",
+      "email": "Электронная почта",
+      "email_hint": "Введите ваш email",
+      "button": "Восстановить пароль",
+      "check_code_title": "Мы отправили письмо с cсылкой на указанный email. Следуйте инструкциям в письме, чтобы восстановить пароль",
+      "button_go_to_login": "Перейти к авторизации",
+      "check_code_field": "Введите код",
+      "check_code_button": "Проверить код",
+      "new_password": "Новый пароль",
+      "new_password_hint": "Введите новый пароль",
+      "confirm_password": "Подтвердите пароль",
+      "confirm_password_hint": "Подтвердите ваш пароль",
+      "change_password_button": "Изменить пароль"
     }
+  },
+  "home": {
+    "title": "Здравствуйте, {name}!"
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"en": en, "ru": ru};

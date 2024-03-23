@@ -36,6 +36,13 @@
             "delete_success": "Успешно удалено"
         }
     },
+    "navbar" : {
+        "home": "Главная",
+        "games": "Игры",
+        "news": "Новости",
+        "friends": "Друзья",
+        "profile": "Профиль"
+    },
     "auth": {
         "demo": {
             "title": {
@@ -94,5 +101,8 @@
             "confirm_password_hint": "Подтвердите ваш пароль",
             "change_password_button": "Изменить пароль"
         }
+    },
+    "home": {
+        "title": "Здравствуйте, {name}!"
     }
 }

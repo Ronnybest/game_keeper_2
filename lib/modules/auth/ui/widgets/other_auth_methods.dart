@@ -28,7 +28,7 @@ class OtherAuthMethods extends StatelessWidget {
             if (context.mounted) {
               context.loaderOverlay.hide();
               if (result) {
-                AutoRouter.of(context).replace(const HomeRoute());
+                AutoRouter.of(context).replace(GKNavBar());
               }
             }
           },

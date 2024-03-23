@@ -34,6 +34,12 @@ abstract class  LocaleKeys {
   static const common_success_delete_success = 'common.success.delete_success';
   static const common_success = 'common.success';
   static const common = 'common';
+  static const navbar_home = 'navbar.home';
+  static const navbar_games = 'navbar.games';
+  static const navbar_news = 'navbar.news';
+  static const navbar_friends = 'navbar.friends';
+  static const navbar_profile = 'navbar.profile';
+  static const navbar = 'navbar';
   static const auth_demo_title_first = 'auth.demo.title.first';
   static const auth_demo_title_second = 'auth.demo.title.second';
   static const auth_demo_title_third = 'auth.demo.title.third';
@@ -86,5 +92,7 @@ abstract class  LocaleKeys {
   static const auth_forgot_password_change_password_button = 'auth.forgot_password.change_password_button';
   static const auth_forgot_password = 'auth.forgot_password';
   static const auth = 'auth';
+  static const home_title = 'home.title';
+  static const home = 'home';
 
 }

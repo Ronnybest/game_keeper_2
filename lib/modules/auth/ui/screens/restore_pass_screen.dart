@@ -83,81 +83,81 @@ class _RestorePassScreenState extends State<RestorePassScreen> {
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: SingleChildScrollView(
             child: Form(
-                key: _key,
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 10, bottom: 15),
-                      child: Text(
-                        LocaleKeys.auth_forgot_password_welocome_title.tr(),
-                        style: const TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.w600,
-                        ),
-                        textAlign: TextAlign.start,
+              key: _key,
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10, bottom: 15),
+                    child: Text(
+                      LocaleKeys.auth_forgot_password_welocome_title.tr(),
+                      style: const TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.w600,
                       ),
+                      textAlign: TextAlign.start,
                     ),
-                    GKTextField(
-                      validator: GetIt.I<Validators>().emailRegexValidator,
-                      controller: _emailController,
-                      placeholder: LocaleKeys.auth_forgot_password_email.tr(),
-                      hintText: LocaleKeys.auth_forgot_password_email_hint.tr(),
-                      isDisabled: restoreSend,
-                    ),
-                    const SizedBox(height: 20),
-                    if (!restoreSend)
-                      GKButton(
-                        text: LocaleKeys.auth_forgot_password_button.tr(),
-                        onTap: () {
-                          if (_key.currentState!.validate()) {
-                            context.read<AuthBloc>().add(
-                                  AuthEvent.emailRestorePassword(
-                                    _emailController.text,
-                                  ),
-                                );
-                          }
-                        },
-                      ),
-                    BlocBuilder<AuthBloc, AuthState>(
-                      builder: (context, state) {
-                        return state.maybeWhen(
-                          emailRestorePasswordLoaded: () {
-                            return Column(
-                              children: [
-                                Text(
-                                  LocaleKeys
-                                      .auth_forgot_password_check_code_title
-                                      .tr(),
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w400,
-                                    color: Theme.of(context)
-                                        .colorScheme
-                                        .onBackground
-                                        .withOpacity(.8),
-                                  ),
-                                  textAlign: TextAlign.start,
+                  ),
+                  GKTextField(
+                    validator: GetIt.I<Validators>().emailRegexValidator,
+                    controller: _emailController,
+                    placeholder: LocaleKeys.auth_forgot_password_email.tr(),
+                    hintText: LocaleKeys.auth_forgot_password_email_hint.tr(),
+                    isDisabled: restoreSend,
+                  ),
+                  const SizedBox(height: 20),
+                  if (!restoreSend)
+                    GKButton(
+                      text: LocaleKeys.auth_forgot_password_button.tr(),
+                      onTap: () {
+                        if (_key.currentState!.validate()) {
+                          context.read<AuthBloc>().add(
+                                AuthEvent.emailRestorePassword(
+                                  _emailController.text,
                                 ),
-                                const SizedBox(height: 20),
-                                GKButton(
-                                  text: LocaleKeys
-                                      .auth_forgot_password_button_go_to_login
-                                      .tr(),
-                                  onTap: () {
-                                    AutoRouter.of(context).maybePop(
-                                      const AuthRoute(),
-                                    );
-                                  },
-                                ),
-                              ],
-                            );
-                          },
-                          orElse: () => const SizedBox(),
-                        );
+                              );
+                        }
                       },
                     ),
-                  ],
-                )),
+                  BlocBuilder<AuthBloc, AuthState>(
+                    builder: (context, state) {
+                      return state.maybeWhen(
+                        emailRestorePasswordLoaded: () {
+                          return Column(
+                            children: [
+                              Text(
+                                LocaleKeys.auth_forgot_password_check_code_title
+                                    .tr(),
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400,
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onBackground
+                                      .withOpacity(.8),
+                                ),
+                                textAlign: TextAlign.start,
+                              ),
+                              const SizedBox(height: 20),
+                              GKButton(
+                                text: LocaleKeys
+                                    .auth_forgot_password_button_go_to_login
+                                    .tr(),
+                                onTap: () {
+                                  AutoRouter.of(context).maybePop(
+                                    const AuthRoute(),
+                                  );
+                                },
+                              ),
+                            ],
+                          );
+                        },
+                        orElse: () => const SizedBox(),
+                      );
+                    },
+                  ),
+                ],
+              ),
+            ),
           ),
         ),
       ),

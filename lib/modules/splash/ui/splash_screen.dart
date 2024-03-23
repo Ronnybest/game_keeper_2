@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen>
                 await GetIt.I<SharedPrefencesUtil>().sharedPreferencesInit();
             if (mounted) {
               if (user != null) {
-                AutoRouter.of(context).replace(const HomeRoute());
+                AutoRouter.of(context).replace(GKNavBar());
               } else if (sharedPrefs
                       .getString(SharedPrefsConstants.hasSeenDemo) ==
                   DemoSharedPrefsValues.showed) {

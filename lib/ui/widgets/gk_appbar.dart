@@ -16,17 +16,18 @@ class GKAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: Text(title ?? ''),
       actions: actions,
-      leading: Row(
-        children: [
-          leading ?? SizedBox(width: 5.w),
-          IconButton.filledTonal(
-            icon: const Icon(Icons.arrow_back),
-            onPressed: () {
-              AutoRouter.of(context).maybePop();
-            },
-          ),
-        ],
-      ),
+      leading: leading ??
+          (AutoRouter.of(context).canPop()
+              ? SizedBox(
+                  width: 5.w,
+                  child: IconButton.filledTonal(
+                    icon: const Icon(Icons.arrow_back),
+                    onPressed: () {
+                      AutoRouter.of(context).maybePop();
+                    },
+                  ),
+                )
+              : null),
     );
   }
 

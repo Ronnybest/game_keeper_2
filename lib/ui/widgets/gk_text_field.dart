@@ -148,23 +148,40 @@ class _GKTextFieldState extends State<GKTextField> {
             ),
             hintText: widget.hintText,
             prefixIcon: widget.prefixIcon,
-            suffixIcon: widget.suffixIcon,
+            suffixIcon: (widget.suffixIcon) ??
+                (_hasFocus
+                    ? GestureDetector(
+                        onTap: _clearText,
+                        child: Icon(
+                          Icons.clear,
+                          color: Theme.of(context)
+                              .colorScheme
+                              .onBackground
+                              .withOpacity(.6),
+                        ),
+                      )
+                    : null),
           ),
         ),
-        _errorText != null
-            ? Padding(
-                padding: const EdgeInsets.only(top: 5),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    _errorText!,
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.error,
-                    ),
-                  ),
+        if (_errorText != null)
+          Padding(
+            padding: const EdgeInsets.only(
+              top: 5,
+              right: 5,
+            ),
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: Text(
+                _errorText!,
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.error,
+                  fontSize: 12,
                 ),
-              )
-            : const SizedBox.shrink(),
+              ),
+            ),
+          )
+        else
+          const SizedBox.shrink(),
       ],
     );
   }
