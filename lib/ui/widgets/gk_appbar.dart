@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class GKAppBar extends StatelessWidget implements PreferredSizeWidget {
   const GKAppBar(
@@ -18,15 +17,12 @@ class GKAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: actions,
       leading: leading ??
           (AutoRouter.of(context).canPop()
-              ? SizedBox(
-                  width: 5.w,
-                  child: IconButton.filledTonal(
-                    icon: const Icon(Icons.arrow_back),
-                    onPressed: () {
-                      AutoRouter.of(context).maybePop();
-                    },
-                  ),
-                )
+              ? IconButton.filledTonal(
+                icon: const Icon(Icons.arrow_back),
+                onPressed: () {
+                  AutoRouter.of(context).maybePop();
+                },
+              )
               : null),
     );
   }

@@ -94,5 +94,9 @@ abstract class  LocaleKeys {
   static const auth = 'auth';
   static const home_title = 'home.title';
   static const home = 'home';
+  static const profile = 'profile';
+  static const preferences_profile_settings = 'preferences.profile_settings';
+  static const preferences_logout = 'preferences.logout';
+  static const preferences = 'preferences';
 
 }

@@ -36,7 +36,7 @@
             "delete_success": "Successfully deleted"
         }
     },
-    "navbar" : {
+    "navbar": {
         "home": "Home",
         "games": "Games",
         "news": "News",
@@ -104,5 +104,10 @@
     },
     "home": {
         "title": "Hello, {name}!"
+    },
+    "profile": {},
+    "preferences": {
+        "profile_settings": "Profile settings",
+        "logout": "Logout"
     }
 }

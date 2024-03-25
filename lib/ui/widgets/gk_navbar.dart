@@ -33,6 +33,9 @@ class _GKNavBarState extends State<GKNavBar> {
       routes: const [
         app_router.HomeRoute(),
         app_router.TestedRoute(),
+        app_router.TestedRoute(),
+        app_router.TestedRoute(),
+        app_router.ProfileRoute(),
       ],
       homeIndex: 0,
       transitionBuilder: (context, child, animation) {

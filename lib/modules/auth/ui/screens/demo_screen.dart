@@ -69,7 +69,10 @@ class _DemoScreenState extends State<DemoScreen> {
               right: 15,
               child: GestureDetector(
                 onTap: () {
-                  AutoRouter.of(context).replace(const AuthRoute());
+                  AutoRouter.of(context).pushAndPopUntil(
+                    const AuthRoute(),
+                    predicate: (_) => false,
+                  );
                 },
                 child: const Icon(
                   Icons.close,
@@ -83,24 +86,28 @@ class _DemoScreenState extends State<DemoScreen> {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: GKButton(
-                onTap: () async {
-                  if (_pageController.page == 2) {
-                    var prefs = await GetIt.I<SharedPrefencesUtil>()
-                        .sharedPreferencesInit();
-                    prefs.setString(SharedPrefsConstants.hasSeenDemo,
-                        DemoSharedPrefsValues.showed);
-                    if (context.mounted) {
-                      AutoRouter.of(context).replace(const AuthRoute());
+                  onTap: () async {
+                    if (_pageController.page == 2) {
+                      var prefs = await GetIt.I<SharedPrefencesUtil>()
+                          .sharedPreferencesInit();
+                      prefs.setString(SharedPrefsConstants.hasSeenDemo,
+                          DemoSharedPrefsValues.showed);
+                      if (context.mounted) {
+                        AutoRouter.of(context).pushAndPopUntil(
+                          const AuthRoute(),
+                          predicate: (_) {
+                            return false;
+                          },
+                        );
+                      }
+                    } else {
+                      _pageController.nextPage(
+                        duration: const Duration(milliseconds: 500),
+                        curve: Curves.easeInOut,
+                      );
                     }
-                  } else {
-                    _pageController.nextPage(
-                      duration: const Duration(milliseconds: 500),
-                      curve: Curves.easeInOut,
-                    );
-                  }
-                },
-                text: _currentButtonText
-              ),
+                  },
+                  text: _currentButtonText),
             ),
           ),
           Padding(

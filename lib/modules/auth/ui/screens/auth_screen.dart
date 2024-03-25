@@ -80,7 +80,8 @@ class _AuthScreenState extends State<AuthScreen> {
               },
               emailLoginLoaded: (user) {
                 context.loaderOverlay.hide();
-                AutoRouter.of(context).replace(GKNavBar());
+                AutoRouter.of(context)
+                    .pushAndPopUntil(GKNavBar(), predicate: (_) => false);
                 return null;
               },
               emailLoginError: (error) {

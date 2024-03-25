@@ -34,13 +34,20 @@ class _SplashScreenState extends State<SplashScreen>
                 await GetIt.I<SharedPrefencesUtil>().sharedPreferencesInit();
             if (mounted) {
               if (user != null) {
-                AutoRouter.of(context).replace(GKNavBar());
+                AutoRouter.of(context)
+                    .pushAndPopUntil(GKNavBar(), predicate: (_) => false);
               } else if (sharedPrefs
                       .getString(SharedPrefsConstants.hasSeenDemo) ==
                   DemoSharedPrefsValues.showed) {
-                AutoRouter.of(context).replace(const AuthRoute());
+                AutoRouter.of(context).pushAndPopUntil(const AuthRoute(),
+                    predicate: (_) {
+                  return false;
+                });
               } else {
-                AutoRouter.of(context).replace(const DemoRoute());
+                AutoRouter.of(context).pushAndPopUntil(const DemoRoute(),
+                    predicate: (_) {
+                  return false;
+                });
               }
             } else {
               return;

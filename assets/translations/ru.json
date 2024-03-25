@@ -36,7 +36,7 @@
             "delete_success": "Успешно удалено"
         }
     },
-    "navbar" : {
+    "navbar": {
         "home": "Главная",
         "games": "Игры",
         "news": "Новости",
@@ -104,5 +104,10 @@
     },
     "home": {
         "title": "Здравствуйте, {name}!"
+    },
+    "profile": {},
+    "preferences": {
+        "profile_settings": "Настройки профиля",
+        "logout": "Выйти"
     }
 }
