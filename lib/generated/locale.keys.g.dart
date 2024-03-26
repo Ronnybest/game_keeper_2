@@ -36,7 +36,7 @@ abstract class  LocaleKeys {
   static const common = 'common';
   static const navbar_home = 'navbar.home';
   static const navbar_games = 'navbar.games';
-  static const navbar_news = 'navbar.news';
+  static const navbar_services = 'navbar.services';
   static const navbar_friends = 'navbar.friends';
   static const navbar_profile = 'navbar.profile';
   static const navbar = 'navbar';
@@ -93,7 +93,9 @@ abstract class  LocaleKeys {
   static const auth_forgot_password = 'auth.forgot_password';
   static const auth = 'auth';
   static const home_title = 'home.title';
+  static const home_trend_games = 'home.trend_games';
   static const home = 'home';
+  static const profile_default_username = 'profile.default_username';
   static const profile = 'profile';
   static const preferences_profile_settings = 'preferences.profile_settings';
   static const preferences_logout = 'preferences.logout';

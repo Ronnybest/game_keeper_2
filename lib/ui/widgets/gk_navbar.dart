@@ -70,8 +70,8 @@ class _GKNavBarState extends State<GKNavBar> {
       label: LocaleKeys.navbar_games.tr(),
     ),
     NavigationDestination(
-      icon: const Icon(Icons.newspaper),
-      label: LocaleKeys.navbar_news.tr(),
+      icon: const Icon(Icons.dashboard),
+      label: LocaleKeys.navbar_services.tr(),
     ),
     NavigationDestination(
       icon: const Icon(Icons.person),
@@ -83,7 +83,12 @@ class _GKNavBarState extends State<GKNavBar> {
         height: 24,
         child: ClipRRect(
           borderRadius: BorderRadius.circular(50),
-          child: FastCachedImage(url: user.photoURL!),
+          child: FastCachedImage(
+            url: user.photoURL ?? '',
+            errorBuilder: (context, error, stackTrace) {
+              return const Icon(Icons.person);
+            },
+          ),
         ),
       ),
       label: LocaleKeys.navbar_profile.tr(),

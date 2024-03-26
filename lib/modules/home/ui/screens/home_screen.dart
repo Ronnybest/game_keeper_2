@@ -3,6 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:game_keeper/generated/locale.keys.g.dart';
+import 'package:game_keeper/modules/home/ui/widgets/trending_games.dart';
 import 'package:game_keeper/ui/widgets/gk_appbar.dart';
 
 @RoutePage()
@@ -27,11 +28,19 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: GKAppBar(
         title: LocaleKeys.home_title.tr(
-          namedArgs: {'name': user.displayName ?? 'User'},
+          namedArgs: {
+            'name': user.displayName!.isNotEmpty
+                ? user.displayName!
+                : LocaleKeys.profile_default_username.tr(),
+          },
         ),
       ),
-      body: Text(
-        'Home Screen',
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            TrendigGames(),
+          ],
+        ),
       ),
     );
   }

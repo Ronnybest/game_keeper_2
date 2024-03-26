@@ -3,12 +3,12 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:fast_cached_network_image/fast_cached_network_image.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:game_keeper/core/router/app_router.gr.dart';
+import 'package:game_keeper/core/utils/clear_all_data.dart';
 import 'package:game_keeper/generated/locale.keys.g.dart';
 import 'package:game_keeper/ui/widgets/gk_appbar.dart';
 import 'package:game_keeper/ui/widgets/gk_list_item.dart';
+import 'package:get_it/get_it.dart';
 
 @RoutePage()
 class ApplicationPreferences extends StatefulWidget {
@@ -43,7 +43,8 @@ class _ApplicationPreferencesState extends State<ApplicationPreferences> {
                   children: [
                     CircleAvatar(
                       radius: 25,
-                      backgroundImage: FastCachedImageProvider(user!.photoURL!),
+                      backgroundImage: FastCachedImageProvider(
+                          user?.photoURL ?? ''), // TODO : Add default image
                     ),
                     const SizedBox(
                       width: 12,
@@ -53,7 +54,9 @@ class _ApplicationPreferencesState extends State<ApplicationPreferences> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          user!.displayName!,
+                          user!.displayName!.isNotEmpty
+                              ? user!.displayName!
+                              : LocaleKeys.profile_default_username.tr(),
                           style: TextStyle(
                               color: Theme.of(context)
                                   .colorScheme
@@ -117,16 +120,19 @@ class _ApplicationPreferencesState extends State<ApplicationPreferences> {
             //     bottomRight: Radius.circular(20),
             //   ),
             // ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             GKListItem(
               title: LocaleKeys.preferences_logout.tr(),
               leading: 'assets/images/log_out.svg',
               borderRadius: BorderRadius.circular(20),
-              onTap: () {
-                FirebaseAuth.instance.signOut();
-                AutoRouter.of(context).popAndPush(const AuthRoute());
+              onTap: () async {
+                await FirebaseAuth.instance.signOut();
+                await GetIt.I<ClearAllData>().clearAllData();
+                if (context.mounted) {
+                  AutoRouter.of(context).popAndPush(const AuthRoute());
+                }
               },
             )
           ],

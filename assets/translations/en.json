@@ -39,7 +39,7 @@
     "navbar": {
         "home": "Home",
         "games": "Games",
-        "news": "News",
+        "services": "Services",
         "friends": "Friends",
         "profile": "Profile"
     },
@@ -103,9 +103,12 @@
         }
     },
     "home": {
-        "title": "Hello, {name}!"
+        "title": "Hello, {name}!",
+        "trend_games": "Trending games"
     },
-    "profile": {},
+    "profile": {
+        "default_username": "Gamer"
+    },
     "preferences": {
         "profile_settings": "Profile settings",
         "logout": "Logout"

@@ -39,7 +39,7 @@
     "navbar": {
         "home": "Главная",
         "games": "Игры",
-        "news": "Новости",
+        "services": "Сервисы",
         "friends": "Друзья",
         "profile": "Профиль"
     },
@@ -103,9 +103,12 @@
         }
     },
     "home": {
-        "title": "Здравствуйте, {name}!"
+        "title": "Здравствуйте, {name}!",
+        "trend_games": "Игры в тренде"
     },
-    "profile": {},
+    "profile": {
+        "default_username": "Геймер"
+    },
     "preferences": {
         "profile_settings": "Настройки профиля",
         "logout": "Выйти"
