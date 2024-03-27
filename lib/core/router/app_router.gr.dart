@@ -65,7 +65,7 @@ abstract class $AppRouter extends _i11.RootStackRouter {
     HomeRoute.name: (routeData) {
       return _i11.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i5.HomeScreen(),
+        child: _i11.WrappedRoute(child: const _i5.HomeScreen()),
       );
     },
     ProfileRoute.name: (routeData) {

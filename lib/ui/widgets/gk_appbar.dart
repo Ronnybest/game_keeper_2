@@ -13,16 +13,24 @@ class GKAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Text(title ?? ''),
+      //centerTitle: true,
+      title: Text(
+        title ?? '',
+        style: TextStyle(
+          color: Theme.of(context).colorScheme.onSurface,
+          fontSize: 25,
+          fontWeight: FontWeight.w500,
+        ),
+      ),
       actions: actions,
       leading: leading ??
           (AutoRouter.of(context).canPop()
               ? IconButton.filledTonal(
-                icon: const Icon(Icons.arrow_back),
-                onPressed: () {
-                  AutoRouter.of(context).maybePop();
-                },
-              )
+                  icon: const Icon(Icons.arrow_back),
+                  onPressed: () {
+                    AutoRouter.of(context).maybePop();
+                  },
+                )
               : null),
     );
   }

@@ -3,7 +3,9 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:game_keeper/app_observer.dart';
 import 'package:game_keeper/core/injection/injections.dart';
 import 'package:game_keeper/core/router/app_router.dart';
 import 'package:game_keeper/core/utils/custom_loader.dart';
@@ -23,6 +25,9 @@ void main() async {
   await GetIt.I.allReady();
   await GetIt.I<FastCachedNetworkInit>().init();
 
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+
+  Bloc.observer = AppBlocObserver();
   runApp(
     EasyLocalization(
       useOnlyLangCode: true,

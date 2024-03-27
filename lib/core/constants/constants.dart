@@ -90,3 +90,14 @@ class LoginMethods {
     FontAwesomeIcons.xTwitter,
   ];
 }
+
+class AppConstants {
+  static const String publicRawgIoApiKey = '5697c2a176a84803867e7bd2eb9aed59';
+  static const String publicNewsApiKey =
+      '9c26dd98e6367043e0241737fbea20cac50725fc';
+}
+
+class ApiConstants {
+  static const String baseRawgIoUrl = 'https://api.rawg.io/api/';
+  static const String baseNewsUrl = 'https://www.gamespot.com/api/';
+}

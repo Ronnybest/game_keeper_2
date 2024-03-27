@@ -20,24 +20,24 @@ mixin _$HomeState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingTrendingGames,
-    required TResult Function() loadedTrendingGames,
-    required TResult Function() errorTrendingGames,
+    required TResult Function(GamesListModel result) loadedTrendingGames,
+    required TResult Function(dynamic error) errorTrendingGames,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingTrendingGames,
-    TResult? Function()? loadedTrendingGames,
-    TResult? Function()? errorTrendingGames,
+    TResult? Function(GamesListModel result)? loadedTrendingGames,
+    TResult? Function(dynamic error)? errorTrendingGames,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingTrendingGames,
-    TResult Function()? loadedTrendingGames,
-    TResult Function()? errorTrendingGames,
+    TResult Function(GamesListModel result)? loadedTrendingGames,
+    TResult Function(dynamic error)? errorTrendingGames,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -125,8 +125,8 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingTrendingGames,
-    required TResult Function() loadedTrendingGames,
-    required TResult Function() errorTrendingGames,
+    required TResult Function(GamesListModel result) loadedTrendingGames,
+    required TResult Function(dynamic error) errorTrendingGames,
   }) {
     return initial();
   }
@@ -136,8 +136,8 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingTrendingGames,
-    TResult? Function()? loadedTrendingGames,
-    TResult? Function()? errorTrendingGames,
+    TResult? Function(GamesListModel result)? loadedTrendingGames,
+    TResult? Function(dynamic error)? errorTrendingGames,
   }) {
     return initial?.call();
   }
@@ -147,8 +147,8 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingTrendingGames,
-    TResult Function()? loadedTrendingGames,
-    TResult Function()? errorTrendingGames,
+    TResult Function(GamesListModel result)? loadedTrendingGames,
+    TResult Function(dynamic error)? errorTrendingGames,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -240,8 +240,8 @@ class _$LoadingTrendingGamesImpl implements _LoadingTrendingGames {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingTrendingGames,
-    required TResult Function() loadedTrendingGames,
-    required TResult Function() errorTrendingGames,
+    required TResult Function(GamesListModel result) loadedTrendingGames,
+    required TResult Function(dynamic error) errorTrendingGames,
   }) {
     return loadingTrendingGames();
   }
@@ -251,8 +251,8 @@ class _$LoadingTrendingGamesImpl implements _LoadingTrendingGames {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingTrendingGames,
-    TResult? Function()? loadedTrendingGames,
-    TResult? Function()? errorTrendingGames,
+    TResult? Function(GamesListModel result)? loadedTrendingGames,
+    TResult? Function(dynamic error)? errorTrendingGames,
   }) {
     return loadingTrendingGames?.call();
   }
@@ -262,8 +262,8 @@ class _$LoadingTrendingGamesImpl implements _LoadingTrendingGames {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingTrendingGames,
-    TResult Function()? loadedTrendingGames,
-    TResult Function()? errorTrendingGames,
+    TResult Function(GamesListModel result)? loadedTrendingGames,
+    TResult Function(dynamic error)? errorTrendingGames,
     required TResult orElse(),
   }) {
     if (loadingTrendingGames != null) {
@@ -319,6 +319,8 @@ abstract class _$$LoadedTrendingGamesImplCopyWith<$Res> {
   factory _$$LoadedTrendingGamesImplCopyWith(_$LoadedTrendingGamesImpl value,
           $Res Function(_$LoadedTrendingGamesImpl) then) =
       __$$LoadedTrendingGamesImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({GamesListModel result});
 }
 
 /// @nodoc
@@ -328,37 +330,61 @@ class __$$LoadedTrendingGamesImplCopyWithImpl<$Res>
   __$$LoadedTrendingGamesImplCopyWithImpl(_$LoadedTrendingGamesImpl _value,
       $Res Function(_$LoadedTrendingGamesImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? result = null,
+  }) {
+    return _then(_$LoadedTrendingGamesImpl(
+      null == result
+          ? _value.result
+          : result // ignore: cast_nullable_to_non_nullable
+              as GamesListModel,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$LoadedTrendingGamesImpl implements _LoadedTrendingGames {
-  const _$LoadedTrendingGamesImpl();
+  const _$LoadedTrendingGamesImpl(this.result);
+
+  @override
+  final GamesListModel result;
 
   @override
   String toString() {
-    return 'HomeState.loadedTrendingGames()';
+    return 'HomeState.loadedTrendingGames(result: $result)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LoadedTrendingGamesImpl);
+            other is _$LoadedTrendingGamesImpl &&
+            (identical(other.result, result) || other.result == result));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, result);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LoadedTrendingGamesImplCopyWith<_$LoadedTrendingGamesImpl> get copyWith =>
+      __$$LoadedTrendingGamesImplCopyWithImpl<_$LoadedTrendingGamesImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingTrendingGames,
-    required TResult Function() loadedTrendingGames,
-    required TResult Function() errorTrendingGames,
+    required TResult Function(GamesListModel result) loadedTrendingGames,
+    required TResult Function(dynamic error) errorTrendingGames,
   }) {
-    return loadedTrendingGames();
+    return loadedTrendingGames(result);
   }
 
   @override
@@ -366,10 +392,10 @@ class _$LoadedTrendingGamesImpl implements _LoadedTrendingGames {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingTrendingGames,
-    TResult? Function()? loadedTrendingGames,
-    TResult? Function()? errorTrendingGames,
+    TResult? Function(GamesListModel result)? loadedTrendingGames,
+    TResult? Function(dynamic error)? errorTrendingGames,
   }) {
-    return loadedTrendingGames?.call();
+    return loadedTrendingGames?.call(result);
   }
 
   @override
@@ -377,12 +403,12 @@ class _$LoadedTrendingGamesImpl implements _LoadedTrendingGames {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingTrendingGames,
-    TResult Function()? loadedTrendingGames,
-    TResult Function()? errorTrendingGames,
+    TResult Function(GamesListModel result)? loadedTrendingGames,
+    TResult Function(dynamic error)? errorTrendingGames,
     required TResult orElse(),
   }) {
     if (loadedTrendingGames != null) {
-      return loadedTrendingGames();
+      return loadedTrendingGames(result);
     }
     return orElse();
   }
@@ -426,7 +452,13 @@ class _$LoadedTrendingGamesImpl implements _LoadedTrendingGames {
 }
 
 abstract class _LoadedTrendingGames implements HomeState {
-  const factory _LoadedTrendingGames() = _$LoadedTrendingGamesImpl;
+  const factory _LoadedTrendingGames(final GamesListModel result) =
+      _$LoadedTrendingGamesImpl;
+
+  GamesListModel get result;
+  @JsonKey(ignore: true)
+  _$$LoadedTrendingGamesImplCopyWith<_$LoadedTrendingGamesImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -434,6 +466,8 @@ abstract class _$$ErrorTrendingGamesImplCopyWith<$Res> {
   factory _$$ErrorTrendingGamesImplCopyWith(_$ErrorTrendingGamesImpl value,
           $Res Function(_$ErrorTrendingGamesImpl) then) =
       __$$ErrorTrendingGamesImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({dynamic error});
 }
 
 /// @nodoc
@@ -443,36 +477,62 @@ class __$$ErrorTrendingGamesImplCopyWithImpl<$Res>
   __$$ErrorTrendingGamesImplCopyWithImpl(_$ErrorTrendingGamesImpl _value,
       $Res Function(_$ErrorTrendingGamesImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = freezed,
+  }) {
+    return _then(_$ErrorTrendingGamesImpl(
+      freezed == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$ErrorTrendingGamesImpl implements _ErrorTrendingGames {
-  const _$ErrorTrendingGamesImpl();
+  const _$ErrorTrendingGamesImpl(this.error);
+
+  @override
+  final dynamic error;
 
   @override
   String toString() {
-    return 'HomeState.errorTrendingGames()';
+    return 'HomeState.errorTrendingGames(error: $error)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ErrorTrendingGamesImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$ErrorTrendingGamesImpl &&
+            const DeepCollectionEquality().equals(other.error, error));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(error));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ErrorTrendingGamesImplCopyWith<_$ErrorTrendingGamesImpl> get copyWith =>
+      __$$ErrorTrendingGamesImplCopyWithImpl<_$ErrorTrendingGamesImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingTrendingGames,
-    required TResult Function() loadedTrendingGames,
-    required TResult Function() errorTrendingGames,
+    required TResult Function(GamesListModel result) loadedTrendingGames,
+    required TResult Function(dynamic error) errorTrendingGames,
   }) {
-    return errorTrendingGames();
+    return errorTrendingGames(error);
   }
 
   @override
@@ -480,10 +540,10 @@ class _$ErrorTrendingGamesImpl implements _ErrorTrendingGames {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingTrendingGames,
-    TResult? Function()? loadedTrendingGames,
-    TResult? Function()? errorTrendingGames,
+    TResult? Function(GamesListModel result)? loadedTrendingGames,
+    TResult? Function(dynamic error)? errorTrendingGames,
   }) {
-    return errorTrendingGames?.call();
+    return errorTrendingGames?.call(error);
   }
 
   @override
@@ -491,12 +551,12 @@ class _$ErrorTrendingGamesImpl implements _ErrorTrendingGames {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingTrendingGames,
-    TResult Function()? loadedTrendingGames,
-    TResult Function()? errorTrendingGames,
+    TResult Function(GamesListModel result)? loadedTrendingGames,
+    TResult Function(dynamic error)? errorTrendingGames,
     required TResult orElse(),
   }) {
     if (errorTrendingGames != null) {
-      return errorTrendingGames();
+      return errorTrendingGames(error);
     }
     return orElse();
   }
@@ -540,24 +600,32 @@ class _$ErrorTrendingGamesImpl implements _ErrorTrendingGames {
 }
 
 abstract class _ErrorTrendingGames implements HomeState {
-  const factory _ErrorTrendingGames() = _$ErrorTrendingGamesImpl;
+  const factory _ErrorTrendingGames(final dynamic error) =
+      _$ErrorTrendingGamesImpl;
+
+  dynamic get error;
+  @JsonKey(ignore: true)
+  _$$ErrorTrendingGamesImplCopyWith<_$ErrorTrendingGamesImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 mixin _$HomeEvent {
+  int? get page => throw _privateConstructorUsedError;
+  int? get pageSize => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() fetchTrendingGames,
+    required TResult Function(int? page, int? pageSize) fetchTrendingGames,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? fetchTrendingGames,
+    TResult? Function(int? page, int? pageSize)? fetchTrendingGames,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? fetchTrendingGames,
+    TResult Function(int? page, int? pageSize)? fetchTrendingGames,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -577,12 +645,18 @@ mixin _$HomeEvent {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $HomeEventCopyWith<HomeEvent> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $HomeEventCopyWith<$Res> {
   factory $HomeEventCopyWith(HomeEvent value, $Res Function(HomeEvent) then) =
       _$HomeEventCopyWithImpl<$Res, HomeEvent>;
+  @useResult
+  $Res call({int? page, int? pageSize});
 }
 
 /// @nodoc
@@ -594,13 +668,35 @@ class _$HomeEventCopyWithImpl<$Res, $Val extends HomeEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? page = freezed,
+    Object? pageSize = freezed,
+  }) {
+    return _then(_value.copyWith(
+      page: freezed == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      pageSize: freezed == pageSize
+          ? _value.pageSize
+          : pageSize // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
+  }
 }
 
 /// @nodoc
-abstract class _$$FetchTrendingGamesImplCopyWith<$Res> {
+abstract class _$$FetchTrendingGamesImplCopyWith<$Res>
+    implements $HomeEventCopyWith<$Res> {
   factory _$$FetchTrendingGamesImplCopyWith(_$FetchTrendingGamesImpl value,
           $Res Function(_$FetchTrendingGamesImpl) then) =
       __$$FetchTrendingGamesImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int? page, int? pageSize});
 }
 
 /// @nodoc
@@ -610,51 +706,85 @@ class __$$FetchTrendingGamesImplCopyWithImpl<$Res>
   __$$FetchTrendingGamesImplCopyWithImpl(_$FetchTrendingGamesImpl _value,
       $Res Function(_$FetchTrendingGamesImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? page = freezed,
+    Object? pageSize = freezed,
+  }) {
+    return _then(_$FetchTrendingGamesImpl(
+      freezed == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      freezed == pageSize
+          ? _value.pageSize
+          : pageSize // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$FetchTrendingGamesImpl implements _FetchTrendingGames {
-  const _$FetchTrendingGamesImpl();
+  const _$FetchTrendingGamesImpl(this.page, this.pageSize);
+
+  @override
+  final int? page;
+  @override
+  final int? pageSize;
 
   @override
   String toString() {
-    return 'HomeEvent.fetchTrendingGames()';
+    return 'HomeEvent.fetchTrendingGames(page: $page, pageSize: $pageSize)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$FetchTrendingGamesImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$FetchTrendingGamesImpl &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.pageSize, pageSize) ||
+                other.pageSize == pageSize));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, page, pageSize);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchTrendingGamesImplCopyWith<_$FetchTrendingGamesImpl> get copyWith =>
+      __$$FetchTrendingGamesImplCopyWithImpl<_$FetchTrendingGamesImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() fetchTrendingGames,
+    required TResult Function(int? page, int? pageSize) fetchTrendingGames,
   }) {
-    return fetchTrendingGames();
+    return fetchTrendingGames(page, pageSize);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? fetchTrendingGames,
+    TResult? Function(int? page, int? pageSize)? fetchTrendingGames,
   }) {
-    return fetchTrendingGames?.call();
+    return fetchTrendingGames?.call(page, pageSize);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? fetchTrendingGames,
+    TResult Function(int? page, int? pageSize)? fetchTrendingGames,
     required TResult orElse(),
   }) {
     if (fetchTrendingGames != null) {
-      return fetchTrendingGames();
+      return fetchTrendingGames(page, pageSize);
     }
     return orElse();
   }
@@ -689,5 +819,15 @@ class _$FetchTrendingGamesImpl implements _FetchTrendingGames {
 }
 
 abstract class _FetchTrendingGames implements HomeEvent {
-  const factory _FetchTrendingGames() = _$FetchTrendingGamesImpl;
+  const factory _FetchTrendingGames(final int? page, final int? pageSize) =
+      _$FetchTrendingGamesImpl;
+
+  @override
+  int? get page;
+  @override
+  int? get pageSize;
+  @override
+  @JsonKey(ignore: true)
+  _$$FetchTrendingGamesImplCopyWith<_$FetchTrendingGamesImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
