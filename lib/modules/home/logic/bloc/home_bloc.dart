@@ -1,7 +1,11 @@
 import 'package:bloc/bloc.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:game_keeper/core/models/user_firestore.dart';
+import 'package:game_keeper/core/utils/user_info_firestore.dart';
 import 'package:game_keeper/modules/home/logic/api/model/games_list_model.dart';
 import 'package:game_keeper/modules/home/logic/api/repository/home_repository.dart';
+import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'package:intl/intl.dart';
 part 'home_state.dart';
@@ -33,6 +37,28 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         emit(HomeState.loadedTrendingGames(result));
       } catch (e) {
         emit(HomeState.errorTrendingGames(e));
+      }
+    }, fetchUserData: (_FetchUserData value) async {
+      try {
+        emit(const HomeState.loadingUserData());
+        var currentUser = FirebaseAuth.instance.currentUser;
+        var user = await GetIt.I<UserInfoFirestore>().getUserInfo(currentUser!);
+        if (user != null) {
+          emit(HomeState.loadedUserData(user));
+        } else {
+          emit(const HomeState.errorUserData(
+              'User not found')); // TODO add localization
+        }
+      } catch (e) {
+        emit(HomeState.errorUserData(e));
+      }
+    }, updateUserData: (_UpdateUserData value) async {
+      try {
+        emit(const HomeState.loadingUpdateUserData());
+        await GetIt.I<UserInfoFirestore>().updateUserInfo(value.user);
+        emit(const HomeState.loadedUpdateUserData());
+      } catch (e) {
+        emit(HomeState.errorUpdateUserData(e));
       }
     });
   }

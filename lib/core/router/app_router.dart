@@ -28,5 +28,6 @@ class AppRouter extends $AppRouter {
           ],
         ),
         AutoRoute(page: ApplicationPreferences.page),
+        AutoRoute(page: MoreGamesRoute.page),
       ];
 }

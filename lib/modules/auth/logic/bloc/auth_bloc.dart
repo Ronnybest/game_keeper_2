@@ -1,6 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:game_keeper/core/utils/user_info_firestore.dart';
+import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 
 part 'auth_state.dart';
@@ -23,6 +25,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
               emit(const AuthState.emailLoginUserNotFound());
               return;
             }
+            await GetIt.I<UserInfoFirestore>().saveUserInfo(user.user!);
             emit(AuthState.emailLoginLoaded(user.user!));
           } on FirebaseAuthException catch (e) {
             emit(AuthState.emailLoginError(e));
@@ -37,6 +40,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
               email: value.login,
               password: value.pass,
             );
+            await GetIt.I<UserInfoFirestore>().saveUserInfo(user.user!);
             emit(AuthState.emailRegisterLoaded(user.user!));
           } on FirebaseAuthException catch (e) {
             emit(

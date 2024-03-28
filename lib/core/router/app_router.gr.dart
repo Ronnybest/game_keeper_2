@@ -8,43 +8,47 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i11;
-import 'package:flutter/material.dart' as _i12;
+import 'package:auto_route/auto_route.dart' as _i12;
+import 'package:flutter/material.dart' as _i13;
 import 'package:game_keeper/modules/auth/ui/screens/auth_screen.dart' as _i2;
 import 'package:game_keeper/modules/auth/ui/screens/demo_screen.dart' as _i3;
 import 'package:game_keeper/modules/auth/ui/screens/register_email_screen.dart'
-    as _i7;
-import 'package:game_keeper/modules/auth/ui/screens/restore_pass_screen.dart'
     as _i8;
-import 'package:game_keeper/modules/home/ui/screens/home_screen.dart' as _i5;
-import 'package:game_keeper/modules/home/ui/screens/test_screen.dart' as _i10;
-import 'package:game_keeper/modules/profile/ui/screens/profile_screen.dart'
+import 'package:game_keeper/modules/auth/ui/screens/restore_pass_screen.dart'
+    as _i9;
+import 'package:game_keeper/modules/game_view/ui/screens/more_games_screen.dart'
     as _i6;
+import 'package:game_keeper/modules/home/logic/api/model/games_list_model.dart'
+    as _i15;
+import 'package:game_keeper/modules/home/ui/screens/home_screen.dart' as _i5;
+import 'package:game_keeper/modules/home/ui/screens/test_screen.dart' as _i11;
+import 'package:game_keeper/modules/profile/ui/screens/profile_screen.dart'
+    as _i7;
 import 'package:game_keeper/modules/profile/ui/screens/settings_screen.dart'
     as _i1;
-import 'package:game_keeper/modules/splash/ui/splash_screen.dart' as _i9;
-import 'package:game_keeper/ui/widgets/gk_appbar.dart' as _i13;
+import 'package:game_keeper/modules/splash/ui/splash_screen.dart' as _i10;
+import 'package:game_keeper/ui/widgets/gk_appbar.dart' as _i14;
 import 'package:game_keeper/ui/widgets/gk_navbar.dart' as _i4;
 
-abstract class $AppRouter extends _i11.RootStackRouter {
+abstract class $AppRouter extends _i12.RootStackRouter {
   $AppRouter({super.navigatorKey});
 
   @override
-  final Map<String, _i11.PageFactory> pagesMap = {
+  final Map<String, _i12.PageFactory> pagesMap = {
     ApplicationPreferences.name: (routeData) {
-      return _i11.AutoRoutePage<dynamic>(
+      return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i1.ApplicationPreferences(),
       );
     },
     AuthRoute.name: (routeData) {
-      return _i11.AutoRoutePage<dynamic>(
+      return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i11.WrappedRoute(child: const _i2.AuthScreen()),
+        child: _i12.WrappedRoute(child: const _i2.AuthScreen()),
       );
     },
     DemoRoute.name: (routeData) {
-      return _i11.AutoRoutePage<dynamic>(
+      return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i3.DemoScreen(),
       );
@@ -52,7 +56,7 @@ abstract class $AppRouter extends _i11.RootStackRouter {
     GKNavBar.name: (routeData) {
       final args =
           routeData.argsAs<GKNavBarArgs>(orElse: () => const GKNavBarArgs());
-      return _i11.AutoRoutePage<dynamic>(
+      return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i4.GKNavBar(
           key: args.key,
@@ -63,39 +67,49 @@ abstract class $AppRouter extends _i11.RootStackRouter {
       );
     },
     HomeRoute.name: (routeData) {
-      return _i11.AutoRoutePage<dynamic>(
+      return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i11.WrappedRoute(child: const _i5.HomeScreen()),
+        child: _i12.WrappedRoute(child: const _i5.HomeScreen()),
+      );
+    },
+    MoreGamesRoute.name: (routeData) {
+      final args = routeData.argsAs<MoreGamesRouteArgs>();
+      return _i12.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: _i6.MoreGamesScreen(
+          key: args.key,
+          gamesListModel: args.gamesListModel,
+        ),
       );
     },
     ProfileRoute.name: (routeData) {
-      return _i11.AutoRoutePage<dynamic>(
+      return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i6.ProfileScreen(),
+        child: const _i7.ProfileScreen(),
       );
     },
     RegisterEmailRoute.name: (routeData) {
-      return _i11.AutoRoutePage<dynamic>(
+      return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i11.WrappedRoute(child: const _i7.RegisterEmailScreen()),
+        child: _i12.WrappedRoute(child: const _i8.RegisterEmailScreen()),
       );
     },
     RestorePassRoute.name: (routeData) {
-      return _i11.AutoRoutePage<dynamic>(
+      return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i11.WrappedRoute(child: const _i8.RestorePassScreen()),
+        child: _i12.WrappedRoute(child: const _i9.RestorePassScreen()),
       );
     },
     SplashRoute.name: (routeData) {
-      return _i11.AutoRoutePage<dynamic>(
+      return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i9.SplashScreen(),
+        child: const _i10.SplashScreen(),
       );
     },
     TestedRoute.name: (routeData) {
-      return _i11.AutoRoutePage<dynamic>(
+      return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i10.TestedScreen(),
+        child: const _i11.TestedScreen(),
       );
     },
   };
@@ -103,8 +117,8 @@ abstract class $AppRouter extends _i11.RootStackRouter {
 
 /// generated route for
 /// [_i1.ApplicationPreferences]
-class ApplicationPreferences extends _i11.PageRouteInfo<void> {
-  const ApplicationPreferences({List<_i11.PageRouteInfo>? children})
+class ApplicationPreferences extends _i12.PageRouteInfo<void> {
+  const ApplicationPreferences({List<_i12.PageRouteInfo>? children})
       : super(
           ApplicationPreferences.name,
           initialChildren: children,
@@ -112,13 +126,13 @@ class ApplicationPreferences extends _i11.PageRouteInfo<void> {
 
   static const String name = 'ApplicationPreferences';
 
-  static const _i11.PageInfo<void> page = _i11.PageInfo<void>(name);
+  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i2.AuthScreen]
-class AuthRoute extends _i11.PageRouteInfo<void> {
-  const AuthRoute({List<_i11.PageRouteInfo>? children})
+class AuthRoute extends _i12.PageRouteInfo<void> {
+  const AuthRoute({List<_i12.PageRouteInfo>? children})
       : super(
           AuthRoute.name,
           initialChildren: children,
@@ -126,13 +140,13 @@ class AuthRoute extends _i11.PageRouteInfo<void> {
 
   static const String name = 'AuthRoute';
 
-  static const _i11.PageInfo<void> page = _i11.PageInfo<void>(name);
+  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i3.DemoScreen]
-class DemoRoute extends _i11.PageRouteInfo<void> {
-  const DemoRoute({List<_i11.PageRouteInfo>? children})
+class DemoRoute extends _i12.PageRouteInfo<void> {
+  const DemoRoute({List<_i12.PageRouteInfo>? children})
       : super(
           DemoRoute.name,
           initialChildren: children,
@@ -140,18 +154,18 @@ class DemoRoute extends _i11.PageRouteInfo<void> {
 
   static const String name = 'DemoRoute';
 
-  static const _i11.PageInfo<void> page = _i11.PageInfo<void>(name);
+  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i4.GKNavBar]
-class GKNavBar extends _i11.PageRouteInfo<GKNavBarArgs> {
+class GKNavBar extends _i12.PageRouteInfo<GKNavBarArgs> {
   GKNavBar({
-    _i12.Key? key,
-    _i13.GKAppBar? appBar,
-    _i12.Widget? body,
-    _i12.FloatingActionButton? floatingActionButton,
-    List<_i11.PageRouteInfo>? children,
+    _i13.Key? key,
+    _i14.GKAppBar? appBar,
+    _i13.Widget? body,
+    _i13.FloatingActionButton? floatingActionButton,
+    List<_i12.PageRouteInfo>? children,
   }) : super(
           GKNavBar.name,
           args: GKNavBarArgs(
@@ -165,8 +179,8 @@ class GKNavBar extends _i11.PageRouteInfo<GKNavBarArgs> {
 
   static const String name = 'GKNavBar';
 
-  static const _i11.PageInfo<GKNavBarArgs> page =
-      _i11.PageInfo<GKNavBarArgs>(name);
+  static const _i12.PageInfo<GKNavBarArgs> page =
+      _i12.PageInfo<GKNavBarArgs>(name);
 }
 
 class GKNavBarArgs {
@@ -177,13 +191,13 @@ class GKNavBarArgs {
     this.floatingActionButton,
   });
 
-  final _i12.Key? key;
+  final _i13.Key? key;
 
-  final _i13.GKAppBar? appBar;
+  final _i14.GKAppBar? appBar;
 
-  final _i12.Widget? body;
+  final _i13.Widget? body;
 
-  final _i12.FloatingActionButton? floatingActionButton;
+  final _i13.FloatingActionButton? floatingActionButton;
 
   @override
   String toString() {
@@ -193,8 +207,8 @@ class GKNavBarArgs {
 
 /// generated route for
 /// [_i5.HomeScreen]
-class HomeRoute extends _i11.PageRouteInfo<void> {
-  const HomeRoute({List<_i11.PageRouteInfo>? children})
+class HomeRoute extends _i12.PageRouteInfo<void> {
+  const HomeRoute({List<_i12.PageRouteInfo>? children})
       : super(
           HomeRoute.name,
           initialChildren: children,
@@ -202,13 +216,51 @@ class HomeRoute extends _i11.PageRouteInfo<void> {
 
   static const String name = 'HomeRoute';
 
-  static const _i11.PageInfo<void> page = _i11.PageInfo<void>(name);
+  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i6.ProfileScreen]
-class ProfileRoute extends _i11.PageRouteInfo<void> {
-  const ProfileRoute({List<_i11.PageRouteInfo>? children})
+/// [_i6.MoreGamesScreen]
+class MoreGamesRoute extends _i12.PageRouteInfo<MoreGamesRouteArgs> {
+  MoreGamesRoute({
+    _i13.Key? key,
+    required _i15.GamesListModel gamesListModel,
+    List<_i12.PageRouteInfo>? children,
+  }) : super(
+          MoreGamesRoute.name,
+          args: MoreGamesRouteArgs(
+            key: key,
+            gamesListModel: gamesListModel,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'MoreGamesRoute';
+
+  static const _i12.PageInfo<MoreGamesRouteArgs> page =
+      _i12.PageInfo<MoreGamesRouteArgs>(name);
+}
+
+class MoreGamesRouteArgs {
+  const MoreGamesRouteArgs({
+    this.key,
+    required this.gamesListModel,
+  });
+
+  final _i13.Key? key;
+
+  final _i15.GamesListModel gamesListModel;
+
+  @override
+  String toString() {
+    return 'MoreGamesRouteArgs{key: $key, gamesListModel: $gamesListModel}';
+  }
+}
+
+/// generated route for
+/// [_i7.ProfileScreen]
+class ProfileRoute extends _i12.PageRouteInfo<void> {
+  const ProfileRoute({List<_i12.PageRouteInfo>? children})
       : super(
           ProfileRoute.name,
           initialChildren: children,
@@ -216,13 +268,13 @@ class ProfileRoute extends _i11.PageRouteInfo<void> {
 
   static const String name = 'ProfileRoute';
 
-  static const _i11.PageInfo<void> page = _i11.PageInfo<void>(name);
+  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i7.RegisterEmailScreen]
-class RegisterEmailRoute extends _i11.PageRouteInfo<void> {
-  const RegisterEmailRoute({List<_i11.PageRouteInfo>? children})
+/// [_i8.RegisterEmailScreen]
+class RegisterEmailRoute extends _i12.PageRouteInfo<void> {
+  const RegisterEmailRoute({List<_i12.PageRouteInfo>? children})
       : super(
           RegisterEmailRoute.name,
           initialChildren: children,
@@ -230,13 +282,13 @@ class RegisterEmailRoute extends _i11.PageRouteInfo<void> {
 
   static const String name = 'RegisterEmailRoute';
 
-  static const _i11.PageInfo<void> page = _i11.PageInfo<void>(name);
+  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i8.RestorePassScreen]
-class RestorePassRoute extends _i11.PageRouteInfo<void> {
-  const RestorePassRoute({List<_i11.PageRouteInfo>? children})
+/// [_i9.RestorePassScreen]
+class RestorePassRoute extends _i12.PageRouteInfo<void> {
+  const RestorePassRoute({List<_i12.PageRouteInfo>? children})
       : super(
           RestorePassRoute.name,
           initialChildren: children,
@@ -244,13 +296,13 @@ class RestorePassRoute extends _i11.PageRouteInfo<void> {
 
   static const String name = 'RestorePassRoute';
 
-  static const _i11.PageInfo<void> page = _i11.PageInfo<void>(name);
+  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i9.SplashScreen]
-class SplashRoute extends _i11.PageRouteInfo<void> {
-  const SplashRoute({List<_i11.PageRouteInfo>? children})
+/// [_i10.SplashScreen]
+class SplashRoute extends _i12.PageRouteInfo<void> {
+  const SplashRoute({List<_i12.PageRouteInfo>? children})
       : super(
           SplashRoute.name,
           initialChildren: children,
@@ -258,13 +310,13 @@ class SplashRoute extends _i11.PageRouteInfo<void> {
 
   static const String name = 'SplashRoute';
 
-  static const _i11.PageInfo<void> page = _i11.PageInfo<void>(name);
+  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i10.TestedScreen]
-class TestedRoute extends _i11.PageRouteInfo<void> {
-  const TestedRoute({List<_i11.PageRouteInfo>? children})
+/// [_i11.TestedScreen]
+class TestedRoute extends _i12.PageRouteInfo<void> {
+  const TestedRoute({List<_i12.PageRouteInfo>? children})
       : super(
           TestedRoute.name,
           initialChildren: children,
@@ -272,5 +324,5 @@ class TestedRoute extends _i11.PageRouteInfo<void> {
 
   static const String name = 'TestedRoute';
 
-  static const _i11.PageInfo<void> page = _i11.PageInfo<void>(name);
+  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
 }

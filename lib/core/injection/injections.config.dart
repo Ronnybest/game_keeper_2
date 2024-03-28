@@ -9,23 +9,24 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:game_keeper/core/constants/constants.dart' as _i7;
-import 'package:game_keeper/core/network/core_api.dart' as _i12;
-import 'package:game_keeper/core/network/core_config.dart' as _i11;
+import 'package:game_keeper/core/network/core_api.dart' as _i13;
+import 'package:game_keeper/core/network/core_config.dart' as _i12;
 import 'package:game_keeper/core/utils/clear_all_data.dart' as _i6;
 import 'package:game_keeper/core/utils/fast_cached_image.dart' as _i8;
 import 'package:game_keeper/core/utils/logger_init.dart' as _i3;
 import 'package:game_keeper/core/utils/shared_prefs.dart' as _i10;
+import 'package:game_keeper/core/utils/user_info_firestore.dart' as _i11;
 import 'package:game_keeper/modules/auth/logic/bloc/auth_bloc.dart' as _i4;
 import 'package:game_keeper/modules/auth/logic/utils/auth_google.dart' as _i5;
 import 'package:game_keeper/modules/auth/logic/utils/login_methods_list.dart'
     as _i9;
 import 'package:game_keeper/modules/home/logic/api/provider/home_provider.dart'
-    as _i13;
-import 'package:game_keeper/modules/home/logic/api/repository/home_repository.dart'
     as _i14;
-import 'package:game_keeper/modules/home/logic/api/repository/implementation/home_repository_impl.dart'
+import 'package:game_keeper/modules/home/logic/api/repository/home_repository.dart'
     as _i15;
-import 'package:game_keeper/modules/home/logic/bloc/home_bloc.dart' as _i16;
+import 'package:game_keeper/modules/home/logic/api/repository/implementation/home_repository_impl.dart'
+    as _i16;
+import 'package:game_keeper/modules/home/logic/bloc/home_bloc.dart' as _i17;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
@@ -59,19 +60,20 @@ extension GetItInjectableX on _i1.GetIt {
       () => appModule.baseNewsUrl,
       instanceName: 'baseNewsUrl',
     );
+    gh.lazySingleton<_i11.UserInfoFirestore>(() => _i11.UserInfoFirestore());
     gh.lazySingleton<_i7.Validators>(() => _i7.Validators());
-    gh.singleton<_i11.CoreConfig>(() => _i11.CoreConfig(
+    gh.singleton<_i12.CoreConfig>(() => _i12.CoreConfig(
           gh<String>(instanceName: 'baseRawgIoUrl'),
           gh<String>(instanceName: 'baseNewsUrl'),
         ));
-    gh.singleton<_i12.CoreApi>(() => _i12.CoreApi(gh<_i11.CoreConfig>()));
-    gh.lazySingleton<_i13.HomeProvider>(
-        () => _i13.HomeProvider(gh<_i12.CoreApi>()));
-    gh.lazySingleton<_i14.HomeRepository>(
-        () => _i15.HomeRepositoryImpl(gh<_i13.HomeProvider>()));
-    gh.factory<_i16.HomeBloc>(() => _i16.HomeBloc(gh<_i14.HomeRepository>()));
+    gh.singleton<_i13.CoreApi>(() => _i13.CoreApi(gh<_i12.CoreConfig>()));
+    gh.lazySingleton<_i14.HomeProvider>(
+        () => _i14.HomeProvider(gh<_i13.CoreApi>()));
+    gh.lazySingleton<_i15.HomeRepository>(
+        () => _i16.HomeRepositoryImpl(gh<_i14.HomeProvider>()));
+    gh.factory<_i17.HomeBloc>(() => _i17.HomeBloc(gh<_i15.HomeRepository>()));
     return this;
   }
 }
 
-class _$AppModule extends _i12.AppModule {}
+class _$AppModule extends _i13.AppModule {}
