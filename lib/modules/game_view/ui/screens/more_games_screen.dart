@@ -21,23 +21,17 @@ class _MoreGamesScreenState extends State<MoreGamesScreen> {
       appBar: GKAppBar(
         title: LocaleKeys.home_trend_games.tr(),
       ),
-      body: Placeholder()
-      // SingleChildScrollView(
-      //   physics: const AlwaysScrollableScrollPhysics(),
-      //   child: Column(
-      //     children: [
-      //       ListView.builder(
-      //         itemCount: 10,
-      //         itemBuilder: (context, index) {
-      //           return SizedBox(
-      //             height: 100,
-      //             width: 100,
-      //             child: Text(index.toString()));
-      //         },
-      //       ),
-      //     ],
-      //   ),
-      // ),
+      body: RefreshIndicator(
+        onRefresh: () {
+          return Future.value();
+        },
+        child: SingleChildScrollView(
+          physics: const AlwaysScrollableScrollPhysics(),
+          child: ListView.builder(
+            itemBuilder: (context, index) {},
+          ),
+        ),
+      ),
     );
   }
 }

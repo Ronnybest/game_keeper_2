@@ -107,13 +107,29 @@ class _HomeScreenState extends State<HomeScreen> {
                 BlocBuilder<HomeBloc, HomeState>(
                   builder: (context, state) {
                     return state.maybeWhen(
-                      orElse: () => GKShimmerGenerator(
-                        count: 5,
-                        padding: const EdgeInsets.only(
-                            left: 15, right: 15, top: 10),
-                        height: 200,
-                        width: 300.w,
-                        axisDirection: Axis.horizontal,
+                      orElse: () => Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(
+                              top: 15,
+                              left: 15,
+                              right: 15,
+                            ),
+                            child: ShimmerElement(
+                              width: double.infinity,
+                              height: 40,
+                              radius: BorderRadius.circular(12),
+                            ),
+                          ),
+                          GKShimmerGenerator(
+                            count: 5,
+                            padding: const EdgeInsets.only(
+                                left: 15, right: 15, top: 10),
+                            height: 200,
+                            width: 300.w,
+                            axisDirection: Axis.horizontal,
+                          ),
+                        ],
                       ),
                       loadedTrendingGames: (result) {
                         return Column(
@@ -125,7 +141,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 );
                               },
                               child: Padding(
-                                padding: const EdgeInsets.only(left: 15, right: 15, top: 15, bottom: 10),
+                                padding: const EdgeInsets.only(
+                                    left: 15, right: 15, top: 15, bottom: 10),
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
