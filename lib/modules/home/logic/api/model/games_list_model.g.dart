@@ -12,7 +12,7 @@ GamesListModel _$GamesListModelFromJson(Map<String, dynamic> json) =>
       next: json['next'] as String?,
       previous: json['previous'],
       results: (json['results'] as List<dynamic>?)
-          ?.map((e) => Result.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => GameResult.fromJson(e as Map<String, dynamic>))
           .toList(),
       seoTitle: json['seo_title'] as String?,
       seoDescription: json['seo_description'] as String?,
@@ -91,7 +91,7 @@ Map<String, dynamic> _$YearYearToJson(YearYear instance) => <String, dynamic>{
       'nofollow': instance.nofollow,
     };
 
-Result _$ResultFromJson(Map<String, dynamic> json) => Result(
+GameResult _$GameResultFromJson(Map<String, dynamic> json) => GameResult(
       id: json['id'] as int?,
       slug: json['slug'] as String?,
       name: json['name'] as String?,
@@ -146,7 +146,8 @@ Result _$ResultFromJson(Map<String, dynamic> json) => Result(
           .toList(),
     );
 
-Map<String, dynamic> _$ResultToJson(Result instance) => <String, dynamic>{
+Map<String, dynamic> _$GameResultToJson(GameResult instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'slug': instance.slug,
       'name': instance.name,

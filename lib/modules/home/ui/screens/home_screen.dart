@@ -137,7 +137,16 @@ class _HomeScreenState extends State<HomeScreen> {
                             GestureDetector(
                               onTap: () {
                                 context.router.push(
-                                  MoreGamesRoute(gamesListModel: result),
+                                  MoreGamesRoute(
+                                    gamesListModel: result,
+                                    eventProvider: (pageKey, pageSize) {
+                                      return HomeEvent
+                                          .fetchPaginationTrendingGames(
+                                        pageKey,
+                                        pageSize,
+                                      );
+                                    },
+                                  ),
                                 );
                               },
                               child: Padding(

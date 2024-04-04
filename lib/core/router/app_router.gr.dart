@@ -20,6 +20,7 @@ import 'package:game_keeper/modules/game_view/ui/screens/more_games_screen.dart'
     as _i6;
 import 'package:game_keeper/modules/home/logic/api/model/games_list_model.dart'
     as _i15;
+import 'package:game_keeper/modules/home/logic/bloc/home_bloc.dart' as _i16;
 import 'package:game_keeper/modules/home/ui/screens/home_screen.dart' as _i5;
 import 'package:game_keeper/modules/home/ui/screens/test_screen.dart' as _i11;
 import 'package:game_keeper/modules/profile/ui/screens/profile_screen.dart'
@@ -76,10 +77,12 @@ abstract class $AppRouter extends _i12.RootStackRouter {
       final args = routeData.argsAs<MoreGamesRouteArgs>();
       return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i6.MoreGamesScreen(
+        child: _i12.WrappedRoute(
+            child: _i6.MoreGamesScreen(
           key: args.key,
           gamesListModel: args.gamesListModel,
-        ),
+          eventProvider: args.eventProvider,
+        )),
       );
     },
     ProfileRoute.name: (routeData) {
@@ -225,12 +228,17 @@ class MoreGamesRoute extends _i12.PageRouteInfo<MoreGamesRouteArgs> {
   MoreGamesRoute({
     _i13.Key? key,
     required _i15.GamesListModel gamesListModel,
+    required _i16.HomeEvent Function(
+      int,
+      int,
+    ) eventProvider,
     List<_i12.PageRouteInfo>? children,
   }) : super(
           MoreGamesRoute.name,
           args: MoreGamesRouteArgs(
             key: key,
             gamesListModel: gamesListModel,
+            eventProvider: eventProvider,
           ),
           initialChildren: children,
         );
@@ -245,15 +253,21 @@ class MoreGamesRouteArgs {
   const MoreGamesRouteArgs({
     this.key,
     required this.gamesListModel,
+    required this.eventProvider,
   });
 
   final _i13.Key? key;
 
   final _i15.GamesListModel gamesListModel;
 
+  final _i16.HomeEvent Function(
+    int,
+    int,
+  ) eventProvider;
+
   @override
   String toString() {
-    return 'MoreGamesRouteArgs{key: $key, gamesListModel: $gamesListModel}';
+    return 'MoreGamesRouteArgs{key: $key, gamesListModel: $gamesListModel, eventProvider: $eventProvider}';
   }
 }
 

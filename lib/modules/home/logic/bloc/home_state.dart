@@ -14,7 +14,15 @@ class HomeState with _$HomeState {
   const factory HomeState.errorTrendingGames(dynamic error) =
       _ErrorTrendingGames;
 
-      const factory HomeState.loadingUpdateUserData() = _LoadingUpdateUserData;
+  const factory HomeState.loadingPaginationTrendingGames() =
+      _LoadingPaginationTrendingGames;
+  const factory HomeState.loadedPaginationTrendingGames(
+      GamesListModel newResult) = _LoadedPaginationTrendingGames;
+  const factory HomeState.errorPaginationTrendingGames(dynamic error) =
+      _ErrorPaginationTrendingGames;
+
+  const factory HomeState.loadingUpdateUserData() = _LoadingUpdateUserData;
   const factory HomeState.loadedUpdateUserData() = _LoadedUpdateUserData;
-  const factory HomeState.errorUpdateUserData(dynamic error) = _ErrorUpdateUserData;
+  const factory HomeState.errorUpdateUserData(dynamic error) =
+      _ErrorUpdateUserData;
 }

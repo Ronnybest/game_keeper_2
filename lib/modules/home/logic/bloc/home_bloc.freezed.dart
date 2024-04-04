@@ -25,6 +25,10 @@ mixin _$HomeState {
     required TResult Function() loadingTrendingGames,
     required TResult Function(GamesListModel result) loadedTrendingGames,
     required TResult Function(dynamic error) errorTrendingGames,
+    required TResult Function() loadingPaginationTrendingGames,
+    required TResult Function(GamesListModel newResult)
+        loadedPaginationTrendingGames,
+    required TResult Function(dynamic error) errorPaginationTrendingGames,
     required TResult Function() loadingUpdateUserData,
     required TResult Function() loadedUpdateUserData,
     required TResult Function(dynamic error) errorUpdateUserData,
@@ -39,6 +43,9 @@ mixin _$HomeState {
     TResult? Function()? loadingTrendingGames,
     TResult? Function(GamesListModel result)? loadedTrendingGames,
     TResult? Function(dynamic error)? errorTrendingGames,
+    TResult? Function()? loadingPaginationTrendingGames,
+    TResult? Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult? Function(dynamic error)? errorPaginationTrendingGames,
     TResult? Function()? loadingUpdateUserData,
     TResult? Function()? loadedUpdateUserData,
     TResult? Function(dynamic error)? errorUpdateUserData,
@@ -53,6 +60,9 @@ mixin _$HomeState {
     TResult Function()? loadingTrendingGames,
     TResult Function(GamesListModel result)? loadedTrendingGames,
     TResult Function(dynamic error)? errorTrendingGames,
+    TResult Function()? loadingPaginationTrendingGames,
+    TResult Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult Function(dynamic error)? errorPaginationTrendingGames,
     TResult Function()? loadingUpdateUserData,
     TResult Function()? loadedUpdateUserData,
     TResult Function(dynamic error)? errorUpdateUserData,
@@ -68,6 +78,12 @@ mixin _$HomeState {
     required TResult Function(_LoadingTrendingGames value) loadingTrendingGames,
     required TResult Function(_LoadedTrendingGames value) loadedTrendingGames,
     required TResult Function(_ErrorTrendingGames value) errorTrendingGames,
+    required TResult Function(_LoadingPaginationTrendingGames value)
+        loadingPaginationTrendingGames,
+    required TResult Function(_LoadedPaginationTrendingGames value)
+        loadedPaginationTrendingGames,
+    required TResult Function(_ErrorPaginationTrendingGames value)
+        errorPaginationTrendingGames,
     required TResult Function(_LoadingUpdateUserData value)
         loadingUpdateUserData,
     required TResult Function(_LoadedUpdateUserData value) loadedUpdateUserData,
@@ -83,6 +99,12 @@ mixin _$HomeState {
     TResult? Function(_LoadingTrendingGames value)? loadingTrendingGames,
     TResult? Function(_LoadedTrendingGames value)? loadedTrendingGames,
     TResult? Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult? Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult? Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult? Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
     TResult? Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
     TResult? Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
     TResult? Function(_ErrorUpdateUserData value)? errorUpdateUserData,
@@ -97,6 +119,12 @@ mixin _$HomeState {
     TResult Function(_LoadingTrendingGames value)? loadingTrendingGames,
     TResult Function(_LoadedTrendingGames value)? loadedTrendingGames,
     TResult Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
     TResult Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
     TResult Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
     TResult Function(_ErrorUpdateUserData value)? errorUpdateUserData,
@@ -167,6 +195,10 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loadingTrendingGames,
     required TResult Function(GamesListModel result) loadedTrendingGames,
     required TResult Function(dynamic error) errorTrendingGames,
+    required TResult Function() loadingPaginationTrendingGames,
+    required TResult Function(GamesListModel newResult)
+        loadedPaginationTrendingGames,
+    required TResult Function(dynamic error) errorPaginationTrendingGames,
     required TResult Function() loadingUpdateUserData,
     required TResult Function() loadedUpdateUserData,
     required TResult Function(dynamic error) errorUpdateUserData,
@@ -184,6 +216,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loadingTrendingGames,
     TResult? Function(GamesListModel result)? loadedTrendingGames,
     TResult? Function(dynamic error)? errorTrendingGames,
+    TResult? Function()? loadingPaginationTrendingGames,
+    TResult? Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult? Function(dynamic error)? errorPaginationTrendingGames,
     TResult? Function()? loadingUpdateUserData,
     TResult? Function()? loadedUpdateUserData,
     TResult? Function(dynamic error)? errorUpdateUserData,
@@ -201,6 +236,9 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loadingTrendingGames,
     TResult Function(GamesListModel result)? loadedTrendingGames,
     TResult Function(dynamic error)? errorTrendingGames,
+    TResult Function()? loadingPaginationTrendingGames,
+    TResult Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult Function(dynamic error)? errorPaginationTrendingGames,
     TResult Function()? loadingUpdateUserData,
     TResult Function()? loadedUpdateUserData,
     TResult Function(dynamic error)? errorUpdateUserData,
@@ -222,6 +260,12 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_LoadingTrendingGames value) loadingTrendingGames,
     required TResult Function(_LoadedTrendingGames value) loadedTrendingGames,
     required TResult Function(_ErrorTrendingGames value) errorTrendingGames,
+    required TResult Function(_LoadingPaginationTrendingGames value)
+        loadingPaginationTrendingGames,
+    required TResult Function(_LoadedPaginationTrendingGames value)
+        loadedPaginationTrendingGames,
+    required TResult Function(_ErrorPaginationTrendingGames value)
+        errorPaginationTrendingGames,
     required TResult Function(_LoadingUpdateUserData value)
         loadingUpdateUserData,
     required TResult Function(_LoadedUpdateUserData value) loadedUpdateUserData,
@@ -240,6 +284,12 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_LoadingTrendingGames value)? loadingTrendingGames,
     TResult? Function(_LoadedTrendingGames value)? loadedTrendingGames,
     TResult? Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult? Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult? Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult? Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
     TResult? Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
     TResult? Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
     TResult? Function(_ErrorUpdateUserData value)? errorUpdateUserData,
@@ -257,6 +307,12 @@ class _$InitialImpl implements _Initial {
     TResult Function(_LoadingTrendingGames value)? loadingTrendingGames,
     TResult Function(_LoadedTrendingGames value)? loadedTrendingGames,
     TResult Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
     TResult Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
     TResult Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
     TResult Function(_ErrorUpdateUserData value)? errorUpdateUserData,
@@ -318,6 +374,10 @@ class _$LoadingUserDataImpl implements _LoadingUserData {
     required TResult Function() loadingTrendingGames,
     required TResult Function(GamesListModel result) loadedTrendingGames,
     required TResult Function(dynamic error) errorTrendingGames,
+    required TResult Function() loadingPaginationTrendingGames,
+    required TResult Function(GamesListModel newResult)
+        loadedPaginationTrendingGames,
+    required TResult Function(dynamic error) errorPaginationTrendingGames,
     required TResult Function() loadingUpdateUserData,
     required TResult Function() loadedUpdateUserData,
     required TResult Function(dynamic error) errorUpdateUserData,
@@ -335,6 +395,9 @@ class _$LoadingUserDataImpl implements _LoadingUserData {
     TResult? Function()? loadingTrendingGames,
     TResult? Function(GamesListModel result)? loadedTrendingGames,
     TResult? Function(dynamic error)? errorTrendingGames,
+    TResult? Function()? loadingPaginationTrendingGames,
+    TResult? Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult? Function(dynamic error)? errorPaginationTrendingGames,
     TResult? Function()? loadingUpdateUserData,
     TResult? Function()? loadedUpdateUserData,
     TResult? Function(dynamic error)? errorUpdateUserData,
@@ -352,6 +415,9 @@ class _$LoadingUserDataImpl implements _LoadingUserData {
     TResult Function()? loadingTrendingGames,
     TResult Function(GamesListModel result)? loadedTrendingGames,
     TResult Function(dynamic error)? errorTrendingGames,
+    TResult Function()? loadingPaginationTrendingGames,
+    TResult Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult Function(dynamic error)? errorPaginationTrendingGames,
     TResult Function()? loadingUpdateUserData,
     TResult Function()? loadedUpdateUserData,
     TResult Function(dynamic error)? errorUpdateUserData,
@@ -373,6 +439,12 @@ class _$LoadingUserDataImpl implements _LoadingUserData {
     required TResult Function(_LoadingTrendingGames value) loadingTrendingGames,
     required TResult Function(_LoadedTrendingGames value) loadedTrendingGames,
     required TResult Function(_ErrorTrendingGames value) errorTrendingGames,
+    required TResult Function(_LoadingPaginationTrendingGames value)
+        loadingPaginationTrendingGames,
+    required TResult Function(_LoadedPaginationTrendingGames value)
+        loadedPaginationTrendingGames,
+    required TResult Function(_ErrorPaginationTrendingGames value)
+        errorPaginationTrendingGames,
     required TResult Function(_LoadingUpdateUserData value)
         loadingUpdateUserData,
     required TResult Function(_LoadedUpdateUserData value) loadedUpdateUserData,
@@ -391,6 +463,12 @@ class _$LoadingUserDataImpl implements _LoadingUserData {
     TResult? Function(_LoadingTrendingGames value)? loadingTrendingGames,
     TResult? Function(_LoadedTrendingGames value)? loadedTrendingGames,
     TResult? Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult? Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult? Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult? Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
     TResult? Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
     TResult? Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
     TResult? Function(_ErrorUpdateUserData value)? errorUpdateUserData,
@@ -408,6 +486,12 @@ class _$LoadingUserDataImpl implements _LoadingUserData {
     TResult Function(_LoadingTrendingGames value)? loadingTrendingGames,
     TResult Function(_LoadedTrendingGames value)? loadedTrendingGames,
     TResult Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
     TResult Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
     TResult Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
     TResult Function(_ErrorUpdateUserData value)? errorUpdateUserData,
@@ -496,6 +580,10 @@ class _$LoadedUserDataImpl implements _LoadedUserData {
     required TResult Function() loadingTrendingGames,
     required TResult Function(GamesListModel result) loadedTrendingGames,
     required TResult Function(dynamic error) errorTrendingGames,
+    required TResult Function() loadingPaginationTrendingGames,
+    required TResult Function(GamesListModel newResult)
+        loadedPaginationTrendingGames,
+    required TResult Function(dynamic error) errorPaginationTrendingGames,
     required TResult Function() loadingUpdateUserData,
     required TResult Function() loadedUpdateUserData,
     required TResult Function(dynamic error) errorUpdateUserData,
@@ -513,6 +601,9 @@ class _$LoadedUserDataImpl implements _LoadedUserData {
     TResult? Function()? loadingTrendingGames,
     TResult? Function(GamesListModel result)? loadedTrendingGames,
     TResult? Function(dynamic error)? errorTrendingGames,
+    TResult? Function()? loadingPaginationTrendingGames,
+    TResult? Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult? Function(dynamic error)? errorPaginationTrendingGames,
     TResult? Function()? loadingUpdateUserData,
     TResult? Function()? loadedUpdateUserData,
     TResult? Function(dynamic error)? errorUpdateUserData,
@@ -530,6 +621,9 @@ class _$LoadedUserDataImpl implements _LoadedUserData {
     TResult Function()? loadingTrendingGames,
     TResult Function(GamesListModel result)? loadedTrendingGames,
     TResult Function(dynamic error)? errorTrendingGames,
+    TResult Function()? loadingPaginationTrendingGames,
+    TResult Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult Function(dynamic error)? errorPaginationTrendingGames,
     TResult Function()? loadingUpdateUserData,
     TResult Function()? loadedUpdateUserData,
     TResult Function(dynamic error)? errorUpdateUserData,
@@ -551,6 +645,12 @@ class _$LoadedUserDataImpl implements _LoadedUserData {
     required TResult Function(_LoadingTrendingGames value) loadingTrendingGames,
     required TResult Function(_LoadedTrendingGames value) loadedTrendingGames,
     required TResult Function(_ErrorTrendingGames value) errorTrendingGames,
+    required TResult Function(_LoadingPaginationTrendingGames value)
+        loadingPaginationTrendingGames,
+    required TResult Function(_LoadedPaginationTrendingGames value)
+        loadedPaginationTrendingGames,
+    required TResult Function(_ErrorPaginationTrendingGames value)
+        errorPaginationTrendingGames,
     required TResult Function(_LoadingUpdateUserData value)
         loadingUpdateUserData,
     required TResult Function(_LoadedUpdateUserData value) loadedUpdateUserData,
@@ -569,6 +669,12 @@ class _$LoadedUserDataImpl implements _LoadedUserData {
     TResult? Function(_LoadingTrendingGames value)? loadingTrendingGames,
     TResult? Function(_LoadedTrendingGames value)? loadedTrendingGames,
     TResult? Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult? Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult? Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult? Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
     TResult? Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
     TResult? Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
     TResult? Function(_ErrorUpdateUserData value)? errorUpdateUserData,
@@ -586,6 +692,12 @@ class _$LoadedUserDataImpl implements _LoadedUserData {
     TResult Function(_LoadingTrendingGames value)? loadingTrendingGames,
     TResult Function(_LoadedTrendingGames value)? loadedTrendingGames,
     TResult Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
     TResult Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
     TResult Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
     TResult Function(_ErrorUpdateUserData value)? errorUpdateUserData,
@@ -680,6 +792,10 @@ class _$ErrorUserDataImpl implements _ErrorUserData {
     required TResult Function() loadingTrendingGames,
     required TResult Function(GamesListModel result) loadedTrendingGames,
     required TResult Function(dynamic error) errorTrendingGames,
+    required TResult Function() loadingPaginationTrendingGames,
+    required TResult Function(GamesListModel newResult)
+        loadedPaginationTrendingGames,
+    required TResult Function(dynamic error) errorPaginationTrendingGames,
     required TResult Function() loadingUpdateUserData,
     required TResult Function() loadedUpdateUserData,
     required TResult Function(dynamic error) errorUpdateUserData,
@@ -697,6 +813,9 @@ class _$ErrorUserDataImpl implements _ErrorUserData {
     TResult? Function()? loadingTrendingGames,
     TResult? Function(GamesListModel result)? loadedTrendingGames,
     TResult? Function(dynamic error)? errorTrendingGames,
+    TResult? Function()? loadingPaginationTrendingGames,
+    TResult? Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult? Function(dynamic error)? errorPaginationTrendingGames,
     TResult? Function()? loadingUpdateUserData,
     TResult? Function()? loadedUpdateUserData,
     TResult? Function(dynamic error)? errorUpdateUserData,
@@ -714,6 +833,9 @@ class _$ErrorUserDataImpl implements _ErrorUserData {
     TResult Function()? loadingTrendingGames,
     TResult Function(GamesListModel result)? loadedTrendingGames,
     TResult Function(dynamic error)? errorTrendingGames,
+    TResult Function()? loadingPaginationTrendingGames,
+    TResult Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult Function(dynamic error)? errorPaginationTrendingGames,
     TResult Function()? loadingUpdateUserData,
     TResult Function()? loadedUpdateUserData,
     TResult Function(dynamic error)? errorUpdateUserData,
@@ -735,6 +857,12 @@ class _$ErrorUserDataImpl implements _ErrorUserData {
     required TResult Function(_LoadingTrendingGames value) loadingTrendingGames,
     required TResult Function(_LoadedTrendingGames value) loadedTrendingGames,
     required TResult Function(_ErrorTrendingGames value) errorTrendingGames,
+    required TResult Function(_LoadingPaginationTrendingGames value)
+        loadingPaginationTrendingGames,
+    required TResult Function(_LoadedPaginationTrendingGames value)
+        loadedPaginationTrendingGames,
+    required TResult Function(_ErrorPaginationTrendingGames value)
+        errorPaginationTrendingGames,
     required TResult Function(_LoadingUpdateUserData value)
         loadingUpdateUserData,
     required TResult Function(_LoadedUpdateUserData value) loadedUpdateUserData,
@@ -753,6 +881,12 @@ class _$ErrorUserDataImpl implements _ErrorUserData {
     TResult? Function(_LoadingTrendingGames value)? loadingTrendingGames,
     TResult? Function(_LoadedTrendingGames value)? loadedTrendingGames,
     TResult? Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult? Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult? Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult? Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
     TResult? Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
     TResult? Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
     TResult? Function(_ErrorUpdateUserData value)? errorUpdateUserData,
@@ -770,6 +904,12 @@ class _$ErrorUserDataImpl implements _ErrorUserData {
     TResult Function(_LoadingTrendingGames value)? loadingTrendingGames,
     TResult Function(_LoadedTrendingGames value)? loadedTrendingGames,
     TResult Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
     TResult Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
     TResult Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
     TResult Function(_ErrorUpdateUserData value)? errorUpdateUserData,
@@ -837,6 +977,10 @@ class _$LoadingTrendingGamesImpl implements _LoadingTrendingGames {
     required TResult Function() loadingTrendingGames,
     required TResult Function(GamesListModel result) loadedTrendingGames,
     required TResult Function(dynamic error) errorTrendingGames,
+    required TResult Function() loadingPaginationTrendingGames,
+    required TResult Function(GamesListModel newResult)
+        loadedPaginationTrendingGames,
+    required TResult Function(dynamic error) errorPaginationTrendingGames,
     required TResult Function() loadingUpdateUserData,
     required TResult Function() loadedUpdateUserData,
     required TResult Function(dynamic error) errorUpdateUserData,
@@ -854,6 +998,9 @@ class _$LoadingTrendingGamesImpl implements _LoadingTrendingGames {
     TResult? Function()? loadingTrendingGames,
     TResult? Function(GamesListModel result)? loadedTrendingGames,
     TResult? Function(dynamic error)? errorTrendingGames,
+    TResult? Function()? loadingPaginationTrendingGames,
+    TResult? Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult? Function(dynamic error)? errorPaginationTrendingGames,
     TResult? Function()? loadingUpdateUserData,
     TResult? Function()? loadedUpdateUserData,
     TResult? Function(dynamic error)? errorUpdateUserData,
@@ -871,6 +1018,9 @@ class _$LoadingTrendingGamesImpl implements _LoadingTrendingGames {
     TResult Function()? loadingTrendingGames,
     TResult Function(GamesListModel result)? loadedTrendingGames,
     TResult Function(dynamic error)? errorTrendingGames,
+    TResult Function()? loadingPaginationTrendingGames,
+    TResult Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult Function(dynamic error)? errorPaginationTrendingGames,
     TResult Function()? loadingUpdateUserData,
     TResult Function()? loadedUpdateUserData,
     TResult Function(dynamic error)? errorUpdateUserData,
@@ -892,6 +1042,12 @@ class _$LoadingTrendingGamesImpl implements _LoadingTrendingGames {
     required TResult Function(_LoadingTrendingGames value) loadingTrendingGames,
     required TResult Function(_LoadedTrendingGames value) loadedTrendingGames,
     required TResult Function(_ErrorTrendingGames value) errorTrendingGames,
+    required TResult Function(_LoadingPaginationTrendingGames value)
+        loadingPaginationTrendingGames,
+    required TResult Function(_LoadedPaginationTrendingGames value)
+        loadedPaginationTrendingGames,
+    required TResult Function(_ErrorPaginationTrendingGames value)
+        errorPaginationTrendingGames,
     required TResult Function(_LoadingUpdateUserData value)
         loadingUpdateUserData,
     required TResult Function(_LoadedUpdateUserData value) loadedUpdateUserData,
@@ -910,6 +1066,12 @@ class _$LoadingTrendingGamesImpl implements _LoadingTrendingGames {
     TResult? Function(_LoadingTrendingGames value)? loadingTrendingGames,
     TResult? Function(_LoadedTrendingGames value)? loadedTrendingGames,
     TResult? Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult? Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult? Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult? Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
     TResult? Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
     TResult? Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
     TResult? Function(_ErrorUpdateUserData value)? errorUpdateUserData,
@@ -927,6 +1089,12 @@ class _$LoadingTrendingGamesImpl implements _LoadingTrendingGames {
     TResult Function(_LoadingTrendingGames value)? loadingTrendingGames,
     TResult Function(_LoadedTrendingGames value)? loadedTrendingGames,
     TResult Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
     TResult Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
     TResult Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
     TResult Function(_ErrorUpdateUserData value)? errorUpdateUserData,
@@ -1015,6 +1183,10 @@ class _$LoadedTrendingGamesImpl implements _LoadedTrendingGames {
     required TResult Function() loadingTrendingGames,
     required TResult Function(GamesListModel result) loadedTrendingGames,
     required TResult Function(dynamic error) errorTrendingGames,
+    required TResult Function() loadingPaginationTrendingGames,
+    required TResult Function(GamesListModel newResult)
+        loadedPaginationTrendingGames,
+    required TResult Function(dynamic error) errorPaginationTrendingGames,
     required TResult Function() loadingUpdateUserData,
     required TResult Function() loadedUpdateUserData,
     required TResult Function(dynamic error) errorUpdateUserData,
@@ -1032,6 +1204,9 @@ class _$LoadedTrendingGamesImpl implements _LoadedTrendingGames {
     TResult? Function()? loadingTrendingGames,
     TResult? Function(GamesListModel result)? loadedTrendingGames,
     TResult? Function(dynamic error)? errorTrendingGames,
+    TResult? Function()? loadingPaginationTrendingGames,
+    TResult? Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult? Function(dynamic error)? errorPaginationTrendingGames,
     TResult? Function()? loadingUpdateUserData,
     TResult? Function()? loadedUpdateUserData,
     TResult? Function(dynamic error)? errorUpdateUserData,
@@ -1049,6 +1224,9 @@ class _$LoadedTrendingGamesImpl implements _LoadedTrendingGames {
     TResult Function()? loadingTrendingGames,
     TResult Function(GamesListModel result)? loadedTrendingGames,
     TResult Function(dynamic error)? errorTrendingGames,
+    TResult Function()? loadingPaginationTrendingGames,
+    TResult Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult Function(dynamic error)? errorPaginationTrendingGames,
     TResult Function()? loadingUpdateUserData,
     TResult Function()? loadedUpdateUserData,
     TResult Function(dynamic error)? errorUpdateUserData,
@@ -1070,6 +1248,12 @@ class _$LoadedTrendingGamesImpl implements _LoadedTrendingGames {
     required TResult Function(_LoadingTrendingGames value) loadingTrendingGames,
     required TResult Function(_LoadedTrendingGames value) loadedTrendingGames,
     required TResult Function(_ErrorTrendingGames value) errorTrendingGames,
+    required TResult Function(_LoadingPaginationTrendingGames value)
+        loadingPaginationTrendingGames,
+    required TResult Function(_LoadedPaginationTrendingGames value)
+        loadedPaginationTrendingGames,
+    required TResult Function(_ErrorPaginationTrendingGames value)
+        errorPaginationTrendingGames,
     required TResult Function(_LoadingUpdateUserData value)
         loadingUpdateUserData,
     required TResult Function(_LoadedUpdateUserData value) loadedUpdateUserData,
@@ -1088,6 +1272,12 @@ class _$LoadedTrendingGamesImpl implements _LoadedTrendingGames {
     TResult? Function(_LoadingTrendingGames value)? loadingTrendingGames,
     TResult? Function(_LoadedTrendingGames value)? loadedTrendingGames,
     TResult? Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult? Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult? Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult? Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
     TResult? Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
     TResult? Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
     TResult? Function(_ErrorUpdateUserData value)? errorUpdateUserData,
@@ -1105,6 +1295,12 @@ class _$LoadedTrendingGamesImpl implements _LoadedTrendingGames {
     TResult Function(_LoadingTrendingGames value)? loadingTrendingGames,
     TResult Function(_LoadedTrendingGames value)? loadedTrendingGames,
     TResult Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
     TResult Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
     TResult Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
     TResult Function(_ErrorUpdateUserData value)? errorUpdateUserData,
@@ -1200,6 +1396,10 @@ class _$ErrorTrendingGamesImpl implements _ErrorTrendingGames {
     required TResult Function() loadingTrendingGames,
     required TResult Function(GamesListModel result) loadedTrendingGames,
     required TResult Function(dynamic error) errorTrendingGames,
+    required TResult Function() loadingPaginationTrendingGames,
+    required TResult Function(GamesListModel newResult)
+        loadedPaginationTrendingGames,
+    required TResult Function(dynamic error) errorPaginationTrendingGames,
     required TResult Function() loadingUpdateUserData,
     required TResult Function() loadedUpdateUserData,
     required TResult Function(dynamic error) errorUpdateUserData,
@@ -1217,6 +1417,9 @@ class _$ErrorTrendingGamesImpl implements _ErrorTrendingGames {
     TResult? Function()? loadingTrendingGames,
     TResult? Function(GamesListModel result)? loadedTrendingGames,
     TResult? Function(dynamic error)? errorTrendingGames,
+    TResult? Function()? loadingPaginationTrendingGames,
+    TResult? Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult? Function(dynamic error)? errorPaginationTrendingGames,
     TResult? Function()? loadingUpdateUserData,
     TResult? Function()? loadedUpdateUserData,
     TResult? Function(dynamic error)? errorUpdateUserData,
@@ -1234,6 +1437,9 @@ class _$ErrorTrendingGamesImpl implements _ErrorTrendingGames {
     TResult Function()? loadingTrendingGames,
     TResult Function(GamesListModel result)? loadedTrendingGames,
     TResult Function(dynamic error)? errorTrendingGames,
+    TResult Function()? loadingPaginationTrendingGames,
+    TResult Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult Function(dynamic error)? errorPaginationTrendingGames,
     TResult Function()? loadingUpdateUserData,
     TResult Function()? loadedUpdateUserData,
     TResult Function(dynamic error)? errorUpdateUserData,
@@ -1255,6 +1461,12 @@ class _$ErrorTrendingGamesImpl implements _ErrorTrendingGames {
     required TResult Function(_LoadingTrendingGames value) loadingTrendingGames,
     required TResult Function(_LoadedTrendingGames value) loadedTrendingGames,
     required TResult Function(_ErrorTrendingGames value) errorTrendingGames,
+    required TResult Function(_LoadingPaginationTrendingGames value)
+        loadingPaginationTrendingGames,
+    required TResult Function(_LoadedPaginationTrendingGames value)
+        loadedPaginationTrendingGames,
+    required TResult Function(_ErrorPaginationTrendingGames value)
+        errorPaginationTrendingGames,
     required TResult Function(_LoadingUpdateUserData value)
         loadingUpdateUserData,
     required TResult Function(_LoadedUpdateUserData value) loadedUpdateUserData,
@@ -1273,6 +1485,12 @@ class _$ErrorTrendingGamesImpl implements _ErrorTrendingGames {
     TResult? Function(_LoadingTrendingGames value)? loadingTrendingGames,
     TResult? Function(_LoadedTrendingGames value)? loadedTrendingGames,
     TResult? Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult? Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult? Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult? Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
     TResult? Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
     TResult? Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
     TResult? Function(_ErrorUpdateUserData value)? errorUpdateUserData,
@@ -1290,6 +1508,12 @@ class _$ErrorTrendingGamesImpl implements _ErrorTrendingGames {
     TResult Function(_LoadingTrendingGames value)? loadingTrendingGames,
     TResult Function(_LoadedTrendingGames value)? loadedTrendingGames,
     TResult Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
     TResult Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
     TResult Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
     TResult Function(_ErrorUpdateUserData value)? errorUpdateUserData,
@@ -1310,6 +1534,626 @@ abstract class _ErrorTrendingGames implements HomeState {
   @JsonKey(ignore: true)
   _$$ErrorTrendingGamesImplCopyWith<_$ErrorTrendingGamesImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LoadingPaginationTrendingGamesImplCopyWith<$Res> {
+  factory _$$LoadingPaginationTrendingGamesImplCopyWith(
+          _$LoadingPaginationTrendingGamesImpl value,
+          $Res Function(_$LoadingPaginationTrendingGamesImpl) then) =
+      __$$LoadingPaginationTrendingGamesImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$LoadingPaginationTrendingGamesImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$LoadingPaginationTrendingGamesImpl>
+    implements _$$LoadingPaginationTrendingGamesImplCopyWith<$Res> {
+  __$$LoadingPaginationTrendingGamesImplCopyWithImpl(
+      _$LoadingPaginationTrendingGamesImpl _value,
+      $Res Function(_$LoadingPaginationTrendingGamesImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$LoadingPaginationTrendingGamesImpl
+    implements _LoadingPaginationTrendingGames {
+  const _$LoadingPaginationTrendingGamesImpl();
+
+  @override
+  String toString() {
+    return 'HomeState.loadingPaginationTrendingGames()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoadingPaginationTrendingGamesImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingUserData,
+    required TResult Function(UserFirestore user) loadedUserData,
+    required TResult Function(dynamic error) errorUserData,
+    required TResult Function() loadingTrendingGames,
+    required TResult Function(GamesListModel result) loadedTrendingGames,
+    required TResult Function(dynamic error) errorTrendingGames,
+    required TResult Function() loadingPaginationTrendingGames,
+    required TResult Function(GamesListModel newResult)
+        loadedPaginationTrendingGames,
+    required TResult Function(dynamic error) errorPaginationTrendingGames,
+    required TResult Function() loadingUpdateUserData,
+    required TResult Function() loadedUpdateUserData,
+    required TResult Function(dynamic error) errorUpdateUserData,
+  }) {
+    return loadingPaginationTrendingGames();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingUserData,
+    TResult? Function(UserFirestore user)? loadedUserData,
+    TResult? Function(dynamic error)? errorUserData,
+    TResult? Function()? loadingTrendingGames,
+    TResult? Function(GamesListModel result)? loadedTrendingGames,
+    TResult? Function(dynamic error)? errorTrendingGames,
+    TResult? Function()? loadingPaginationTrendingGames,
+    TResult? Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult? Function(dynamic error)? errorPaginationTrendingGames,
+    TResult? Function()? loadingUpdateUserData,
+    TResult? Function()? loadedUpdateUserData,
+    TResult? Function(dynamic error)? errorUpdateUserData,
+  }) {
+    return loadingPaginationTrendingGames?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingUserData,
+    TResult Function(UserFirestore user)? loadedUserData,
+    TResult Function(dynamic error)? errorUserData,
+    TResult Function()? loadingTrendingGames,
+    TResult Function(GamesListModel result)? loadedTrendingGames,
+    TResult Function(dynamic error)? errorTrendingGames,
+    TResult Function()? loadingPaginationTrendingGames,
+    TResult Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult Function(dynamic error)? errorPaginationTrendingGames,
+    TResult Function()? loadingUpdateUserData,
+    TResult Function()? loadedUpdateUserData,
+    TResult Function(dynamic error)? errorUpdateUserData,
+    required TResult orElse(),
+  }) {
+    if (loadingPaginationTrendingGames != null) {
+      return loadingPaginationTrendingGames();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadingUserData value) loadingUserData,
+    required TResult Function(_LoadedUserData value) loadedUserData,
+    required TResult Function(_ErrorUserData value) errorUserData,
+    required TResult Function(_LoadingTrendingGames value) loadingTrendingGames,
+    required TResult Function(_LoadedTrendingGames value) loadedTrendingGames,
+    required TResult Function(_ErrorTrendingGames value) errorTrendingGames,
+    required TResult Function(_LoadingPaginationTrendingGames value)
+        loadingPaginationTrendingGames,
+    required TResult Function(_LoadedPaginationTrendingGames value)
+        loadedPaginationTrendingGames,
+    required TResult Function(_ErrorPaginationTrendingGames value)
+        errorPaginationTrendingGames,
+    required TResult Function(_LoadingUpdateUserData value)
+        loadingUpdateUserData,
+    required TResult Function(_LoadedUpdateUserData value) loadedUpdateUserData,
+    required TResult Function(_ErrorUpdateUserData value) errorUpdateUserData,
+  }) {
+    return loadingPaginationTrendingGames(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingUserData value)? loadingUserData,
+    TResult? Function(_LoadedUserData value)? loadedUserData,
+    TResult? Function(_ErrorUserData value)? errorUserData,
+    TResult? Function(_LoadingTrendingGames value)? loadingTrendingGames,
+    TResult? Function(_LoadedTrendingGames value)? loadedTrendingGames,
+    TResult? Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult? Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult? Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult? Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
+    TResult? Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
+    TResult? Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
+    TResult? Function(_ErrorUpdateUserData value)? errorUpdateUserData,
+  }) {
+    return loadingPaginationTrendingGames?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadingUserData value)? loadingUserData,
+    TResult Function(_LoadedUserData value)? loadedUserData,
+    TResult Function(_ErrorUserData value)? errorUserData,
+    TResult Function(_LoadingTrendingGames value)? loadingTrendingGames,
+    TResult Function(_LoadedTrendingGames value)? loadedTrendingGames,
+    TResult Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
+    TResult Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
+    TResult Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
+    TResult Function(_ErrorUpdateUserData value)? errorUpdateUserData,
+    required TResult orElse(),
+  }) {
+    if (loadingPaginationTrendingGames != null) {
+      return loadingPaginationTrendingGames(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadingPaginationTrendingGames implements HomeState {
+  const factory _LoadingPaginationTrendingGames() =
+      _$LoadingPaginationTrendingGamesImpl;
+}
+
+/// @nodoc
+abstract class _$$LoadedPaginationTrendingGamesImplCopyWith<$Res> {
+  factory _$$LoadedPaginationTrendingGamesImplCopyWith(
+          _$LoadedPaginationTrendingGamesImpl value,
+          $Res Function(_$LoadedPaginationTrendingGamesImpl) then) =
+      __$$LoadedPaginationTrendingGamesImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({GamesListModel newResult});
+}
+
+/// @nodoc
+class __$$LoadedPaginationTrendingGamesImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$LoadedPaginationTrendingGamesImpl>
+    implements _$$LoadedPaginationTrendingGamesImplCopyWith<$Res> {
+  __$$LoadedPaginationTrendingGamesImplCopyWithImpl(
+      _$LoadedPaginationTrendingGamesImpl _value,
+      $Res Function(_$LoadedPaginationTrendingGamesImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? newResult = null,
+  }) {
+    return _then(_$LoadedPaginationTrendingGamesImpl(
+      null == newResult
+          ? _value.newResult
+          : newResult // ignore: cast_nullable_to_non_nullable
+              as GamesListModel,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LoadedPaginationTrendingGamesImpl
+    implements _LoadedPaginationTrendingGames {
+  const _$LoadedPaginationTrendingGamesImpl(this.newResult);
+
+  @override
+  final GamesListModel newResult;
+
+  @override
+  String toString() {
+    return 'HomeState.loadedPaginationTrendingGames(newResult: $newResult)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoadedPaginationTrendingGamesImpl &&
+            (identical(other.newResult, newResult) ||
+                other.newResult == newResult));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, newResult);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LoadedPaginationTrendingGamesImplCopyWith<
+          _$LoadedPaginationTrendingGamesImpl>
+      get copyWith => __$$LoadedPaginationTrendingGamesImplCopyWithImpl<
+          _$LoadedPaginationTrendingGamesImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingUserData,
+    required TResult Function(UserFirestore user) loadedUserData,
+    required TResult Function(dynamic error) errorUserData,
+    required TResult Function() loadingTrendingGames,
+    required TResult Function(GamesListModel result) loadedTrendingGames,
+    required TResult Function(dynamic error) errorTrendingGames,
+    required TResult Function() loadingPaginationTrendingGames,
+    required TResult Function(GamesListModel newResult)
+        loadedPaginationTrendingGames,
+    required TResult Function(dynamic error) errorPaginationTrendingGames,
+    required TResult Function() loadingUpdateUserData,
+    required TResult Function() loadedUpdateUserData,
+    required TResult Function(dynamic error) errorUpdateUserData,
+  }) {
+    return loadedPaginationTrendingGames(newResult);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingUserData,
+    TResult? Function(UserFirestore user)? loadedUserData,
+    TResult? Function(dynamic error)? errorUserData,
+    TResult? Function()? loadingTrendingGames,
+    TResult? Function(GamesListModel result)? loadedTrendingGames,
+    TResult? Function(dynamic error)? errorTrendingGames,
+    TResult? Function()? loadingPaginationTrendingGames,
+    TResult? Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult? Function(dynamic error)? errorPaginationTrendingGames,
+    TResult? Function()? loadingUpdateUserData,
+    TResult? Function()? loadedUpdateUserData,
+    TResult? Function(dynamic error)? errorUpdateUserData,
+  }) {
+    return loadedPaginationTrendingGames?.call(newResult);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingUserData,
+    TResult Function(UserFirestore user)? loadedUserData,
+    TResult Function(dynamic error)? errorUserData,
+    TResult Function()? loadingTrendingGames,
+    TResult Function(GamesListModel result)? loadedTrendingGames,
+    TResult Function(dynamic error)? errorTrendingGames,
+    TResult Function()? loadingPaginationTrendingGames,
+    TResult Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult Function(dynamic error)? errorPaginationTrendingGames,
+    TResult Function()? loadingUpdateUserData,
+    TResult Function()? loadedUpdateUserData,
+    TResult Function(dynamic error)? errorUpdateUserData,
+    required TResult orElse(),
+  }) {
+    if (loadedPaginationTrendingGames != null) {
+      return loadedPaginationTrendingGames(newResult);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadingUserData value) loadingUserData,
+    required TResult Function(_LoadedUserData value) loadedUserData,
+    required TResult Function(_ErrorUserData value) errorUserData,
+    required TResult Function(_LoadingTrendingGames value) loadingTrendingGames,
+    required TResult Function(_LoadedTrendingGames value) loadedTrendingGames,
+    required TResult Function(_ErrorTrendingGames value) errorTrendingGames,
+    required TResult Function(_LoadingPaginationTrendingGames value)
+        loadingPaginationTrendingGames,
+    required TResult Function(_LoadedPaginationTrendingGames value)
+        loadedPaginationTrendingGames,
+    required TResult Function(_ErrorPaginationTrendingGames value)
+        errorPaginationTrendingGames,
+    required TResult Function(_LoadingUpdateUserData value)
+        loadingUpdateUserData,
+    required TResult Function(_LoadedUpdateUserData value) loadedUpdateUserData,
+    required TResult Function(_ErrorUpdateUserData value) errorUpdateUserData,
+  }) {
+    return loadedPaginationTrendingGames(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingUserData value)? loadingUserData,
+    TResult? Function(_LoadedUserData value)? loadedUserData,
+    TResult? Function(_ErrorUserData value)? errorUserData,
+    TResult? Function(_LoadingTrendingGames value)? loadingTrendingGames,
+    TResult? Function(_LoadedTrendingGames value)? loadedTrendingGames,
+    TResult? Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult? Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult? Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult? Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
+    TResult? Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
+    TResult? Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
+    TResult? Function(_ErrorUpdateUserData value)? errorUpdateUserData,
+  }) {
+    return loadedPaginationTrendingGames?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadingUserData value)? loadingUserData,
+    TResult Function(_LoadedUserData value)? loadedUserData,
+    TResult Function(_ErrorUserData value)? errorUserData,
+    TResult Function(_LoadingTrendingGames value)? loadingTrendingGames,
+    TResult Function(_LoadedTrendingGames value)? loadedTrendingGames,
+    TResult Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
+    TResult Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
+    TResult Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
+    TResult Function(_ErrorUpdateUserData value)? errorUpdateUserData,
+    required TResult orElse(),
+  }) {
+    if (loadedPaginationTrendingGames != null) {
+      return loadedPaginationTrendingGames(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadedPaginationTrendingGames implements HomeState {
+  const factory _LoadedPaginationTrendingGames(final GamesListModel newResult) =
+      _$LoadedPaginationTrendingGamesImpl;
+
+  GamesListModel get newResult;
+  @JsonKey(ignore: true)
+  _$$LoadedPaginationTrendingGamesImplCopyWith<
+          _$LoadedPaginationTrendingGamesImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ErrorPaginationTrendingGamesImplCopyWith<$Res> {
+  factory _$$ErrorPaginationTrendingGamesImplCopyWith(
+          _$ErrorPaginationTrendingGamesImpl value,
+          $Res Function(_$ErrorPaginationTrendingGamesImpl) then) =
+      __$$ErrorPaginationTrendingGamesImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({dynamic error});
+}
+
+/// @nodoc
+class __$$ErrorPaginationTrendingGamesImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$ErrorPaginationTrendingGamesImpl>
+    implements _$$ErrorPaginationTrendingGamesImplCopyWith<$Res> {
+  __$$ErrorPaginationTrendingGamesImplCopyWithImpl(
+      _$ErrorPaginationTrendingGamesImpl _value,
+      $Res Function(_$ErrorPaginationTrendingGamesImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = freezed,
+  }) {
+    return _then(_$ErrorPaginationTrendingGamesImpl(
+      freezed == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ErrorPaginationTrendingGamesImpl
+    implements _ErrorPaginationTrendingGames {
+  const _$ErrorPaginationTrendingGamesImpl(this.error);
+
+  @override
+  final dynamic error;
+
+  @override
+  String toString() {
+    return 'HomeState.errorPaginationTrendingGames(error: $error)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ErrorPaginationTrendingGamesImpl &&
+            const DeepCollectionEquality().equals(other.error, error));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(error));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ErrorPaginationTrendingGamesImplCopyWith<
+          _$ErrorPaginationTrendingGamesImpl>
+      get copyWith => __$$ErrorPaginationTrendingGamesImplCopyWithImpl<
+          _$ErrorPaginationTrendingGamesImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingUserData,
+    required TResult Function(UserFirestore user) loadedUserData,
+    required TResult Function(dynamic error) errorUserData,
+    required TResult Function() loadingTrendingGames,
+    required TResult Function(GamesListModel result) loadedTrendingGames,
+    required TResult Function(dynamic error) errorTrendingGames,
+    required TResult Function() loadingPaginationTrendingGames,
+    required TResult Function(GamesListModel newResult)
+        loadedPaginationTrendingGames,
+    required TResult Function(dynamic error) errorPaginationTrendingGames,
+    required TResult Function() loadingUpdateUserData,
+    required TResult Function() loadedUpdateUserData,
+    required TResult Function(dynamic error) errorUpdateUserData,
+  }) {
+    return errorPaginationTrendingGames(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingUserData,
+    TResult? Function(UserFirestore user)? loadedUserData,
+    TResult? Function(dynamic error)? errorUserData,
+    TResult? Function()? loadingTrendingGames,
+    TResult? Function(GamesListModel result)? loadedTrendingGames,
+    TResult? Function(dynamic error)? errorTrendingGames,
+    TResult? Function()? loadingPaginationTrendingGames,
+    TResult? Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult? Function(dynamic error)? errorPaginationTrendingGames,
+    TResult? Function()? loadingUpdateUserData,
+    TResult? Function()? loadedUpdateUserData,
+    TResult? Function(dynamic error)? errorUpdateUserData,
+  }) {
+    return errorPaginationTrendingGames?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingUserData,
+    TResult Function(UserFirestore user)? loadedUserData,
+    TResult Function(dynamic error)? errorUserData,
+    TResult Function()? loadingTrendingGames,
+    TResult Function(GamesListModel result)? loadedTrendingGames,
+    TResult Function(dynamic error)? errorTrendingGames,
+    TResult Function()? loadingPaginationTrendingGames,
+    TResult Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult Function(dynamic error)? errorPaginationTrendingGames,
+    TResult Function()? loadingUpdateUserData,
+    TResult Function()? loadedUpdateUserData,
+    TResult Function(dynamic error)? errorUpdateUserData,
+    required TResult orElse(),
+  }) {
+    if (errorPaginationTrendingGames != null) {
+      return errorPaginationTrendingGames(error);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadingUserData value) loadingUserData,
+    required TResult Function(_LoadedUserData value) loadedUserData,
+    required TResult Function(_ErrorUserData value) errorUserData,
+    required TResult Function(_LoadingTrendingGames value) loadingTrendingGames,
+    required TResult Function(_LoadedTrendingGames value) loadedTrendingGames,
+    required TResult Function(_ErrorTrendingGames value) errorTrendingGames,
+    required TResult Function(_LoadingPaginationTrendingGames value)
+        loadingPaginationTrendingGames,
+    required TResult Function(_LoadedPaginationTrendingGames value)
+        loadedPaginationTrendingGames,
+    required TResult Function(_ErrorPaginationTrendingGames value)
+        errorPaginationTrendingGames,
+    required TResult Function(_LoadingUpdateUserData value)
+        loadingUpdateUserData,
+    required TResult Function(_LoadedUpdateUserData value) loadedUpdateUserData,
+    required TResult Function(_ErrorUpdateUserData value) errorUpdateUserData,
+  }) {
+    return errorPaginationTrendingGames(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingUserData value)? loadingUserData,
+    TResult? Function(_LoadedUserData value)? loadedUserData,
+    TResult? Function(_ErrorUserData value)? errorUserData,
+    TResult? Function(_LoadingTrendingGames value)? loadingTrendingGames,
+    TResult? Function(_LoadedTrendingGames value)? loadedTrendingGames,
+    TResult? Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult? Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult? Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult? Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
+    TResult? Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
+    TResult? Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
+    TResult? Function(_ErrorUpdateUserData value)? errorUpdateUserData,
+  }) {
+    return errorPaginationTrendingGames?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadingUserData value)? loadingUserData,
+    TResult Function(_LoadedUserData value)? loadedUserData,
+    TResult Function(_ErrorUserData value)? errorUserData,
+    TResult Function(_LoadingTrendingGames value)? loadingTrendingGames,
+    TResult Function(_LoadedTrendingGames value)? loadedTrendingGames,
+    TResult Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
+    TResult Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
+    TResult Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
+    TResult Function(_ErrorUpdateUserData value)? errorUpdateUserData,
+    required TResult orElse(),
+  }) {
+    if (errorPaginationTrendingGames != null) {
+      return errorPaginationTrendingGames(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ErrorPaginationTrendingGames implements HomeState {
+  const factory _ErrorPaginationTrendingGames(final dynamic error) =
+      _$ErrorPaginationTrendingGamesImpl;
+
+  dynamic get error;
+  @JsonKey(ignore: true)
+  _$$ErrorPaginationTrendingGamesImplCopyWith<
+          _$ErrorPaginationTrendingGamesImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1359,6 +2203,10 @@ class _$LoadingUpdateUserDataImpl implements _LoadingUpdateUserData {
     required TResult Function() loadingTrendingGames,
     required TResult Function(GamesListModel result) loadedTrendingGames,
     required TResult Function(dynamic error) errorTrendingGames,
+    required TResult Function() loadingPaginationTrendingGames,
+    required TResult Function(GamesListModel newResult)
+        loadedPaginationTrendingGames,
+    required TResult Function(dynamic error) errorPaginationTrendingGames,
     required TResult Function() loadingUpdateUserData,
     required TResult Function() loadedUpdateUserData,
     required TResult Function(dynamic error) errorUpdateUserData,
@@ -1376,6 +2224,9 @@ class _$LoadingUpdateUserDataImpl implements _LoadingUpdateUserData {
     TResult? Function()? loadingTrendingGames,
     TResult? Function(GamesListModel result)? loadedTrendingGames,
     TResult? Function(dynamic error)? errorTrendingGames,
+    TResult? Function()? loadingPaginationTrendingGames,
+    TResult? Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult? Function(dynamic error)? errorPaginationTrendingGames,
     TResult? Function()? loadingUpdateUserData,
     TResult? Function()? loadedUpdateUserData,
     TResult? Function(dynamic error)? errorUpdateUserData,
@@ -1393,6 +2244,9 @@ class _$LoadingUpdateUserDataImpl implements _LoadingUpdateUserData {
     TResult Function()? loadingTrendingGames,
     TResult Function(GamesListModel result)? loadedTrendingGames,
     TResult Function(dynamic error)? errorTrendingGames,
+    TResult Function()? loadingPaginationTrendingGames,
+    TResult Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult Function(dynamic error)? errorPaginationTrendingGames,
     TResult Function()? loadingUpdateUserData,
     TResult Function()? loadedUpdateUserData,
     TResult Function(dynamic error)? errorUpdateUserData,
@@ -1414,6 +2268,12 @@ class _$LoadingUpdateUserDataImpl implements _LoadingUpdateUserData {
     required TResult Function(_LoadingTrendingGames value) loadingTrendingGames,
     required TResult Function(_LoadedTrendingGames value) loadedTrendingGames,
     required TResult Function(_ErrorTrendingGames value) errorTrendingGames,
+    required TResult Function(_LoadingPaginationTrendingGames value)
+        loadingPaginationTrendingGames,
+    required TResult Function(_LoadedPaginationTrendingGames value)
+        loadedPaginationTrendingGames,
+    required TResult Function(_ErrorPaginationTrendingGames value)
+        errorPaginationTrendingGames,
     required TResult Function(_LoadingUpdateUserData value)
         loadingUpdateUserData,
     required TResult Function(_LoadedUpdateUserData value) loadedUpdateUserData,
@@ -1432,6 +2292,12 @@ class _$LoadingUpdateUserDataImpl implements _LoadingUpdateUserData {
     TResult? Function(_LoadingTrendingGames value)? loadingTrendingGames,
     TResult? Function(_LoadedTrendingGames value)? loadedTrendingGames,
     TResult? Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult? Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult? Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult? Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
     TResult? Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
     TResult? Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
     TResult? Function(_ErrorUpdateUserData value)? errorUpdateUserData,
@@ -1449,6 +2315,12 @@ class _$LoadingUpdateUserDataImpl implements _LoadingUpdateUserData {
     TResult Function(_LoadingTrendingGames value)? loadingTrendingGames,
     TResult Function(_LoadedTrendingGames value)? loadedTrendingGames,
     TResult Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
     TResult Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
     TResult Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
     TResult Function(_ErrorUpdateUserData value)? errorUpdateUserData,
@@ -1511,6 +2383,10 @@ class _$LoadedUpdateUserDataImpl implements _LoadedUpdateUserData {
     required TResult Function() loadingTrendingGames,
     required TResult Function(GamesListModel result) loadedTrendingGames,
     required TResult Function(dynamic error) errorTrendingGames,
+    required TResult Function() loadingPaginationTrendingGames,
+    required TResult Function(GamesListModel newResult)
+        loadedPaginationTrendingGames,
+    required TResult Function(dynamic error) errorPaginationTrendingGames,
     required TResult Function() loadingUpdateUserData,
     required TResult Function() loadedUpdateUserData,
     required TResult Function(dynamic error) errorUpdateUserData,
@@ -1528,6 +2404,9 @@ class _$LoadedUpdateUserDataImpl implements _LoadedUpdateUserData {
     TResult? Function()? loadingTrendingGames,
     TResult? Function(GamesListModel result)? loadedTrendingGames,
     TResult? Function(dynamic error)? errorTrendingGames,
+    TResult? Function()? loadingPaginationTrendingGames,
+    TResult? Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult? Function(dynamic error)? errorPaginationTrendingGames,
     TResult? Function()? loadingUpdateUserData,
     TResult? Function()? loadedUpdateUserData,
     TResult? Function(dynamic error)? errorUpdateUserData,
@@ -1545,6 +2424,9 @@ class _$LoadedUpdateUserDataImpl implements _LoadedUpdateUserData {
     TResult Function()? loadingTrendingGames,
     TResult Function(GamesListModel result)? loadedTrendingGames,
     TResult Function(dynamic error)? errorTrendingGames,
+    TResult Function()? loadingPaginationTrendingGames,
+    TResult Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult Function(dynamic error)? errorPaginationTrendingGames,
     TResult Function()? loadingUpdateUserData,
     TResult Function()? loadedUpdateUserData,
     TResult Function(dynamic error)? errorUpdateUserData,
@@ -1566,6 +2448,12 @@ class _$LoadedUpdateUserDataImpl implements _LoadedUpdateUserData {
     required TResult Function(_LoadingTrendingGames value) loadingTrendingGames,
     required TResult Function(_LoadedTrendingGames value) loadedTrendingGames,
     required TResult Function(_ErrorTrendingGames value) errorTrendingGames,
+    required TResult Function(_LoadingPaginationTrendingGames value)
+        loadingPaginationTrendingGames,
+    required TResult Function(_LoadedPaginationTrendingGames value)
+        loadedPaginationTrendingGames,
+    required TResult Function(_ErrorPaginationTrendingGames value)
+        errorPaginationTrendingGames,
     required TResult Function(_LoadingUpdateUserData value)
         loadingUpdateUserData,
     required TResult Function(_LoadedUpdateUserData value) loadedUpdateUserData,
@@ -1584,6 +2472,12 @@ class _$LoadedUpdateUserDataImpl implements _LoadedUpdateUserData {
     TResult? Function(_LoadingTrendingGames value)? loadingTrendingGames,
     TResult? Function(_LoadedTrendingGames value)? loadedTrendingGames,
     TResult? Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult? Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult? Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult? Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
     TResult? Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
     TResult? Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
     TResult? Function(_ErrorUpdateUserData value)? errorUpdateUserData,
@@ -1601,6 +2495,12 @@ class _$LoadedUpdateUserDataImpl implements _LoadedUpdateUserData {
     TResult Function(_LoadingTrendingGames value)? loadingTrendingGames,
     TResult Function(_LoadedTrendingGames value)? loadedTrendingGames,
     TResult Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
     TResult Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
     TResult Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
     TResult Function(_ErrorUpdateUserData value)? errorUpdateUserData,
@@ -1690,6 +2590,10 @@ class _$ErrorUpdateUserDataImpl implements _ErrorUpdateUserData {
     required TResult Function() loadingTrendingGames,
     required TResult Function(GamesListModel result) loadedTrendingGames,
     required TResult Function(dynamic error) errorTrendingGames,
+    required TResult Function() loadingPaginationTrendingGames,
+    required TResult Function(GamesListModel newResult)
+        loadedPaginationTrendingGames,
+    required TResult Function(dynamic error) errorPaginationTrendingGames,
     required TResult Function() loadingUpdateUserData,
     required TResult Function() loadedUpdateUserData,
     required TResult Function(dynamic error) errorUpdateUserData,
@@ -1707,6 +2611,9 @@ class _$ErrorUpdateUserDataImpl implements _ErrorUpdateUserData {
     TResult? Function()? loadingTrendingGames,
     TResult? Function(GamesListModel result)? loadedTrendingGames,
     TResult? Function(dynamic error)? errorTrendingGames,
+    TResult? Function()? loadingPaginationTrendingGames,
+    TResult? Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult? Function(dynamic error)? errorPaginationTrendingGames,
     TResult? Function()? loadingUpdateUserData,
     TResult? Function()? loadedUpdateUserData,
     TResult? Function(dynamic error)? errorUpdateUserData,
@@ -1724,6 +2631,9 @@ class _$ErrorUpdateUserDataImpl implements _ErrorUpdateUserData {
     TResult Function()? loadingTrendingGames,
     TResult Function(GamesListModel result)? loadedTrendingGames,
     TResult Function(dynamic error)? errorTrendingGames,
+    TResult Function()? loadingPaginationTrendingGames,
+    TResult Function(GamesListModel newResult)? loadedPaginationTrendingGames,
+    TResult Function(dynamic error)? errorPaginationTrendingGames,
     TResult Function()? loadingUpdateUserData,
     TResult Function()? loadedUpdateUserData,
     TResult Function(dynamic error)? errorUpdateUserData,
@@ -1745,6 +2655,12 @@ class _$ErrorUpdateUserDataImpl implements _ErrorUpdateUserData {
     required TResult Function(_LoadingTrendingGames value) loadingTrendingGames,
     required TResult Function(_LoadedTrendingGames value) loadedTrendingGames,
     required TResult Function(_ErrorTrendingGames value) errorTrendingGames,
+    required TResult Function(_LoadingPaginationTrendingGames value)
+        loadingPaginationTrendingGames,
+    required TResult Function(_LoadedPaginationTrendingGames value)
+        loadedPaginationTrendingGames,
+    required TResult Function(_ErrorPaginationTrendingGames value)
+        errorPaginationTrendingGames,
     required TResult Function(_LoadingUpdateUserData value)
         loadingUpdateUserData,
     required TResult Function(_LoadedUpdateUserData value) loadedUpdateUserData,
@@ -1763,6 +2679,12 @@ class _$ErrorUpdateUserDataImpl implements _ErrorUpdateUserData {
     TResult? Function(_LoadingTrendingGames value)? loadingTrendingGames,
     TResult? Function(_LoadedTrendingGames value)? loadedTrendingGames,
     TResult? Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult? Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult? Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult? Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
     TResult? Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
     TResult? Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
     TResult? Function(_ErrorUpdateUserData value)? errorUpdateUserData,
@@ -1780,6 +2702,12 @@ class _$ErrorUpdateUserDataImpl implements _ErrorUpdateUserData {
     TResult Function(_LoadingTrendingGames value)? loadingTrendingGames,
     TResult Function(_LoadedTrendingGames value)? loadedTrendingGames,
     TResult Function(_ErrorTrendingGames value)? errorTrendingGames,
+    TResult Function(_LoadingPaginationTrendingGames value)?
+        loadingPaginationTrendingGames,
+    TResult Function(_LoadedPaginationTrendingGames value)?
+        loadedPaginationTrendingGames,
+    TResult Function(_ErrorPaginationTrendingGames value)?
+        errorPaginationTrendingGames,
     TResult Function(_LoadingUpdateUserData value)? loadingUpdateUserData,
     TResult Function(_LoadedUpdateUserData value)? loadedUpdateUserData,
     TResult Function(_ErrorUpdateUserData value)? errorUpdateUserData,
@@ -1808,6 +2736,8 @@ mixin _$HomeEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() fetchUserData,
     required TResult Function(int? page, int? pageSize) fetchTrendingGames,
+    required TResult Function(int? page, int? pageSize)
+        fetchPaginationTrendingGames,
     required TResult Function(UserFirestore user) updateUserData,
   }) =>
       throw _privateConstructorUsedError;
@@ -1815,6 +2745,7 @@ mixin _$HomeEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchUserData,
     TResult? Function(int? page, int? pageSize)? fetchTrendingGames,
+    TResult? Function(int? page, int? pageSize)? fetchPaginationTrendingGames,
     TResult? Function(UserFirestore user)? updateUserData,
   }) =>
       throw _privateConstructorUsedError;
@@ -1822,6 +2753,7 @@ mixin _$HomeEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchUserData,
     TResult Function(int? page, int? pageSize)? fetchTrendingGames,
+    TResult Function(int? page, int? pageSize)? fetchPaginationTrendingGames,
     TResult Function(UserFirestore user)? updateUserData,
     required TResult orElse(),
   }) =>
@@ -1830,6 +2762,8 @@ mixin _$HomeEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchUserData value) fetchUserData,
     required TResult Function(_FetchTrendingGames value) fetchTrendingGames,
+    required TResult Function(_FetchPaginationTrendingGames value)
+        fetchPaginationTrendingGames,
     required TResult Function(_UpdateUserData value) updateUserData,
   }) =>
       throw _privateConstructorUsedError;
@@ -1837,6 +2771,8 @@ mixin _$HomeEvent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FetchUserData value)? fetchUserData,
     TResult? Function(_FetchTrendingGames value)? fetchTrendingGames,
+    TResult? Function(_FetchPaginationTrendingGames value)?
+        fetchPaginationTrendingGames,
     TResult? Function(_UpdateUserData value)? updateUserData,
   }) =>
       throw _privateConstructorUsedError;
@@ -1844,6 +2780,8 @@ mixin _$HomeEvent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchUserData value)? fetchUserData,
     TResult Function(_FetchTrendingGames value)? fetchTrendingGames,
+    TResult Function(_FetchPaginationTrendingGames value)?
+        fetchPaginationTrendingGames,
     TResult Function(_UpdateUserData value)? updateUserData,
     required TResult orElse(),
   }) =>
@@ -1907,6 +2845,8 @@ class _$FetchUserDataImpl implements _FetchUserData {
   TResult when<TResult extends Object?>({
     required TResult Function() fetchUserData,
     required TResult Function(int? page, int? pageSize) fetchTrendingGames,
+    required TResult Function(int? page, int? pageSize)
+        fetchPaginationTrendingGames,
     required TResult Function(UserFirestore user) updateUserData,
   }) {
     return fetchUserData();
@@ -1917,6 +2857,7 @@ class _$FetchUserDataImpl implements _FetchUserData {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchUserData,
     TResult? Function(int? page, int? pageSize)? fetchTrendingGames,
+    TResult? Function(int? page, int? pageSize)? fetchPaginationTrendingGames,
     TResult? Function(UserFirestore user)? updateUserData,
   }) {
     return fetchUserData?.call();
@@ -1927,6 +2868,7 @@ class _$FetchUserDataImpl implements _FetchUserData {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchUserData,
     TResult Function(int? page, int? pageSize)? fetchTrendingGames,
+    TResult Function(int? page, int? pageSize)? fetchPaginationTrendingGames,
     TResult Function(UserFirestore user)? updateUserData,
     required TResult orElse(),
   }) {
@@ -1941,6 +2883,8 @@ class _$FetchUserDataImpl implements _FetchUserData {
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchUserData value) fetchUserData,
     required TResult Function(_FetchTrendingGames value) fetchTrendingGames,
+    required TResult Function(_FetchPaginationTrendingGames value)
+        fetchPaginationTrendingGames,
     required TResult Function(_UpdateUserData value) updateUserData,
   }) {
     return fetchUserData(this);
@@ -1951,6 +2895,8 @@ class _$FetchUserDataImpl implements _FetchUserData {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FetchUserData value)? fetchUserData,
     TResult? Function(_FetchTrendingGames value)? fetchTrendingGames,
+    TResult? Function(_FetchPaginationTrendingGames value)?
+        fetchPaginationTrendingGames,
     TResult? Function(_UpdateUserData value)? updateUserData,
   }) {
     return fetchUserData?.call(this);
@@ -1961,6 +2907,8 @@ class _$FetchUserDataImpl implements _FetchUserData {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchUserData value)? fetchUserData,
     TResult Function(_FetchTrendingGames value)? fetchTrendingGames,
+    TResult Function(_FetchPaginationTrendingGames value)?
+        fetchPaginationTrendingGames,
     TResult Function(_UpdateUserData value)? updateUserData,
     required TResult orElse(),
   }) {
@@ -2051,6 +2999,8 @@ class _$FetchTrendingGamesImpl implements _FetchTrendingGames {
   TResult when<TResult extends Object?>({
     required TResult Function() fetchUserData,
     required TResult Function(int? page, int? pageSize) fetchTrendingGames,
+    required TResult Function(int? page, int? pageSize)
+        fetchPaginationTrendingGames,
     required TResult Function(UserFirestore user) updateUserData,
   }) {
     return fetchTrendingGames(page, pageSize);
@@ -2061,6 +3011,7 @@ class _$FetchTrendingGamesImpl implements _FetchTrendingGames {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchUserData,
     TResult? Function(int? page, int? pageSize)? fetchTrendingGames,
+    TResult? Function(int? page, int? pageSize)? fetchPaginationTrendingGames,
     TResult? Function(UserFirestore user)? updateUserData,
   }) {
     return fetchTrendingGames?.call(page, pageSize);
@@ -2071,6 +3022,7 @@ class _$FetchTrendingGamesImpl implements _FetchTrendingGames {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchUserData,
     TResult Function(int? page, int? pageSize)? fetchTrendingGames,
+    TResult Function(int? page, int? pageSize)? fetchPaginationTrendingGames,
     TResult Function(UserFirestore user)? updateUserData,
     required TResult orElse(),
   }) {
@@ -2085,6 +3037,8 @@ class _$FetchTrendingGamesImpl implements _FetchTrendingGames {
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchUserData value) fetchUserData,
     required TResult Function(_FetchTrendingGames value) fetchTrendingGames,
+    required TResult Function(_FetchPaginationTrendingGames value)
+        fetchPaginationTrendingGames,
     required TResult Function(_UpdateUserData value) updateUserData,
   }) {
     return fetchTrendingGames(this);
@@ -2095,6 +3049,8 @@ class _$FetchTrendingGamesImpl implements _FetchTrendingGames {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FetchUserData value)? fetchUserData,
     TResult? Function(_FetchTrendingGames value)? fetchTrendingGames,
+    TResult? Function(_FetchPaginationTrendingGames value)?
+        fetchPaginationTrendingGames,
     TResult? Function(_UpdateUserData value)? updateUserData,
   }) {
     return fetchTrendingGames?.call(this);
@@ -2105,6 +3061,8 @@ class _$FetchTrendingGamesImpl implements _FetchTrendingGames {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchUserData value)? fetchUserData,
     TResult Function(_FetchTrendingGames value)? fetchTrendingGames,
+    TResult Function(_FetchPaginationTrendingGames value)?
+        fetchPaginationTrendingGames,
     TResult Function(_UpdateUserData value)? updateUserData,
     required TResult orElse(),
   }) {
@@ -2124,6 +3082,173 @@ abstract class _FetchTrendingGames implements HomeEvent {
   @JsonKey(ignore: true)
   _$$FetchTrendingGamesImplCopyWith<_$FetchTrendingGamesImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FetchPaginationTrendingGamesImplCopyWith<$Res> {
+  factory _$$FetchPaginationTrendingGamesImplCopyWith(
+          _$FetchPaginationTrendingGamesImpl value,
+          $Res Function(_$FetchPaginationTrendingGamesImpl) then) =
+      __$$FetchPaginationTrendingGamesImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int? page, int? pageSize});
+}
+
+/// @nodoc
+class __$$FetchPaginationTrendingGamesImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$FetchPaginationTrendingGamesImpl>
+    implements _$$FetchPaginationTrendingGamesImplCopyWith<$Res> {
+  __$$FetchPaginationTrendingGamesImplCopyWithImpl(
+      _$FetchPaginationTrendingGamesImpl _value,
+      $Res Function(_$FetchPaginationTrendingGamesImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? page = freezed,
+    Object? pageSize = freezed,
+  }) {
+    return _then(_$FetchPaginationTrendingGamesImpl(
+      freezed == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      freezed == pageSize
+          ? _value.pageSize
+          : pageSize // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FetchPaginationTrendingGamesImpl
+    implements _FetchPaginationTrendingGames {
+  const _$FetchPaginationTrendingGamesImpl(this.page, this.pageSize);
+
+  @override
+  final int? page;
+  @override
+  final int? pageSize;
+
+  @override
+  String toString() {
+    return 'HomeEvent.fetchPaginationTrendingGames(page: $page, pageSize: $pageSize)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchPaginationTrendingGamesImpl &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.pageSize, pageSize) ||
+                other.pageSize == pageSize));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, page, pageSize);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchPaginationTrendingGamesImplCopyWith<
+          _$FetchPaginationTrendingGamesImpl>
+      get copyWith => __$$FetchPaginationTrendingGamesImplCopyWithImpl<
+          _$FetchPaginationTrendingGamesImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchUserData,
+    required TResult Function(int? page, int? pageSize) fetchTrendingGames,
+    required TResult Function(int? page, int? pageSize)
+        fetchPaginationTrendingGames,
+    required TResult Function(UserFirestore user) updateUserData,
+  }) {
+    return fetchPaginationTrendingGames(page, pageSize);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchUserData,
+    TResult? Function(int? page, int? pageSize)? fetchTrendingGames,
+    TResult? Function(int? page, int? pageSize)? fetchPaginationTrendingGames,
+    TResult? Function(UserFirestore user)? updateUserData,
+  }) {
+    return fetchPaginationTrendingGames?.call(page, pageSize);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchUserData,
+    TResult Function(int? page, int? pageSize)? fetchTrendingGames,
+    TResult Function(int? page, int? pageSize)? fetchPaginationTrendingGames,
+    TResult Function(UserFirestore user)? updateUserData,
+    required TResult orElse(),
+  }) {
+    if (fetchPaginationTrendingGames != null) {
+      return fetchPaginationTrendingGames(page, pageSize);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchUserData value) fetchUserData,
+    required TResult Function(_FetchTrendingGames value) fetchTrendingGames,
+    required TResult Function(_FetchPaginationTrendingGames value)
+        fetchPaginationTrendingGames,
+    required TResult Function(_UpdateUserData value) updateUserData,
+  }) {
+    return fetchPaginationTrendingGames(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchUserData value)? fetchUserData,
+    TResult? Function(_FetchTrendingGames value)? fetchTrendingGames,
+    TResult? Function(_FetchPaginationTrendingGames value)?
+        fetchPaginationTrendingGames,
+    TResult? Function(_UpdateUserData value)? updateUserData,
+  }) {
+    return fetchPaginationTrendingGames?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchUserData value)? fetchUserData,
+    TResult Function(_FetchTrendingGames value)? fetchTrendingGames,
+    TResult Function(_FetchPaginationTrendingGames value)?
+        fetchPaginationTrendingGames,
+    TResult Function(_UpdateUserData value)? updateUserData,
+    required TResult orElse(),
+  }) {
+    if (fetchPaginationTrendingGames != null) {
+      return fetchPaginationTrendingGames(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchPaginationTrendingGames implements HomeEvent {
+  const factory _FetchPaginationTrendingGames(
+          final int? page, final int? pageSize) =
+      _$FetchPaginationTrendingGamesImpl;
+
+  int? get page;
+  int? get pageSize;
+  @JsonKey(ignore: true)
+  _$$FetchPaginationTrendingGamesImplCopyWith<
+          _$FetchPaginationTrendingGamesImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2193,6 +3318,8 @@ class _$UpdateUserDataImpl implements _UpdateUserData {
   TResult when<TResult extends Object?>({
     required TResult Function() fetchUserData,
     required TResult Function(int? page, int? pageSize) fetchTrendingGames,
+    required TResult Function(int? page, int? pageSize)
+        fetchPaginationTrendingGames,
     required TResult Function(UserFirestore user) updateUserData,
   }) {
     return updateUserData(user);
@@ -2203,6 +3330,7 @@ class _$UpdateUserDataImpl implements _UpdateUserData {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchUserData,
     TResult? Function(int? page, int? pageSize)? fetchTrendingGames,
+    TResult? Function(int? page, int? pageSize)? fetchPaginationTrendingGames,
     TResult? Function(UserFirestore user)? updateUserData,
   }) {
     return updateUserData?.call(user);
@@ -2213,6 +3341,7 @@ class _$UpdateUserDataImpl implements _UpdateUserData {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchUserData,
     TResult Function(int? page, int? pageSize)? fetchTrendingGames,
+    TResult Function(int? page, int? pageSize)? fetchPaginationTrendingGames,
     TResult Function(UserFirestore user)? updateUserData,
     required TResult orElse(),
   }) {
@@ -2227,6 +3356,8 @@ class _$UpdateUserDataImpl implements _UpdateUserData {
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchUserData value) fetchUserData,
     required TResult Function(_FetchTrendingGames value) fetchTrendingGames,
+    required TResult Function(_FetchPaginationTrendingGames value)
+        fetchPaginationTrendingGames,
     required TResult Function(_UpdateUserData value) updateUserData,
   }) {
     return updateUserData(this);
@@ -2237,6 +3368,8 @@ class _$UpdateUserDataImpl implements _UpdateUserData {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FetchUserData value)? fetchUserData,
     TResult? Function(_FetchTrendingGames value)? fetchTrendingGames,
+    TResult? Function(_FetchPaginationTrendingGames value)?
+        fetchPaginationTrendingGames,
     TResult? Function(_UpdateUserData value)? updateUserData,
   }) {
     return updateUserData?.call(this);
@@ -2247,6 +3380,8 @@ class _$UpdateUserDataImpl implements _UpdateUserData {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchUserData value)? fetchUserData,
     TResult Function(_FetchTrendingGames value)? fetchTrendingGames,
+    TResult Function(_FetchPaginationTrendingGames value)?
+        fetchPaginationTrendingGames,
     TResult Function(_UpdateUserData value)? updateUserData,
     required TResult orElse(),
   }) {

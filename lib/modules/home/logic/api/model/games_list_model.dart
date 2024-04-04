@@ -20,7 +20,7 @@ class GamesListModel {
     @JsonKey(name: "previous")
     final dynamic previous;
     @JsonKey(name: "results")
-    final List<Result>? results;
+    final List<GameResult>? results;
     @JsonKey(name: "seo_title")
     final String? seoTitle;
     @JsonKey(name: "seo_description")
@@ -128,7 +128,7 @@ class YearYear {
 }
 
 @JsonSerializable()
-class Result {
+class GameResult {
     @JsonKey(name: "id")
     final int? id;
     @JsonKey(name: "slug")
@@ -188,7 +188,7 @@ class Result {
     @JsonKey(name: "short_screenshots")
     final List<ShortScreenshot>? shortScreenshots;
 
-    Result({
+    GameResult({
         this.id,
         this.slug,
         this.name,
@@ -220,10 +220,11 @@ class Result {
         this.shortScreenshots,
     });
 
-    factory Result.fromJson(Map<String, dynamic> json) => _$ResultFromJson(json);
+    factory GameResult.fromJson(Map<String, dynamic> json) => _$GameResultFromJson(json);
 
-    Map<String, dynamic> toJson() => _$ResultToJson(this);
+    Map<String, dynamic> toJson() => _$GameResultToJson(this);
 }
+
 
 @JsonSerializable()
 class AddedByStatus {

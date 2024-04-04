@@ -20,46 +20,74 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   }
 
   Future<void> _onEvent(HomeEvent event, Emitter<HomeState> emit) {
-    return event.map(fetchTrendingGames: (value) async {
-      try {
-        emit(const HomeState.loadingTrendingGames());
-        DateTime currentDate = DateTime.now();
-        DateTime startDate = currentDate.subtract(const Duration(days: 90));
-        DateTime endDate = currentDate.add(const Duration(days: 550));
-        String formattedStartDate = DateFormat('yyyy-MM-dd').format(startDate);
-        String formattedEndDate = DateFormat('yyyy-MM-dd').format(endDate);
-        var result = await _homeRepository.getTrendingGames(
-          page: value.page ?? 1,
-          pageSize: value.pageSize ?? 10,
-          startDate: formattedStartDate,
-          endDate: formattedEndDate,
-        );
-        emit(HomeState.loadedTrendingGames(result));
-      } catch (e) {
-        emit(HomeState.errorTrendingGames(e));
-      }
-    }, fetchUserData: (_FetchUserData value) async {
-      try {
-        emit(const HomeState.loadingUserData());
-        var currentUser = FirebaseAuth.instance.currentUser;
-        var user = await GetIt.I<UserInfoFirestore>().getUserInfo(currentUser!);
-        if (user != null) {
-          emit(HomeState.loadedUserData(user));
-        } else {
-          emit(const HomeState.errorUserData(
-              'User not found')); // TODO add localization
+    return event.map(
+      fetchTrendingGames: (value) async {
+        try {
+          emit(const HomeState.loadingTrendingGames());
+          DateTime currentDate = DateTime.now();
+          DateTime startDate = currentDate.subtract(const Duration(days: 90));
+          DateTime endDate = currentDate.add(const Duration(days: 550));
+          String formattedStartDate =
+              DateFormat('yyyy-MM-dd').format(startDate);
+          String formattedEndDate = DateFormat('yyyy-MM-dd').format(endDate);
+          var result = await _homeRepository.getTrendingGames(
+            page: value.page ?? 1,
+            pageSize: value.pageSize ?? 10,
+            startDate: formattedStartDate,
+            endDate: formattedEndDate,
+          );
+          emit(HomeState.loadedTrendingGames(result));
+        } catch (e) {
+          emit(HomeState.errorTrendingGames(e));
         }
-      } catch (e) {
-        emit(HomeState.errorUserData(e));
-      }
-    }, updateUserData: (_UpdateUserData value) async {
-      try {
-        emit(const HomeState.loadingUpdateUserData());
-        await GetIt.I<UserInfoFirestore>().updateUserInfo(value.user);
-        emit(const HomeState.loadedUpdateUserData());
-      } catch (e) {
-        emit(HomeState.errorUpdateUserData(e));
-      }
-    });
+      },
+      fetchPaginationTrendingGames: (value) async {
+        try {
+          emit(const HomeState.loadingPaginationTrendingGames());
+          DateTime currentDate = DateTime.now();
+          DateTime startDate = currentDate.subtract(const Duration(days: 90));
+          DateTime endDate = currentDate.add(const Duration(days: 550));
+          String formattedStartDate =
+              DateFormat('yyyy-MM-dd').format(startDate);
+          String formattedEndDate = DateFormat('yyyy-MM-dd').format(endDate);
+          var result = await _homeRepository.getTrendingGames(
+            page: value.page ?? 1,
+            pageSize: value.pageSize ?? 10,
+            startDate: formattedStartDate,
+            endDate: formattedEndDate,
+          );
+          emit(
+            HomeState.loadedPaginationTrendingGames(result),
+          );
+        } catch (e) {
+          emit(HomeState.errorPaginationTrendingGames(e));
+        }
+      },
+      fetchUserData: (_FetchUserData value) async {
+        try {
+          emit(const HomeState.loadingUserData());
+          var currentUser = FirebaseAuth.instance.currentUser;
+          var user =
+              await GetIt.I<UserInfoFirestore>().getUserInfo(currentUser!);
+          if (user != null) {
+            emit(HomeState.loadedUserData(user));
+          } else {
+            emit(const HomeState.errorUserData(
+                'User not found')); // TODO add localization
+          }
+        } catch (e) {
+          emit(HomeState.errorUserData(e));
+        }
+      },
+      updateUserData: (_UpdateUserData value) async {
+        try {
+          emit(const HomeState.loadingUpdateUserData());
+          await GetIt.I<UserInfoFirestore>().updateUserInfo(value.user);
+          emit(const HomeState.loadedUpdateUserData());
+        } catch (e) {
+          emit(HomeState.errorUpdateUserData(e));
+        }
+      },
+    );
   }
 }
