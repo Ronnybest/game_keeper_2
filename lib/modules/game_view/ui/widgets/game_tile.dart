@@ -1,9 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:fast_cached_network_image/fast_cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:game_keeper/modules/home/logic/api/model/games_list_model.dart';
+import 'package:game_keeper/ui/widgets/gk_shimmer.dart';
 
 class GameTile extends StatelessWidget {
   const GameTile({super.key, required this.game});
@@ -26,8 +25,15 @@ class GameTile extends StatelessWidget {
               fit: BoxFit.cover,
               errorBuilder: (context, error, stackTrace) {
                 return const Icon(
-                  CupertinoIcons.gamecontroller,
+                  Icons.gamepad,
                   size: 65,
+                );
+              },
+              loadingBuilder: (context, progress) {
+                return ShimmerElement(
+                  width: 65,
+                  height: 65,
+                  radius: BorderRadius.circular(15),
                 );
               },
             ),
@@ -62,7 +68,6 @@ class GameTile extends StatelessWidget {
                             .withOpacity(.7),
                       ),
                     ),
-                   
                   ],
                 ),
               ],

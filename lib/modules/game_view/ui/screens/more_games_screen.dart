@@ -8,6 +8,7 @@ import 'package:game_keeper/modules/game_view/ui/widgets/game_tile.dart';
 import 'package:game_keeper/modules/home/logic/api/model/games_list_model.dart';
 import 'package:game_keeper/modules/home/logic/bloc/home_bloc.dart';
 import 'package:game_keeper/ui/widgets/gk_appbar.dart';
+import 'package:game_keeper/ui/widgets/gk_shimmer.dart';
 import 'package:get_it/get_it.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
@@ -93,9 +94,7 @@ class _MoreGamesScreenState extends State<MoreGamesScreen> {
             pagingController: _pagingController,
             builderDelegate: PagedChildBuilderDelegate<GameResult>(
               firstPageProgressIndicatorBuilder: (context) {
-                return Center(
-                  child: CircularProgressIndicator(),
-                );
+                return GKShimmerGenerator(count: 10);
               },
               itemBuilder: (context, item, index) {
                 return GameTile(game: item);
