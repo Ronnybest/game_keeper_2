@@ -43,7 +43,7 @@ class _MoreGamesScreenState extends State<MoreGamesScreen> {
     super.initState();
     isInit = true;
     _pagingController =
-        PagingController(firstPageKey: 1, invisibleItemsThreshold: 4);
+        PagingController(firstPageKey: 1, invisibleItemsThreshold: 6);
     _pagingController.addPageRequestListener(_fetchPage);
     _fetchPage(1);
   }
@@ -94,7 +94,19 @@ class _MoreGamesScreenState extends State<MoreGamesScreen> {
             pagingController: _pagingController,
             builderDelegate: PagedChildBuilderDelegate<GameResult>(
               firstPageProgressIndicatorBuilder: (context) {
-                return GKShimmerGenerator(count: 10);
+                return const GKShimmerGenerator(
+                  count: 10,
+                  height: 65,
+                  listPadding: EdgeInsets.symmetric(vertical: 13),
+                );
+              },
+              animateTransitions: true,
+              newPageProgressIndicatorBuilder: (context) {
+                return const GKShimmerGenerator(
+                  count: 1,
+                  height: 65,
+                  listPadding: EdgeInsets.symmetric(vertical: 13),
+                );
               },
               itemBuilder: (context, item, index) {
                 return GameTile(game: item);

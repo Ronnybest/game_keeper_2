@@ -16,7 +16,8 @@ class AppRouter extends $AppRouter {
         AutoRoute(page: AuthRoute.page),
         AutoRoute(page: RegisterEmailRoute.page),
         AutoRoute(page: RestorePassRoute.page),
-        //AutoRoute(page: TestedRoute.page),
+
+        // Navugation bar routes
         AutoRoute(
           page: GKNavBar.page,
           children: [
@@ -29,5 +30,6 @@ class AppRouter extends $AppRouter {
         ),
         AutoRoute(page: ApplicationPreferences.page),
         AutoRoute(page: MoreGamesRoute.page),
+        AutoRoute(page: GameViewRoute.page),
       ];
 }

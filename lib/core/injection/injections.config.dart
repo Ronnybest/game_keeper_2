@@ -20,13 +20,21 @@ import 'package:game_keeper/modules/auth/logic/bloc/auth_bloc.dart' as _i4;
 import 'package:game_keeper/modules/auth/logic/utils/auth_google.dart' as _i5;
 import 'package:game_keeper/modules/auth/logic/utils/login_methods_list.dart'
     as _i9;
-import 'package:game_keeper/modules/home/logic/api/provider/home_provider.dart'
+import 'package:game_keeper/modules/game_view/logic/api/provider/game_provider.dart'
     as _i14;
-import 'package:game_keeper/modules/home/logic/api/repository/home_repository.dart'
+import 'package:game_keeper/modules/game_view/logic/api/repository/game_repository.dart'
     as _i15;
-import 'package:game_keeper/modules/home/logic/api/repository/implementation/home_repository_impl.dart'
+import 'package:game_keeper/modules/game_view/logic/api/repository/implementation/game_repository_impl.dart'
     as _i16;
-import 'package:game_keeper/modules/home/logic/bloc/home_bloc.dart' as _i17;
+import 'package:game_keeper/modules/game_view/logic/bloc/game_view_bloc.dart'
+    as _i17;
+import 'package:game_keeper/modules/home/logic/api/provider/home_provider.dart'
+    as _i18;
+import 'package:game_keeper/modules/home/logic/api/repository/home_repository.dart'
+    as _i19;
+import 'package:game_keeper/modules/home/logic/api/repository/implementation/home_repository_impl.dart'
+    as _i20;
+import 'package:game_keeper/modules/home/logic/bloc/home_bloc.dart' as _i21;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
@@ -67,11 +75,17 @@ extension GetItInjectableX on _i1.GetIt {
           gh<String>(instanceName: 'baseNewsUrl'),
         ));
     gh.singleton<_i13.CoreApi>(() => _i13.CoreApi(gh<_i12.CoreConfig>()));
-    gh.lazySingleton<_i14.HomeProvider>(
-        () => _i14.HomeProvider(gh<_i13.CoreApi>()));
-    gh.lazySingleton<_i15.HomeRepository>(
-        () => _i16.HomeRepositoryImpl(gh<_i14.HomeProvider>()));
-    gh.factory<_i17.HomeBloc>(() => _i17.HomeBloc(gh<_i15.HomeRepository>()));
+    gh.lazySingleton<_i14.GameProvider>(
+        () => _i14.GameProvider(gh<_i13.CoreApi>()));
+    gh.lazySingleton<_i15.GameRepository>(
+        () => _i16.GameRepositoryImpl(gh<_i14.GameProvider>()));
+    gh.factory<_i17.GameViewBloc>(
+        () => _i17.GameViewBloc(gh<_i15.GameRepository>()));
+    gh.lazySingleton<_i18.HomeProvider>(
+        () => _i18.HomeProvider(gh<_i13.CoreApi>()));
+    gh.lazySingleton<_i19.HomeRepository>(
+        () => _i20.HomeRepositoryImpl(gh<_i18.HomeProvider>()));
+    gh.factory<_i21.HomeBloc>(() => _i21.HomeBloc(gh<_i19.HomeRepository>()));
     return this;
   }
 }
