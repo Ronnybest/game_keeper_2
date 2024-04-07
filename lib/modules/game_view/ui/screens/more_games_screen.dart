@@ -3,6 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:game_keeper/core/constants/constants.dart';
+import 'package:game_keeper/core/utils/exception_worker.dart';
 import 'package:game_keeper/generated/locale.keys.g.dart';
 import 'package:game_keeper/modules/game_view/ui/widgets/game_tile.dart';
 import 'package:game_keeper/modules/home/logic/api/model/games_list_model.dart';
@@ -77,6 +78,9 @@ class _MoreGamesScreenState extends State<MoreGamesScreen> {
         child: BlocListener<HomeBloc, HomeState>(
           listener: (context, state) {
             state.whenOrNull(
+              errorPaginationTrendingGames: (error) {
+                GetIt.I<ExceptionWorker>().errorWorker(error, context);
+              },
               loadedPaginationTrendingGames: (newResult) {
                 final isLastPage =
                     newResult.results!.length < AppConstants.pageSize;

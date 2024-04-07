@@ -1,7 +1,9 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:game_keeper/core/utils/exception_worker.dart';
 import 'package:game_keeper/modules/game_view/logic/bloc/game_view_bloc.dart';
 import 'package:game_keeper/ui/widgets/gk_appbar.dart';
 import 'package:get_it/get_it.dart';
@@ -39,20 +41,24 @@ class _GameViewScreenState extends State<GameViewScreen> {
         appBar: const GKAppBar(),
         body: BlocConsumer<GameViewBloc, GameViewState>(
           listener: (context, state) {
-            // TODO: implement listener
+            state.maybeWhen(
+                orElse: () {},
+                errorGame: (error) {
+                  GetIt.I<ExceptionWorker>().errorWorker(error, context);
+                });
           },
           builder: (context, state) {
             return state.maybeWhen(
                 orElse: () => const Center(child: CircularProgressIndicator()),
                 loadedGame: (game) {
-                  return SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        Text(game.name!),
-                        Text(game.descriptionRaw!),
-                        Text(game.descriptionRaw!),
-                      ],
-                    ),
+                  return Column(
+                    children: [
+                      Container(
+                        width: 60,
+                        height: 20,
+                        color: Colors.red,
+                      ),
+                    ],
                   );
                 },
                 errorGame: (error) {
