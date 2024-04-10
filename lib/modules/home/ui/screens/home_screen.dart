@@ -8,6 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:game_keeper/core/models/user_firestore.dart';
 import 'package:game_keeper/core/router/app_router.gr.dart';
+import 'package:game_keeper/core/utils/exception_worker.dart';
 import 'package:game_keeper/generated/locale.keys.g.dart';
 import 'package:game_keeper/modules/home/logic/bloc/home_bloc.dart';
 import 'package:game_keeper/modules/home/ui/widgets/trending_games.dart';
@@ -79,12 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
               },
               errorUserData: (error) {
                 context.loaderOverlay.hide();
-                ScaffoldMessenger.of(context).showSnackBar(
-                  // TODO add custom snackbar
-                  SnackBar(
-                    content: Text(error.toString()),
-                  ),
-                );
+                GetIt.I<ExceptionWorker>().errorWorker(error, context);
               },
             );
           },
