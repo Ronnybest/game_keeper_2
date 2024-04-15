@@ -107,12 +107,21 @@
         "trend_games": "Игры в тренде"
     },
     "game_view": {
-        "added" : "Добавлено",
+        "added": "Добавлено",
         "rating": "Рейтинг",
-        "suggestions" : "Рекомендации",
+        "suggestions": "Рекомендации",
         "achivements": "Достижения",
-        "nd" : "Н/Д",
-        "no_images": "Нет изображений"
+        "nd": "Н/Д",
+        "no_images": "Нет изображений",
+        "community_ratings": "Оценка сообщества RAWG.io",
+        "community_ratings_description": "Оценка сообщества RAWG.io основана на оценках пользователей и экспертов. Она показывает, насколько игра хороша в целом.",
+        "description": "Описание",
+        "ratings": {
+            "exceptional": "Исключительно",
+            "recommended": "Рекомендуется",
+            "meh": "Так себе",
+            "skip": "Пропустить"
+        }
     },
     "profile": {
         "default_username": "Геймер"

@@ -6,17 +6,21 @@ class GameInfoCard extends StatelessWidget {
     required this.value,
     required this.title,
     required this.icon,
+    required this.constraints,
   });
 
   final String value;
   final String title;
   final IconData icon;
+  final BoxConstraints constraints;
 
   @override
   Widget build(BuildContext context) {
+    double width =
+        constraints.maxWidth / 4 < 92 ? constraints.maxWidth / 4 : 92;
     return SizedBox(
-      width: 95,
-      height: 95,
+      width: width,
+      height: width,
       child: Card(
         shadowColor: Colors.transparent,
         child: Column(

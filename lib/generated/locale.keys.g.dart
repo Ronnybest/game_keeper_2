@@ -101,6 +101,14 @@ abstract class  LocaleKeys {
   static const game_view_achivements = 'game_view.achivements';
   static const game_view_nd = 'game_view.nd';
   static const game_view_no_images = 'game_view.no_images';
+  static const game_view_community_ratings = 'game_view.community_ratings';
+  static const game_view_community_ratings_description = 'game_view.community_ratings_description';
+  static const game_view_description = 'game_view.description';
+  static const game_view_ratings_exceptional = 'game_view.ratings.exceptional';
+  static const game_view_ratings_recommended = 'game_view.ratings.recommended';
+  static const game_view_ratings_meh = 'game_view.ratings.meh';
+  static const game_view_ratings_skip = 'game_view.ratings.skip';
+  static const game_view_ratings = 'game_view.ratings';
   static const game_view = 'game_view';
   static const profile_default_username = 'profile.default_username';
   static const profile = 'profile';

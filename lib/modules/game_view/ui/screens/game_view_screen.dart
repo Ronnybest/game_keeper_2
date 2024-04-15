@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:game_keeper/core/utils/exception_worker.dart';
 import 'package:game_keeper/generated/locale.keys.g.dart';
 import 'package:game_keeper/modules/game_view/logic/bloc/game_view_bloc.dart';
+import 'package:game_keeper/modules/game_view/ui/widgets/animated_description.dart';
 import 'package:game_keeper/modules/game_view/ui/widgets/game_info_card.dart';
 import 'package:game_keeper/modules/game_view/ui/widgets/game_rating_area.dart';
 import 'package:game_keeper/ui/widgets/gk_appbar.dart';
@@ -30,10 +31,13 @@ class GameViewScreen extends StatefulWidget implements AutoRouteWrapper {
   }
 }
 
-class _GameViewScreenState extends State<GameViewScreen> {
+class _GameViewScreenState extends State<GameViewScreen>
+    with SingleTickerProviderStateMixin {
   static const double logoImageSize = 80;
   static const double screenshotsImageHeight = 190;
   static const double screenshotsImageWidth = 337;
+  bool isDescriptionExpanded = false;
+  late AnimationController _controller;
 
   @override
   void initState() {
@@ -41,6 +45,16 @@ class _GameViewScreenState extends State<GameViewScreen> {
     BlocProvider.of<GameViewBloc>(context).add(
       GameViewEvent.fetchGame(widget.gameId),
     );
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 500),
+    );
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 
   @override
@@ -139,34 +153,41 @@ class _GameViewScreenState extends State<GameViewScreen> {
                         left: 12,
                         right: 12,
                       ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          GameInfoCard(
-                            value: game.added.toString(),
-                            title: LocaleKeys.game_view_added.tr(),
-                            icon: Icons.check,
-                          ),
-                          GameInfoCard(
-                            value: game.rating.toString(),
-                            title: LocaleKeys.game_view_rating.tr(),
-                            icon: Icons.star,
-                          ),
-                          GameInfoCard(
-                            value: game.suggestionsCount.toString(),
-                            title: LocaleKeys.game_view_suggestions.tr(),
-                            icon: Icons.thumb_up,
-                          ),
-                          GameInfoCard(
-                            value: game.achievementsCount == 0 ||
-                                    game.achievementsCount == null
-                                ? LocaleKeys.game_view_nd.tr()
-                                : game.achievementsCount.toString(),
-                            title: LocaleKeys.game_view_achivements.tr(),
-                            icon: Icons.emoji_events,
-                          ),
-                        ],
+                      child: LayoutBuilder(
+                        builder: (context, constraints) {
+                          return Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              GameInfoCard(
+                                constraints: constraints,
+                                value: game.added.toString(),
+                                title: LocaleKeys.game_view_added.tr(),
+                                icon: Icons.check,
+                              ),
+                              GameInfoCard(
+                                constraints: constraints,
+                                value: game.rating.toString(),
+                                title: LocaleKeys.game_view_rating.tr(),
+                                icon: Icons.star,
+                              ),
+                              GameInfoCard(
+                                constraints: constraints,
+                                value: game.suggestionsCount.toString(),
+                                title: LocaleKeys.game_view_suggestions.tr(),
+                                icon: Icons.thumb_up,
+                              ),
+                              GameInfoCard(
+                                constraints: constraints,
+                                value: game.achievementsCount == 0 ||
+                                        game.achievementsCount == null
+                                    ? LocaleKeys.game_view_nd.tr()
+                                    : game.achievementsCount.toString(),
+                                title: LocaleKeys.game_view_achivements.tr(),
+                                icon: Icons.emoji_events,
+                              ),
+                            ],
+                          );
+                        },
                       ),
                     ),
                     Padding(
@@ -243,12 +264,132 @@ class _GameViewScreenState extends State<GameViewScreen> {
                       ),
                     ),
                     Padding(
-                      padding:
-                          const EdgeInsets.only(top: 15, left: 15, right: 15),
-                      child: BuildRatingArea(
-                        game: game,
+                      padding: const EdgeInsets.only(
+                        top: 15,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 15, right: 15),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Text(
+                                  LocaleKeys.game_view_community_ratings.tr(),
+                                  style: const TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 3,
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    showDialog(
+                                      context: context,
+                                      builder: (context) {
+                                        return AlertDialog(
+                                          title: Text(
+                                            LocaleKeys
+                                                .game_view_community_ratings
+                                                .tr(),
+                                          ),
+                                          content: Text(
+                                            LocaleKeys
+                                                .game_view_community_ratings_description
+                                                .tr(),
+                                          ),
+                                          actions: <Widget>[
+                                            TextButton(
+                                              onPressed: () {
+                                                Navigator.of(context).pop();
+                                              },
+                                              child: Text(
+                                                LocaleKeys.common_buttons_close
+                                                    .tr(),
+                                              ),
+                                            ),
+                                          ],
+                                        );
+                                      },
+                                    );
+                                  },
+                                  child: const Icon(
+                                    Icons.info_outlined,
+                                    size: 16,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          BuildRatingArea(
+                            game: game,
+                          ),
+                          const SizedBox(height: 6),
+                        ],
                       ),
                     ),
+                    if (game.descriptionRaw != null &&
+                        game.descriptionRaw!.isNotEmpty)
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(top: 15, left: 15, right: 15),
+                        child: Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  isDescriptionExpanded =
+                                      !isDescriptionExpanded;
+                                  if (isDescriptionExpanded) {
+                                    _controller.forward();
+                                  } else {
+                                    _controller.reverse();
+                                  }
+                                });
+                              },
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    LocaleKeys.game_view_description.tr(),
+                                    style: const TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  RotationTransition(
+                                    turns:
+                                        Tween(begin: 0.25, end: 0.75).animate(
+                                      CurvedAnimation(
+                                        parent: _controller,
+                                        curve: Curves.easeInOut,
+                                      ),
+                                    ),
+                                    child: const Icon(
+                                      Icons.arrow_forward_ios,
+                                      size: 18,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            AnimatedDescription(
+                              expand: isDescriptionExpanded,
+                              child: Text(
+                                game.descriptionRaw ?? '',
+                                style: const TextStyle(
+                                  fontSize: 15,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                   ],
                 ),
               );

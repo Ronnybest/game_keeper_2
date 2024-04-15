@@ -107,12 +107,21 @@
         "trend_games": "Trending games"
     },
     "game_view": {
-        "added" : "Added",
+        "added": "Added",
         "rating": "Rating",
-        "suggestions" : "Suggestions",
+        "suggestions": "Suggestions",
         "achivements": "Achievements",
-        "nd" : "N/D",
-        "no_images" : "No images"
+        "nd": "N/D",
+        "no_images": "No images",
+        "community_ratings": "RAWG.io community ratings",
+        "community_ratings_description": "RAWG.io community rating based on user and expert ratings. It shows that the game is really good overall.",
+        "description": "Description",
+        "ratings": {
+            "exceptional": "Exceptional",
+            "recommended": "Recommended",
+            "meh": "Meh",
+            "skip": "Skip"
+        }
     },
     "profile": {
         "default_username": "Gamer"

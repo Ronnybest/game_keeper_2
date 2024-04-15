@@ -1,3 +1,4 @@
+import 'package:dynamic_color/dynamic_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:game_keeper/core/constants/constants.dart';
@@ -49,58 +50,85 @@ class BuildRatingArea extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Map<int, Gradient> colorRatingPack = {
+      1: LinearGradient(
+        colors: [
+          const Color.fromARGB(255, 197, 29, 49).harmonizeWith(
+            Theme.of(context).colorScheme.secondaryContainer,
+          ),
+          const Color.fromARGB(255, 63, 13, 18).harmonizeWith(
+            Theme.of(context).colorScheme.secondaryContainer,
+          ),
+        ], //rgba(90, 255, 21, 1)
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+      ),
+      3: LinearGradient(
+        colors: [
+          const Color.fromARGB(255, 255, 170, 1).harmonizeWith(
+            Theme.of(context).colorScheme.secondaryContainer,
+          ),
+          const Color.fromARGB(255, 158, 85, 2).harmonizeWith(
+            Theme.of(context).colorScheme.secondaryContainer,
+          ),
+        ],
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+      ),
+      4: LinearGradient(
+        colors: [
+          const Color.fromARGB(255, 0, 70, 210).harmonizeWith(
+            Theme.of(context).colorScheme.secondaryContainer,
+          ),
+          const Color.fromARGB(255, 41, 29, 124).harmonizeWith(
+            Theme.of(context).colorScheme.secondaryContainer,
+          )
+        ],
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+      ),
+      5: LinearGradient(
+        colors: [
+          const Color.fromARGB(255, 95, 226, 18).harmonizeWith(
+            Theme.of(context).colorScheme.secondaryContainer,
+          ),
+          const Color.fromARGB(255, 2, 106, 16).harmonizeWith(
+            Theme.of(context).colorScheme.secondaryContainer,
+          ),
+        ],
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+      ),
+    };
+
     int biggestId = gimmeBiggestRatingCountName();
     if (biggestId >= 0) {
       return IntrinsicHeight(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Row(
-            //   crossAxisAlignment: CrossAxisAlignment.end,
-            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //   children: [
-            //     Row(
-            //       crossAxisAlignment: CrossAxisAlignment.center,
-            //       children: [
-            //         Text(
-            //           capitalizeFirstLetter(game.ratings![biggestId].title!),
-            //           style: const TextStyle(
-            //               fontSize: 21, fontWeight: FontWeight.bold),
-            //         ),
-            //         Container(
-            //           margin: const EdgeInsets.only(left: 7),
-            //           //color: Colors.red,
-            //           width: 28,
-            //           height: 28,
-            //           child: Image.asset(
-            //             'assets/images/${AppConstants.emojiPack[game.ratings![biggestId].id]!}',
-            //           ),
-            //         ),
-            //       ],
-            //     ),
-            //     Text(
-            //       '${formatAddedValue(game.ratings![biggestId].count!).toString()} votes',
-            //       style: TextStyle(
-            //           fontSize: 21, fontWeight: FontWeight.normal),
-            //     )
-            //   ],
-            // ),
-            Align(
-              alignment: Alignment.center,
-              child: SizedBox(
-                width: MediaQuery.sizeOf(context).width - 20,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(5.r),
-                  child: Row(
-                    children: buildRatingBars(),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Align(
+                alignment: Alignment.center,
+                child: SizedBox(
+                  width: MediaQuery.sizeOf(context).width - 20,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(5.r),
+                    child: Row(
+                      children: buildRatingBars(colorRatingPack),
+                    ),
                   ),
                 ),
               ),
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: buildRatingsCount(),
+            Padding(
+              padding: const EdgeInsets.only(top: 11),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: buildRatingsCount(colorRatingPack),
+                ),
               ),
             )
           ],
@@ -111,32 +139,39 @@ class BuildRatingArea extends StatelessWidget {
     }
   }
 
-  List<Widget> buildRatingsCount() {
+  List<Widget> buildRatingsCount(var colorRatingPack) {
     List<Widget> ratingsCount = [];
+    int index = 0;
     for (var rating in game.ratings!) {
-      ratingsCount.add(Container(
-        padding: EdgeInsets.all(3.h),
-        margin: EdgeInsets.symmetric(vertical: 10.h, horizontal: 5.w),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10.r),
-          border: GradientBoxBorder(
-            gradient: AppConstants.colorRatingPack[rating.id]!,
-            width: 1.5,
+      ratingsCount.add(
+        Container(
+          padding: EdgeInsets.all(3.h),
+          margin: EdgeInsets.only(
+            right: index == 3 ? 15 : 10,
+            left: index == 0 ? 15 : 0,
+          ),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.r),
+            border: GradientBoxBorder(
+              gradient: colorRatingPack[rating.id]!,
+              width: 1.5,
+            ),
+          ),
+          height: 30,
+          child: Align(
+            alignment: Alignment.center,
+            child: Text(
+              '${capitalizeFirstLetter(AppConstants.ratingNamePack[rating.id]!)}: ${rating.count}',
+            ),
           ),
         ),
-        height: 30,
-        child: Align(
-          alignment: Alignment.center,
-          child: Text(
-            '${capitalizeFirstLetter(rating.title!)}: ${rating.count}',
-          ),
-        ),
-      ));
+      );
+      index++;
     }
     return ratingsCount;
   }
 
-  List<Widget> buildRatingBars() {
+  List<Widget> buildRatingBars(var colorRatingPack) {
     List<Widget> ratingBars = [];
     for (var rating in game.ratings!) {
       ratingBars.add(Expanded(
@@ -144,13 +179,12 @@ class BuildRatingArea extends StatelessWidget {
         child: Stack(
           children: [
             Container(
-              decoration: BoxDecoration(
-                  gradient: AppConstants.colorRatingPack[rating.id]),
+              decoration: BoxDecoration(gradient: colorRatingPack[rating.id]),
               height: 50,
             ),
             Positioned(
               bottom: -2,
-              left: -15,
+              left: -10,
               child: SizedBox(
                 height: 45,
                 width: 45,
