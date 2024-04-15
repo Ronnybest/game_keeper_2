@@ -106,6 +106,14 @@
         "title": "Hello, {name}!",
         "trend_games": "Trending games"
     },
+    "game_view": {
+        "added" : "Added",
+        "rating": "Rating",
+        "suggestions" : "Suggestions",
+        "achivements": "Achievements",
+        "nd" : "N/D",
+        "no_images" : "No images"
+    },
     "profile": {
         "default_username": "Gamer"
     },

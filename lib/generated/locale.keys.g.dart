@@ -95,6 +95,13 @@ abstract class  LocaleKeys {
   static const home_title = 'home.title';
   static const home_trend_games = 'home.trend_games';
   static const home = 'home';
+  static const game_view_added = 'game_view.added';
+  static const game_view_rating = 'game_view.rating';
+  static const game_view_suggestions = 'game_view.suggestions';
+  static const game_view_achivements = 'game_view.achivements';
+  static const game_view_nd = 'game_view.nd';
+  static const game_view_no_images = 'game_view.no_images';
+  static const game_view = 'game_view';
   static const profile_default_username = 'profile.default_username';
   static const profile = 'profile';
   static const preferences_profile_settings = 'preferences.profile_settings';

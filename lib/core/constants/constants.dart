@@ -96,6 +96,46 @@ class AppConstants {
   static const String publicNewsApiKey =
       '9c26dd98e6367043e0241737fbea20cac50725fc';
   static const int pageSize = 20;
+  static const Map<int, String> emojiPack = {
+    1: 'skip.png',
+    3: 'meh.png',
+    4: 'recommended.png',
+    5: 'exceptional.png',
+  };
+  static const Map<int, Gradient> colorRatingPack = {
+    1: LinearGradient(
+      colors: [
+        Color.fromARGB(255, 197, 29, 49),
+        Color.fromARGB(255, 63, 13, 18)
+      ], //rgba(90, 255, 21, 1)
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
+    ),
+    3: LinearGradient(
+      colors: [
+        Color.fromARGB(255, 255, 170, 1),
+        Color.fromARGB(255, 158, 85, 2)
+      ],
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
+    ),
+    4: LinearGradient(
+      colors: [
+        Color.fromARGB(255, 0, 70, 210),
+        Color.fromARGB(255, 41, 29, 124)
+      ],
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
+    ),
+    5: LinearGradient(
+      colors: [
+        Color.fromARGB(255, 95, 226, 18),
+        Color.fromARGB(255, 2, 106, 16)
+      ],
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
+    ),
+  };
 }
 
 class ApiConstants {

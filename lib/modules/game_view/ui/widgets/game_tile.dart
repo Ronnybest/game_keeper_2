@@ -65,6 +65,7 @@ class GameTile extends StatelessWidget {
                     height: 5,
                   ),
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
                         DateFormat('dd.MM.yyyy').format(game.released!),
@@ -89,31 +90,14 @@ class GameTile extends StatelessWidget {
                               .withOpacity(.7),
                         ),
                       ),
+                      const SizedBox(
+                        width: 2,
+                      ),
                       Icon(
                         Icons.star,
                         color: Theme.of(context).colorScheme.secondary,
                         size: 13,
                       ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      if (game.added != null)
-                        Text(
-                          game.added.toString(),
-                          style: TextStyle(
-                            fontSize: 13,
-                            color: Theme.of(context)
-                                .colorScheme
-                                .onBackground
-                                .withOpacity(.7),
-                          ),
-                        ),
-                      if (game.added != null)
-                        Icon(
-                          Icons.add_circle,
-                          color: Theme.of(context).colorScheme.secondary,
-                          size: 13,
-                        ),
                     ],
                   ),
                 ],

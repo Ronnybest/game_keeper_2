@@ -9,6 +9,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i13;
+import 'package:flutter/cupertino.dart' as _i16;
 import 'package:flutter/material.dart' as _i14;
 import 'package:game_keeper/modules/auth/ui/screens/auth_screen.dart' as _i2;
 import 'package:game_keeper/modules/auth/ui/screens/demo_screen.dart' as _i3;
@@ -21,8 +22,8 @@ import 'package:game_keeper/modules/game_view/ui/screens/game_view_screen.dart'
 import 'package:game_keeper/modules/game_view/ui/screens/more_games_screen.dart'
     as _i7;
 import 'package:game_keeper/modules/home/logic/api/model/games_list_model.dart'
-    as _i16;
-import 'package:game_keeper/modules/home/logic/bloc/home_bloc.dart' as _i17;
+    as _i17;
+import 'package:game_keeper/modules/home/logic/bloc/home_bloc.dart' as _i18;
 import 'package:game_keeper/modules/home/ui/screens/home_screen.dart' as _i6;
 import 'package:game_keeper/modules/home/ui/screens/test_screen.dart' as _i12;
 import 'package:game_keeper/modules/profile/ui/screens/profile_screen.dart'
@@ -225,7 +226,7 @@ class GKNavBarArgs {
 /// [_i5.GameViewScreen]
 class GameViewRoute extends _i13.PageRouteInfo<GameViewRouteArgs> {
   GameViewRoute({
-    _i14.Key? key,
+    _i16.Key? key,
     required int gameId,
     List<_i13.PageRouteInfo>? children,
   }) : super(
@@ -249,7 +250,7 @@ class GameViewRouteArgs {
     required this.gameId,
   });
 
-  final _i14.Key? key;
+  final _i16.Key? key;
 
   final int gameId;
 
@@ -278,8 +279,8 @@ class HomeRoute extends _i13.PageRouteInfo<void> {
 class MoreGamesRoute extends _i13.PageRouteInfo<MoreGamesRouteArgs> {
   MoreGamesRoute({
     _i14.Key? key,
-    required _i16.GamesListModel gamesListModel,
-    required _i17.HomeEvent Function(
+    required _i17.GamesListModel gamesListModel,
+    required _i18.HomeEvent Function(
       int,
       int,
     ) eventProvider,
@@ -309,9 +310,9 @@ class MoreGamesRouteArgs {
 
   final _i14.Key? key;
 
-  final _i16.GamesListModel gamesListModel;
+  final _i17.GamesListModel gamesListModel;
 
-  final _i17.HomeEvent Function(
+  final _i18.HomeEvent Function(
     int,
     int,
   ) eventProvider;

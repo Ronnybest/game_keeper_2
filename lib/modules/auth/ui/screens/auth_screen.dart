@@ -162,7 +162,7 @@ class _AuthScreenState extends State<AuthScreen> {
                         child: Text(
                           LocaleKeys.auth_login_forget_pass.tr(),
                           style: TextStyle(
-                            color: Colors.greenAccent.withOpacity(0.5),
+                            color: Theme.of(context).colorScheme.tertiary,
                             fontSize: 12.sp,
                           ),
                         ),

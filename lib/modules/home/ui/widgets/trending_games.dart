@@ -1,7 +1,9 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:fast_cached_network_image/fast_cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:game_keeper/core/models/user_firestore.dart';
+import 'package:game_keeper/core/router/app_router.gr.dart';
 import 'package:game_keeper/core/utils/user_info_firestore.dart';
 import 'package:game_keeper/modules/home/logic/api/model/games_list_model.dart';
 import 'package:game_keeper/ui/widgets/gk_animated_bookmark.dart';
@@ -47,10 +49,9 @@ class _TrendigGamesState extends State<TrendigGames> {
               }
               return GestureDetector(
                 onTap: () {
-                  // Navigator.of(context).pushNamed(
-                  //   Routes.gameDetailsScreen,
-                  //   arguments: GameDetailsScreenArguments(game: game),
-                  // );
+                  AutoRouter.of(context).push(
+                    GameViewRoute(gameId: game.id ?? -1),
+                  );
                 },
                 onDoubleTap: () async {
                   if (isBookmarked) {

@@ -106,6 +106,14 @@
         "title": "Здравствуйте, {name}!",
         "trend_games": "Игры в тренде"
     },
+    "game_view": {
+        "added" : "Добавлено",
+        "rating": "Рейтинг",
+        "suggestions" : "Рекомендации",
+        "achivements": "Достижения",
+        "nd" : "Н/Д",
+        "no_images": "Нет изображений"
+    },
     "profile": {
         "default_username": "Геймер"
     },

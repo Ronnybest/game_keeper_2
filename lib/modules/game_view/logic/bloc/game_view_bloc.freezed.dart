@@ -20,7 +20,9 @@ mixin _$GameViewState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGame,
-    required TResult Function(FullGameModel game) loadedGame,
+    required TResult Function(
+            FullGameModel game, GameScreenshotsModel screenshots)
+        loadedGame,
     required TResult Function(dynamic message) errorGame,
   }) =>
       throw _privateConstructorUsedError;
@@ -28,7 +30,8 @@ mixin _$GameViewState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGame,
-    TResult? Function(FullGameModel game)? loadedGame,
+    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots)?
+        loadedGame,
     TResult? Function(dynamic message)? errorGame,
   }) =>
       throw _privateConstructorUsedError;
@@ -36,7 +39,8 @@ mixin _$GameViewState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGame,
-    TResult Function(FullGameModel game)? loadedGame,
+    TResult Function(FullGameModel game, GameScreenshotsModel screenshots)?
+        loadedGame,
     TResult Function(dynamic message)? errorGame,
     required TResult orElse(),
   }) =>
@@ -126,7 +130,9 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGame,
-    required TResult Function(FullGameModel game) loadedGame,
+    required TResult Function(
+            FullGameModel game, GameScreenshotsModel screenshots)
+        loadedGame,
     required TResult Function(dynamic message) errorGame,
   }) {
     return initial();
@@ -137,7 +143,8 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGame,
-    TResult? Function(FullGameModel game)? loadedGame,
+    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots)?
+        loadedGame,
     TResult? Function(dynamic message)? errorGame,
   }) {
     return initial?.call();
@@ -148,7 +155,8 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGame,
-    TResult Function(FullGameModel game)? loadedGame,
+    TResult Function(FullGameModel game, GameScreenshotsModel screenshots)?
+        loadedGame,
     TResult Function(dynamic message)? errorGame,
     required TResult orElse(),
   }) {
@@ -240,7 +248,9 @@ class _$LoadingGameImpl implements _LoadingGame {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGame,
-    required TResult Function(FullGameModel game) loadedGame,
+    required TResult Function(
+            FullGameModel game, GameScreenshotsModel screenshots)
+        loadedGame,
     required TResult Function(dynamic message) errorGame,
   }) {
     return loadingGame();
@@ -251,7 +261,8 @@ class _$LoadingGameImpl implements _LoadingGame {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGame,
-    TResult? Function(FullGameModel game)? loadedGame,
+    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots)?
+        loadedGame,
     TResult? Function(dynamic message)? errorGame,
   }) {
     return loadingGame?.call();
@@ -262,7 +273,8 @@ class _$LoadingGameImpl implements _LoadingGame {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGame,
-    TResult Function(FullGameModel game)? loadedGame,
+    TResult Function(FullGameModel game, GameScreenshotsModel screenshots)?
+        loadedGame,
     TResult Function(dynamic message)? errorGame,
     required TResult orElse(),
   }) {
@@ -320,7 +332,7 @@ abstract class _$$LoadedGameImplCopyWith<$Res> {
           _$LoadedGameImpl value, $Res Function(_$LoadedGameImpl) then) =
       __$$LoadedGameImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({FullGameModel game});
+  $Res call({FullGameModel game, GameScreenshotsModel screenshots});
 }
 
 /// @nodoc
@@ -335,12 +347,17 @@ class __$$LoadedGameImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? game = null,
+    Object? screenshots = null,
   }) {
     return _then(_$LoadedGameImpl(
       null == game
           ? _value.game
           : game // ignore: cast_nullable_to_non_nullable
               as FullGameModel,
+      null == screenshots
+          ? _value.screenshots
+          : screenshots // ignore: cast_nullable_to_non_nullable
+              as GameScreenshotsModel,
     ));
   }
 }
@@ -348,14 +365,16 @@ class __$$LoadedGameImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$LoadedGameImpl implements _LoadedGame {
-  const _$LoadedGameImpl(this.game);
+  const _$LoadedGameImpl(this.game, this.screenshots);
 
   @override
   final FullGameModel game;
+  @override
+  final GameScreenshotsModel screenshots;
 
   @override
   String toString() {
-    return 'GameViewState.loadedGame(game: $game)';
+    return 'GameViewState.loadedGame(game: $game, screenshots: $screenshots)';
   }
 
   @override
@@ -363,11 +382,13 @@ class _$LoadedGameImpl implements _LoadedGame {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LoadedGameImpl &&
-            (identical(other.game, game) || other.game == game));
+            (identical(other.game, game) || other.game == game) &&
+            (identical(other.screenshots, screenshots) ||
+                other.screenshots == screenshots));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, game);
+  int get hashCode => Object.hash(runtimeType, game, screenshots);
 
   @JsonKey(ignore: true)
   @override
@@ -380,10 +401,12 @@ class _$LoadedGameImpl implements _LoadedGame {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGame,
-    required TResult Function(FullGameModel game) loadedGame,
+    required TResult Function(
+            FullGameModel game, GameScreenshotsModel screenshots)
+        loadedGame,
     required TResult Function(dynamic message) errorGame,
   }) {
-    return loadedGame(game);
+    return loadedGame(game, screenshots);
   }
 
   @override
@@ -391,10 +414,11 @@ class _$LoadedGameImpl implements _LoadedGame {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGame,
-    TResult? Function(FullGameModel game)? loadedGame,
+    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots)?
+        loadedGame,
     TResult? Function(dynamic message)? errorGame,
   }) {
-    return loadedGame?.call(game);
+    return loadedGame?.call(game, screenshots);
   }
 
   @override
@@ -402,12 +426,13 @@ class _$LoadedGameImpl implements _LoadedGame {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGame,
-    TResult Function(FullGameModel game)? loadedGame,
+    TResult Function(FullGameModel game, GameScreenshotsModel screenshots)?
+        loadedGame,
     TResult Function(dynamic message)? errorGame,
     required TResult orElse(),
   }) {
     if (loadedGame != null) {
-      return loadedGame(game);
+      return loadedGame(game, screenshots);
     }
     return orElse();
   }
@@ -451,9 +476,12 @@ class _$LoadedGameImpl implements _LoadedGame {
 }
 
 abstract class _LoadedGame implements GameViewState {
-  const factory _LoadedGame(final FullGameModel game) = _$LoadedGameImpl;
+  const factory _LoadedGame(
+          final FullGameModel game, final GameScreenshotsModel screenshots) =
+      _$LoadedGameImpl;
 
   FullGameModel get game;
+  GameScreenshotsModel get screenshots;
   @JsonKey(ignore: true)
   _$$LoadedGameImplCopyWith<_$LoadedGameImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -526,7 +554,9 @@ class _$ErrorGameImpl implements _ErrorGame {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGame,
-    required TResult Function(FullGameModel game) loadedGame,
+    required TResult Function(
+            FullGameModel game, GameScreenshotsModel screenshots)
+        loadedGame,
     required TResult Function(dynamic message) errorGame,
   }) {
     return errorGame(message);
@@ -537,7 +567,8 @@ class _$ErrorGameImpl implements _ErrorGame {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGame,
-    TResult? Function(FullGameModel game)? loadedGame,
+    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots)?
+        loadedGame,
     TResult? Function(dynamic message)? errorGame,
   }) {
     return errorGame?.call(message);
@@ -548,7 +579,8 @@ class _$ErrorGameImpl implements _ErrorGame {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGame,
-    TResult Function(FullGameModel game)? loadedGame,
+    TResult Function(FullGameModel game, GameScreenshotsModel screenshots)?
+        loadedGame,
     TResult Function(dynamic message)? errorGame,
     required TResult orElse(),
   }) {

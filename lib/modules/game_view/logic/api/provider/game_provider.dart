@@ -1,5 +1,6 @@
 import 'package:game_keeper/core/network/core_api.dart';
 import 'package:game_keeper/modules/game_view/logic/api/model/full_game_model.dart';
+import 'package:game_keeper/modules/game_view/logic/api/model/game_screenshots_model.dart';
 import 'package:game_keeper/modules/game_view/logic/api/service/game_service.dart';
 import 'package:injectable/injectable.dart';
 
@@ -13,6 +14,14 @@ class GameProvider {
   }) async {
     GameService gameService = GameService(_coreApi.rawgIoDio);
     FullGameModel result = await gameService.getGame(id: id);
+    return result;
+  }
+
+  Future<GameScreenshotsModel> getGameScreenshots({
+    required int id,
+  }) async {
+    GameService gameService = GameService(_coreApi.rawgIoDio);
+    GameScreenshotsModel result = await gameService.getGameScreenshots(id: id);
     return result;
   }
 }

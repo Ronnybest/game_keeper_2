@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:game_keeper/modules/game_view/logic/api/model/full_game_model.dart';
+import 'package:game_keeper/modules/game_view/logic/api/model/game_screenshots_model.dart';
 import 'package:game_keeper/modules/game_view/logic/api/repository/game_repository.dart';
 import 'package:injectable/injectable.dart';
 
@@ -18,14 +19,17 @@ class GameViewBloc extends Bloc<GameViewEvent, GameViewState> {
   }
 
   Future<void> _onEvent(GameViewEvent event, Emitter<GameViewState> emit) {
-    return event.map(fetchGame: (_FetchGame value) async {
-      try {
-        emit(const GameViewState.loadingGame());
-        var result = await _gameViewRepository.getGame(id: value.gameId);
-        emit(GameViewState.loadedGame(result));
-      } catch (e) {
-        emit(GameViewState.errorGame(e));
-      }
-    });
+    return event.map(
+      fetchGame: (_FetchGame value) async {
+        try {
+          emit(const GameViewState.loadingGame());
+          var result = await _gameViewRepository.getGame(id: value.gameId);
+          var screenshots = await _gameViewRepository.getGameScreenshots(id: value.gameId);
+          emit(GameViewState.loadedGame(result, screenshots));
+        } catch (e) {
+          emit(GameViewState.errorGame(e));
+        }
+      },
+    );
   }
 }
