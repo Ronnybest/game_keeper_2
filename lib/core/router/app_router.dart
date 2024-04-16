@@ -31,5 +31,6 @@ class AppRouter extends $AppRouter {
         AutoRoute(page: ApplicationPreferences.page),
         AutoRoute(page: MoreGamesRoute.page),
         AutoRoute(page: GameViewRoute.page),
+        AutoRoute(page: RedditCommentsListRoute.page),
       ];
 }

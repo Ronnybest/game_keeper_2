@@ -109,6 +109,10 @@ abstract class  LocaleKeys {
   static const game_view_ratings_meh = 'game_view.ratings.meh';
   static const game_view_ratings_skip = 'game_view.ratings.skip';
   static const game_view_ratings = 'game_view.ratings';
+  static const game_view_reddit_comments_title = 'game_view.reddit_comments.title';
+  static const game_view_reddit_comments_no_comments = 'game_view.reddit_comments.no_comments';
+  static const game_view_reddit_comments_default_username = 'game_view.reddit_comments.default_username';
+  static const game_view_reddit_comments = 'game_view.reddit_comments';
   static const game_view = 'game_view';
   static const profile_default_username = 'profile.default_username';
   static const profile = 'profile';

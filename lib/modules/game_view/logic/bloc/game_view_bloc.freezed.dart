@@ -21,27 +21,43 @@ mixin _$GameViewState {
     required TResult Function() initial,
     required TResult Function() loadingGame,
     required TResult Function(
-            FullGameModel game, GameScreenshotsModel screenshots)
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)
         loadedGame,
     required TResult Function(dynamic message) errorGame,
+    required TResult Function() loadingPagingRedditComments,
+    required TResult Function(GameRedditCommentsModel redditComments)
+        loadedPagingRedditComments,
+    required TResult Function(dynamic message) errorPagingRedditComments,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGame,
-    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots)?
+    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)?
         loadedGame,
     TResult? Function(dynamic message)? errorGame,
+    TResult? Function()? loadingPagingRedditComments,
+    TResult? Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult? Function(dynamic message)? errorPagingRedditComments,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGame,
-    TResult Function(FullGameModel game, GameScreenshotsModel screenshots)?
+    TResult Function(FullGameModel game, GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)?
         loadedGame,
     TResult Function(dynamic message)? errorGame,
+    TResult Function()? loadingPagingRedditComments,
+    TResult Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult Function(dynamic message)? errorPagingRedditComments,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -51,6 +67,12 @@ mixin _$GameViewState {
     required TResult Function(_LoadingGame value) loadingGame,
     required TResult Function(_LoadedGame value) loadedGame,
     required TResult Function(_ErrorGame value) errorGame,
+    required TResult Function(_LoadingPagingRedditComments value)
+        loadingPagingRedditComments,
+    required TResult Function(_LoadedPagingRedditComments value)
+        loadedPagingRedditComments,
+    required TResult Function(_ErrorPagingRedditComments value)
+        errorPagingRedditComments,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -59,6 +81,12 @@ mixin _$GameViewState {
     TResult? Function(_LoadingGame value)? loadingGame,
     TResult? Function(_LoadedGame value)? loadedGame,
     TResult? Function(_ErrorGame value)? errorGame,
+    TResult? Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult? Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult? Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -67,6 +95,12 @@ mixin _$GameViewState {
     TResult Function(_LoadingGame value)? loadingGame,
     TResult Function(_LoadedGame value)? loadedGame,
     TResult Function(_ErrorGame value)? errorGame,
+    TResult Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -131,9 +165,15 @@ class _$InitialImpl implements _Initial {
     required TResult Function() initial,
     required TResult Function() loadingGame,
     required TResult Function(
-            FullGameModel game, GameScreenshotsModel screenshots)
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)
         loadedGame,
     required TResult Function(dynamic message) errorGame,
+    required TResult Function() loadingPagingRedditComments,
+    required TResult Function(GameRedditCommentsModel redditComments)
+        loadedPagingRedditComments,
+    required TResult Function(dynamic message) errorPagingRedditComments,
   }) {
     return initial();
   }
@@ -143,9 +183,14 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGame,
-    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots)?
+    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)?
         loadedGame,
     TResult? Function(dynamic message)? errorGame,
+    TResult? Function()? loadingPagingRedditComments,
+    TResult? Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult? Function(dynamic message)? errorPagingRedditComments,
   }) {
     return initial?.call();
   }
@@ -155,9 +200,14 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGame,
-    TResult Function(FullGameModel game, GameScreenshotsModel screenshots)?
+    TResult Function(FullGameModel game, GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)?
         loadedGame,
     TResult Function(dynamic message)? errorGame,
+    TResult Function()? loadingPagingRedditComments,
+    TResult Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult Function(dynamic message)? errorPagingRedditComments,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -173,6 +223,12 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_LoadingGame value) loadingGame,
     required TResult Function(_LoadedGame value) loadedGame,
     required TResult Function(_ErrorGame value) errorGame,
+    required TResult Function(_LoadingPagingRedditComments value)
+        loadingPagingRedditComments,
+    required TResult Function(_LoadedPagingRedditComments value)
+        loadedPagingRedditComments,
+    required TResult Function(_ErrorPagingRedditComments value)
+        errorPagingRedditComments,
   }) {
     return initial(this);
   }
@@ -184,6 +240,12 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_LoadingGame value)? loadingGame,
     TResult? Function(_LoadedGame value)? loadedGame,
     TResult? Function(_ErrorGame value)? errorGame,
+    TResult? Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult? Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult? Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
   }) {
     return initial?.call(this);
   }
@@ -195,6 +257,12 @@ class _$InitialImpl implements _Initial {
     TResult Function(_LoadingGame value)? loadingGame,
     TResult Function(_LoadedGame value)? loadedGame,
     TResult Function(_ErrorGame value)? errorGame,
+    TResult Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -249,9 +317,15 @@ class _$LoadingGameImpl implements _LoadingGame {
     required TResult Function() initial,
     required TResult Function() loadingGame,
     required TResult Function(
-            FullGameModel game, GameScreenshotsModel screenshots)
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)
         loadedGame,
     required TResult Function(dynamic message) errorGame,
+    required TResult Function() loadingPagingRedditComments,
+    required TResult Function(GameRedditCommentsModel redditComments)
+        loadedPagingRedditComments,
+    required TResult Function(dynamic message) errorPagingRedditComments,
   }) {
     return loadingGame();
   }
@@ -261,9 +335,14 @@ class _$LoadingGameImpl implements _LoadingGame {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGame,
-    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots)?
+    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)?
         loadedGame,
     TResult? Function(dynamic message)? errorGame,
+    TResult? Function()? loadingPagingRedditComments,
+    TResult? Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult? Function(dynamic message)? errorPagingRedditComments,
   }) {
     return loadingGame?.call();
   }
@@ -273,9 +352,14 @@ class _$LoadingGameImpl implements _LoadingGame {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGame,
-    TResult Function(FullGameModel game, GameScreenshotsModel screenshots)?
+    TResult Function(FullGameModel game, GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)?
         loadedGame,
     TResult Function(dynamic message)? errorGame,
+    TResult Function()? loadingPagingRedditComments,
+    TResult Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult Function(dynamic message)? errorPagingRedditComments,
     required TResult orElse(),
   }) {
     if (loadingGame != null) {
@@ -291,6 +375,12 @@ class _$LoadingGameImpl implements _LoadingGame {
     required TResult Function(_LoadingGame value) loadingGame,
     required TResult Function(_LoadedGame value) loadedGame,
     required TResult Function(_ErrorGame value) errorGame,
+    required TResult Function(_LoadingPagingRedditComments value)
+        loadingPagingRedditComments,
+    required TResult Function(_LoadedPagingRedditComments value)
+        loadedPagingRedditComments,
+    required TResult Function(_ErrorPagingRedditComments value)
+        errorPagingRedditComments,
   }) {
     return loadingGame(this);
   }
@@ -302,6 +392,12 @@ class _$LoadingGameImpl implements _LoadingGame {
     TResult? Function(_LoadingGame value)? loadingGame,
     TResult? Function(_LoadedGame value)? loadedGame,
     TResult? Function(_ErrorGame value)? errorGame,
+    TResult? Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult? Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult? Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
   }) {
     return loadingGame?.call(this);
   }
@@ -313,6 +409,12 @@ class _$LoadingGameImpl implements _LoadingGame {
     TResult Function(_LoadingGame value)? loadingGame,
     TResult Function(_LoadedGame value)? loadedGame,
     TResult Function(_ErrorGame value)? errorGame,
+    TResult Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
     required TResult orElse(),
   }) {
     if (loadingGame != null) {
@@ -332,7 +434,10 @@ abstract class _$$LoadedGameImplCopyWith<$Res> {
           _$LoadedGameImpl value, $Res Function(_$LoadedGameImpl) then) =
       __$$LoadedGameImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({FullGameModel game, GameScreenshotsModel screenshots});
+  $Res call(
+      {FullGameModel game,
+      GameScreenshotsModel screenshots,
+      GameRedditCommentsModel redditComments});
 }
 
 /// @nodoc
@@ -348,6 +453,7 @@ class __$$LoadedGameImplCopyWithImpl<$Res>
   $Res call({
     Object? game = null,
     Object? screenshots = null,
+    Object? redditComments = null,
   }) {
     return _then(_$LoadedGameImpl(
       null == game
@@ -358,6 +464,10 @@ class __$$LoadedGameImplCopyWithImpl<$Res>
           ? _value.screenshots
           : screenshots // ignore: cast_nullable_to_non_nullable
               as GameScreenshotsModel,
+      null == redditComments
+          ? _value.redditComments
+          : redditComments // ignore: cast_nullable_to_non_nullable
+              as GameRedditCommentsModel,
     ));
   }
 }
@@ -365,16 +475,18 @@ class __$$LoadedGameImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$LoadedGameImpl implements _LoadedGame {
-  const _$LoadedGameImpl(this.game, this.screenshots);
+  const _$LoadedGameImpl(this.game, this.screenshots, this.redditComments);
 
   @override
   final FullGameModel game;
   @override
   final GameScreenshotsModel screenshots;
+  @override
+  final GameRedditCommentsModel redditComments;
 
   @override
   String toString() {
-    return 'GameViewState.loadedGame(game: $game, screenshots: $screenshots)';
+    return 'GameViewState.loadedGame(game: $game, screenshots: $screenshots, redditComments: $redditComments)';
   }
 
   @override
@@ -384,11 +496,14 @@ class _$LoadedGameImpl implements _LoadedGame {
             other is _$LoadedGameImpl &&
             (identical(other.game, game) || other.game == game) &&
             (identical(other.screenshots, screenshots) ||
-                other.screenshots == screenshots));
+                other.screenshots == screenshots) &&
+            (identical(other.redditComments, redditComments) ||
+                other.redditComments == redditComments));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, game, screenshots);
+  int get hashCode =>
+      Object.hash(runtimeType, game, screenshots, redditComments);
 
   @JsonKey(ignore: true)
   @override
@@ -402,11 +517,17 @@ class _$LoadedGameImpl implements _LoadedGame {
     required TResult Function() initial,
     required TResult Function() loadingGame,
     required TResult Function(
-            FullGameModel game, GameScreenshotsModel screenshots)
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)
         loadedGame,
     required TResult Function(dynamic message) errorGame,
+    required TResult Function() loadingPagingRedditComments,
+    required TResult Function(GameRedditCommentsModel redditComments)
+        loadedPagingRedditComments,
+    required TResult Function(dynamic message) errorPagingRedditComments,
   }) {
-    return loadedGame(game, screenshots);
+    return loadedGame(game, screenshots, redditComments);
   }
 
   @override
@@ -414,11 +535,16 @@ class _$LoadedGameImpl implements _LoadedGame {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGame,
-    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots)?
+    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)?
         loadedGame,
     TResult? Function(dynamic message)? errorGame,
+    TResult? Function()? loadingPagingRedditComments,
+    TResult? Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult? Function(dynamic message)? errorPagingRedditComments,
   }) {
-    return loadedGame?.call(game, screenshots);
+    return loadedGame?.call(game, screenshots, redditComments);
   }
 
   @override
@@ -426,13 +552,18 @@ class _$LoadedGameImpl implements _LoadedGame {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGame,
-    TResult Function(FullGameModel game, GameScreenshotsModel screenshots)?
+    TResult Function(FullGameModel game, GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)?
         loadedGame,
     TResult Function(dynamic message)? errorGame,
+    TResult Function()? loadingPagingRedditComments,
+    TResult Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult Function(dynamic message)? errorPagingRedditComments,
     required TResult orElse(),
   }) {
     if (loadedGame != null) {
-      return loadedGame(game, screenshots);
+      return loadedGame(game, screenshots, redditComments);
     }
     return orElse();
   }
@@ -444,6 +575,12 @@ class _$LoadedGameImpl implements _LoadedGame {
     required TResult Function(_LoadingGame value) loadingGame,
     required TResult Function(_LoadedGame value) loadedGame,
     required TResult Function(_ErrorGame value) errorGame,
+    required TResult Function(_LoadingPagingRedditComments value)
+        loadingPagingRedditComments,
+    required TResult Function(_LoadedPagingRedditComments value)
+        loadedPagingRedditComments,
+    required TResult Function(_ErrorPagingRedditComments value)
+        errorPagingRedditComments,
   }) {
     return loadedGame(this);
   }
@@ -455,6 +592,12 @@ class _$LoadedGameImpl implements _LoadedGame {
     TResult? Function(_LoadingGame value)? loadingGame,
     TResult? Function(_LoadedGame value)? loadedGame,
     TResult? Function(_ErrorGame value)? errorGame,
+    TResult? Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult? Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult? Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
   }) {
     return loadedGame?.call(this);
   }
@@ -466,6 +609,12 @@ class _$LoadedGameImpl implements _LoadedGame {
     TResult Function(_LoadingGame value)? loadingGame,
     TResult Function(_LoadedGame value)? loadedGame,
     TResult Function(_ErrorGame value)? errorGame,
+    TResult Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
     required TResult orElse(),
   }) {
     if (loadedGame != null) {
@@ -477,11 +626,13 @@ class _$LoadedGameImpl implements _LoadedGame {
 
 abstract class _LoadedGame implements GameViewState {
   const factory _LoadedGame(
-          final FullGameModel game, final GameScreenshotsModel screenshots) =
-      _$LoadedGameImpl;
+      final FullGameModel game,
+      final GameScreenshotsModel screenshots,
+      final GameRedditCommentsModel redditComments) = _$LoadedGameImpl;
 
   FullGameModel get game;
   GameScreenshotsModel get screenshots;
+  GameRedditCommentsModel get redditComments;
   @JsonKey(ignore: true)
   _$$LoadedGameImplCopyWith<_$LoadedGameImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -555,9 +706,15 @@ class _$ErrorGameImpl implements _ErrorGame {
     required TResult Function() initial,
     required TResult Function() loadingGame,
     required TResult Function(
-            FullGameModel game, GameScreenshotsModel screenshots)
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)
         loadedGame,
     required TResult Function(dynamic message) errorGame,
+    required TResult Function() loadingPagingRedditComments,
+    required TResult Function(GameRedditCommentsModel redditComments)
+        loadedPagingRedditComments,
+    required TResult Function(dynamic message) errorPagingRedditComments,
   }) {
     return errorGame(message);
   }
@@ -567,9 +724,14 @@ class _$ErrorGameImpl implements _ErrorGame {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGame,
-    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots)?
+    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)?
         loadedGame,
     TResult? Function(dynamic message)? errorGame,
+    TResult? Function()? loadingPagingRedditComments,
+    TResult? Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult? Function(dynamic message)? errorPagingRedditComments,
   }) {
     return errorGame?.call(message);
   }
@@ -579,9 +741,14 @@ class _$ErrorGameImpl implements _ErrorGame {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGame,
-    TResult Function(FullGameModel game, GameScreenshotsModel screenshots)?
+    TResult Function(FullGameModel game, GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)?
         loadedGame,
     TResult Function(dynamic message)? errorGame,
+    TResult Function()? loadingPagingRedditComments,
+    TResult Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult Function(dynamic message)? errorPagingRedditComments,
     required TResult orElse(),
   }) {
     if (errorGame != null) {
@@ -597,6 +764,12 @@ class _$ErrorGameImpl implements _ErrorGame {
     required TResult Function(_LoadingGame value) loadingGame,
     required TResult Function(_LoadedGame value) loadedGame,
     required TResult Function(_ErrorGame value) errorGame,
+    required TResult Function(_LoadingPagingRedditComments value)
+        loadingPagingRedditComments,
+    required TResult Function(_LoadedPagingRedditComments value)
+        loadedPagingRedditComments,
+    required TResult Function(_ErrorPagingRedditComments value)
+        errorPagingRedditComments,
   }) {
     return errorGame(this);
   }
@@ -608,6 +781,12 @@ class _$ErrorGameImpl implements _ErrorGame {
     TResult? Function(_LoadingGame value)? loadingGame,
     TResult? Function(_LoadedGame value)? loadedGame,
     TResult? Function(_ErrorGame value)? errorGame,
+    TResult? Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult? Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult? Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
   }) {
     return errorGame?.call(this);
   }
@@ -619,6 +798,12 @@ class _$ErrorGameImpl implements _ErrorGame {
     TResult Function(_LoadingGame value)? loadingGame,
     TResult Function(_LoadedGame value)? loadedGame,
     TResult Function(_ErrorGame value)? errorGame,
+    TResult Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
     required TResult orElse(),
   }) {
     if (errorGame != null) {
@@ -638,43 +823,581 @@ abstract class _ErrorGame implements GameViewState {
 }
 
 /// @nodoc
+abstract class _$$LoadingPagingRedditCommentsImplCopyWith<$Res> {
+  factory _$$LoadingPagingRedditCommentsImplCopyWith(
+          _$LoadingPagingRedditCommentsImpl value,
+          $Res Function(_$LoadingPagingRedditCommentsImpl) then) =
+      __$$LoadingPagingRedditCommentsImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$LoadingPagingRedditCommentsImplCopyWithImpl<$Res>
+    extends _$GameViewStateCopyWithImpl<$Res, _$LoadingPagingRedditCommentsImpl>
+    implements _$$LoadingPagingRedditCommentsImplCopyWith<$Res> {
+  __$$LoadingPagingRedditCommentsImplCopyWithImpl(
+      _$LoadingPagingRedditCommentsImpl _value,
+      $Res Function(_$LoadingPagingRedditCommentsImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$LoadingPagingRedditCommentsImpl
+    implements _LoadingPagingRedditComments {
+  const _$LoadingPagingRedditCommentsImpl();
+
+  @override
+  String toString() {
+    return 'GameViewState.loadingPagingRedditComments()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoadingPagingRedditCommentsImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingGame,
+    required TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)
+        loadedGame,
+    required TResult Function(dynamic message) errorGame,
+    required TResult Function() loadingPagingRedditComments,
+    required TResult Function(GameRedditCommentsModel redditComments)
+        loadedPagingRedditComments,
+    required TResult Function(dynamic message) errorPagingRedditComments,
+  }) {
+    return loadingPagingRedditComments();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingGame,
+    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)?
+        loadedGame,
+    TResult? Function(dynamic message)? errorGame,
+    TResult? Function()? loadingPagingRedditComments,
+    TResult? Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult? Function(dynamic message)? errorPagingRedditComments,
+  }) {
+    return loadingPagingRedditComments?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingGame,
+    TResult Function(FullGameModel game, GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)?
+        loadedGame,
+    TResult Function(dynamic message)? errorGame,
+    TResult Function()? loadingPagingRedditComments,
+    TResult Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult Function(dynamic message)? errorPagingRedditComments,
+    required TResult orElse(),
+  }) {
+    if (loadingPagingRedditComments != null) {
+      return loadingPagingRedditComments();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadingGame value) loadingGame,
+    required TResult Function(_LoadedGame value) loadedGame,
+    required TResult Function(_ErrorGame value) errorGame,
+    required TResult Function(_LoadingPagingRedditComments value)
+        loadingPagingRedditComments,
+    required TResult Function(_LoadedPagingRedditComments value)
+        loadedPagingRedditComments,
+    required TResult Function(_ErrorPagingRedditComments value)
+        errorPagingRedditComments,
+  }) {
+    return loadingPagingRedditComments(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingGame value)? loadingGame,
+    TResult? Function(_LoadedGame value)? loadedGame,
+    TResult? Function(_ErrorGame value)? errorGame,
+    TResult? Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult? Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult? Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
+  }) {
+    return loadingPagingRedditComments?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadingGame value)? loadingGame,
+    TResult Function(_LoadedGame value)? loadedGame,
+    TResult Function(_ErrorGame value)? errorGame,
+    TResult Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
+    required TResult orElse(),
+  }) {
+    if (loadingPagingRedditComments != null) {
+      return loadingPagingRedditComments(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadingPagingRedditComments implements GameViewState {
+  const factory _LoadingPagingRedditComments() =
+      _$LoadingPagingRedditCommentsImpl;
+}
+
+/// @nodoc
+abstract class _$$LoadedPagingRedditCommentsImplCopyWith<$Res> {
+  factory _$$LoadedPagingRedditCommentsImplCopyWith(
+          _$LoadedPagingRedditCommentsImpl value,
+          $Res Function(_$LoadedPagingRedditCommentsImpl) then) =
+      __$$LoadedPagingRedditCommentsImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({GameRedditCommentsModel redditComments});
+}
+
+/// @nodoc
+class __$$LoadedPagingRedditCommentsImplCopyWithImpl<$Res>
+    extends _$GameViewStateCopyWithImpl<$Res, _$LoadedPagingRedditCommentsImpl>
+    implements _$$LoadedPagingRedditCommentsImplCopyWith<$Res> {
+  __$$LoadedPagingRedditCommentsImplCopyWithImpl(
+      _$LoadedPagingRedditCommentsImpl _value,
+      $Res Function(_$LoadedPagingRedditCommentsImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? redditComments = null,
+  }) {
+    return _then(_$LoadedPagingRedditCommentsImpl(
+      null == redditComments
+          ? _value.redditComments
+          : redditComments // ignore: cast_nullable_to_non_nullable
+              as GameRedditCommentsModel,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LoadedPagingRedditCommentsImpl implements _LoadedPagingRedditComments {
+  const _$LoadedPagingRedditCommentsImpl(this.redditComments);
+
+  @override
+  final GameRedditCommentsModel redditComments;
+
+  @override
+  String toString() {
+    return 'GameViewState.loadedPagingRedditComments(redditComments: $redditComments)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoadedPagingRedditCommentsImpl &&
+            (identical(other.redditComments, redditComments) ||
+                other.redditComments == redditComments));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, redditComments);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LoadedPagingRedditCommentsImplCopyWith<_$LoadedPagingRedditCommentsImpl>
+      get copyWith => __$$LoadedPagingRedditCommentsImplCopyWithImpl<
+          _$LoadedPagingRedditCommentsImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingGame,
+    required TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)
+        loadedGame,
+    required TResult Function(dynamic message) errorGame,
+    required TResult Function() loadingPagingRedditComments,
+    required TResult Function(GameRedditCommentsModel redditComments)
+        loadedPagingRedditComments,
+    required TResult Function(dynamic message) errorPagingRedditComments,
+  }) {
+    return loadedPagingRedditComments(redditComments);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingGame,
+    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)?
+        loadedGame,
+    TResult? Function(dynamic message)? errorGame,
+    TResult? Function()? loadingPagingRedditComments,
+    TResult? Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult? Function(dynamic message)? errorPagingRedditComments,
+  }) {
+    return loadedPagingRedditComments?.call(redditComments);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingGame,
+    TResult Function(FullGameModel game, GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)?
+        loadedGame,
+    TResult Function(dynamic message)? errorGame,
+    TResult Function()? loadingPagingRedditComments,
+    TResult Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult Function(dynamic message)? errorPagingRedditComments,
+    required TResult orElse(),
+  }) {
+    if (loadedPagingRedditComments != null) {
+      return loadedPagingRedditComments(redditComments);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadingGame value) loadingGame,
+    required TResult Function(_LoadedGame value) loadedGame,
+    required TResult Function(_ErrorGame value) errorGame,
+    required TResult Function(_LoadingPagingRedditComments value)
+        loadingPagingRedditComments,
+    required TResult Function(_LoadedPagingRedditComments value)
+        loadedPagingRedditComments,
+    required TResult Function(_ErrorPagingRedditComments value)
+        errorPagingRedditComments,
+  }) {
+    return loadedPagingRedditComments(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingGame value)? loadingGame,
+    TResult? Function(_LoadedGame value)? loadedGame,
+    TResult? Function(_ErrorGame value)? errorGame,
+    TResult? Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult? Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult? Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
+  }) {
+    return loadedPagingRedditComments?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadingGame value)? loadingGame,
+    TResult Function(_LoadedGame value)? loadedGame,
+    TResult Function(_ErrorGame value)? errorGame,
+    TResult Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
+    required TResult orElse(),
+  }) {
+    if (loadedPagingRedditComments != null) {
+      return loadedPagingRedditComments(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadedPagingRedditComments implements GameViewState {
+  const factory _LoadedPagingRedditComments(
+          final GameRedditCommentsModel redditComments) =
+      _$LoadedPagingRedditCommentsImpl;
+
+  GameRedditCommentsModel get redditComments;
+  @JsonKey(ignore: true)
+  _$$LoadedPagingRedditCommentsImplCopyWith<_$LoadedPagingRedditCommentsImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ErrorPagingRedditCommentsImplCopyWith<$Res> {
+  factory _$$ErrorPagingRedditCommentsImplCopyWith(
+          _$ErrorPagingRedditCommentsImpl value,
+          $Res Function(_$ErrorPagingRedditCommentsImpl) then) =
+      __$$ErrorPagingRedditCommentsImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({dynamic message});
+}
+
+/// @nodoc
+class __$$ErrorPagingRedditCommentsImplCopyWithImpl<$Res>
+    extends _$GameViewStateCopyWithImpl<$Res, _$ErrorPagingRedditCommentsImpl>
+    implements _$$ErrorPagingRedditCommentsImplCopyWith<$Res> {
+  __$$ErrorPagingRedditCommentsImplCopyWithImpl(
+      _$ErrorPagingRedditCommentsImpl _value,
+      $Res Function(_$ErrorPagingRedditCommentsImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(_$ErrorPagingRedditCommentsImpl(
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ErrorPagingRedditCommentsImpl implements _ErrorPagingRedditComments {
+  const _$ErrorPagingRedditCommentsImpl(this.message);
+
+  @override
+  final dynamic message;
+
+  @override
+  String toString() {
+    return 'GameViewState.errorPagingRedditComments(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ErrorPagingRedditCommentsImpl &&
+            const DeepCollectionEquality().equals(other.message, message));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ErrorPagingRedditCommentsImplCopyWith<_$ErrorPagingRedditCommentsImpl>
+      get copyWith => __$$ErrorPagingRedditCommentsImplCopyWithImpl<
+          _$ErrorPagingRedditCommentsImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingGame,
+    required TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)
+        loadedGame,
+    required TResult Function(dynamic message) errorGame,
+    required TResult Function() loadingPagingRedditComments,
+    required TResult Function(GameRedditCommentsModel redditComments)
+        loadedPagingRedditComments,
+    required TResult Function(dynamic message) errorPagingRedditComments,
+  }) {
+    return errorPagingRedditComments(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingGame,
+    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)?
+        loadedGame,
+    TResult? Function(dynamic message)? errorGame,
+    TResult? Function()? loadingPagingRedditComments,
+    TResult? Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult? Function(dynamic message)? errorPagingRedditComments,
+  }) {
+    return errorPagingRedditComments?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingGame,
+    TResult Function(FullGameModel game, GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments)?
+        loadedGame,
+    TResult Function(dynamic message)? errorGame,
+    TResult Function()? loadingPagingRedditComments,
+    TResult Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult Function(dynamic message)? errorPagingRedditComments,
+    required TResult orElse(),
+  }) {
+    if (errorPagingRedditComments != null) {
+      return errorPagingRedditComments(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadingGame value) loadingGame,
+    required TResult Function(_LoadedGame value) loadedGame,
+    required TResult Function(_ErrorGame value) errorGame,
+    required TResult Function(_LoadingPagingRedditComments value)
+        loadingPagingRedditComments,
+    required TResult Function(_LoadedPagingRedditComments value)
+        loadedPagingRedditComments,
+    required TResult Function(_ErrorPagingRedditComments value)
+        errorPagingRedditComments,
+  }) {
+    return errorPagingRedditComments(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingGame value)? loadingGame,
+    TResult? Function(_LoadedGame value)? loadedGame,
+    TResult? Function(_ErrorGame value)? errorGame,
+    TResult? Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult? Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult? Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
+  }) {
+    return errorPagingRedditComments?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadingGame value)? loadingGame,
+    TResult Function(_LoadedGame value)? loadedGame,
+    TResult Function(_ErrorGame value)? errorGame,
+    TResult Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
+    required TResult orElse(),
+  }) {
+    if (errorPagingRedditComments != null) {
+      return errorPagingRedditComments(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ErrorPagingRedditComments implements GameViewState {
+  const factory _ErrorPagingRedditComments(final dynamic message) =
+      _$ErrorPagingRedditCommentsImpl;
+
+  dynamic get message;
+  @JsonKey(ignore: true)
+  _$$ErrorPagingRedditCommentsImplCopyWith<_$ErrorPagingRedditCommentsImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$GameViewEvent {
-  int get gameId => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(int gameId) fetchGame,
+    required TResult Function(int id, int page) fetchPagingRedditComments,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int gameId)? fetchGame,
+    TResult? Function(int id, int page)? fetchPagingRedditComments,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int gameId)? fetchGame,
+    TResult Function(int id, int page)? fetchPagingRedditComments,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchGame value) fetchGame,
+    required TResult Function(_FetchPagingRedditComments value)
+        fetchPagingRedditComments,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FetchGame value)? fetchGame,
+    TResult? Function(_FetchPagingRedditComments value)?
+        fetchPagingRedditComments,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchGame value)? fetchGame,
+    TResult Function(_FetchPagingRedditComments value)?
+        fetchPagingRedditComments,
     required TResult orElse(),
   }) =>
-      throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $GameViewEventCopyWith<GameViewEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -683,8 +1406,6 @@ abstract class $GameViewEventCopyWith<$Res> {
   factory $GameViewEventCopyWith(
           GameViewEvent value, $Res Function(GameViewEvent) then) =
       _$GameViewEventCopyWithImpl<$Res, GameViewEvent>;
-  @useResult
-  $Res call({int gameId});
 }
 
 /// @nodoc
@@ -696,28 +1417,13 @@ class _$GameViewEventCopyWithImpl<$Res, $Val extends GameViewEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? gameId = null,
-  }) {
-    return _then(_value.copyWith(
-      gameId: null == gameId
-          ? _value.gameId
-          : gameId // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
-  }
 }
 
 /// @nodoc
-abstract class _$$FetchGameImplCopyWith<$Res>
-    implements $GameViewEventCopyWith<$Res> {
+abstract class _$$FetchGameImplCopyWith<$Res> {
   factory _$$FetchGameImplCopyWith(
           _$FetchGameImpl value, $Res Function(_$FetchGameImpl) then) =
       __$$FetchGameImplCopyWithImpl<$Res>;
-  @override
   @useResult
   $Res call({int gameId});
 }
@@ -778,6 +1484,7 @@ class _$FetchGameImpl implements _FetchGame {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(int gameId) fetchGame,
+    required TResult Function(int id, int page) fetchPagingRedditComments,
   }) {
     return fetchGame(gameId);
   }
@@ -786,6 +1493,7 @@ class _$FetchGameImpl implements _FetchGame {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int gameId)? fetchGame,
+    TResult? Function(int id, int page)? fetchPagingRedditComments,
   }) {
     return fetchGame?.call(gameId);
   }
@@ -794,6 +1502,7 @@ class _$FetchGameImpl implements _FetchGame {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int gameId)? fetchGame,
+    TResult Function(int id, int page)? fetchPagingRedditComments,
     required TResult orElse(),
   }) {
     if (fetchGame != null) {
@@ -806,6 +1515,8 @@ class _$FetchGameImpl implements _FetchGame {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchGame value) fetchGame,
+    required TResult Function(_FetchPagingRedditComments value)
+        fetchPagingRedditComments,
   }) {
     return fetchGame(this);
   }
@@ -814,6 +1525,8 @@ class _$FetchGameImpl implements _FetchGame {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FetchGame value)? fetchGame,
+    TResult? Function(_FetchPagingRedditComments value)?
+        fetchPagingRedditComments,
   }) {
     return fetchGame?.call(this);
   }
@@ -822,6 +1535,8 @@ class _$FetchGameImpl implements _FetchGame {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchGame value)? fetchGame,
+    TResult Function(_FetchPagingRedditComments value)?
+        fetchPagingRedditComments,
     required TResult orElse(),
   }) {
     if (fetchGame != null) {
@@ -834,10 +1549,157 @@ class _$FetchGameImpl implements _FetchGame {
 abstract class _FetchGame implements GameViewEvent {
   const factory _FetchGame(final int gameId) = _$FetchGameImpl;
 
-  @override
   int get gameId;
-  @override
   @JsonKey(ignore: true)
   _$$FetchGameImplCopyWith<_$FetchGameImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FetchPagingRedditCommentsImplCopyWith<$Res> {
+  factory _$$FetchPagingRedditCommentsImplCopyWith(
+          _$FetchPagingRedditCommentsImpl value,
+          $Res Function(_$FetchPagingRedditCommentsImpl) then) =
+      __$$FetchPagingRedditCommentsImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int id, int page});
+}
+
+/// @nodoc
+class __$$FetchPagingRedditCommentsImplCopyWithImpl<$Res>
+    extends _$GameViewEventCopyWithImpl<$Res, _$FetchPagingRedditCommentsImpl>
+    implements _$$FetchPagingRedditCommentsImplCopyWith<$Res> {
+  __$$FetchPagingRedditCommentsImplCopyWithImpl(
+      _$FetchPagingRedditCommentsImpl _value,
+      $Res Function(_$FetchPagingRedditCommentsImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? page = null,
+  }) {
+    return _then(_$FetchPagingRedditCommentsImpl(
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      null == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FetchPagingRedditCommentsImpl implements _FetchPagingRedditComments {
+  const _$FetchPagingRedditCommentsImpl(this.id, this.page);
+
+  @override
+  final int id;
+  @override
+  final int page;
+
+  @override
+  String toString() {
+    return 'GameViewEvent.fetchPagingRedditComments(id: $id, page: $page)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchPagingRedditCommentsImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.page, page) || other.page == page));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id, page);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchPagingRedditCommentsImplCopyWith<_$FetchPagingRedditCommentsImpl>
+      get copyWith => __$$FetchPagingRedditCommentsImplCopyWithImpl<
+          _$FetchPagingRedditCommentsImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int gameId) fetchGame,
+    required TResult Function(int id, int page) fetchPagingRedditComments,
+  }) {
+    return fetchPagingRedditComments(id, page);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int gameId)? fetchGame,
+    TResult? Function(int id, int page)? fetchPagingRedditComments,
+  }) {
+    return fetchPagingRedditComments?.call(id, page);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int gameId)? fetchGame,
+    TResult Function(int id, int page)? fetchPagingRedditComments,
+    required TResult orElse(),
+  }) {
+    if (fetchPagingRedditComments != null) {
+      return fetchPagingRedditComments(id, page);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchGame value) fetchGame,
+    required TResult Function(_FetchPagingRedditComments value)
+        fetchPagingRedditComments,
+  }) {
+    return fetchPagingRedditComments(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchGame value)? fetchGame,
+    TResult? Function(_FetchPagingRedditComments value)?
+        fetchPagingRedditComments,
+  }) {
+    return fetchPagingRedditComments?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchGame value)? fetchGame,
+    TResult Function(_FetchPagingRedditComments value)?
+        fetchPagingRedditComments,
+    required TResult orElse(),
+  }) {
+    if (fetchPagingRedditComments != null) {
+      return fetchPagingRedditComments(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchPagingRedditComments implements GameViewEvent {
+  const factory _FetchPagingRedditComments(final int id, final int page) =
+      _$FetchPagingRedditCommentsImpl;
+
+  int get id;
+  int get page;
+  @JsonKey(ignore: true)
+  _$$FetchPagingRedditCommentsImplCopyWith<_$FetchPagingRedditCommentsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
