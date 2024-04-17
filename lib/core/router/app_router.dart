@@ -22,7 +22,7 @@ class AppRouter extends $AppRouter {
           page: GKNavBar.page,
           children: [
             AutoRoute(page: HomeRoute.page),
-            AutoRoute(page: TestedRoute.page),
+            AutoRoute(page: GamesRoute.page),
             AutoRoute(page: TestedRoute.page),
             AutoRoute(page: TestedRoute.page),
             AutoRoute(page: ProfileRoute.page),
@@ -32,5 +32,7 @@ class AppRouter extends $AppRouter {
         AutoRoute(page: MoreGamesRoute.page),
         AutoRoute(page: GameViewRoute.page),
         AutoRoute(page: RedditCommentsListRoute.page),
+        AutoRoute(page: GameAchivementsListRoute.page),
+        AutoRoute(page: FullSearchRoute.page),
       ];
 }

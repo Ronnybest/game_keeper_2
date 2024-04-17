@@ -95,10 +95,10 @@ class ShimmerElement extends StatelessWidget {
     return Shimmer.fromColors(
       baseColor: currentBrightness == Brightness.light
           ? const Color.fromARGB(255, 238, 237, 237)
-          : Color.fromARGB(255, 34, 34, 34), // Colors.grey[300] : Colors.grey[800]
+          : const Color.fromARGB(255, 34, 34, 34), // Colors.grey[300] : Colors.grey[800]
       highlightColor: currentBrightness == Brightness.light
           ? const Color(0xffE4E6EA)
-          : Color.fromARGB(255, 49, 45, 45), // Colors.white,
+          : const Color.fromARGB(255, 49, 45, 45), // Colors.white,
       child: Container(
         decoration: BoxDecoration(
           borderRadius: radius,

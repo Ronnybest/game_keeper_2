@@ -123,9 +123,21 @@
             "skip": "Skip"
         },
         "reddit_comments": {
-            "title": "Комментарии Reddit",
-            "no_comments": "Нет комментариев",
-            "default_username": "Аноним"
+            "title": "Reddit comments",
+            "no_comments": "No comments",
+            "default_username": "Anonymous"
+        },
+        "achivement_tile": {
+            "owners": "Owners",
+            "owners_description": "Based on RAWG.io data"
+        }
+    },
+    "games": {
+        "title": "Games",
+        "search": {
+            "search": "Search",
+            "search_hint": "Search for games",
+            "search_no_results": "No results found"
         }
     },
     "profile": {

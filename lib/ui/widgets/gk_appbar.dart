@@ -24,7 +24,7 @@ class GKAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       actions: actions,
       leading: leading ??
-          (AutoRouter.of(context).canPop()
+          (AutoRouter.of(context).canPop(ignorePagelessRoutes: true)
               ? IconButton.filledTonal(
                   icon: const Icon(Icons.arrow_back),
                   onPressed: () {

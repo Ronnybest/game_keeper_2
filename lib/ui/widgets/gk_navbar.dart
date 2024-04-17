@@ -32,7 +32,7 @@ class _GKNavBarState extends State<GKNavBar> {
     return AutoTabsRouter(
       routes: const [
         app_router.HomeRoute(),
-        app_router.TestedRoute(),
+        app_router.GamesRoute(),
         app_router.TestedRoute(),
         app_router.TestedRoute(),
         app_router.ProfileRoute(),

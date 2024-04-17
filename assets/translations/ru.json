@@ -126,6 +126,17 @@
             "title": "Комментарии Reddit",
             "no_comments": "Нет комментариев",
             "default_username": "Аноним"
+        },
+        "achivement_tile": {
+            "owners": "Обладатели",
+            "owners_description": "На основе данных RAWG.io"
+        }
+    },
+    "games": {
+        "title": "Игры",
+        "search": {
+            "search_hint": "Поиск игр",
+            "search_no_results": "По вашему запросу ничего не найдено"
         }
     },
     "profile": {

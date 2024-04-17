@@ -113,7 +113,16 @@ abstract class  LocaleKeys {
   static const game_view_reddit_comments_no_comments = 'game_view.reddit_comments.no_comments';
   static const game_view_reddit_comments_default_username = 'game_view.reddit_comments.default_username';
   static const game_view_reddit_comments = 'game_view.reddit_comments';
+  static const game_view_achivement_tile_owners = 'game_view.achivement_tile.owners';
+  static const game_view_achivement_tile_owners_description = 'game_view.achivement_tile.owners_description';
+  static const game_view_achivement_tile = 'game_view.achivement_tile';
   static const game_view = 'game_view';
+  static const games_title = 'games.title';
+  static const games_search_search = 'games.search.search';
+  static const games_search_search_hint = 'games.search.search_hint';
+  static const games_search_search_no_results = 'games.search.search_no_results';
+  static const games_search = 'games.search';
+  static const games = 'games';
   static const profile_default_username = 'profile.default_username';
   static const profile = 'profile';
   static const preferences_profile_settings = 'preferences.profile_settings';
