@@ -9,4 +9,5 @@ class GameViewEvent with _$GameViewEvent {
 
   const factory GameViewEvent.fetchPagingGameAchievements(int id, int page) =
       _FetchPagingGameAchievements;
+
 }

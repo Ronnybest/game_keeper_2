@@ -4,6 +4,7 @@ import 'package:game_keeper/modules/games/game_view/logic/api/model/full_game_mo
 import 'package:game_keeper/modules/games/game_view/logic/api/model/game_achievements_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/game_reddit_comments_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/game_screenshots_model.dart';
+import 'package:game_keeper/modules/games/game_view/logic/api/model/where_to_buy_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/repository/game_view_repository.dart';
 import 'package:injectable/injectable.dart';
 
@@ -26,18 +27,20 @@ class GameViewBloc extends Bloc<GameViewEvent, GameViewState> {
         try {
           emit(const GameViewState.loadingGame());
           var result = await _gameViewRepository.getGame(id: value.gameId);
-          await Future.delayed(const Duration(milliseconds: 500));
+          //await Future.delayed(const Duration(milliseconds: 500));
           var screenshots =
               await _gameViewRepository.getGameScreenshots(id: value.gameId);
-          await Future.delayed(const Duration(milliseconds: 500));
+          //await Future.delayed(const Duration(milliseconds: 500));
           var redditComments =
               await _gameViewRepository.getRedditComments(id: value.gameId);
-          await Future.delayed(const Duration(milliseconds: 500));
+          //await Future.delayed(const Duration(milliseconds: 500));
           var achivements = await _gameViewRepository.getPagingGameAchievements(
               id: value.gameId, page: 1);
           int achievementsCount = achivements.count ?? 0;
-          emit(GameViewState.loadedGame(
-              result, screenshots, redditComments, achievementsCount));
+          var whereToBuy =
+              await _gameViewRepository.getWhereToBuy(id: value.gameId);
+          emit(GameViewState.loadedGame(result, screenshots, redditComments,
+              achievementsCount, whereToBuy));
         } catch (e) {
           emit(GameViewState.errorGame(e));
         }

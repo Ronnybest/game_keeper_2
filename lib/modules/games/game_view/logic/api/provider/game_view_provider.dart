@@ -3,6 +3,7 @@ import 'package:game_keeper/modules/games/game_view/logic/api/model/full_game_mo
 import 'package:game_keeper/modules/games/game_view/logic/api/model/game_achievements_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/game_reddit_comments_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/game_screenshots_model.dart';
+import 'package:game_keeper/modules/games/game_view/logic/api/model/where_to_buy_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/service/game_view_service.dart';
 import 'package:injectable/injectable.dart';
 
@@ -46,5 +47,12 @@ class GameViewProvider {
       {required int id, required int page}) async {
     GameViewService gameService = GameViewService(_coreApi.rawgIoDio);
     return await gameService.getPagingGameAchievements(id: id, page: page);
+  }
+
+  Future<WhereToBuyModel> getWhereToBuy({
+    required int id,
+  }) async {
+    GameViewService gameService = GameViewService(_coreApi.rawgIoDio);
+    return await gameService.getWhereToBuy(id: id);
   }
 }

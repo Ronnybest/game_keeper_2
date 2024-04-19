@@ -2,6 +2,7 @@ import 'package:game_keeper/modules/games/game_view/logic/api/model/full_game_mo
 import 'package:game_keeper/modules/games/game_view/logic/api/model/game_achievements_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/game_reddit_comments_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/game_screenshots_model.dart';
+import 'package:game_keeper/modules/games/game_view/logic/api/model/where_to_buy_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/provider/game_view_provider.dart';
 import 'package:injectable/injectable.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/repository/game_view_repository.dart';
@@ -44,5 +45,12 @@ class GameViewRepositoryImpl implements GameViewRepository {
   Future<GameAchievementsModel> getPagingGameAchievements(
       {required int id, required int page}) async {
     return _gameProvider.getPagingGameAchievements(id: id, page: page);
+  }
+
+  @override
+  Future<WhereToBuyModel> getWhereToBuy({
+    required int id,
+  }) async {
+    return _gameProvider.getWhereToBuy(id: id);
   }
 }

@@ -16,6 +16,7 @@ abstract class  LocaleKeys {
   static const common_buttons_login = 'common.buttons.login';
   static const common_buttons_already_have = 'common.buttons.already_have';
   static const common_buttons_register = 'common.buttons.register';
+  static const common_buttons_retry = 'common.buttons.retry';
   static const common_buttons = 'common.buttons';
   static const common_errors_required = 'common.errors.required';
   static const common_errors_email = 'common.errors.email';
@@ -24,6 +25,7 @@ abstract class  LocaleKeys {
   static const common_errors_email_exists = 'common.errors.email_exists';
   static const common_errors_password_email_incorrect = 'common.errors.password_email_incorrect';
   static const common_errors_server = 'common.errors.server';
+  static const common_errors_try_again = 'common.errors.try_again';
   static const common_errors_unknown = 'common.errors.unknown';
   static const common_errors_not_found = 'common.errors.not_found';
   static const common_errors = 'common.errors';
@@ -116,6 +118,7 @@ abstract class  LocaleKeys {
   static const game_view_achivement_tile_owners = 'game_view.achivement_tile.owners';
   static const game_view_achivement_tile_owners_description = 'game_view.achivement_tile.owners_description';
   static const game_view_achivement_tile = 'game_view.achivement_tile';
+  static const game_view_where_to_buy = 'game_view.where_to_buy';
   static const game_view = 'game_view';
   static const games_title = 'games.title';
   static const games_search_search = 'games.search.search';

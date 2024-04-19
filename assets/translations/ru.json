@@ -15,7 +15,8 @@
             "forgot_pass": "Забыли пароль?",
             "login": "Войти",
             "already_have": "Уже есть аккаунт?",
-            "register": "Регистрация"
+            "register": "Регистрация",
+            "retry" : "Повторить"
         },
         "errors": {
             "required": "Обязательное поле",
@@ -25,6 +26,7 @@
             "email_exists": "Пользователь с таким email уже существует",
             "password_email_incorrect": "Неверный email или пароль",
             "server": "Ошибка сервера",
+            "try_again": "Пожалуйста, попробуйте еще раз",
             "unknown": "Неизвестная ошибка",
             "not_found": "Не найдено"
         },
@@ -130,7 +132,8 @@
         "achivement_tile": {
             "owners": "Обладатели",
             "owners_description": "На основе данных RAWG.io"
-        }
+        },
+        "where_to_buy" : "Где купить"
     },
     "games": {
         "title": "Игры",

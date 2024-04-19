@@ -15,7 +15,8 @@
             "forgot_pass": "Forgot your password?",
             "login": "To come in",
             "already_have": "Already have an account?",
-            "register": "Register"
+            "register": "Register",
+            "retry" : "Retry"
         },
         "errors": {
             "required": "Obligatory field",
@@ -24,7 +25,8 @@
             "confirm_password": "Password mismatch",
             "email_exists": "A user with this email already exists",
             "password_email_incorrect": "Invalid email or password",
-            "server": "server error",
+            "server": "Server error",
+            "try_again": "Please, try again later",
             "unknown": "Unknown error",
             "not_found": "Not found"
         },
@@ -130,7 +132,8 @@
         "achivement_tile": {
             "owners": "Owners",
             "owners_description": "Based on RAWG.io data"
-        }
+        },
+        "where_to_buy" : "Where to buy"
     },
     "games": {
         "title": "Games",

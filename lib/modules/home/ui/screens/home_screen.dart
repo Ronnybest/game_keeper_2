@@ -8,6 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:game_keeper/core/models/user_firestore.dart';
 import 'package:game_keeper/core/router/app_router.gr.dart';
+import 'package:game_keeper/core/utils/exception_widget.dart';
 import 'package:game_keeper/core/utils/exception_worker.dart';
 import 'package:game_keeper/generated/locale.keys.g.dart';
 import 'package:game_keeper/modules/home/logic/bloc/home_bloc.dart';
@@ -103,6 +104,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 BlocBuilder<HomeBloc, HomeState>(
                   builder: (context, state) {
                     return state.maybeWhen(
+                      errorTrendingGames: (error) {
+                        return Center(
+                          child: ExceptionWidget(
+                            message: error.message,
+                            onRetry: () {
+                              _onRefresh();
+                            },
+                          ),
+                        );
+                      },
                       orElse: () => Column(
                         children: [
                           Padding(

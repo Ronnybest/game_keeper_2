@@ -24,7 +24,8 @@ mixin _$GameViewState {
             FullGameModel game,
             GameScreenshotsModel screenshots,
             GameRedditCommentsModel redditComments,
-            int totalAchivementCount)
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)
         loadedGame,
     required TResult Function(dynamic message) errorGame,
     required TResult Function() loadingPagingRedditComments,
@@ -41,8 +42,12 @@ mixin _$GameViewState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGame,
-    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots,
-            GameRedditCommentsModel redditComments, int totalAchivementCount)?
+    TResult? Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
         loadedGame,
     TResult? Function(dynamic message)? errorGame,
     TResult? Function()? loadingPagingRedditComments,
@@ -59,8 +64,12 @@ mixin _$GameViewState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGame,
-    TResult Function(FullGameModel game, GameScreenshotsModel screenshots,
-            GameRedditCommentsModel redditComments, int totalAchivementCount)?
+    TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
         loadedGame,
     TResult Function(dynamic message)? errorGame,
     TResult Function()? loadingPagingRedditComments,
@@ -199,7 +208,8 @@ class _$InitialImpl implements _Initial {
             FullGameModel game,
             GameScreenshotsModel screenshots,
             GameRedditCommentsModel redditComments,
-            int totalAchivementCount)
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)
         loadedGame,
     required TResult Function(dynamic message) errorGame,
     required TResult Function() loadingPagingRedditComments,
@@ -219,8 +229,12 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGame,
-    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots,
-            GameRedditCommentsModel redditComments, int totalAchivementCount)?
+    TResult? Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
         loadedGame,
     TResult? Function(dynamic message)? errorGame,
     TResult? Function()? loadingPagingRedditComments,
@@ -240,8 +254,12 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGame,
-    TResult Function(FullGameModel game, GameScreenshotsModel screenshots,
-            GameRedditCommentsModel redditComments, int totalAchivementCount)?
+    TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
         loadedGame,
     TResult Function(dynamic message)? errorGame,
     TResult Function()? loadingPagingRedditComments,
@@ -382,7 +400,8 @@ class _$LoadingGameImpl implements _LoadingGame {
             FullGameModel game,
             GameScreenshotsModel screenshots,
             GameRedditCommentsModel redditComments,
-            int totalAchivementCount)
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)
         loadedGame,
     required TResult Function(dynamic message) errorGame,
     required TResult Function() loadingPagingRedditComments,
@@ -402,8 +421,12 @@ class _$LoadingGameImpl implements _LoadingGame {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGame,
-    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots,
-            GameRedditCommentsModel redditComments, int totalAchivementCount)?
+    TResult? Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
         loadedGame,
     TResult? Function(dynamic message)? errorGame,
     TResult? Function()? loadingPagingRedditComments,
@@ -423,8 +446,12 @@ class _$LoadingGameImpl implements _LoadingGame {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGame,
-    TResult Function(FullGameModel game, GameScreenshotsModel screenshots,
-            GameRedditCommentsModel redditComments, int totalAchivementCount)?
+    TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
         loadedGame,
     TResult Function(dynamic message)? errorGame,
     TResult Function()? loadingPagingRedditComments,
@@ -531,7 +558,8 @@ abstract class _$$LoadedGameImplCopyWith<$Res> {
       {FullGameModel game,
       GameScreenshotsModel screenshots,
       GameRedditCommentsModel redditComments,
-      int totalAchivementCount});
+      int totalAchivementCount,
+      WhereToBuyModel whereToBuy});
 }
 
 /// @nodoc
@@ -549,6 +577,7 @@ class __$$LoadedGameImplCopyWithImpl<$Res>
     Object? screenshots = null,
     Object? redditComments = null,
     Object? totalAchivementCount = null,
+    Object? whereToBuy = null,
   }) {
     return _then(_$LoadedGameImpl(
       null == game
@@ -567,6 +596,10 @@ class __$$LoadedGameImplCopyWithImpl<$Res>
           ? _value.totalAchivementCount
           : totalAchivementCount // ignore: cast_nullable_to_non_nullable
               as int,
+      null == whereToBuy
+          ? _value.whereToBuy
+          : whereToBuy // ignore: cast_nullable_to_non_nullable
+              as WhereToBuyModel,
     ));
   }
 }
@@ -575,7 +608,7 @@ class __$$LoadedGameImplCopyWithImpl<$Res>
 
 class _$LoadedGameImpl implements _LoadedGame {
   const _$LoadedGameImpl(this.game, this.screenshots, this.redditComments,
-      this.totalAchivementCount);
+      this.totalAchivementCount, this.whereToBuy);
 
   @override
   final FullGameModel game;
@@ -585,10 +618,12 @@ class _$LoadedGameImpl implements _LoadedGame {
   final GameRedditCommentsModel redditComments;
   @override
   final int totalAchivementCount;
+  @override
+  final WhereToBuyModel whereToBuy;
 
   @override
   String toString() {
-    return 'GameViewState.loadedGame(game: $game, screenshots: $screenshots, redditComments: $redditComments, totalAchivementCount: $totalAchivementCount)';
+    return 'GameViewState.loadedGame(game: $game, screenshots: $screenshots, redditComments: $redditComments, totalAchivementCount: $totalAchivementCount, whereToBuy: $whereToBuy)';
   }
 
   @override
@@ -602,12 +637,14 @@ class _$LoadedGameImpl implements _LoadedGame {
             (identical(other.redditComments, redditComments) ||
                 other.redditComments == redditComments) &&
             (identical(other.totalAchivementCount, totalAchivementCount) ||
-                other.totalAchivementCount == totalAchivementCount));
+                other.totalAchivementCount == totalAchivementCount) &&
+            (identical(other.whereToBuy, whereToBuy) ||
+                other.whereToBuy == whereToBuy));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, game, screenshots, redditComments, totalAchivementCount);
+  int get hashCode => Object.hash(runtimeType, game, screenshots,
+      redditComments, totalAchivementCount, whereToBuy);
 
   @JsonKey(ignore: true)
   @override
@@ -624,7 +661,8 @@ class _$LoadedGameImpl implements _LoadedGame {
             FullGameModel game,
             GameScreenshotsModel screenshots,
             GameRedditCommentsModel redditComments,
-            int totalAchivementCount)
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)
         loadedGame,
     required TResult Function(dynamic message) errorGame,
     required TResult Function() loadingPagingRedditComments,
@@ -636,7 +674,8 @@ class _$LoadedGameImpl implements _LoadedGame {
         loadedPagingGameAchievements,
     required TResult Function(dynamic message) errorPagingGameAchievements,
   }) {
-    return loadedGame(game, screenshots, redditComments, totalAchivementCount);
+    return loadedGame(
+        game, screenshots, redditComments, totalAchivementCount, whereToBuy);
   }
 
   @override
@@ -644,8 +683,12 @@ class _$LoadedGameImpl implements _LoadedGame {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGame,
-    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots,
-            GameRedditCommentsModel redditComments, int totalAchivementCount)?
+    TResult? Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
         loadedGame,
     TResult? Function(dynamic message)? errorGame,
     TResult? Function()? loadingPagingRedditComments,
@@ -658,7 +701,7 @@ class _$LoadedGameImpl implements _LoadedGame {
     TResult? Function(dynamic message)? errorPagingGameAchievements,
   }) {
     return loadedGame?.call(
-        game, screenshots, redditComments, totalAchivementCount);
+        game, screenshots, redditComments, totalAchivementCount, whereToBuy);
   }
 
   @override
@@ -666,8 +709,12 @@ class _$LoadedGameImpl implements _LoadedGame {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGame,
-    TResult Function(FullGameModel game, GameScreenshotsModel screenshots,
-            GameRedditCommentsModel redditComments, int totalAchivementCount)?
+    TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
         loadedGame,
     TResult Function(dynamic message)? errorGame,
     TResult Function()? loadingPagingRedditComments,
@@ -682,7 +729,7 @@ class _$LoadedGameImpl implements _LoadedGame {
   }) {
     if (loadedGame != null) {
       return loadedGame(
-          game, screenshots, redditComments, totalAchivementCount);
+          game, screenshots, redditComments, totalAchivementCount, whereToBuy);
     }
     return orElse();
   }
@@ -766,12 +813,14 @@ abstract class _LoadedGame implements GameViewState {
       final FullGameModel game,
       final GameScreenshotsModel screenshots,
       final GameRedditCommentsModel redditComments,
-      final int totalAchivementCount) = _$LoadedGameImpl;
+      final int totalAchivementCount,
+      final WhereToBuyModel whereToBuy) = _$LoadedGameImpl;
 
   FullGameModel get game;
   GameScreenshotsModel get screenshots;
   GameRedditCommentsModel get redditComments;
   int get totalAchivementCount;
+  WhereToBuyModel get whereToBuy;
   @JsonKey(ignore: true)
   _$$LoadedGameImplCopyWith<_$LoadedGameImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -848,7 +897,8 @@ class _$ErrorGameImpl implements _ErrorGame {
             FullGameModel game,
             GameScreenshotsModel screenshots,
             GameRedditCommentsModel redditComments,
-            int totalAchivementCount)
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)
         loadedGame,
     required TResult Function(dynamic message) errorGame,
     required TResult Function() loadingPagingRedditComments,
@@ -868,8 +918,12 @@ class _$ErrorGameImpl implements _ErrorGame {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGame,
-    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots,
-            GameRedditCommentsModel redditComments, int totalAchivementCount)?
+    TResult? Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
         loadedGame,
     TResult? Function(dynamic message)? errorGame,
     TResult? Function()? loadingPagingRedditComments,
@@ -889,8 +943,12 @@ class _$ErrorGameImpl implements _ErrorGame {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGame,
-    TResult Function(FullGameModel game, GameScreenshotsModel screenshots,
-            GameRedditCommentsModel redditComments, int totalAchivementCount)?
+    TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
         loadedGame,
     TResult Function(dynamic message)? errorGame,
     TResult Function()? loadingPagingRedditComments,
@@ -1040,7 +1098,8 @@ class _$LoadingPagingRedditCommentsImpl
             FullGameModel game,
             GameScreenshotsModel screenshots,
             GameRedditCommentsModel redditComments,
-            int totalAchivementCount)
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)
         loadedGame,
     required TResult Function(dynamic message) errorGame,
     required TResult Function() loadingPagingRedditComments,
@@ -1060,8 +1119,12 @@ class _$LoadingPagingRedditCommentsImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGame,
-    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots,
-            GameRedditCommentsModel redditComments, int totalAchivementCount)?
+    TResult? Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
         loadedGame,
     TResult? Function(dynamic message)? errorGame,
     TResult? Function()? loadingPagingRedditComments,
@@ -1081,8 +1144,12 @@ class _$LoadingPagingRedditCommentsImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGame,
-    TResult Function(FullGameModel game, GameScreenshotsModel screenshots,
-            GameRedditCommentsModel redditComments, int totalAchivementCount)?
+    TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
         loadedGame,
     TResult Function(dynamic message)? errorGame,
     TResult Function()? loadingPagingRedditComments,
@@ -1254,7 +1321,8 @@ class _$LoadedPagingRedditCommentsImpl implements _LoadedPagingRedditComments {
             FullGameModel game,
             GameScreenshotsModel screenshots,
             GameRedditCommentsModel redditComments,
-            int totalAchivementCount)
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)
         loadedGame,
     required TResult Function(dynamic message) errorGame,
     required TResult Function() loadingPagingRedditComments,
@@ -1274,8 +1342,12 @@ class _$LoadedPagingRedditCommentsImpl implements _LoadedPagingRedditComments {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGame,
-    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots,
-            GameRedditCommentsModel redditComments, int totalAchivementCount)?
+    TResult? Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
         loadedGame,
     TResult? Function(dynamic message)? errorGame,
     TResult? Function()? loadingPagingRedditComments,
@@ -1295,8 +1367,12 @@ class _$LoadedPagingRedditCommentsImpl implements _LoadedPagingRedditComments {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGame,
-    TResult Function(FullGameModel game, GameScreenshotsModel screenshots,
-            GameRedditCommentsModel redditComments, int totalAchivementCount)?
+    TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
         loadedGame,
     TResult Function(dynamic message)? errorGame,
     TResult Function()? loadingPagingRedditComments,
@@ -1474,7 +1550,8 @@ class _$ErrorPagingRedditCommentsImpl implements _ErrorPagingRedditComments {
             FullGameModel game,
             GameScreenshotsModel screenshots,
             GameRedditCommentsModel redditComments,
-            int totalAchivementCount)
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)
         loadedGame,
     required TResult Function(dynamic message) errorGame,
     required TResult Function() loadingPagingRedditComments,
@@ -1494,8 +1571,12 @@ class _$ErrorPagingRedditCommentsImpl implements _ErrorPagingRedditComments {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGame,
-    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots,
-            GameRedditCommentsModel redditComments, int totalAchivementCount)?
+    TResult? Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
         loadedGame,
     TResult? Function(dynamic message)? errorGame,
     TResult? Function()? loadingPagingRedditComments,
@@ -1515,8 +1596,12 @@ class _$ErrorPagingRedditCommentsImpl implements _ErrorPagingRedditComments {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGame,
-    TResult Function(FullGameModel game, GameScreenshotsModel screenshots,
-            GameRedditCommentsModel redditComments, int totalAchivementCount)?
+    TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
         loadedGame,
     TResult Function(dynamic message)? errorGame,
     TResult Function()? loadingPagingRedditComments,
@@ -1668,7 +1753,8 @@ class _$LoadingPagingGameAchievementsImpl
             FullGameModel game,
             GameScreenshotsModel screenshots,
             GameRedditCommentsModel redditComments,
-            int totalAchivementCount)
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)
         loadedGame,
     required TResult Function(dynamic message) errorGame,
     required TResult Function() loadingPagingRedditComments,
@@ -1688,8 +1774,12 @@ class _$LoadingPagingGameAchievementsImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGame,
-    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots,
-            GameRedditCommentsModel redditComments, int totalAchivementCount)?
+    TResult? Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
         loadedGame,
     TResult? Function(dynamic message)? errorGame,
     TResult? Function()? loadingPagingRedditComments,
@@ -1709,8 +1799,12 @@ class _$LoadingPagingGameAchievementsImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGame,
-    TResult Function(FullGameModel game, GameScreenshotsModel screenshots,
-            GameRedditCommentsModel redditComments, int totalAchivementCount)?
+    TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
         loadedGame,
     TResult Function(dynamic message)? errorGame,
     TResult Function()? loadingPagingRedditComments,
@@ -1885,7 +1979,8 @@ class _$LoadedPagingGameAchievementsImpl
             FullGameModel game,
             GameScreenshotsModel screenshots,
             GameRedditCommentsModel redditComments,
-            int totalAchivementCount)
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)
         loadedGame,
     required TResult Function(dynamic message) errorGame,
     required TResult Function() loadingPagingRedditComments,
@@ -1905,8 +2000,12 @@ class _$LoadedPagingGameAchievementsImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGame,
-    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots,
-            GameRedditCommentsModel redditComments, int totalAchivementCount)?
+    TResult? Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
         loadedGame,
     TResult? Function(dynamic message)? errorGame,
     TResult? Function()? loadingPagingRedditComments,
@@ -1926,8 +2025,12 @@ class _$LoadedPagingGameAchievementsImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGame,
-    TResult Function(FullGameModel game, GameScreenshotsModel screenshots,
-            GameRedditCommentsModel redditComments, int totalAchivementCount)?
+    TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
         loadedGame,
     TResult Function(dynamic message)? errorGame,
     TResult Function()? loadingPagingRedditComments,
@@ -2107,7 +2210,8 @@ class _$ErrorPagingGameAchievementsImpl
             FullGameModel game,
             GameScreenshotsModel screenshots,
             GameRedditCommentsModel redditComments,
-            int totalAchivementCount)
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)
         loadedGame,
     required TResult Function(dynamic message) errorGame,
     required TResult Function() loadingPagingRedditComments,
@@ -2127,8 +2231,12 @@ class _$ErrorPagingGameAchievementsImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGame,
-    TResult? Function(FullGameModel game, GameScreenshotsModel screenshots,
-            GameRedditCommentsModel redditComments, int totalAchivementCount)?
+    TResult? Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
         loadedGame,
     TResult? Function(dynamic message)? errorGame,
     TResult? Function()? loadingPagingRedditComments,
@@ -2148,8 +2256,12 @@ class _$ErrorPagingGameAchievementsImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGame,
-    TResult Function(FullGameModel game, GameScreenshotsModel screenshots,
-            GameRedditCommentsModel redditComments, int totalAchivementCount)?
+    TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
         loadedGame,
     TResult Function(dynamic message)? errorGame,
     TResult Function()? loadingPagingRedditComments,

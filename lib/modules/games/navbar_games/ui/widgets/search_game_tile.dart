@@ -14,7 +14,7 @@ class SearchGameTile extends StatelessWidget {
       child: ListTile(
         title: Text(game.name ?? ''),
         subtitle: Text(
-          DateFormat('dd.MM.yyyy').format(game.released!),
+          game.released != null ? DateFormat('dd.MM.yyyy').format(game.released!) : '',
         ),
         leading: ClipRRect(
           borderRadius: BorderRadius.circular(10),

@@ -2,6 +2,7 @@ import 'package:game_keeper/modules/games/game_view/logic/api/model/full_game_mo
 import 'package:game_keeper/modules/games/game_view/logic/api/model/game_achievements_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/game_reddit_comments_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/game_screenshots_model.dart';
+import 'package:game_keeper/modules/games/game_view/logic/api/model/where_to_buy_model.dart';
 
 abstract class GameViewRepository {
   Future<FullGameModel> getGame({
@@ -23,4 +24,8 @@ abstract class GameViewRepository {
 
   Future<GameAchievementsModel> getPagingGameAchievements(
       {required int id, required int page});
+
+  Future<WhereToBuyModel> getWhereToBuy({
+    required int id,
+  });
 }

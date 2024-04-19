@@ -68,11 +68,10 @@ abstract class $AppRouter extends _i17.RootStackRouter {
       final args = routeData.argsAs<FullSearchRouteArgs>();
       return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i17.WrappedRoute(
-            child: _i4.FullSearchScreen(
+        child: _i4.FullSearchScreen(
           key: args.key,
           query: args.query,
-        )),
+        ),
       );
     },
     GKNavBar.name: (routeData) {
@@ -92,23 +91,21 @@ abstract class $AppRouter extends _i17.RootStackRouter {
       final args = routeData.argsAs<GameAchivementsListRouteArgs>();
       return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i17.WrappedRoute(
-            child: _i6.GameAchivementsListScreen(
+        child: _i6.GameAchivementsListScreen(
           key: args.key,
           gameId: args.gameId,
           gameName: args.gameName,
-        )),
+        ),
       );
     },
     GameViewRoute.name: (routeData) {
       final args = routeData.argsAs<GameViewRouteArgs>();
       return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i17.WrappedRoute(
-            child: _i7.GameViewScreen(
+        child: _i7.GameViewScreen(
           key: args.key,
           gameId: args.gameId,
-        )),
+        ),
       );
     },
     GamesRoute.name: (routeData) {
@@ -120,19 +117,18 @@ abstract class $AppRouter extends _i17.RootStackRouter {
     HomeRoute.name: (routeData) {
       return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i17.WrappedRoute(child: const _i9.HomeScreen()),
+        child: const _i9.HomeScreen(),
       );
     },
     MoreGamesRoute.name: (routeData) {
       final args = routeData.argsAs<MoreGamesRouteArgs>();
       return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i17.WrappedRoute(
-            child: _i10.MoreGamesScreen(
+        child: _i10.MoreGamesScreen(
           key: args.key,
           gamesListModel: args.gamesListModel,
           eventProvider: args.eventProvider,
-        )),
+        ),
       );
     },
     ProfileRoute.name: (routeData) {
@@ -145,24 +141,23 @@ abstract class $AppRouter extends _i17.RootStackRouter {
       final args = routeData.argsAs<RedditCommentsListRouteArgs>();
       return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i17.WrappedRoute(
-            child: _i12.RedditCommentsListScreen(
+        child: _i12.RedditCommentsListScreen(
           key: args.key,
           gameId: args.gameId,
           gameName: args.gameName,
-        )),
+        ),
       );
     },
     RegisterEmailRoute.name: (routeData) {
       return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i17.WrappedRoute(child: const _i13.RegisterEmailScreen()),
+        child: const _i13.RegisterEmailScreen(),
       );
     },
     RestorePassRoute.name: (routeData) {
       return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i17.WrappedRoute(child: const _i14.RestorePassScreen()),
+        child: const _i14.RestorePassScreen(),
       );
     },
     SplashRoute.name: (routeData) {

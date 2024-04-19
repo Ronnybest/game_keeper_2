@@ -1,13 +1,14 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:game_keeper/core/utils/exception_worker.dart';
+import 'package:game_keeper/core/utils/exception_widget.dart';
 import 'package:game_keeper/modules/games/game_view/logic/bloc/game_view_bloc.dart';
 import 'package:game_keeper/modules/games/game_view/ui/widgets/game_actions.dart';
 import 'package:game_keeper/modules/games/game_view/ui/widgets/game_description_card.dart';
 import 'package:game_keeper/modules/games/game_view/ui/widgets/game_header.dart';
 import 'package:game_keeper/modules/games/game_view/ui/widgets/game_rating.dart';
 import 'package:game_keeper/modules/games/game_view/ui/widgets/game_screenshots.dart';
+import 'package:game_keeper/modules/games/game_view/ui/widgets/game_where_to_buy_list.dart';
 import 'package:game_keeper/modules/games/game_view/ui/widgets/reddit_comments.dart';
 import 'package:game_keeper/ui/widgets/gk_appbar.dart';
 import 'package:get_it/get_it.dart';
@@ -49,9 +50,9 @@ class _GameViewScreenState extends State<GameViewScreen> {
         listener: (context, state) {
           state.maybeWhen(
             orElse: () {},
-            errorGame: (error) {
-              GetIt.I<ExceptionWorker>().errorWorker(error, context);
-            },
+            // errorGame: (error) {
+            //   GetIt.I<ExceptionWorker>().errorWorker(error, context);
+            // },
           );
         },
         builder: (context, state) {
@@ -60,7 +61,8 @@ class _GameViewScreenState extends State<GameViewScreen> {
             loadingGame: () => const Center(
               child: CircularProgressIndicator(),
             ),
-            loadedGame: (game, screenshots, redditComments, achivementCount) {
+            loadedGame: (game, screenshots, redditComments, achivementCount,
+                whereToBuyModel) {
               return SingleChildScrollView(
                 child: Column(
                   children: [
@@ -79,13 +81,21 @@ class _GameViewScreenState extends State<GameViewScreen> {
                       gameId: game.id!,
                       gameName: game.name ?? '',
                     ),
+                    GameWhereToBuy(whereToBuyModel: whereToBuyModel),
                   ],
                 ),
               );
             },
             errorGame: (error) {
               return Center(
-                child: Text('Error: $error'),
+                child: ExceptionWidget(
+                  message: error.message,
+                  onRetry: () {
+                    BlocProvider.of<GameViewBloc>(context).add(
+                      GameViewEvent.fetchGame(widget.gameId),
+                    );
+                  },
+                ),
               );
             },
           );
