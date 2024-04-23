@@ -23,13 +23,13 @@ class SearchGameTile extends StatelessWidget {
             height: 60,
             width: 60,
             fit: BoxFit.cover,
-            errorBuilder: (context, error, _) {
+            errorBuilder: (__, ___, _) {
               return const Icon(
-                Icons.error,
+                Icons.gamepad,
                 size: 60,
               );
             },
-            loadingBuilder: (p0, p1) {
+            loadingBuilder: (_, __) {
               return ShimmerElement(
                 width: 60,
                 height: 60,
