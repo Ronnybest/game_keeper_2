@@ -15,5 +15,13 @@ class GameViewState with _$GameViewState {
   const factory GameViewState.loadedPagingGameAchievements(GameAchievementsModel achievements) = _LoadedPagingGameAchievements;
   const factory GameViewState.errorPagingGameAchievements(dynamic message) = _ErrorPagingGameAchievements;
 
+  const factory GameViewState.loadingGameDeveloperInfo() = _LoadingGameDeveloperInfo;
+  const factory GameViewState.loadedGameDeveloperInfo(GameDeveloperModel developer) = _LoadedGameDeveloperInfo;
+  const factory GameViewState.errorGameDeveloperInfo(dynamic message) = _ErrorGameDeveloperInfo;
+
+  const factory GameViewState.loadingGamesByDeveloperPaging() = _LoadingGamesByDeveloperPaging;
+  const factory GameViewState.loadedGamesByDeveloperPaging(DeveloperGamesListModel games) = _LoadedGamesByDeveloperPaging;
+  const factory GameViewState.errorGamesByDeveloperPaging(dynamic message) = _ErrorGamesByDeveloperPaging;
+
 
 }

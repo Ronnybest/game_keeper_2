@@ -9,7 +9,7 @@ part of 'game_achievements_model.dart';
 GameAchievementsModel _$GameAchievementsModelFromJson(
         Map<String, dynamic> json) =>
     GameAchievementsModel(
-      count: json['count'] as int?,
+      count: (json['count'] as num?)?.toInt(),
       next: json['next'] as String?,
       previous: json['previous'],
       results: (json['results'] as List<dynamic>?)
@@ -27,7 +27,7 @@ Map<String, dynamic> _$GameAchievementsModelToJson(
     };
 
 Result _$ResultFromJson(Map<String, dynamic> json) => Result(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       description: json['description'] as String?,
       image: json['image'] as String?,

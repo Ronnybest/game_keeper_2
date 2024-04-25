@@ -9,7 +9,7 @@ part of 'game_reddit_comments_model.dart';
 GameRedditCommentsModel _$GameRedditCommentsModelFromJson(
         Map<String, dynamic> json) =>
     GameRedditCommentsModel(
-      count: json['count'] as int?,
+      count: (json['count'] as num?)?.toInt(),
       next: json['next'] as String?,
       previous: json['previous'],
       results: (json['results'] as List<dynamic>?)
@@ -27,7 +27,7 @@ Map<String, dynamic> _$GameRedditCommentsModelToJson(
     };
 
 Result _$ResultFromJson(Map<String, dynamic> json) => Result(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       text: json['text'] as String?,
       image: json['image'] as String?,

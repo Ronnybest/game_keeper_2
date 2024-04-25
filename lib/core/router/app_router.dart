@@ -34,5 +34,6 @@ class AppRouter extends $AppRouter {
         AutoRoute(page: RedditCommentsListRoute.page),
         AutoRoute(page: GameAchivementsListRoute.page),
         AutoRoute(page: FullSearchRoute.page),
+        AutoRoute(page: GameDeveloperInfoRoute.page),
       ];
 }

@@ -36,6 +36,14 @@ mixin _$GameViewState {
     required TResult Function(GameAchievementsModel achievements)
         loadedPagingGameAchievements,
     required TResult Function(dynamic message) errorPagingGameAchievements,
+    required TResult Function() loadingGameDeveloperInfo,
+    required TResult Function(GameDeveloperModel developer)
+        loadedGameDeveloperInfo,
+    required TResult Function(dynamic message) errorGameDeveloperInfo,
+    required TResult Function() loadingGamesByDeveloperPaging,
+    required TResult Function(DeveloperGamesListModel games)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(dynamic message) errorGamesByDeveloperPaging,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -58,6 +66,13 @@ mixin _$GameViewState {
     TResult? Function(GameAchievementsModel achievements)?
         loadedPagingGameAchievements,
     TResult? Function(dynamic message)? errorPagingGameAchievements,
+    TResult? Function()? loadingGameDeveloperInfo,
+    TResult? Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult? Function(dynamic message)? errorGameDeveloperInfo,
+    TResult? Function()? loadingGamesByDeveloperPaging,
+    TResult? Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(dynamic message)? errorGamesByDeveloperPaging,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -80,6 +95,13 @@ mixin _$GameViewState {
     TResult Function(GameAchievementsModel achievements)?
         loadedPagingGameAchievements,
     TResult Function(dynamic message)? errorPagingGameAchievements,
+    TResult Function()? loadingGameDeveloperInfo,
+    TResult Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult Function(dynamic message)? errorGameDeveloperInfo,
+    TResult Function()? loadingGamesByDeveloperPaging,
+    TResult Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(dynamic message)? errorGamesByDeveloperPaging,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -101,6 +123,18 @@ mixin _$GameViewState {
         loadedPagingGameAchievements,
     required TResult Function(_ErrorPagingGameAchievements value)
         errorPagingGameAchievements,
+    required TResult Function(_LoadingGameDeveloperInfo value)
+        loadingGameDeveloperInfo,
+    required TResult Function(_LoadedGameDeveloperInfo value)
+        loadedGameDeveloperInfo,
+    required TResult Function(_ErrorGameDeveloperInfo value)
+        errorGameDeveloperInfo,
+    required TResult Function(_LoadingGamesByDeveloperPaging value)
+        loadingGamesByDeveloperPaging,
+    required TResult Function(_LoadedGamesByDeveloperPaging value)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(_ErrorGamesByDeveloperPaging value)
+        errorGamesByDeveloperPaging,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -121,6 +155,16 @@ mixin _$GameViewState {
         loadedPagingGameAchievements,
     TResult? Function(_ErrorPagingGameAchievements value)?
         errorPagingGameAchievements,
+    TResult? Function(_LoadingGameDeveloperInfo value)?
+        loadingGameDeveloperInfo,
+    TResult? Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult? Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult? Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult? Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -141,6 +185,15 @@ mixin _$GameViewState {
         loadedPagingGameAchievements,
     TResult Function(_ErrorPagingGameAchievements value)?
         errorPagingGameAchievements,
+    TResult Function(_LoadingGameDeveloperInfo value)? loadingGameDeveloperInfo,
+    TResult Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -220,6 +273,14 @@ class _$InitialImpl implements _Initial {
     required TResult Function(GameAchievementsModel achievements)
         loadedPagingGameAchievements,
     required TResult Function(dynamic message) errorPagingGameAchievements,
+    required TResult Function() loadingGameDeveloperInfo,
+    required TResult Function(GameDeveloperModel developer)
+        loadedGameDeveloperInfo,
+    required TResult Function(dynamic message) errorGameDeveloperInfo,
+    required TResult Function() loadingGamesByDeveloperPaging,
+    required TResult Function(DeveloperGamesListModel games)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(dynamic message) errorGamesByDeveloperPaging,
   }) {
     return initial();
   }
@@ -245,6 +306,13 @@ class _$InitialImpl implements _Initial {
     TResult? Function(GameAchievementsModel achievements)?
         loadedPagingGameAchievements,
     TResult? Function(dynamic message)? errorPagingGameAchievements,
+    TResult? Function()? loadingGameDeveloperInfo,
+    TResult? Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult? Function(dynamic message)? errorGameDeveloperInfo,
+    TResult? Function()? loadingGamesByDeveloperPaging,
+    TResult? Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(dynamic message)? errorGamesByDeveloperPaging,
   }) {
     return initial?.call();
   }
@@ -270,6 +338,13 @@ class _$InitialImpl implements _Initial {
     TResult Function(GameAchievementsModel achievements)?
         loadedPagingGameAchievements,
     TResult Function(dynamic message)? errorPagingGameAchievements,
+    TResult Function()? loadingGameDeveloperInfo,
+    TResult Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult Function(dynamic message)? errorGameDeveloperInfo,
+    TResult Function()? loadingGamesByDeveloperPaging,
+    TResult Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(dynamic message)? errorGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -297,6 +372,18 @@ class _$InitialImpl implements _Initial {
         loadedPagingGameAchievements,
     required TResult Function(_ErrorPagingGameAchievements value)
         errorPagingGameAchievements,
+    required TResult Function(_LoadingGameDeveloperInfo value)
+        loadingGameDeveloperInfo,
+    required TResult Function(_LoadedGameDeveloperInfo value)
+        loadedGameDeveloperInfo,
+    required TResult Function(_ErrorGameDeveloperInfo value)
+        errorGameDeveloperInfo,
+    required TResult Function(_LoadingGamesByDeveloperPaging value)
+        loadingGamesByDeveloperPaging,
+    required TResult Function(_LoadedGamesByDeveloperPaging value)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(_ErrorGamesByDeveloperPaging value)
+        errorGamesByDeveloperPaging,
   }) {
     return initial(this);
   }
@@ -320,6 +407,16 @@ class _$InitialImpl implements _Initial {
         loadedPagingGameAchievements,
     TResult? Function(_ErrorPagingGameAchievements value)?
         errorPagingGameAchievements,
+    TResult? Function(_LoadingGameDeveloperInfo value)?
+        loadingGameDeveloperInfo,
+    TResult? Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult? Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult? Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult? Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
   }) {
     return initial?.call(this);
   }
@@ -343,6 +440,15 @@ class _$InitialImpl implements _Initial {
         loadedPagingGameAchievements,
     TResult Function(_ErrorPagingGameAchievements value)?
         errorPagingGameAchievements,
+    TResult Function(_LoadingGameDeveloperInfo value)? loadingGameDeveloperInfo,
+    TResult Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -412,6 +518,14 @@ class _$LoadingGameImpl implements _LoadingGame {
     required TResult Function(GameAchievementsModel achievements)
         loadedPagingGameAchievements,
     required TResult Function(dynamic message) errorPagingGameAchievements,
+    required TResult Function() loadingGameDeveloperInfo,
+    required TResult Function(GameDeveloperModel developer)
+        loadedGameDeveloperInfo,
+    required TResult Function(dynamic message) errorGameDeveloperInfo,
+    required TResult Function() loadingGamesByDeveloperPaging,
+    required TResult Function(DeveloperGamesListModel games)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(dynamic message) errorGamesByDeveloperPaging,
   }) {
     return loadingGame();
   }
@@ -437,6 +551,13 @@ class _$LoadingGameImpl implements _LoadingGame {
     TResult? Function(GameAchievementsModel achievements)?
         loadedPagingGameAchievements,
     TResult? Function(dynamic message)? errorPagingGameAchievements,
+    TResult? Function()? loadingGameDeveloperInfo,
+    TResult? Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult? Function(dynamic message)? errorGameDeveloperInfo,
+    TResult? Function()? loadingGamesByDeveloperPaging,
+    TResult? Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(dynamic message)? errorGamesByDeveloperPaging,
   }) {
     return loadingGame?.call();
   }
@@ -462,6 +583,13 @@ class _$LoadingGameImpl implements _LoadingGame {
     TResult Function(GameAchievementsModel achievements)?
         loadedPagingGameAchievements,
     TResult Function(dynamic message)? errorPagingGameAchievements,
+    TResult Function()? loadingGameDeveloperInfo,
+    TResult Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult Function(dynamic message)? errorGameDeveloperInfo,
+    TResult Function()? loadingGamesByDeveloperPaging,
+    TResult Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(dynamic message)? errorGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (loadingGame != null) {
@@ -489,6 +617,18 @@ class _$LoadingGameImpl implements _LoadingGame {
         loadedPagingGameAchievements,
     required TResult Function(_ErrorPagingGameAchievements value)
         errorPagingGameAchievements,
+    required TResult Function(_LoadingGameDeveloperInfo value)
+        loadingGameDeveloperInfo,
+    required TResult Function(_LoadedGameDeveloperInfo value)
+        loadedGameDeveloperInfo,
+    required TResult Function(_ErrorGameDeveloperInfo value)
+        errorGameDeveloperInfo,
+    required TResult Function(_LoadingGamesByDeveloperPaging value)
+        loadingGamesByDeveloperPaging,
+    required TResult Function(_LoadedGamesByDeveloperPaging value)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(_ErrorGamesByDeveloperPaging value)
+        errorGamesByDeveloperPaging,
   }) {
     return loadingGame(this);
   }
@@ -512,6 +652,16 @@ class _$LoadingGameImpl implements _LoadingGame {
         loadedPagingGameAchievements,
     TResult? Function(_ErrorPagingGameAchievements value)?
         errorPagingGameAchievements,
+    TResult? Function(_LoadingGameDeveloperInfo value)?
+        loadingGameDeveloperInfo,
+    TResult? Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult? Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult? Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult? Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
   }) {
     return loadingGame?.call(this);
   }
@@ -535,6 +685,15 @@ class _$LoadingGameImpl implements _LoadingGame {
         loadedPagingGameAchievements,
     TResult Function(_ErrorPagingGameAchievements value)?
         errorPagingGameAchievements,
+    TResult Function(_LoadingGameDeveloperInfo value)? loadingGameDeveloperInfo,
+    TResult Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (loadingGame != null) {
@@ -673,6 +832,14 @@ class _$LoadedGameImpl implements _LoadedGame {
     required TResult Function(GameAchievementsModel achievements)
         loadedPagingGameAchievements,
     required TResult Function(dynamic message) errorPagingGameAchievements,
+    required TResult Function() loadingGameDeveloperInfo,
+    required TResult Function(GameDeveloperModel developer)
+        loadedGameDeveloperInfo,
+    required TResult Function(dynamic message) errorGameDeveloperInfo,
+    required TResult Function() loadingGamesByDeveloperPaging,
+    required TResult Function(DeveloperGamesListModel games)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(dynamic message) errorGamesByDeveloperPaging,
   }) {
     return loadedGame(
         game, screenshots, redditComments, totalAchivementCount, whereToBuy);
@@ -699,6 +866,13 @@ class _$LoadedGameImpl implements _LoadedGame {
     TResult? Function(GameAchievementsModel achievements)?
         loadedPagingGameAchievements,
     TResult? Function(dynamic message)? errorPagingGameAchievements,
+    TResult? Function()? loadingGameDeveloperInfo,
+    TResult? Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult? Function(dynamic message)? errorGameDeveloperInfo,
+    TResult? Function()? loadingGamesByDeveloperPaging,
+    TResult? Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(dynamic message)? errorGamesByDeveloperPaging,
   }) {
     return loadedGame?.call(
         game, screenshots, redditComments, totalAchivementCount, whereToBuy);
@@ -725,6 +899,13 @@ class _$LoadedGameImpl implements _LoadedGame {
     TResult Function(GameAchievementsModel achievements)?
         loadedPagingGameAchievements,
     TResult Function(dynamic message)? errorPagingGameAchievements,
+    TResult Function()? loadingGameDeveloperInfo,
+    TResult Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult Function(dynamic message)? errorGameDeveloperInfo,
+    TResult Function()? loadingGamesByDeveloperPaging,
+    TResult Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(dynamic message)? errorGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (loadedGame != null) {
@@ -753,6 +934,18 @@ class _$LoadedGameImpl implements _LoadedGame {
         loadedPagingGameAchievements,
     required TResult Function(_ErrorPagingGameAchievements value)
         errorPagingGameAchievements,
+    required TResult Function(_LoadingGameDeveloperInfo value)
+        loadingGameDeveloperInfo,
+    required TResult Function(_LoadedGameDeveloperInfo value)
+        loadedGameDeveloperInfo,
+    required TResult Function(_ErrorGameDeveloperInfo value)
+        errorGameDeveloperInfo,
+    required TResult Function(_LoadingGamesByDeveloperPaging value)
+        loadingGamesByDeveloperPaging,
+    required TResult Function(_LoadedGamesByDeveloperPaging value)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(_ErrorGamesByDeveloperPaging value)
+        errorGamesByDeveloperPaging,
   }) {
     return loadedGame(this);
   }
@@ -776,6 +969,16 @@ class _$LoadedGameImpl implements _LoadedGame {
         loadedPagingGameAchievements,
     TResult? Function(_ErrorPagingGameAchievements value)?
         errorPagingGameAchievements,
+    TResult? Function(_LoadingGameDeveloperInfo value)?
+        loadingGameDeveloperInfo,
+    TResult? Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult? Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult? Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult? Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
   }) {
     return loadedGame?.call(this);
   }
@@ -799,6 +1002,15 @@ class _$LoadedGameImpl implements _LoadedGame {
         loadedPagingGameAchievements,
     TResult Function(_ErrorPagingGameAchievements value)?
         errorPagingGameAchievements,
+    TResult Function(_LoadingGameDeveloperInfo value)? loadingGameDeveloperInfo,
+    TResult Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (loadedGame != null) {
@@ -909,6 +1121,14 @@ class _$ErrorGameImpl implements _ErrorGame {
     required TResult Function(GameAchievementsModel achievements)
         loadedPagingGameAchievements,
     required TResult Function(dynamic message) errorPagingGameAchievements,
+    required TResult Function() loadingGameDeveloperInfo,
+    required TResult Function(GameDeveloperModel developer)
+        loadedGameDeveloperInfo,
+    required TResult Function(dynamic message) errorGameDeveloperInfo,
+    required TResult Function() loadingGamesByDeveloperPaging,
+    required TResult Function(DeveloperGamesListModel games)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(dynamic message) errorGamesByDeveloperPaging,
   }) {
     return errorGame(message);
   }
@@ -934,6 +1154,13 @@ class _$ErrorGameImpl implements _ErrorGame {
     TResult? Function(GameAchievementsModel achievements)?
         loadedPagingGameAchievements,
     TResult? Function(dynamic message)? errorPagingGameAchievements,
+    TResult? Function()? loadingGameDeveloperInfo,
+    TResult? Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult? Function(dynamic message)? errorGameDeveloperInfo,
+    TResult? Function()? loadingGamesByDeveloperPaging,
+    TResult? Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(dynamic message)? errorGamesByDeveloperPaging,
   }) {
     return errorGame?.call(message);
   }
@@ -959,6 +1186,13 @@ class _$ErrorGameImpl implements _ErrorGame {
     TResult Function(GameAchievementsModel achievements)?
         loadedPagingGameAchievements,
     TResult Function(dynamic message)? errorPagingGameAchievements,
+    TResult Function()? loadingGameDeveloperInfo,
+    TResult Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult Function(dynamic message)? errorGameDeveloperInfo,
+    TResult Function()? loadingGamesByDeveloperPaging,
+    TResult Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(dynamic message)? errorGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (errorGame != null) {
@@ -986,6 +1220,18 @@ class _$ErrorGameImpl implements _ErrorGame {
         loadedPagingGameAchievements,
     required TResult Function(_ErrorPagingGameAchievements value)
         errorPagingGameAchievements,
+    required TResult Function(_LoadingGameDeveloperInfo value)
+        loadingGameDeveloperInfo,
+    required TResult Function(_LoadedGameDeveloperInfo value)
+        loadedGameDeveloperInfo,
+    required TResult Function(_ErrorGameDeveloperInfo value)
+        errorGameDeveloperInfo,
+    required TResult Function(_LoadingGamesByDeveloperPaging value)
+        loadingGamesByDeveloperPaging,
+    required TResult Function(_LoadedGamesByDeveloperPaging value)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(_ErrorGamesByDeveloperPaging value)
+        errorGamesByDeveloperPaging,
   }) {
     return errorGame(this);
   }
@@ -1009,6 +1255,16 @@ class _$ErrorGameImpl implements _ErrorGame {
         loadedPagingGameAchievements,
     TResult? Function(_ErrorPagingGameAchievements value)?
         errorPagingGameAchievements,
+    TResult? Function(_LoadingGameDeveloperInfo value)?
+        loadingGameDeveloperInfo,
+    TResult? Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult? Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult? Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult? Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
   }) {
     return errorGame?.call(this);
   }
@@ -1032,6 +1288,15 @@ class _$ErrorGameImpl implements _ErrorGame {
         loadedPagingGameAchievements,
     TResult Function(_ErrorPagingGameAchievements value)?
         errorPagingGameAchievements,
+    TResult Function(_LoadingGameDeveloperInfo value)? loadingGameDeveloperInfo,
+    TResult Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (errorGame != null) {
@@ -1110,6 +1375,14 @@ class _$LoadingPagingRedditCommentsImpl
     required TResult Function(GameAchievementsModel achievements)
         loadedPagingGameAchievements,
     required TResult Function(dynamic message) errorPagingGameAchievements,
+    required TResult Function() loadingGameDeveloperInfo,
+    required TResult Function(GameDeveloperModel developer)
+        loadedGameDeveloperInfo,
+    required TResult Function(dynamic message) errorGameDeveloperInfo,
+    required TResult Function() loadingGamesByDeveloperPaging,
+    required TResult Function(DeveloperGamesListModel games)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(dynamic message) errorGamesByDeveloperPaging,
   }) {
     return loadingPagingRedditComments();
   }
@@ -1135,6 +1408,13 @@ class _$LoadingPagingRedditCommentsImpl
     TResult? Function(GameAchievementsModel achievements)?
         loadedPagingGameAchievements,
     TResult? Function(dynamic message)? errorPagingGameAchievements,
+    TResult? Function()? loadingGameDeveloperInfo,
+    TResult? Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult? Function(dynamic message)? errorGameDeveloperInfo,
+    TResult? Function()? loadingGamesByDeveloperPaging,
+    TResult? Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(dynamic message)? errorGamesByDeveloperPaging,
   }) {
     return loadingPagingRedditComments?.call();
   }
@@ -1160,6 +1440,13 @@ class _$LoadingPagingRedditCommentsImpl
     TResult Function(GameAchievementsModel achievements)?
         loadedPagingGameAchievements,
     TResult Function(dynamic message)? errorPagingGameAchievements,
+    TResult Function()? loadingGameDeveloperInfo,
+    TResult Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult Function(dynamic message)? errorGameDeveloperInfo,
+    TResult Function()? loadingGamesByDeveloperPaging,
+    TResult Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(dynamic message)? errorGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (loadingPagingRedditComments != null) {
@@ -1187,6 +1474,18 @@ class _$LoadingPagingRedditCommentsImpl
         loadedPagingGameAchievements,
     required TResult Function(_ErrorPagingGameAchievements value)
         errorPagingGameAchievements,
+    required TResult Function(_LoadingGameDeveloperInfo value)
+        loadingGameDeveloperInfo,
+    required TResult Function(_LoadedGameDeveloperInfo value)
+        loadedGameDeveloperInfo,
+    required TResult Function(_ErrorGameDeveloperInfo value)
+        errorGameDeveloperInfo,
+    required TResult Function(_LoadingGamesByDeveloperPaging value)
+        loadingGamesByDeveloperPaging,
+    required TResult Function(_LoadedGamesByDeveloperPaging value)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(_ErrorGamesByDeveloperPaging value)
+        errorGamesByDeveloperPaging,
   }) {
     return loadingPagingRedditComments(this);
   }
@@ -1210,6 +1509,16 @@ class _$LoadingPagingRedditCommentsImpl
         loadedPagingGameAchievements,
     TResult? Function(_ErrorPagingGameAchievements value)?
         errorPagingGameAchievements,
+    TResult? Function(_LoadingGameDeveloperInfo value)?
+        loadingGameDeveloperInfo,
+    TResult? Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult? Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult? Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult? Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
   }) {
     return loadingPagingRedditComments?.call(this);
   }
@@ -1233,6 +1542,15 @@ class _$LoadingPagingRedditCommentsImpl
         loadedPagingGameAchievements,
     TResult Function(_ErrorPagingGameAchievements value)?
         errorPagingGameAchievements,
+    TResult Function(_LoadingGameDeveloperInfo value)? loadingGameDeveloperInfo,
+    TResult Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (loadingPagingRedditComments != null) {
@@ -1333,6 +1651,14 @@ class _$LoadedPagingRedditCommentsImpl implements _LoadedPagingRedditComments {
     required TResult Function(GameAchievementsModel achievements)
         loadedPagingGameAchievements,
     required TResult Function(dynamic message) errorPagingGameAchievements,
+    required TResult Function() loadingGameDeveloperInfo,
+    required TResult Function(GameDeveloperModel developer)
+        loadedGameDeveloperInfo,
+    required TResult Function(dynamic message) errorGameDeveloperInfo,
+    required TResult Function() loadingGamesByDeveloperPaging,
+    required TResult Function(DeveloperGamesListModel games)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(dynamic message) errorGamesByDeveloperPaging,
   }) {
     return loadedPagingRedditComments(redditComments);
   }
@@ -1358,6 +1684,13 @@ class _$LoadedPagingRedditCommentsImpl implements _LoadedPagingRedditComments {
     TResult? Function(GameAchievementsModel achievements)?
         loadedPagingGameAchievements,
     TResult? Function(dynamic message)? errorPagingGameAchievements,
+    TResult? Function()? loadingGameDeveloperInfo,
+    TResult? Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult? Function(dynamic message)? errorGameDeveloperInfo,
+    TResult? Function()? loadingGamesByDeveloperPaging,
+    TResult? Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(dynamic message)? errorGamesByDeveloperPaging,
   }) {
     return loadedPagingRedditComments?.call(redditComments);
   }
@@ -1383,6 +1716,13 @@ class _$LoadedPagingRedditCommentsImpl implements _LoadedPagingRedditComments {
     TResult Function(GameAchievementsModel achievements)?
         loadedPagingGameAchievements,
     TResult Function(dynamic message)? errorPagingGameAchievements,
+    TResult Function()? loadingGameDeveloperInfo,
+    TResult Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult Function(dynamic message)? errorGameDeveloperInfo,
+    TResult Function()? loadingGamesByDeveloperPaging,
+    TResult Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(dynamic message)? errorGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (loadedPagingRedditComments != null) {
@@ -1410,6 +1750,18 @@ class _$LoadedPagingRedditCommentsImpl implements _LoadedPagingRedditComments {
         loadedPagingGameAchievements,
     required TResult Function(_ErrorPagingGameAchievements value)
         errorPagingGameAchievements,
+    required TResult Function(_LoadingGameDeveloperInfo value)
+        loadingGameDeveloperInfo,
+    required TResult Function(_LoadedGameDeveloperInfo value)
+        loadedGameDeveloperInfo,
+    required TResult Function(_ErrorGameDeveloperInfo value)
+        errorGameDeveloperInfo,
+    required TResult Function(_LoadingGamesByDeveloperPaging value)
+        loadingGamesByDeveloperPaging,
+    required TResult Function(_LoadedGamesByDeveloperPaging value)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(_ErrorGamesByDeveloperPaging value)
+        errorGamesByDeveloperPaging,
   }) {
     return loadedPagingRedditComments(this);
   }
@@ -1433,6 +1785,16 @@ class _$LoadedPagingRedditCommentsImpl implements _LoadedPagingRedditComments {
         loadedPagingGameAchievements,
     TResult? Function(_ErrorPagingGameAchievements value)?
         errorPagingGameAchievements,
+    TResult? Function(_LoadingGameDeveloperInfo value)?
+        loadingGameDeveloperInfo,
+    TResult? Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult? Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult? Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult? Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
   }) {
     return loadedPagingRedditComments?.call(this);
   }
@@ -1456,6 +1818,15 @@ class _$LoadedPagingRedditCommentsImpl implements _LoadedPagingRedditComments {
         loadedPagingGameAchievements,
     TResult Function(_ErrorPagingGameAchievements value)?
         errorPagingGameAchievements,
+    TResult Function(_LoadingGameDeveloperInfo value)? loadingGameDeveloperInfo,
+    TResult Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (loadedPagingRedditComments != null) {
@@ -1562,6 +1933,14 @@ class _$ErrorPagingRedditCommentsImpl implements _ErrorPagingRedditComments {
     required TResult Function(GameAchievementsModel achievements)
         loadedPagingGameAchievements,
     required TResult Function(dynamic message) errorPagingGameAchievements,
+    required TResult Function() loadingGameDeveloperInfo,
+    required TResult Function(GameDeveloperModel developer)
+        loadedGameDeveloperInfo,
+    required TResult Function(dynamic message) errorGameDeveloperInfo,
+    required TResult Function() loadingGamesByDeveloperPaging,
+    required TResult Function(DeveloperGamesListModel games)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(dynamic message) errorGamesByDeveloperPaging,
   }) {
     return errorPagingRedditComments(message);
   }
@@ -1587,6 +1966,13 @@ class _$ErrorPagingRedditCommentsImpl implements _ErrorPagingRedditComments {
     TResult? Function(GameAchievementsModel achievements)?
         loadedPagingGameAchievements,
     TResult? Function(dynamic message)? errorPagingGameAchievements,
+    TResult? Function()? loadingGameDeveloperInfo,
+    TResult? Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult? Function(dynamic message)? errorGameDeveloperInfo,
+    TResult? Function()? loadingGamesByDeveloperPaging,
+    TResult? Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(dynamic message)? errorGamesByDeveloperPaging,
   }) {
     return errorPagingRedditComments?.call(message);
   }
@@ -1612,6 +1998,13 @@ class _$ErrorPagingRedditCommentsImpl implements _ErrorPagingRedditComments {
     TResult Function(GameAchievementsModel achievements)?
         loadedPagingGameAchievements,
     TResult Function(dynamic message)? errorPagingGameAchievements,
+    TResult Function()? loadingGameDeveloperInfo,
+    TResult Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult Function(dynamic message)? errorGameDeveloperInfo,
+    TResult Function()? loadingGamesByDeveloperPaging,
+    TResult Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(dynamic message)? errorGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (errorPagingRedditComments != null) {
@@ -1639,6 +2032,18 @@ class _$ErrorPagingRedditCommentsImpl implements _ErrorPagingRedditComments {
         loadedPagingGameAchievements,
     required TResult Function(_ErrorPagingGameAchievements value)
         errorPagingGameAchievements,
+    required TResult Function(_LoadingGameDeveloperInfo value)
+        loadingGameDeveloperInfo,
+    required TResult Function(_LoadedGameDeveloperInfo value)
+        loadedGameDeveloperInfo,
+    required TResult Function(_ErrorGameDeveloperInfo value)
+        errorGameDeveloperInfo,
+    required TResult Function(_LoadingGamesByDeveloperPaging value)
+        loadingGamesByDeveloperPaging,
+    required TResult Function(_LoadedGamesByDeveloperPaging value)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(_ErrorGamesByDeveloperPaging value)
+        errorGamesByDeveloperPaging,
   }) {
     return errorPagingRedditComments(this);
   }
@@ -1662,6 +2067,16 @@ class _$ErrorPagingRedditCommentsImpl implements _ErrorPagingRedditComments {
         loadedPagingGameAchievements,
     TResult? Function(_ErrorPagingGameAchievements value)?
         errorPagingGameAchievements,
+    TResult? Function(_LoadingGameDeveloperInfo value)?
+        loadingGameDeveloperInfo,
+    TResult? Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult? Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult? Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult? Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
   }) {
     return errorPagingRedditComments?.call(this);
   }
@@ -1685,6 +2100,15 @@ class _$ErrorPagingRedditCommentsImpl implements _ErrorPagingRedditComments {
         loadedPagingGameAchievements,
     TResult Function(_ErrorPagingGameAchievements value)?
         errorPagingGameAchievements,
+    TResult Function(_LoadingGameDeveloperInfo value)? loadingGameDeveloperInfo,
+    TResult Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (errorPagingRedditComments != null) {
@@ -1765,6 +2189,14 @@ class _$LoadingPagingGameAchievementsImpl
     required TResult Function(GameAchievementsModel achievements)
         loadedPagingGameAchievements,
     required TResult Function(dynamic message) errorPagingGameAchievements,
+    required TResult Function() loadingGameDeveloperInfo,
+    required TResult Function(GameDeveloperModel developer)
+        loadedGameDeveloperInfo,
+    required TResult Function(dynamic message) errorGameDeveloperInfo,
+    required TResult Function() loadingGamesByDeveloperPaging,
+    required TResult Function(DeveloperGamesListModel games)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(dynamic message) errorGamesByDeveloperPaging,
   }) {
     return loadingPagingGameAchievements();
   }
@@ -1790,6 +2222,13 @@ class _$LoadingPagingGameAchievementsImpl
     TResult? Function(GameAchievementsModel achievements)?
         loadedPagingGameAchievements,
     TResult? Function(dynamic message)? errorPagingGameAchievements,
+    TResult? Function()? loadingGameDeveloperInfo,
+    TResult? Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult? Function(dynamic message)? errorGameDeveloperInfo,
+    TResult? Function()? loadingGamesByDeveloperPaging,
+    TResult? Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(dynamic message)? errorGamesByDeveloperPaging,
   }) {
     return loadingPagingGameAchievements?.call();
   }
@@ -1815,6 +2254,13 @@ class _$LoadingPagingGameAchievementsImpl
     TResult Function(GameAchievementsModel achievements)?
         loadedPagingGameAchievements,
     TResult Function(dynamic message)? errorPagingGameAchievements,
+    TResult Function()? loadingGameDeveloperInfo,
+    TResult Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult Function(dynamic message)? errorGameDeveloperInfo,
+    TResult Function()? loadingGamesByDeveloperPaging,
+    TResult Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(dynamic message)? errorGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (loadingPagingGameAchievements != null) {
@@ -1842,6 +2288,18 @@ class _$LoadingPagingGameAchievementsImpl
         loadedPagingGameAchievements,
     required TResult Function(_ErrorPagingGameAchievements value)
         errorPagingGameAchievements,
+    required TResult Function(_LoadingGameDeveloperInfo value)
+        loadingGameDeveloperInfo,
+    required TResult Function(_LoadedGameDeveloperInfo value)
+        loadedGameDeveloperInfo,
+    required TResult Function(_ErrorGameDeveloperInfo value)
+        errorGameDeveloperInfo,
+    required TResult Function(_LoadingGamesByDeveloperPaging value)
+        loadingGamesByDeveloperPaging,
+    required TResult Function(_LoadedGamesByDeveloperPaging value)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(_ErrorGamesByDeveloperPaging value)
+        errorGamesByDeveloperPaging,
   }) {
     return loadingPagingGameAchievements(this);
   }
@@ -1865,6 +2323,16 @@ class _$LoadingPagingGameAchievementsImpl
         loadedPagingGameAchievements,
     TResult? Function(_ErrorPagingGameAchievements value)?
         errorPagingGameAchievements,
+    TResult? Function(_LoadingGameDeveloperInfo value)?
+        loadingGameDeveloperInfo,
+    TResult? Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult? Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult? Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult? Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
   }) {
     return loadingPagingGameAchievements?.call(this);
   }
@@ -1888,6 +2356,15 @@ class _$LoadingPagingGameAchievementsImpl
         loadedPagingGameAchievements,
     TResult Function(_ErrorPagingGameAchievements value)?
         errorPagingGameAchievements,
+    TResult Function(_LoadingGameDeveloperInfo value)? loadingGameDeveloperInfo,
+    TResult Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (loadingPagingGameAchievements != null) {
@@ -1991,6 +2468,14 @@ class _$LoadedPagingGameAchievementsImpl
     required TResult Function(GameAchievementsModel achievements)
         loadedPagingGameAchievements,
     required TResult Function(dynamic message) errorPagingGameAchievements,
+    required TResult Function() loadingGameDeveloperInfo,
+    required TResult Function(GameDeveloperModel developer)
+        loadedGameDeveloperInfo,
+    required TResult Function(dynamic message) errorGameDeveloperInfo,
+    required TResult Function() loadingGamesByDeveloperPaging,
+    required TResult Function(DeveloperGamesListModel games)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(dynamic message) errorGamesByDeveloperPaging,
   }) {
     return loadedPagingGameAchievements(achievements);
   }
@@ -2016,6 +2501,13 @@ class _$LoadedPagingGameAchievementsImpl
     TResult? Function(GameAchievementsModel achievements)?
         loadedPagingGameAchievements,
     TResult? Function(dynamic message)? errorPagingGameAchievements,
+    TResult? Function()? loadingGameDeveloperInfo,
+    TResult? Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult? Function(dynamic message)? errorGameDeveloperInfo,
+    TResult? Function()? loadingGamesByDeveloperPaging,
+    TResult? Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(dynamic message)? errorGamesByDeveloperPaging,
   }) {
     return loadedPagingGameAchievements?.call(achievements);
   }
@@ -2041,6 +2533,13 @@ class _$LoadedPagingGameAchievementsImpl
     TResult Function(GameAchievementsModel achievements)?
         loadedPagingGameAchievements,
     TResult Function(dynamic message)? errorPagingGameAchievements,
+    TResult Function()? loadingGameDeveloperInfo,
+    TResult Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult Function(dynamic message)? errorGameDeveloperInfo,
+    TResult Function()? loadingGamesByDeveloperPaging,
+    TResult Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(dynamic message)? errorGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (loadedPagingGameAchievements != null) {
@@ -2068,6 +2567,18 @@ class _$LoadedPagingGameAchievementsImpl
         loadedPagingGameAchievements,
     required TResult Function(_ErrorPagingGameAchievements value)
         errorPagingGameAchievements,
+    required TResult Function(_LoadingGameDeveloperInfo value)
+        loadingGameDeveloperInfo,
+    required TResult Function(_LoadedGameDeveloperInfo value)
+        loadedGameDeveloperInfo,
+    required TResult Function(_ErrorGameDeveloperInfo value)
+        errorGameDeveloperInfo,
+    required TResult Function(_LoadingGamesByDeveloperPaging value)
+        loadingGamesByDeveloperPaging,
+    required TResult Function(_LoadedGamesByDeveloperPaging value)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(_ErrorGamesByDeveloperPaging value)
+        errorGamesByDeveloperPaging,
   }) {
     return loadedPagingGameAchievements(this);
   }
@@ -2091,6 +2602,16 @@ class _$LoadedPagingGameAchievementsImpl
         loadedPagingGameAchievements,
     TResult? Function(_ErrorPagingGameAchievements value)?
         errorPagingGameAchievements,
+    TResult? Function(_LoadingGameDeveloperInfo value)?
+        loadingGameDeveloperInfo,
+    TResult? Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult? Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult? Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult? Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
   }) {
     return loadedPagingGameAchievements?.call(this);
   }
@@ -2114,6 +2635,15 @@ class _$LoadedPagingGameAchievementsImpl
         loadedPagingGameAchievements,
     TResult Function(_ErrorPagingGameAchievements value)?
         errorPagingGameAchievements,
+    TResult Function(_LoadingGameDeveloperInfo value)? loadingGameDeveloperInfo,
+    TResult Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (loadedPagingGameAchievements != null) {
@@ -2222,6 +2752,14 @@ class _$ErrorPagingGameAchievementsImpl
     required TResult Function(GameAchievementsModel achievements)
         loadedPagingGameAchievements,
     required TResult Function(dynamic message) errorPagingGameAchievements,
+    required TResult Function() loadingGameDeveloperInfo,
+    required TResult Function(GameDeveloperModel developer)
+        loadedGameDeveloperInfo,
+    required TResult Function(dynamic message) errorGameDeveloperInfo,
+    required TResult Function() loadingGamesByDeveloperPaging,
+    required TResult Function(DeveloperGamesListModel games)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(dynamic message) errorGamesByDeveloperPaging,
   }) {
     return errorPagingGameAchievements(message);
   }
@@ -2247,6 +2785,13 @@ class _$ErrorPagingGameAchievementsImpl
     TResult? Function(GameAchievementsModel achievements)?
         loadedPagingGameAchievements,
     TResult? Function(dynamic message)? errorPagingGameAchievements,
+    TResult? Function()? loadingGameDeveloperInfo,
+    TResult? Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult? Function(dynamic message)? errorGameDeveloperInfo,
+    TResult? Function()? loadingGamesByDeveloperPaging,
+    TResult? Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(dynamic message)? errorGamesByDeveloperPaging,
   }) {
     return errorPagingGameAchievements?.call(message);
   }
@@ -2272,6 +2817,13 @@ class _$ErrorPagingGameAchievementsImpl
     TResult Function(GameAchievementsModel achievements)?
         loadedPagingGameAchievements,
     TResult Function(dynamic message)? errorPagingGameAchievements,
+    TResult Function()? loadingGameDeveloperInfo,
+    TResult Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult Function(dynamic message)? errorGameDeveloperInfo,
+    TResult Function()? loadingGamesByDeveloperPaging,
+    TResult Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(dynamic message)? errorGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (errorPagingGameAchievements != null) {
@@ -2299,6 +2851,18 @@ class _$ErrorPagingGameAchievementsImpl
         loadedPagingGameAchievements,
     required TResult Function(_ErrorPagingGameAchievements value)
         errorPagingGameAchievements,
+    required TResult Function(_LoadingGameDeveloperInfo value)
+        loadingGameDeveloperInfo,
+    required TResult Function(_LoadedGameDeveloperInfo value)
+        loadedGameDeveloperInfo,
+    required TResult Function(_ErrorGameDeveloperInfo value)
+        errorGameDeveloperInfo,
+    required TResult Function(_LoadingGamesByDeveloperPaging value)
+        loadingGamesByDeveloperPaging,
+    required TResult Function(_LoadedGamesByDeveloperPaging value)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(_ErrorGamesByDeveloperPaging value)
+        errorGamesByDeveloperPaging,
   }) {
     return errorPagingGameAchievements(this);
   }
@@ -2322,6 +2886,16 @@ class _$ErrorPagingGameAchievementsImpl
         loadedPagingGameAchievements,
     TResult? Function(_ErrorPagingGameAchievements value)?
         errorPagingGameAchievements,
+    TResult? Function(_LoadingGameDeveloperInfo value)?
+        loadingGameDeveloperInfo,
+    TResult? Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult? Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult? Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult? Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
   }) {
     return errorPagingGameAchievements?.call(this);
   }
@@ -2345,6 +2919,15 @@ class _$ErrorPagingGameAchievementsImpl
         loadedPagingGameAchievements,
     TResult Function(_ErrorPagingGameAchievements value)?
         errorPagingGameAchievements,
+    TResult Function(_LoadingGameDeveloperInfo value)? loadingGameDeveloperInfo,
+    TResult Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (errorPagingGameAchievements != null) {
@@ -2365,12 +2948,1641 @@ abstract class _ErrorPagingGameAchievements implements GameViewState {
 }
 
 /// @nodoc
+abstract class _$$LoadingGameDeveloperInfoImplCopyWith<$Res> {
+  factory _$$LoadingGameDeveloperInfoImplCopyWith(
+          _$LoadingGameDeveloperInfoImpl value,
+          $Res Function(_$LoadingGameDeveloperInfoImpl) then) =
+      __$$LoadingGameDeveloperInfoImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$LoadingGameDeveloperInfoImplCopyWithImpl<$Res>
+    extends _$GameViewStateCopyWithImpl<$Res, _$LoadingGameDeveloperInfoImpl>
+    implements _$$LoadingGameDeveloperInfoImplCopyWith<$Res> {
+  __$$LoadingGameDeveloperInfoImplCopyWithImpl(
+      _$LoadingGameDeveloperInfoImpl _value,
+      $Res Function(_$LoadingGameDeveloperInfoImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$LoadingGameDeveloperInfoImpl implements _LoadingGameDeveloperInfo {
+  const _$LoadingGameDeveloperInfoImpl();
+
+  @override
+  String toString() {
+    return 'GameViewState.loadingGameDeveloperInfo()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoadingGameDeveloperInfoImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingGame,
+    required TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)
+        loadedGame,
+    required TResult Function(dynamic message) errorGame,
+    required TResult Function() loadingPagingRedditComments,
+    required TResult Function(GameRedditCommentsModel redditComments)
+        loadedPagingRedditComments,
+    required TResult Function(dynamic message) errorPagingRedditComments,
+    required TResult Function() loadingPagingGameAchievements,
+    required TResult Function(GameAchievementsModel achievements)
+        loadedPagingGameAchievements,
+    required TResult Function(dynamic message) errorPagingGameAchievements,
+    required TResult Function() loadingGameDeveloperInfo,
+    required TResult Function(GameDeveloperModel developer)
+        loadedGameDeveloperInfo,
+    required TResult Function(dynamic message) errorGameDeveloperInfo,
+    required TResult Function() loadingGamesByDeveloperPaging,
+    required TResult Function(DeveloperGamesListModel games)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(dynamic message) errorGamesByDeveloperPaging,
+  }) {
+    return loadingGameDeveloperInfo();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingGame,
+    TResult? Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
+        loadedGame,
+    TResult? Function(dynamic message)? errorGame,
+    TResult? Function()? loadingPagingRedditComments,
+    TResult? Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult? Function(dynamic message)? errorPagingRedditComments,
+    TResult? Function()? loadingPagingGameAchievements,
+    TResult? Function(GameAchievementsModel achievements)?
+        loadedPagingGameAchievements,
+    TResult? Function(dynamic message)? errorPagingGameAchievements,
+    TResult? Function()? loadingGameDeveloperInfo,
+    TResult? Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult? Function(dynamic message)? errorGameDeveloperInfo,
+    TResult? Function()? loadingGamesByDeveloperPaging,
+    TResult? Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(dynamic message)? errorGamesByDeveloperPaging,
+  }) {
+    return loadingGameDeveloperInfo?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingGame,
+    TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
+        loadedGame,
+    TResult Function(dynamic message)? errorGame,
+    TResult Function()? loadingPagingRedditComments,
+    TResult Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult Function(dynamic message)? errorPagingRedditComments,
+    TResult Function()? loadingPagingGameAchievements,
+    TResult Function(GameAchievementsModel achievements)?
+        loadedPagingGameAchievements,
+    TResult Function(dynamic message)? errorPagingGameAchievements,
+    TResult Function()? loadingGameDeveloperInfo,
+    TResult Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult Function(dynamic message)? errorGameDeveloperInfo,
+    TResult Function()? loadingGamesByDeveloperPaging,
+    TResult Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(dynamic message)? errorGamesByDeveloperPaging,
+    required TResult orElse(),
+  }) {
+    if (loadingGameDeveloperInfo != null) {
+      return loadingGameDeveloperInfo();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadingGame value) loadingGame,
+    required TResult Function(_LoadedGame value) loadedGame,
+    required TResult Function(_ErrorGame value) errorGame,
+    required TResult Function(_LoadingPagingRedditComments value)
+        loadingPagingRedditComments,
+    required TResult Function(_LoadedPagingRedditComments value)
+        loadedPagingRedditComments,
+    required TResult Function(_ErrorPagingRedditComments value)
+        errorPagingRedditComments,
+    required TResult Function(_LoadingPagingGameAchievements value)
+        loadingPagingGameAchievements,
+    required TResult Function(_LoadedPagingGameAchievements value)
+        loadedPagingGameAchievements,
+    required TResult Function(_ErrorPagingGameAchievements value)
+        errorPagingGameAchievements,
+    required TResult Function(_LoadingGameDeveloperInfo value)
+        loadingGameDeveloperInfo,
+    required TResult Function(_LoadedGameDeveloperInfo value)
+        loadedGameDeveloperInfo,
+    required TResult Function(_ErrorGameDeveloperInfo value)
+        errorGameDeveloperInfo,
+    required TResult Function(_LoadingGamesByDeveloperPaging value)
+        loadingGamesByDeveloperPaging,
+    required TResult Function(_LoadedGamesByDeveloperPaging value)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(_ErrorGamesByDeveloperPaging value)
+        errorGamesByDeveloperPaging,
+  }) {
+    return loadingGameDeveloperInfo(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingGame value)? loadingGame,
+    TResult? Function(_LoadedGame value)? loadedGame,
+    TResult? Function(_ErrorGame value)? errorGame,
+    TResult? Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult? Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult? Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
+    TResult? Function(_LoadingPagingGameAchievements value)?
+        loadingPagingGameAchievements,
+    TResult? Function(_LoadedPagingGameAchievements value)?
+        loadedPagingGameAchievements,
+    TResult? Function(_ErrorPagingGameAchievements value)?
+        errorPagingGameAchievements,
+    TResult? Function(_LoadingGameDeveloperInfo value)?
+        loadingGameDeveloperInfo,
+    TResult? Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult? Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult? Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult? Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
+  }) {
+    return loadingGameDeveloperInfo?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadingGame value)? loadingGame,
+    TResult Function(_LoadedGame value)? loadedGame,
+    TResult Function(_ErrorGame value)? errorGame,
+    TResult Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
+    TResult Function(_LoadingPagingGameAchievements value)?
+        loadingPagingGameAchievements,
+    TResult Function(_LoadedPagingGameAchievements value)?
+        loadedPagingGameAchievements,
+    TResult Function(_ErrorPagingGameAchievements value)?
+        errorPagingGameAchievements,
+    TResult Function(_LoadingGameDeveloperInfo value)? loadingGameDeveloperInfo,
+    TResult Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
+    required TResult orElse(),
+  }) {
+    if (loadingGameDeveloperInfo != null) {
+      return loadingGameDeveloperInfo(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadingGameDeveloperInfo implements GameViewState {
+  const factory _LoadingGameDeveloperInfo() = _$LoadingGameDeveloperInfoImpl;
+}
+
+/// @nodoc
+abstract class _$$LoadedGameDeveloperInfoImplCopyWith<$Res> {
+  factory _$$LoadedGameDeveloperInfoImplCopyWith(
+          _$LoadedGameDeveloperInfoImpl value,
+          $Res Function(_$LoadedGameDeveloperInfoImpl) then) =
+      __$$LoadedGameDeveloperInfoImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({GameDeveloperModel developer});
+}
+
+/// @nodoc
+class __$$LoadedGameDeveloperInfoImplCopyWithImpl<$Res>
+    extends _$GameViewStateCopyWithImpl<$Res, _$LoadedGameDeveloperInfoImpl>
+    implements _$$LoadedGameDeveloperInfoImplCopyWith<$Res> {
+  __$$LoadedGameDeveloperInfoImplCopyWithImpl(
+      _$LoadedGameDeveloperInfoImpl _value,
+      $Res Function(_$LoadedGameDeveloperInfoImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? developer = null,
+  }) {
+    return _then(_$LoadedGameDeveloperInfoImpl(
+      null == developer
+          ? _value.developer
+          : developer // ignore: cast_nullable_to_non_nullable
+              as GameDeveloperModel,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LoadedGameDeveloperInfoImpl implements _LoadedGameDeveloperInfo {
+  const _$LoadedGameDeveloperInfoImpl(this.developer);
+
+  @override
+  final GameDeveloperModel developer;
+
+  @override
+  String toString() {
+    return 'GameViewState.loadedGameDeveloperInfo(developer: $developer)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoadedGameDeveloperInfoImpl &&
+            (identical(other.developer, developer) ||
+                other.developer == developer));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, developer);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LoadedGameDeveloperInfoImplCopyWith<_$LoadedGameDeveloperInfoImpl>
+      get copyWith => __$$LoadedGameDeveloperInfoImplCopyWithImpl<
+          _$LoadedGameDeveloperInfoImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingGame,
+    required TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)
+        loadedGame,
+    required TResult Function(dynamic message) errorGame,
+    required TResult Function() loadingPagingRedditComments,
+    required TResult Function(GameRedditCommentsModel redditComments)
+        loadedPagingRedditComments,
+    required TResult Function(dynamic message) errorPagingRedditComments,
+    required TResult Function() loadingPagingGameAchievements,
+    required TResult Function(GameAchievementsModel achievements)
+        loadedPagingGameAchievements,
+    required TResult Function(dynamic message) errorPagingGameAchievements,
+    required TResult Function() loadingGameDeveloperInfo,
+    required TResult Function(GameDeveloperModel developer)
+        loadedGameDeveloperInfo,
+    required TResult Function(dynamic message) errorGameDeveloperInfo,
+    required TResult Function() loadingGamesByDeveloperPaging,
+    required TResult Function(DeveloperGamesListModel games)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(dynamic message) errorGamesByDeveloperPaging,
+  }) {
+    return loadedGameDeveloperInfo(developer);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingGame,
+    TResult? Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
+        loadedGame,
+    TResult? Function(dynamic message)? errorGame,
+    TResult? Function()? loadingPagingRedditComments,
+    TResult? Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult? Function(dynamic message)? errorPagingRedditComments,
+    TResult? Function()? loadingPagingGameAchievements,
+    TResult? Function(GameAchievementsModel achievements)?
+        loadedPagingGameAchievements,
+    TResult? Function(dynamic message)? errorPagingGameAchievements,
+    TResult? Function()? loadingGameDeveloperInfo,
+    TResult? Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult? Function(dynamic message)? errorGameDeveloperInfo,
+    TResult? Function()? loadingGamesByDeveloperPaging,
+    TResult? Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(dynamic message)? errorGamesByDeveloperPaging,
+  }) {
+    return loadedGameDeveloperInfo?.call(developer);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingGame,
+    TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
+        loadedGame,
+    TResult Function(dynamic message)? errorGame,
+    TResult Function()? loadingPagingRedditComments,
+    TResult Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult Function(dynamic message)? errorPagingRedditComments,
+    TResult Function()? loadingPagingGameAchievements,
+    TResult Function(GameAchievementsModel achievements)?
+        loadedPagingGameAchievements,
+    TResult Function(dynamic message)? errorPagingGameAchievements,
+    TResult Function()? loadingGameDeveloperInfo,
+    TResult Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult Function(dynamic message)? errorGameDeveloperInfo,
+    TResult Function()? loadingGamesByDeveloperPaging,
+    TResult Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(dynamic message)? errorGamesByDeveloperPaging,
+    required TResult orElse(),
+  }) {
+    if (loadedGameDeveloperInfo != null) {
+      return loadedGameDeveloperInfo(developer);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadingGame value) loadingGame,
+    required TResult Function(_LoadedGame value) loadedGame,
+    required TResult Function(_ErrorGame value) errorGame,
+    required TResult Function(_LoadingPagingRedditComments value)
+        loadingPagingRedditComments,
+    required TResult Function(_LoadedPagingRedditComments value)
+        loadedPagingRedditComments,
+    required TResult Function(_ErrorPagingRedditComments value)
+        errorPagingRedditComments,
+    required TResult Function(_LoadingPagingGameAchievements value)
+        loadingPagingGameAchievements,
+    required TResult Function(_LoadedPagingGameAchievements value)
+        loadedPagingGameAchievements,
+    required TResult Function(_ErrorPagingGameAchievements value)
+        errorPagingGameAchievements,
+    required TResult Function(_LoadingGameDeveloperInfo value)
+        loadingGameDeveloperInfo,
+    required TResult Function(_LoadedGameDeveloperInfo value)
+        loadedGameDeveloperInfo,
+    required TResult Function(_ErrorGameDeveloperInfo value)
+        errorGameDeveloperInfo,
+    required TResult Function(_LoadingGamesByDeveloperPaging value)
+        loadingGamesByDeveloperPaging,
+    required TResult Function(_LoadedGamesByDeveloperPaging value)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(_ErrorGamesByDeveloperPaging value)
+        errorGamesByDeveloperPaging,
+  }) {
+    return loadedGameDeveloperInfo(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingGame value)? loadingGame,
+    TResult? Function(_LoadedGame value)? loadedGame,
+    TResult? Function(_ErrorGame value)? errorGame,
+    TResult? Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult? Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult? Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
+    TResult? Function(_LoadingPagingGameAchievements value)?
+        loadingPagingGameAchievements,
+    TResult? Function(_LoadedPagingGameAchievements value)?
+        loadedPagingGameAchievements,
+    TResult? Function(_ErrorPagingGameAchievements value)?
+        errorPagingGameAchievements,
+    TResult? Function(_LoadingGameDeveloperInfo value)?
+        loadingGameDeveloperInfo,
+    TResult? Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult? Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult? Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult? Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
+  }) {
+    return loadedGameDeveloperInfo?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadingGame value)? loadingGame,
+    TResult Function(_LoadedGame value)? loadedGame,
+    TResult Function(_ErrorGame value)? errorGame,
+    TResult Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
+    TResult Function(_LoadingPagingGameAchievements value)?
+        loadingPagingGameAchievements,
+    TResult Function(_LoadedPagingGameAchievements value)?
+        loadedPagingGameAchievements,
+    TResult Function(_ErrorPagingGameAchievements value)?
+        errorPagingGameAchievements,
+    TResult Function(_LoadingGameDeveloperInfo value)? loadingGameDeveloperInfo,
+    TResult Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
+    required TResult orElse(),
+  }) {
+    if (loadedGameDeveloperInfo != null) {
+      return loadedGameDeveloperInfo(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadedGameDeveloperInfo implements GameViewState {
+  const factory _LoadedGameDeveloperInfo(final GameDeveloperModel developer) =
+      _$LoadedGameDeveloperInfoImpl;
+
+  GameDeveloperModel get developer;
+  @JsonKey(ignore: true)
+  _$$LoadedGameDeveloperInfoImplCopyWith<_$LoadedGameDeveloperInfoImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ErrorGameDeveloperInfoImplCopyWith<$Res> {
+  factory _$$ErrorGameDeveloperInfoImplCopyWith(
+          _$ErrorGameDeveloperInfoImpl value,
+          $Res Function(_$ErrorGameDeveloperInfoImpl) then) =
+      __$$ErrorGameDeveloperInfoImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({dynamic message});
+}
+
+/// @nodoc
+class __$$ErrorGameDeveloperInfoImplCopyWithImpl<$Res>
+    extends _$GameViewStateCopyWithImpl<$Res, _$ErrorGameDeveloperInfoImpl>
+    implements _$$ErrorGameDeveloperInfoImplCopyWith<$Res> {
+  __$$ErrorGameDeveloperInfoImplCopyWithImpl(
+      _$ErrorGameDeveloperInfoImpl _value,
+      $Res Function(_$ErrorGameDeveloperInfoImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(_$ErrorGameDeveloperInfoImpl(
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ErrorGameDeveloperInfoImpl implements _ErrorGameDeveloperInfo {
+  const _$ErrorGameDeveloperInfoImpl(this.message);
+
+  @override
+  final dynamic message;
+
+  @override
+  String toString() {
+    return 'GameViewState.errorGameDeveloperInfo(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ErrorGameDeveloperInfoImpl &&
+            const DeepCollectionEquality().equals(other.message, message));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ErrorGameDeveloperInfoImplCopyWith<_$ErrorGameDeveloperInfoImpl>
+      get copyWith => __$$ErrorGameDeveloperInfoImplCopyWithImpl<
+          _$ErrorGameDeveloperInfoImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingGame,
+    required TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)
+        loadedGame,
+    required TResult Function(dynamic message) errorGame,
+    required TResult Function() loadingPagingRedditComments,
+    required TResult Function(GameRedditCommentsModel redditComments)
+        loadedPagingRedditComments,
+    required TResult Function(dynamic message) errorPagingRedditComments,
+    required TResult Function() loadingPagingGameAchievements,
+    required TResult Function(GameAchievementsModel achievements)
+        loadedPagingGameAchievements,
+    required TResult Function(dynamic message) errorPagingGameAchievements,
+    required TResult Function() loadingGameDeveloperInfo,
+    required TResult Function(GameDeveloperModel developer)
+        loadedGameDeveloperInfo,
+    required TResult Function(dynamic message) errorGameDeveloperInfo,
+    required TResult Function() loadingGamesByDeveloperPaging,
+    required TResult Function(DeveloperGamesListModel games)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(dynamic message) errorGamesByDeveloperPaging,
+  }) {
+    return errorGameDeveloperInfo(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingGame,
+    TResult? Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
+        loadedGame,
+    TResult? Function(dynamic message)? errorGame,
+    TResult? Function()? loadingPagingRedditComments,
+    TResult? Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult? Function(dynamic message)? errorPagingRedditComments,
+    TResult? Function()? loadingPagingGameAchievements,
+    TResult? Function(GameAchievementsModel achievements)?
+        loadedPagingGameAchievements,
+    TResult? Function(dynamic message)? errorPagingGameAchievements,
+    TResult? Function()? loadingGameDeveloperInfo,
+    TResult? Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult? Function(dynamic message)? errorGameDeveloperInfo,
+    TResult? Function()? loadingGamesByDeveloperPaging,
+    TResult? Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(dynamic message)? errorGamesByDeveloperPaging,
+  }) {
+    return errorGameDeveloperInfo?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingGame,
+    TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
+        loadedGame,
+    TResult Function(dynamic message)? errorGame,
+    TResult Function()? loadingPagingRedditComments,
+    TResult Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult Function(dynamic message)? errorPagingRedditComments,
+    TResult Function()? loadingPagingGameAchievements,
+    TResult Function(GameAchievementsModel achievements)?
+        loadedPagingGameAchievements,
+    TResult Function(dynamic message)? errorPagingGameAchievements,
+    TResult Function()? loadingGameDeveloperInfo,
+    TResult Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult Function(dynamic message)? errorGameDeveloperInfo,
+    TResult Function()? loadingGamesByDeveloperPaging,
+    TResult Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(dynamic message)? errorGamesByDeveloperPaging,
+    required TResult orElse(),
+  }) {
+    if (errorGameDeveloperInfo != null) {
+      return errorGameDeveloperInfo(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadingGame value) loadingGame,
+    required TResult Function(_LoadedGame value) loadedGame,
+    required TResult Function(_ErrorGame value) errorGame,
+    required TResult Function(_LoadingPagingRedditComments value)
+        loadingPagingRedditComments,
+    required TResult Function(_LoadedPagingRedditComments value)
+        loadedPagingRedditComments,
+    required TResult Function(_ErrorPagingRedditComments value)
+        errorPagingRedditComments,
+    required TResult Function(_LoadingPagingGameAchievements value)
+        loadingPagingGameAchievements,
+    required TResult Function(_LoadedPagingGameAchievements value)
+        loadedPagingGameAchievements,
+    required TResult Function(_ErrorPagingGameAchievements value)
+        errorPagingGameAchievements,
+    required TResult Function(_LoadingGameDeveloperInfo value)
+        loadingGameDeveloperInfo,
+    required TResult Function(_LoadedGameDeveloperInfo value)
+        loadedGameDeveloperInfo,
+    required TResult Function(_ErrorGameDeveloperInfo value)
+        errorGameDeveloperInfo,
+    required TResult Function(_LoadingGamesByDeveloperPaging value)
+        loadingGamesByDeveloperPaging,
+    required TResult Function(_LoadedGamesByDeveloperPaging value)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(_ErrorGamesByDeveloperPaging value)
+        errorGamesByDeveloperPaging,
+  }) {
+    return errorGameDeveloperInfo(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingGame value)? loadingGame,
+    TResult? Function(_LoadedGame value)? loadedGame,
+    TResult? Function(_ErrorGame value)? errorGame,
+    TResult? Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult? Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult? Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
+    TResult? Function(_LoadingPagingGameAchievements value)?
+        loadingPagingGameAchievements,
+    TResult? Function(_LoadedPagingGameAchievements value)?
+        loadedPagingGameAchievements,
+    TResult? Function(_ErrorPagingGameAchievements value)?
+        errorPagingGameAchievements,
+    TResult? Function(_LoadingGameDeveloperInfo value)?
+        loadingGameDeveloperInfo,
+    TResult? Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult? Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult? Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult? Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
+  }) {
+    return errorGameDeveloperInfo?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadingGame value)? loadingGame,
+    TResult Function(_LoadedGame value)? loadedGame,
+    TResult Function(_ErrorGame value)? errorGame,
+    TResult Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
+    TResult Function(_LoadingPagingGameAchievements value)?
+        loadingPagingGameAchievements,
+    TResult Function(_LoadedPagingGameAchievements value)?
+        loadedPagingGameAchievements,
+    TResult Function(_ErrorPagingGameAchievements value)?
+        errorPagingGameAchievements,
+    TResult Function(_LoadingGameDeveloperInfo value)? loadingGameDeveloperInfo,
+    TResult Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
+    required TResult orElse(),
+  }) {
+    if (errorGameDeveloperInfo != null) {
+      return errorGameDeveloperInfo(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ErrorGameDeveloperInfo implements GameViewState {
+  const factory _ErrorGameDeveloperInfo(final dynamic message) =
+      _$ErrorGameDeveloperInfoImpl;
+
+  dynamic get message;
+  @JsonKey(ignore: true)
+  _$$ErrorGameDeveloperInfoImplCopyWith<_$ErrorGameDeveloperInfoImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LoadingGamesByDeveloperPagingImplCopyWith<$Res> {
+  factory _$$LoadingGamesByDeveloperPagingImplCopyWith(
+          _$LoadingGamesByDeveloperPagingImpl value,
+          $Res Function(_$LoadingGamesByDeveloperPagingImpl) then) =
+      __$$LoadingGamesByDeveloperPagingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$LoadingGamesByDeveloperPagingImplCopyWithImpl<$Res>
+    extends _$GameViewStateCopyWithImpl<$Res,
+        _$LoadingGamesByDeveloperPagingImpl>
+    implements _$$LoadingGamesByDeveloperPagingImplCopyWith<$Res> {
+  __$$LoadingGamesByDeveloperPagingImplCopyWithImpl(
+      _$LoadingGamesByDeveloperPagingImpl _value,
+      $Res Function(_$LoadingGamesByDeveloperPagingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$LoadingGamesByDeveloperPagingImpl
+    implements _LoadingGamesByDeveloperPaging {
+  const _$LoadingGamesByDeveloperPagingImpl();
+
+  @override
+  String toString() {
+    return 'GameViewState.loadingGamesByDeveloperPaging()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoadingGamesByDeveloperPagingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingGame,
+    required TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)
+        loadedGame,
+    required TResult Function(dynamic message) errorGame,
+    required TResult Function() loadingPagingRedditComments,
+    required TResult Function(GameRedditCommentsModel redditComments)
+        loadedPagingRedditComments,
+    required TResult Function(dynamic message) errorPagingRedditComments,
+    required TResult Function() loadingPagingGameAchievements,
+    required TResult Function(GameAchievementsModel achievements)
+        loadedPagingGameAchievements,
+    required TResult Function(dynamic message) errorPagingGameAchievements,
+    required TResult Function() loadingGameDeveloperInfo,
+    required TResult Function(GameDeveloperModel developer)
+        loadedGameDeveloperInfo,
+    required TResult Function(dynamic message) errorGameDeveloperInfo,
+    required TResult Function() loadingGamesByDeveloperPaging,
+    required TResult Function(DeveloperGamesListModel games)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(dynamic message) errorGamesByDeveloperPaging,
+  }) {
+    return loadingGamesByDeveloperPaging();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingGame,
+    TResult? Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
+        loadedGame,
+    TResult? Function(dynamic message)? errorGame,
+    TResult? Function()? loadingPagingRedditComments,
+    TResult? Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult? Function(dynamic message)? errorPagingRedditComments,
+    TResult? Function()? loadingPagingGameAchievements,
+    TResult? Function(GameAchievementsModel achievements)?
+        loadedPagingGameAchievements,
+    TResult? Function(dynamic message)? errorPagingGameAchievements,
+    TResult? Function()? loadingGameDeveloperInfo,
+    TResult? Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult? Function(dynamic message)? errorGameDeveloperInfo,
+    TResult? Function()? loadingGamesByDeveloperPaging,
+    TResult? Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(dynamic message)? errorGamesByDeveloperPaging,
+  }) {
+    return loadingGamesByDeveloperPaging?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingGame,
+    TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
+        loadedGame,
+    TResult Function(dynamic message)? errorGame,
+    TResult Function()? loadingPagingRedditComments,
+    TResult Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult Function(dynamic message)? errorPagingRedditComments,
+    TResult Function()? loadingPagingGameAchievements,
+    TResult Function(GameAchievementsModel achievements)?
+        loadedPagingGameAchievements,
+    TResult Function(dynamic message)? errorPagingGameAchievements,
+    TResult Function()? loadingGameDeveloperInfo,
+    TResult Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult Function(dynamic message)? errorGameDeveloperInfo,
+    TResult Function()? loadingGamesByDeveloperPaging,
+    TResult Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(dynamic message)? errorGamesByDeveloperPaging,
+    required TResult orElse(),
+  }) {
+    if (loadingGamesByDeveloperPaging != null) {
+      return loadingGamesByDeveloperPaging();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadingGame value) loadingGame,
+    required TResult Function(_LoadedGame value) loadedGame,
+    required TResult Function(_ErrorGame value) errorGame,
+    required TResult Function(_LoadingPagingRedditComments value)
+        loadingPagingRedditComments,
+    required TResult Function(_LoadedPagingRedditComments value)
+        loadedPagingRedditComments,
+    required TResult Function(_ErrorPagingRedditComments value)
+        errorPagingRedditComments,
+    required TResult Function(_LoadingPagingGameAchievements value)
+        loadingPagingGameAchievements,
+    required TResult Function(_LoadedPagingGameAchievements value)
+        loadedPagingGameAchievements,
+    required TResult Function(_ErrorPagingGameAchievements value)
+        errorPagingGameAchievements,
+    required TResult Function(_LoadingGameDeveloperInfo value)
+        loadingGameDeveloperInfo,
+    required TResult Function(_LoadedGameDeveloperInfo value)
+        loadedGameDeveloperInfo,
+    required TResult Function(_ErrorGameDeveloperInfo value)
+        errorGameDeveloperInfo,
+    required TResult Function(_LoadingGamesByDeveloperPaging value)
+        loadingGamesByDeveloperPaging,
+    required TResult Function(_LoadedGamesByDeveloperPaging value)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(_ErrorGamesByDeveloperPaging value)
+        errorGamesByDeveloperPaging,
+  }) {
+    return loadingGamesByDeveloperPaging(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingGame value)? loadingGame,
+    TResult? Function(_LoadedGame value)? loadedGame,
+    TResult? Function(_ErrorGame value)? errorGame,
+    TResult? Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult? Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult? Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
+    TResult? Function(_LoadingPagingGameAchievements value)?
+        loadingPagingGameAchievements,
+    TResult? Function(_LoadedPagingGameAchievements value)?
+        loadedPagingGameAchievements,
+    TResult? Function(_ErrorPagingGameAchievements value)?
+        errorPagingGameAchievements,
+    TResult? Function(_LoadingGameDeveloperInfo value)?
+        loadingGameDeveloperInfo,
+    TResult? Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult? Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult? Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult? Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
+  }) {
+    return loadingGamesByDeveloperPaging?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadingGame value)? loadingGame,
+    TResult Function(_LoadedGame value)? loadedGame,
+    TResult Function(_ErrorGame value)? errorGame,
+    TResult Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
+    TResult Function(_LoadingPagingGameAchievements value)?
+        loadingPagingGameAchievements,
+    TResult Function(_LoadedPagingGameAchievements value)?
+        loadedPagingGameAchievements,
+    TResult Function(_ErrorPagingGameAchievements value)?
+        errorPagingGameAchievements,
+    TResult Function(_LoadingGameDeveloperInfo value)? loadingGameDeveloperInfo,
+    TResult Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
+    required TResult orElse(),
+  }) {
+    if (loadingGamesByDeveloperPaging != null) {
+      return loadingGamesByDeveloperPaging(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadingGamesByDeveloperPaging implements GameViewState {
+  const factory _LoadingGamesByDeveloperPaging() =
+      _$LoadingGamesByDeveloperPagingImpl;
+}
+
+/// @nodoc
+abstract class _$$LoadedGamesByDeveloperPagingImplCopyWith<$Res> {
+  factory _$$LoadedGamesByDeveloperPagingImplCopyWith(
+          _$LoadedGamesByDeveloperPagingImpl value,
+          $Res Function(_$LoadedGamesByDeveloperPagingImpl) then) =
+      __$$LoadedGamesByDeveloperPagingImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({DeveloperGamesListModel games});
+}
+
+/// @nodoc
+class __$$LoadedGamesByDeveloperPagingImplCopyWithImpl<$Res>
+    extends _$GameViewStateCopyWithImpl<$Res,
+        _$LoadedGamesByDeveloperPagingImpl>
+    implements _$$LoadedGamesByDeveloperPagingImplCopyWith<$Res> {
+  __$$LoadedGamesByDeveloperPagingImplCopyWithImpl(
+      _$LoadedGamesByDeveloperPagingImpl _value,
+      $Res Function(_$LoadedGamesByDeveloperPagingImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? games = null,
+  }) {
+    return _then(_$LoadedGamesByDeveloperPagingImpl(
+      null == games
+          ? _value.games
+          : games // ignore: cast_nullable_to_non_nullable
+              as DeveloperGamesListModel,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LoadedGamesByDeveloperPagingImpl
+    implements _LoadedGamesByDeveloperPaging {
+  const _$LoadedGamesByDeveloperPagingImpl(this.games);
+
+  @override
+  final DeveloperGamesListModel games;
+
+  @override
+  String toString() {
+    return 'GameViewState.loadedGamesByDeveloperPaging(games: $games)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoadedGamesByDeveloperPagingImpl &&
+            (identical(other.games, games) || other.games == games));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, games);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LoadedGamesByDeveloperPagingImplCopyWith<
+          _$LoadedGamesByDeveloperPagingImpl>
+      get copyWith => __$$LoadedGamesByDeveloperPagingImplCopyWithImpl<
+          _$LoadedGamesByDeveloperPagingImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingGame,
+    required TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)
+        loadedGame,
+    required TResult Function(dynamic message) errorGame,
+    required TResult Function() loadingPagingRedditComments,
+    required TResult Function(GameRedditCommentsModel redditComments)
+        loadedPagingRedditComments,
+    required TResult Function(dynamic message) errorPagingRedditComments,
+    required TResult Function() loadingPagingGameAchievements,
+    required TResult Function(GameAchievementsModel achievements)
+        loadedPagingGameAchievements,
+    required TResult Function(dynamic message) errorPagingGameAchievements,
+    required TResult Function() loadingGameDeveloperInfo,
+    required TResult Function(GameDeveloperModel developer)
+        loadedGameDeveloperInfo,
+    required TResult Function(dynamic message) errorGameDeveloperInfo,
+    required TResult Function() loadingGamesByDeveloperPaging,
+    required TResult Function(DeveloperGamesListModel games)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(dynamic message) errorGamesByDeveloperPaging,
+  }) {
+    return loadedGamesByDeveloperPaging(games);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingGame,
+    TResult? Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
+        loadedGame,
+    TResult? Function(dynamic message)? errorGame,
+    TResult? Function()? loadingPagingRedditComments,
+    TResult? Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult? Function(dynamic message)? errorPagingRedditComments,
+    TResult? Function()? loadingPagingGameAchievements,
+    TResult? Function(GameAchievementsModel achievements)?
+        loadedPagingGameAchievements,
+    TResult? Function(dynamic message)? errorPagingGameAchievements,
+    TResult? Function()? loadingGameDeveloperInfo,
+    TResult? Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult? Function(dynamic message)? errorGameDeveloperInfo,
+    TResult? Function()? loadingGamesByDeveloperPaging,
+    TResult? Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(dynamic message)? errorGamesByDeveloperPaging,
+  }) {
+    return loadedGamesByDeveloperPaging?.call(games);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingGame,
+    TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
+        loadedGame,
+    TResult Function(dynamic message)? errorGame,
+    TResult Function()? loadingPagingRedditComments,
+    TResult Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult Function(dynamic message)? errorPagingRedditComments,
+    TResult Function()? loadingPagingGameAchievements,
+    TResult Function(GameAchievementsModel achievements)?
+        loadedPagingGameAchievements,
+    TResult Function(dynamic message)? errorPagingGameAchievements,
+    TResult Function()? loadingGameDeveloperInfo,
+    TResult Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult Function(dynamic message)? errorGameDeveloperInfo,
+    TResult Function()? loadingGamesByDeveloperPaging,
+    TResult Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(dynamic message)? errorGamesByDeveloperPaging,
+    required TResult orElse(),
+  }) {
+    if (loadedGamesByDeveloperPaging != null) {
+      return loadedGamesByDeveloperPaging(games);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadingGame value) loadingGame,
+    required TResult Function(_LoadedGame value) loadedGame,
+    required TResult Function(_ErrorGame value) errorGame,
+    required TResult Function(_LoadingPagingRedditComments value)
+        loadingPagingRedditComments,
+    required TResult Function(_LoadedPagingRedditComments value)
+        loadedPagingRedditComments,
+    required TResult Function(_ErrorPagingRedditComments value)
+        errorPagingRedditComments,
+    required TResult Function(_LoadingPagingGameAchievements value)
+        loadingPagingGameAchievements,
+    required TResult Function(_LoadedPagingGameAchievements value)
+        loadedPagingGameAchievements,
+    required TResult Function(_ErrorPagingGameAchievements value)
+        errorPagingGameAchievements,
+    required TResult Function(_LoadingGameDeveloperInfo value)
+        loadingGameDeveloperInfo,
+    required TResult Function(_LoadedGameDeveloperInfo value)
+        loadedGameDeveloperInfo,
+    required TResult Function(_ErrorGameDeveloperInfo value)
+        errorGameDeveloperInfo,
+    required TResult Function(_LoadingGamesByDeveloperPaging value)
+        loadingGamesByDeveloperPaging,
+    required TResult Function(_LoadedGamesByDeveloperPaging value)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(_ErrorGamesByDeveloperPaging value)
+        errorGamesByDeveloperPaging,
+  }) {
+    return loadedGamesByDeveloperPaging(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingGame value)? loadingGame,
+    TResult? Function(_LoadedGame value)? loadedGame,
+    TResult? Function(_ErrorGame value)? errorGame,
+    TResult? Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult? Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult? Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
+    TResult? Function(_LoadingPagingGameAchievements value)?
+        loadingPagingGameAchievements,
+    TResult? Function(_LoadedPagingGameAchievements value)?
+        loadedPagingGameAchievements,
+    TResult? Function(_ErrorPagingGameAchievements value)?
+        errorPagingGameAchievements,
+    TResult? Function(_LoadingGameDeveloperInfo value)?
+        loadingGameDeveloperInfo,
+    TResult? Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult? Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult? Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult? Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
+  }) {
+    return loadedGamesByDeveloperPaging?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadingGame value)? loadingGame,
+    TResult Function(_LoadedGame value)? loadedGame,
+    TResult Function(_ErrorGame value)? errorGame,
+    TResult Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
+    TResult Function(_LoadingPagingGameAchievements value)?
+        loadingPagingGameAchievements,
+    TResult Function(_LoadedPagingGameAchievements value)?
+        loadedPagingGameAchievements,
+    TResult Function(_ErrorPagingGameAchievements value)?
+        errorPagingGameAchievements,
+    TResult Function(_LoadingGameDeveloperInfo value)? loadingGameDeveloperInfo,
+    TResult Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
+    required TResult orElse(),
+  }) {
+    if (loadedGamesByDeveloperPaging != null) {
+      return loadedGamesByDeveloperPaging(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadedGamesByDeveloperPaging implements GameViewState {
+  const factory _LoadedGamesByDeveloperPaging(
+      final DeveloperGamesListModel games) = _$LoadedGamesByDeveloperPagingImpl;
+
+  DeveloperGamesListModel get games;
+  @JsonKey(ignore: true)
+  _$$LoadedGamesByDeveloperPagingImplCopyWith<
+          _$LoadedGamesByDeveloperPagingImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ErrorGamesByDeveloperPagingImplCopyWith<$Res> {
+  factory _$$ErrorGamesByDeveloperPagingImplCopyWith(
+          _$ErrorGamesByDeveloperPagingImpl value,
+          $Res Function(_$ErrorGamesByDeveloperPagingImpl) then) =
+      __$$ErrorGamesByDeveloperPagingImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({dynamic message});
+}
+
+/// @nodoc
+class __$$ErrorGamesByDeveloperPagingImplCopyWithImpl<$Res>
+    extends _$GameViewStateCopyWithImpl<$Res, _$ErrorGamesByDeveloperPagingImpl>
+    implements _$$ErrorGamesByDeveloperPagingImplCopyWith<$Res> {
+  __$$ErrorGamesByDeveloperPagingImplCopyWithImpl(
+      _$ErrorGamesByDeveloperPagingImpl _value,
+      $Res Function(_$ErrorGamesByDeveloperPagingImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(_$ErrorGamesByDeveloperPagingImpl(
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ErrorGamesByDeveloperPagingImpl
+    implements _ErrorGamesByDeveloperPaging {
+  const _$ErrorGamesByDeveloperPagingImpl(this.message);
+
+  @override
+  final dynamic message;
+
+  @override
+  String toString() {
+    return 'GameViewState.errorGamesByDeveloperPaging(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ErrorGamesByDeveloperPagingImpl &&
+            const DeepCollectionEquality().equals(other.message, message));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ErrorGamesByDeveloperPagingImplCopyWith<_$ErrorGamesByDeveloperPagingImpl>
+      get copyWith => __$$ErrorGamesByDeveloperPagingImplCopyWithImpl<
+          _$ErrorGamesByDeveloperPagingImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingGame,
+    required TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)
+        loadedGame,
+    required TResult Function(dynamic message) errorGame,
+    required TResult Function() loadingPagingRedditComments,
+    required TResult Function(GameRedditCommentsModel redditComments)
+        loadedPagingRedditComments,
+    required TResult Function(dynamic message) errorPagingRedditComments,
+    required TResult Function() loadingPagingGameAchievements,
+    required TResult Function(GameAchievementsModel achievements)
+        loadedPagingGameAchievements,
+    required TResult Function(dynamic message) errorPagingGameAchievements,
+    required TResult Function() loadingGameDeveloperInfo,
+    required TResult Function(GameDeveloperModel developer)
+        loadedGameDeveloperInfo,
+    required TResult Function(dynamic message) errorGameDeveloperInfo,
+    required TResult Function() loadingGamesByDeveloperPaging,
+    required TResult Function(DeveloperGamesListModel games)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(dynamic message) errorGamesByDeveloperPaging,
+  }) {
+    return errorGamesByDeveloperPaging(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingGame,
+    TResult? Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
+        loadedGame,
+    TResult? Function(dynamic message)? errorGame,
+    TResult? Function()? loadingPagingRedditComments,
+    TResult? Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult? Function(dynamic message)? errorPagingRedditComments,
+    TResult? Function()? loadingPagingGameAchievements,
+    TResult? Function(GameAchievementsModel achievements)?
+        loadedPagingGameAchievements,
+    TResult? Function(dynamic message)? errorPagingGameAchievements,
+    TResult? Function()? loadingGameDeveloperInfo,
+    TResult? Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult? Function(dynamic message)? errorGameDeveloperInfo,
+    TResult? Function()? loadingGamesByDeveloperPaging,
+    TResult? Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(dynamic message)? errorGamesByDeveloperPaging,
+  }) {
+    return errorGamesByDeveloperPaging?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingGame,
+    TResult Function(
+            FullGameModel game,
+            GameScreenshotsModel screenshots,
+            GameRedditCommentsModel redditComments,
+            int totalAchivementCount,
+            WhereToBuyModel whereToBuy)?
+        loadedGame,
+    TResult Function(dynamic message)? errorGame,
+    TResult Function()? loadingPagingRedditComments,
+    TResult Function(GameRedditCommentsModel redditComments)?
+        loadedPagingRedditComments,
+    TResult Function(dynamic message)? errorPagingRedditComments,
+    TResult Function()? loadingPagingGameAchievements,
+    TResult Function(GameAchievementsModel achievements)?
+        loadedPagingGameAchievements,
+    TResult Function(dynamic message)? errorPagingGameAchievements,
+    TResult Function()? loadingGameDeveloperInfo,
+    TResult Function(GameDeveloperModel developer)? loadedGameDeveloperInfo,
+    TResult Function(dynamic message)? errorGameDeveloperInfo,
+    TResult Function()? loadingGamesByDeveloperPaging,
+    TResult Function(DeveloperGamesListModel games)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(dynamic message)? errorGamesByDeveloperPaging,
+    required TResult orElse(),
+  }) {
+    if (errorGamesByDeveloperPaging != null) {
+      return errorGamesByDeveloperPaging(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadingGame value) loadingGame,
+    required TResult Function(_LoadedGame value) loadedGame,
+    required TResult Function(_ErrorGame value) errorGame,
+    required TResult Function(_LoadingPagingRedditComments value)
+        loadingPagingRedditComments,
+    required TResult Function(_LoadedPagingRedditComments value)
+        loadedPagingRedditComments,
+    required TResult Function(_ErrorPagingRedditComments value)
+        errorPagingRedditComments,
+    required TResult Function(_LoadingPagingGameAchievements value)
+        loadingPagingGameAchievements,
+    required TResult Function(_LoadedPagingGameAchievements value)
+        loadedPagingGameAchievements,
+    required TResult Function(_ErrorPagingGameAchievements value)
+        errorPagingGameAchievements,
+    required TResult Function(_LoadingGameDeveloperInfo value)
+        loadingGameDeveloperInfo,
+    required TResult Function(_LoadedGameDeveloperInfo value)
+        loadedGameDeveloperInfo,
+    required TResult Function(_ErrorGameDeveloperInfo value)
+        errorGameDeveloperInfo,
+    required TResult Function(_LoadingGamesByDeveloperPaging value)
+        loadingGamesByDeveloperPaging,
+    required TResult Function(_LoadedGamesByDeveloperPaging value)
+        loadedGamesByDeveloperPaging,
+    required TResult Function(_ErrorGamesByDeveloperPaging value)
+        errorGamesByDeveloperPaging,
+  }) {
+    return errorGamesByDeveloperPaging(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingGame value)? loadingGame,
+    TResult? Function(_LoadedGame value)? loadedGame,
+    TResult? Function(_ErrorGame value)? errorGame,
+    TResult? Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult? Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult? Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
+    TResult? Function(_LoadingPagingGameAchievements value)?
+        loadingPagingGameAchievements,
+    TResult? Function(_LoadedPagingGameAchievements value)?
+        loadedPagingGameAchievements,
+    TResult? Function(_ErrorPagingGameAchievements value)?
+        errorPagingGameAchievements,
+    TResult? Function(_LoadingGameDeveloperInfo value)?
+        loadingGameDeveloperInfo,
+    TResult? Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult? Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult? Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult? Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult? Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
+  }) {
+    return errorGamesByDeveloperPaging?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadingGame value)? loadingGame,
+    TResult Function(_LoadedGame value)? loadedGame,
+    TResult Function(_ErrorGame value)? errorGame,
+    TResult Function(_LoadingPagingRedditComments value)?
+        loadingPagingRedditComments,
+    TResult Function(_LoadedPagingRedditComments value)?
+        loadedPagingRedditComments,
+    TResult Function(_ErrorPagingRedditComments value)?
+        errorPagingRedditComments,
+    TResult Function(_LoadingPagingGameAchievements value)?
+        loadingPagingGameAchievements,
+    TResult Function(_LoadedPagingGameAchievements value)?
+        loadedPagingGameAchievements,
+    TResult Function(_ErrorPagingGameAchievements value)?
+        errorPagingGameAchievements,
+    TResult Function(_LoadingGameDeveloperInfo value)? loadingGameDeveloperInfo,
+    TResult Function(_LoadedGameDeveloperInfo value)? loadedGameDeveloperInfo,
+    TResult Function(_ErrorGameDeveloperInfo value)? errorGameDeveloperInfo,
+    TResult Function(_LoadingGamesByDeveloperPaging value)?
+        loadingGamesByDeveloperPaging,
+    TResult Function(_LoadedGamesByDeveloperPaging value)?
+        loadedGamesByDeveloperPaging,
+    TResult Function(_ErrorGamesByDeveloperPaging value)?
+        errorGamesByDeveloperPaging,
+    required TResult orElse(),
+  }) {
+    if (errorGamesByDeveloperPaging != null) {
+      return errorGamesByDeveloperPaging(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ErrorGamesByDeveloperPaging implements GameViewState {
+  const factory _ErrorGamesByDeveloperPaging(final dynamic message) =
+      _$ErrorGamesByDeveloperPagingImpl;
+
+  dynamic get message;
+  @JsonKey(ignore: true)
+  _$$ErrorGamesByDeveloperPagingImplCopyWith<_$ErrorGamesByDeveloperPagingImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$GameViewEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(int gameId) fetchGame,
     required TResult Function(int id, int page) fetchPagingRedditComments,
     required TResult Function(int id, int page) fetchPagingGameAchievements,
+    required TResult Function(int id) fetchGameDeveloperInfo,
+    required TResult Function(int id, int page) fetchGamesByDeveloperPaging,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2378,6 +4590,8 @@ mixin _$GameViewEvent {
     TResult? Function(int gameId)? fetchGame,
     TResult? Function(int id, int page)? fetchPagingRedditComments,
     TResult? Function(int id, int page)? fetchPagingGameAchievements,
+    TResult? Function(int id)? fetchGameDeveloperInfo,
+    TResult? Function(int id, int page)? fetchGamesByDeveloperPaging,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2385,6 +4599,8 @@ mixin _$GameViewEvent {
     TResult Function(int gameId)? fetchGame,
     TResult Function(int id, int page)? fetchPagingRedditComments,
     TResult Function(int id, int page)? fetchPagingGameAchievements,
+    TResult Function(int id)? fetchGameDeveloperInfo,
+    TResult Function(int id, int page)? fetchGamesByDeveloperPaging,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -2395,6 +4611,10 @@ mixin _$GameViewEvent {
         fetchPagingRedditComments,
     required TResult Function(_FetchPagingGameAchievements value)
         fetchPagingGameAchievements,
+    required TResult Function(_FetchGameDeveloperInfo value)
+        fetchGameDeveloperInfo,
+    required TResult Function(_FetchGamesByDeveloperPaging value)
+        fetchGamesByDeveloperPaging,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2404,6 +4624,9 @@ mixin _$GameViewEvent {
         fetchPagingRedditComments,
     TResult? Function(_FetchPagingGameAchievements value)?
         fetchPagingGameAchievements,
+    TResult? Function(_FetchGameDeveloperInfo value)? fetchGameDeveloperInfo,
+    TResult? Function(_FetchGamesByDeveloperPaging value)?
+        fetchGamesByDeveloperPaging,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2413,6 +4636,9 @@ mixin _$GameViewEvent {
         fetchPagingRedditComments,
     TResult Function(_FetchPagingGameAchievements value)?
         fetchPagingGameAchievements,
+    TResult Function(_FetchGameDeveloperInfo value)? fetchGameDeveloperInfo,
+    TResult Function(_FetchGamesByDeveloperPaging value)?
+        fetchGamesByDeveloperPaging,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -2503,6 +4729,8 @@ class _$FetchGameImpl implements _FetchGame {
     required TResult Function(int gameId) fetchGame,
     required TResult Function(int id, int page) fetchPagingRedditComments,
     required TResult Function(int id, int page) fetchPagingGameAchievements,
+    required TResult Function(int id) fetchGameDeveloperInfo,
+    required TResult Function(int id, int page) fetchGamesByDeveloperPaging,
   }) {
     return fetchGame(gameId);
   }
@@ -2513,6 +4741,8 @@ class _$FetchGameImpl implements _FetchGame {
     TResult? Function(int gameId)? fetchGame,
     TResult? Function(int id, int page)? fetchPagingRedditComments,
     TResult? Function(int id, int page)? fetchPagingGameAchievements,
+    TResult? Function(int id)? fetchGameDeveloperInfo,
+    TResult? Function(int id, int page)? fetchGamesByDeveloperPaging,
   }) {
     return fetchGame?.call(gameId);
   }
@@ -2523,6 +4753,8 @@ class _$FetchGameImpl implements _FetchGame {
     TResult Function(int gameId)? fetchGame,
     TResult Function(int id, int page)? fetchPagingRedditComments,
     TResult Function(int id, int page)? fetchPagingGameAchievements,
+    TResult Function(int id)? fetchGameDeveloperInfo,
+    TResult Function(int id, int page)? fetchGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (fetchGame != null) {
@@ -2539,6 +4771,10 @@ class _$FetchGameImpl implements _FetchGame {
         fetchPagingRedditComments,
     required TResult Function(_FetchPagingGameAchievements value)
         fetchPagingGameAchievements,
+    required TResult Function(_FetchGameDeveloperInfo value)
+        fetchGameDeveloperInfo,
+    required TResult Function(_FetchGamesByDeveloperPaging value)
+        fetchGamesByDeveloperPaging,
   }) {
     return fetchGame(this);
   }
@@ -2551,6 +4787,9 @@ class _$FetchGameImpl implements _FetchGame {
         fetchPagingRedditComments,
     TResult? Function(_FetchPagingGameAchievements value)?
         fetchPagingGameAchievements,
+    TResult? Function(_FetchGameDeveloperInfo value)? fetchGameDeveloperInfo,
+    TResult? Function(_FetchGamesByDeveloperPaging value)?
+        fetchGamesByDeveloperPaging,
   }) {
     return fetchGame?.call(this);
   }
@@ -2563,6 +4802,9 @@ class _$FetchGameImpl implements _FetchGame {
         fetchPagingRedditComments,
     TResult Function(_FetchPagingGameAchievements value)?
         fetchPagingGameAchievements,
+    TResult Function(_FetchGameDeveloperInfo value)? fetchGameDeveloperInfo,
+    TResult Function(_FetchGamesByDeveloperPaging value)?
+        fetchGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (fetchGame != null) {
@@ -2659,6 +4901,8 @@ class _$FetchPagingRedditCommentsImpl implements _FetchPagingRedditComments {
     required TResult Function(int gameId) fetchGame,
     required TResult Function(int id, int page) fetchPagingRedditComments,
     required TResult Function(int id, int page) fetchPagingGameAchievements,
+    required TResult Function(int id) fetchGameDeveloperInfo,
+    required TResult Function(int id, int page) fetchGamesByDeveloperPaging,
   }) {
     return fetchPagingRedditComments(id, page);
   }
@@ -2669,6 +4913,8 @@ class _$FetchPagingRedditCommentsImpl implements _FetchPagingRedditComments {
     TResult? Function(int gameId)? fetchGame,
     TResult? Function(int id, int page)? fetchPagingRedditComments,
     TResult? Function(int id, int page)? fetchPagingGameAchievements,
+    TResult? Function(int id)? fetchGameDeveloperInfo,
+    TResult? Function(int id, int page)? fetchGamesByDeveloperPaging,
   }) {
     return fetchPagingRedditComments?.call(id, page);
   }
@@ -2679,6 +4925,8 @@ class _$FetchPagingRedditCommentsImpl implements _FetchPagingRedditComments {
     TResult Function(int gameId)? fetchGame,
     TResult Function(int id, int page)? fetchPagingRedditComments,
     TResult Function(int id, int page)? fetchPagingGameAchievements,
+    TResult Function(int id)? fetchGameDeveloperInfo,
+    TResult Function(int id, int page)? fetchGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (fetchPagingRedditComments != null) {
@@ -2695,6 +4943,10 @@ class _$FetchPagingRedditCommentsImpl implements _FetchPagingRedditComments {
         fetchPagingRedditComments,
     required TResult Function(_FetchPagingGameAchievements value)
         fetchPagingGameAchievements,
+    required TResult Function(_FetchGameDeveloperInfo value)
+        fetchGameDeveloperInfo,
+    required TResult Function(_FetchGamesByDeveloperPaging value)
+        fetchGamesByDeveloperPaging,
   }) {
     return fetchPagingRedditComments(this);
   }
@@ -2707,6 +4959,9 @@ class _$FetchPagingRedditCommentsImpl implements _FetchPagingRedditComments {
         fetchPagingRedditComments,
     TResult? Function(_FetchPagingGameAchievements value)?
         fetchPagingGameAchievements,
+    TResult? Function(_FetchGameDeveloperInfo value)? fetchGameDeveloperInfo,
+    TResult? Function(_FetchGamesByDeveloperPaging value)?
+        fetchGamesByDeveloperPaging,
   }) {
     return fetchPagingRedditComments?.call(this);
   }
@@ -2719,6 +4974,9 @@ class _$FetchPagingRedditCommentsImpl implements _FetchPagingRedditComments {
         fetchPagingRedditComments,
     TResult Function(_FetchPagingGameAchievements value)?
         fetchPagingGameAchievements,
+    TResult Function(_FetchGameDeveloperInfo value)? fetchGameDeveloperInfo,
+    TResult Function(_FetchGamesByDeveloperPaging value)?
+        fetchGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (fetchPagingRedditComments != null) {
@@ -2818,6 +5076,8 @@ class _$FetchPagingGameAchievementsImpl
     required TResult Function(int gameId) fetchGame,
     required TResult Function(int id, int page) fetchPagingRedditComments,
     required TResult Function(int id, int page) fetchPagingGameAchievements,
+    required TResult Function(int id) fetchGameDeveloperInfo,
+    required TResult Function(int id, int page) fetchGamesByDeveloperPaging,
   }) {
     return fetchPagingGameAchievements(id, page);
   }
@@ -2828,6 +5088,8 @@ class _$FetchPagingGameAchievementsImpl
     TResult? Function(int gameId)? fetchGame,
     TResult? Function(int id, int page)? fetchPagingRedditComments,
     TResult? Function(int id, int page)? fetchPagingGameAchievements,
+    TResult? Function(int id)? fetchGameDeveloperInfo,
+    TResult? Function(int id, int page)? fetchGamesByDeveloperPaging,
   }) {
     return fetchPagingGameAchievements?.call(id, page);
   }
@@ -2838,6 +5100,8 @@ class _$FetchPagingGameAchievementsImpl
     TResult Function(int gameId)? fetchGame,
     TResult Function(int id, int page)? fetchPagingRedditComments,
     TResult Function(int id, int page)? fetchPagingGameAchievements,
+    TResult Function(int id)? fetchGameDeveloperInfo,
+    TResult Function(int id, int page)? fetchGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (fetchPagingGameAchievements != null) {
@@ -2854,6 +5118,10 @@ class _$FetchPagingGameAchievementsImpl
         fetchPagingRedditComments,
     required TResult Function(_FetchPagingGameAchievements value)
         fetchPagingGameAchievements,
+    required TResult Function(_FetchGameDeveloperInfo value)
+        fetchGameDeveloperInfo,
+    required TResult Function(_FetchGamesByDeveloperPaging value)
+        fetchGamesByDeveloperPaging,
   }) {
     return fetchPagingGameAchievements(this);
   }
@@ -2866,6 +5134,9 @@ class _$FetchPagingGameAchievementsImpl
         fetchPagingRedditComments,
     TResult? Function(_FetchPagingGameAchievements value)?
         fetchPagingGameAchievements,
+    TResult? Function(_FetchGameDeveloperInfo value)? fetchGameDeveloperInfo,
+    TResult? Function(_FetchGamesByDeveloperPaging value)?
+        fetchGamesByDeveloperPaging,
   }) {
     return fetchPagingGameAchievements?.call(this);
   }
@@ -2878,6 +5149,9 @@ class _$FetchPagingGameAchievementsImpl
         fetchPagingRedditComments,
     TResult Function(_FetchPagingGameAchievements value)?
         fetchPagingGameAchievements,
+    TResult Function(_FetchGameDeveloperInfo value)? fetchGameDeveloperInfo,
+    TResult Function(_FetchGamesByDeveloperPaging value)?
+        fetchGamesByDeveloperPaging,
     required TResult orElse(),
   }) {
     if (fetchPagingGameAchievements != null) {
@@ -2895,5 +5169,345 @@ abstract class _FetchPagingGameAchievements implements GameViewEvent {
   int get page;
   @JsonKey(ignore: true)
   _$$FetchPagingGameAchievementsImplCopyWith<_$FetchPagingGameAchievementsImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FetchGameDeveloperInfoImplCopyWith<$Res> {
+  factory _$$FetchGameDeveloperInfoImplCopyWith(
+          _$FetchGameDeveloperInfoImpl value,
+          $Res Function(_$FetchGameDeveloperInfoImpl) then) =
+      __$$FetchGameDeveloperInfoImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int id});
+}
+
+/// @nodoc
+class __$$FetchGameDeveloperInfoImplCopyWithImpl<$Res>
+    extends _$GameViewEventCopyWithImpl<$Res, _$FetchGameDeveloperInfoImpl>
+    implements _$$FetchGameDeveloperInfoImplCopyWith<$Res> {
+  __$$FetchGameDeveloperInfoImplCopyWithImpl(
+      _$FetchGameDeveloperInfoImpl _value,
+      $Res Function(_$FetchGameDeveloperInfoImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+  }) {
+    return _then(_$FetchGameDeveloperInfoImpl(
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FetchGameDeveloperInfoImpl implements _FetchGameDeveloperInfo {
+  const _$FetchGameDeveloperInfoImpl(this.id);
+
+  @override
+  final int id;
+
+  @override
+  String toString() {
+    return 'GameViewEvent.fetchGameDeveloperInfo(id: $id)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchGameDeveloperInfoImpl &&
+            (identical(other.id, id) || other.id == id));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchGameDeveloperInfoImplCopyWith<_$FetchGameDeveloperInfoImpl>
+      get copyWith => __$$FetchGameDeveloperInfoImplCopyWithImpl<
+          _$FetchGameDeveloperInfoImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int gameId) fetchGame,
+    required TResult Function(int id, int page) fetchPagingRedditComments,
+    required TResult Function(int id, int page) fetchPagingGameAchievements,
+    required TResult Function(int id) fetchGameDeveloperInfo,
+    required TResult Function(int id, int page) fetchGamesByDeveloperPaging,
+  }) {
+    return fetchGameDeveloperInfo(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int gameId)? fetchGame,
+    TResult? Function(int id, int page)? fetchPagingRedditComments,
+    TResult? Function(int id, int page)? fetchPagingGameAchievements,
+    TResult? Function(int id)? fetchGameDeveloperInfo,
+    TResult? Function(int id, int page)? fetchGamesByDeveloperPaging,
+  }) {
+    return fetchGameDeveloperInfo?.call(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int gameId)? fetchGame,
+    TResult Function(int id, int page)? fetchPagingRedditComments,
+    TResult Function(int id, int page)? fetchPagingGameAchievements,
+    TResult Function(int id)? fetchGameDeveloperInfo,
+    TResult Function(int id, int page)? fetchGamesByDeveloperPaging,
+    required TResult orElse(),
+  }) {
+    if (fetchGameDeveloperInfo != null) {
+      return fetchGameDeveloperInfo(id);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchGame value) fetchGame,
+    required TResult Function(_FetchPagingRedditComments value)
+        fetchPagingRedditComments,
+    required TResult Function(_FetchPagingGameAchievements value)
+        fetchPagingGameAchievements,
+    required TResult Function(_FetchGameDeveloperInfo value)
+        fetchGameDeveloperInfo,
+    required TResult Function(_FetchGamesByDeveloperPaging value)
+        fetchGamesByDeveloperPaging,
+  }) {
+    return fetchGameDeveloperInfo(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchGame value)? fetchGame,
+    TResult? Function(_FetchPagingRedditComments value)?
+        fetchPagingRedditComments,
+    TResult? Function(_FetchPagingGameAchievements value)?
+        fetchPagingGameAchievements,
+    TResult? Function(_FetchGameDeveloperInfo value)? fetchGameDeveloperInfo,
+    TResult? Function(_FetchGamesByDeveloperPaging value)?
+        fetchGamesByDeveloperPaging,
+  }) {
+    return fetchGameDeveloperInfo?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchGame value)? fetchGame,
+    TResult Function(_FetchPagingRedditComments value)?
+        fetchPagingRedditComments,
+    TResult Function(_FetchPagingGameAchievements value)?
+        fetchPagingGameAchievements,
+    TResult Function(_FetchGameDeveloperInfo value)? fetchGameDeveloperInfo,
+    TResult Function(_FetchGamesByDeveloperPaging value)?
+        fetchGamesByDeveloperPaging,
+    required TResult orElse(),
+  }) {
+    if (fetchGameDeveloperInfo != null) {
+      return fetchGameDeveloperInfo(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchGameDeveloperInfo implements GameViewEvent {
+  const factory _FetchGameDeveloperInfo(final int id) =
+      _$FetchGameDeveloperInfoImpl;
+
+  int get id;
+  @JsonKey(ignore: true)
+  _$$FetchGameDeveloperInfoImplCopyWith<_$FetchGameDeveloperInfoImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FetchGamesByDeveloperPagingImplCopyWith<$Res> {
+  factory _$$FetchGamesByDeveloperPagingImplCopyWith(
+          _$FetchGamesByDeveloperPagingImpl value,
+          $Res Function(_$FetchGamesByDeveloperPagingImpl) then) =
+      __$$FetchGamesByDeveloperPagingImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int id, int page});
+}
+
+/// @nodoc
+class __$$FetchGamesByDeveloperPagingImplCopyWithImpl<$Res>
+    extends _$GameViewEventCopyWithImpl<$Res, _$FetchGamesByDeveloperPagingImpl>
+    implements _$$FetchGamesByDeveloperPagingImplCopyWith<$Res> {
+  __$$FetchGamesByDeveloperPagingImplCopyWithImpl(
+      _$FetchGamesByDeveloperPagingImpl _value,
+      $Res Function(_$FetchGamesByDeveloperPagingImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? page = null,
+  }) {
+    return _then(_$FetchGamesByDeveloperPagingImpl(
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      null == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FetchGamesByDeveloperPagingImpl
+    implements _FetchGamesByDeveloperPaging {
+  const _$FetchGamesByDeveloperPagingImpl(this.id, this.page);
+
+  @override
+  final int id;
+  @override
+  final int page;
+
+  @override
+  String toString() {
+    return 'GameViewEvent.fetchGamesByDeveloperPaging(id: $id, page: $page)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchGamesByDeveloperPagingImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.page, page) || other.page == page));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id, page);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchGamesByDeveloperPagingImplCopyWith<_$FetchGamesByDeveloperPagingImpl>
+      get copyWith => __$$FetchGamesByDeveloperPagingImplCopyWithImpl<
+          _$FetchGamesByDeveloperPagingImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int gameId) fetchGame,
+    required TResult Function(int id, int page) fetchPagingRedditComments,
+    required TResult Function(int id, int page) fetchPagingGameAchievements,
+    required TResult Function(int id) fetchGameDeveloperInfo,
+    required TResult Function(int id, int page) fetchGamesByDeveloperPaging,
+  }) {
+    return fetchGamesByDeveloperPaging(id, page);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int gameId)? fetchGame,
+    TResult? Function(int id, int page)? fetchPagingRedditComments,
+    TResult? Function(int id, int page)? fetchPagingGameAchievements,
+    TResult? Function(int id)? fetchGameDeveloperInfo,
+    TResult? Function(int id, int page)? fetchGamesByDeveloperPaging,
+  }) {
+    return fetchGamesByDeveloperPaging?.call(id, page);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int gameId)? fetchGame,
+    TResult Function(int id, int page)? fetchPagingRedditComments,
+    TResult Function(int id, int page)? fetchPagingGameAchievements,
+    TResult Function(int id)? fetchGameDeveloperInfo,
+    TResult Function(int id, int page)? fetchGamesByDeveloperPaging,
+    required TResult orElse(),
+  }) {
+    if (fetchGamesByDeveloperPaging != null) {
+      return fetchGamesByDeveloperPaging(id, page);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchGame value) fetchGame,
+    required TResult Function(_FetchPagingRedditComments value)
+        fetchPagingRedditComments,
+    required TResult Function(_FetchPagingGameAchievements value)
+        fetchPagingGameAchievements,
+    required TResult Function(_FetchGameDeveloperInfo value)
+        fetchGameDeveloperInfo,
+    required TResult Function(_FetchGamesByDeveloperPaging value)
+        fetchGamesByDeveloperPaging,
+  }) {
+    return fetchGamesByDeveloperPaging(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchGame value)? fetchGame,
+    TResult? Function(_FetchPagingRedditComments value)?
+        fetchPagingRedditComments,
+    TResult? Function(_FetchPagingGameAchievements value)?
+        fetchPagingGameAchievements,
+    TResult? Function(_FetchGameDeveloperInfo value)? fetchGameDeveloperInfo,
+    TResult? Function(_FetchGamesByDeveloperPaging value)?
+        fetchGamesByDeveloperPaging,
+  }) {
+    return fetchGamesByDeveloperPaging?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchGame value)? fetchGame,
+    TResult Function(_FetchPagingRedditComments value)?
+        fetchPagingRedditComments,
+    TResult Function(_FetchPagingGameAchievements value)?
+        fetchPagingGameAchievements,
+    TResult Function(_FetchGameDeveloperInfo value)? fetchGameDeveloperInfo,
+    TResult Function(_FetchGamesByDeveloperPaging value)?
+        fetchGamesByDeveloperPaging,
+    required TResult orElse(),
+  }) {
+    if (fetchGamesByDeveloperPaging != null) {
+      return fetchGamesByDeveloperPaging(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchGamesByDeveloperPaging implements GameViewEvent {
+  const factory _FetchGamesByDeveloperPaging(final int id, final int page) =
+      _$FetchGamesByDeveloperPagingImpl;
+
+  int get id;
+  int get page;
+  @JsonKey(ignore: true)
+  _$$FetchGamesByDeveloperPagingImplCopyWith<_$FetchGamesByDeveloperPagingImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -8,7 +8,7 @@ part of 'where_to_buy_model.dart';
 
 WhereToBuyModel _$WhereToBuyModelFromJson(Map<String, dynamic> json) =>
     WhereToBuyModel(
-      count: json['count'] as int?,
+      count: (json['count'] as num?)?.toInt(),
       next: json['next'],
       previous: json['previous'],
       results: (json['results'] as List<dynamic>?)
@@ -25,9 +25,9 @@ Map<String, dynamic> _$WhereToBuyModelToJson(WhereToBuyModel instance) =>
     };
 
 Result _$ResultFromJson(Map<String, dynamic> json) => Result(
-      id: json['id'] as int?,
-      gameId: json['game_id'] as int?,
-      storeId: json['store_id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      gameId: (json['game_id'] as num?)?.toInt(),
+      storeId: (json['store_id'] as num?)?.toInt(),
       url: json['url'] as String?,
     );
 

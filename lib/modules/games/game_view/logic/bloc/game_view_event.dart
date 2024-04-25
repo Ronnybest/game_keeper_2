@@ -10,4 +10,8 @@ class GameViewEvent with _$GameViewEvent {
   const factory GameViewEvent.fetchPagingGameAchievements(int id, int page) =
       _FetchPagingGameAchievements;
 
+  const factory GameViewEvent.fetchGameDeveloperInfo(int id) = _FetchGameDeveloperInfo;
+
+  const factory GameViewEvent.fetchGamesByDeveloperPaging(int id, int page) = _FetchGamesByDeveloperPaging;
+
 }

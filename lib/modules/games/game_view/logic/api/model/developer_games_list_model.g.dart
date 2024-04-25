@@ -1,15 +1,16 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'search_games_model.dart';
+part of 'developer_games_list_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-SearchGamesModel _$SearchGamesModelFromJson(Map<String, dynamic> json) =>
-    SearchGamesModel(
+DeveloperGamesListModel _$DeveloperGamesListModelFromJson(
+        Map<String, dynamic> json) =>
+    DeveloperGamesListModel(
       count: (json['count'] as num?)?.toInt(),
-      next: json['next'] as String?,
+      next: json['next'],
       previous: json['previous'],
       results: (json['results'] as List<dynamic>?)
           ?.map((e) => Result.fromJson(e as Map<String, dynamic>))
@@ -17,7 +18,8 @@ SearchGamesModel _$SearchGamesModelFromJson(Map<String, dynamic> json) =>
       userPlatforms: json['user_platforms'] as bool?,
     );
 
-Map<String, dynamic> _$SearchGamesModelToJson(SearchGamesModel instance) =>
+Map<String, dynamic> _$DeveloperGamesListModelToJson(
+        DeveloperGamesListModel instance) =>
     <String, dynamic>{
       'count': instance.count,
       'next': instance.next,
@@ -41,19 +43,14 @@ Result _$ResultFromJson(Map<String, dynamic> json) => Result(
           : DateTime.parse(json['released'] as String),
       tba: json['tba'] as bool?,
       backgroundImage: json['background_image'] as String?,
-      rating: (json['rating'] as num?)?.toDouble(),
+      rating: (json['rating'] as num?)?.toInt(),
       ratingTop: (json['rating_top'] as num?)?.toInt(),
-      ratings: (json['ratings'] as List<dynamic>?)
-          ?.map((e) => Rating.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      ratings: json['ratings'] as List<dynamic>?,
       ratingsCount: (json['ratings_count'] as num?)?.toInt(),
       reviewsTextCount: (json['reviews_text_count'] as num?)?.toInt(),
       added: (json['added'] as num?)?.toInt(),
-      addedByStatus: json['added_by_status'] == null
-          ? null
-          : AddedByStatus.fromJson(
-              json['added_by_status'] as Map<String, dynamic>),
-      metacritic: (json['metacritic'] as num?)?.toInt(),
+      addedByStatus: json['added_by_status'],
+      metacritic: json['metacritic'],
       suggestionsCount: (json['suggestions_count'] as num?)?.toInt(),
       updated: json['updated'] == null
           ? null
@@ -69,6 +66,7 @@ Result _$ResultFromJson(Map<String, dynamic> json) => Result(
           : EsrbRating.fromJson(json['esrb_rating'] as Map<String, dynamic>),
       userGame: json['user_game'],
       reviewsCount: (json['reviews_count'] as num?)?.toInt(),
+      communityRating: (json['community_rating'] as num?)?.toInt(),
       saturatedColor: json['saturated_color'] as String?,
       dominantColor: json['dominant_color'] as String?,
       shortScreenshots: (json['short_screenshots'] as List<dynamic>?)
@@ -80,7 +78,6 @@ Result _$ResultFromJson(Map<String, dynamic> json) => Result(
       genres: (json['genres'] as List<dynamic>?)
           ?.map((e) => Genre.fromJson(e as Map<String, dynamic>))
           .toList(),
-      communityRating: (json['community_rating'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$ResultToJson(Result instance) => <String, dynamic>{
@@ -109,32 +106,12 @@ Map<String, dynamic> _$ResultToJson(Result instance) => <String, dynamic>{
       'esrb_rating': instance.esrbRating,
       'user_game': instance.userGame,
       'reviews_count': instance.reviewsCount,
+      'community_rating': instance.communityRating,
       'saturated_color': instance.saturatedColor,
       'dominant_color': instance.dominantColor,
       'short_screenshots': instance.shortScreenshots,
       'parent_platforms': instance.parentPlatforms,
       'genres': instance.genres,
-      'community_rating': instance.communityRating,
-    };
-
-AddedByStatus _$AddedByStatusFromJson(Map<String, dynamic> json) =>
-    AddedByStatus(
-      yet: (json['yet'] as num?)?.toInt(),
-      owned: (json['owned'] as num?)?.toInt(),
-      beaten: (json['beaten'] as num?)?.toInt(),
-      toplay: (json['toplay'] as num?)?.toInt(),
-      dropped: (json['dropped'] as num?)?.toInt(),
-      playing: (json['playing'] as num?)?.toInt(),
-    );
-
-Map<String, dynamic> _$AddedByStatusToJson(AddedByStatus instance) =>
-    <String, dynamic>{
-      'yet': instance.yet,
-      'owned': instance.owned,
-      'beaten': instance.beaten,
-      'toplay': instance.toplay,
-      'dropped': instance.dropped,
-      'playing': instance.playing,
     };
 
 EsrbRating _$EsrbRatingFromJson(Map<String, dynamic> json) => EsrbRating(
@@ -174,20 +151,6 @@ Platform _$PlatformFromJson(Map<String, dynamic> json) => Platform(
 
 Map<String, dynamic> _$PlatformToJson(Platform instance) => <String, dynamic>{
       'platform': instance.platform,
-    };
-
-Rating _$RatingFromJson(Map<String, dynamic> json) => Rating(
-      id: (json['id'] as num?)?.toInt(),
-      title: json['title'] as String?,
-      count: (json['count'] as num?)?.toInt(),
-      percent: (json['percent'] as num?)?.toDouble(),
-    );
-
-Map<String, dynamic> _$RatingToJson(Rating instance) => <String, dynamic>{
-      'id': instance.id,
-      'title': instance.title,
-      'count': instance.count,
-      'percent': instance.percent,
     };
 
 ShortScreenshot _$ShortScreenshotFromJson(Map<String, dynamic> json) =>

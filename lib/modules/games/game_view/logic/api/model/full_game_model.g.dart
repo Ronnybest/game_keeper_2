@@ -8,12 +8,12 @@ part of 'full_game_model.dart';
 
 FullGameModel _$FullGameModelFromJson(Map<String, dynamic> json) =>
     FullGameModel(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       slug: json['slug'] as String?,
       name: json['name'] as String?,
       nameOriginal: json['name_original'] as String?,
       description: json['description'] as String?,
-      metacritic: json['metacritic'] as int?,
+      metacritic: (json['metacritic'] as num?)?.toInt(),
       metacriticPlatforms: json['metacritic_platforms'] as List<dynamic>?,
       released: json['released'] == null
           ? null
@@ -26,41 +26,42 @@ FullGameModel _$FullGameModelFromJson(Map<String, dynamic> json) =>
       backgroundImageAdditional: json['background_image_additional'] as String?,
       website: json['website'] as String?,
       rating: (json['rating'] as num?)?.toDouble(),
-      ratingTop: json['rating_top'] as int?,
+      ratingTop: (json['rating_top'] as num?)?.toInt(),
       ratings: (json['ratings'] as List<dynamic>?)
           ?.map((e) => Rating.fromJson(e as Map<String, dynamic>))
           .toList(),
       reactions: (json['reactions'] as Map<String, dynamic>?)?.map(
-        (k, e) => MapEntry(k, e as int),
+        (k, e) => MapEntry(k, (e as num).toInt()),
       ),
-      added: json['added'] as int?,
+      added: (json['added'] as num?)?.toInt(),
       addedByStatus: json['added_by_status'] == null
           ? null
           : AddedByStatus.fromJson(
               json['added_by_status'] as Map<String, dynamic>),
-      playtime: json['playtime'] as int?,
-      screenshotsCount: json['screenshots_count'] as int?,
-      moviesCount: json['movies_count'] as int?,
-      creatorsCount: json['creators_count'] as int?,
-      achievementsCount: json['achievements_count'] as int?,
-      parentAchievementsCount: json['parent_achievements_count'] as int?,
+      playtime: (json['playtime'] as num?)?.toInt(),
+      screenshotsCount: (json['screenshots_count'] as num?)?.toInt(),
+      moviesCount: (json['movies_count'] as num?)?.toInt(),
+      creatorsCount: (json['creators_count'] as num?)?.toInt(),
+      achievementsCount: (json['achievements_count'] as num?)?.toInt(),
+      parentAchievementsCount:
+          (json['parent_achievements_count'] as num?)?.toInt(),
       redditUrl: json['reddit_url'] as String?,
       redditName: json['reddit_name'] as String?,
       redditDescription: json['reddit_description'] as String?,
       redditLogo: json['reddit_logo'] as String?,
-      redditCount: json['reddit_count'] as int?,
-      twitchCount: json['twitch_count'] as int?,
-      youtubeCount: json['youtube_count'] as int?,
-      reviewsTextCount: json['reviews_text_count'] as int?,
-      ratingsCount: json['ratings_count'] as int?,
-      suggestionsCount: json['suggestions_count'] as int?,
+      redditCount: (json['reddit_count'] as num?)?.toInt(),
+      twitchCount: (json['twitch_count'] as num?)?.toInt(),
+      youtubeCount: (json['youtube_count'] as num?)?.toInt(),
+      reviewsTextCount: (json['reviews_text_count'] as num?)?.toInt(),
+      ratingsCount: (json['ratings_count'] as num?)?.toInt(),
+      suggestionsCount: (json['suggestions_count'] as num?)?.toInt(),
       alternativeNames: json['alternative_names'] as List<dynamic>?,
       metacriticUrl: json['metacritic_url'] as String?,
-      parentsCount: json['parents_count'] as int?,
-      additionsCount: json['additions_count'] as int?,
-      gameSeriesCount: json['game_series_count'] as int?,
+      parentsCount: (json['parents_count'] as num?)?.toInt(),
+      additionsCount: (json['additions_count'] as num?)?.toInt(),
+      gameSeriesCount: (json['game_series_count'] as num?)?.toInt(),
       userGame: json['user_game'],
-      reviewsCount: json['reviews_count'] as int?,
+      reviewsCount: (json['reviews_count'] as num?)?.toInt(),
       saturatedColor: json['saturated_color'] as String?,
       dominantColor: json['dominant_color'] as String?,
       parentPlatforms: (json['parent_platforms'] as List<dynamic>?)
@@ -151,12 +152,12 @@ Map<String, dynamic> _$FullGameModelToJson(FullGameModel instance) =>
 
 AddedByStatus _$AddedByStatusFromJson(Map<String, dynamic> json) =>
     AddedByStatus(
-      yet: json['yet'] as int?,
-      owned: json['owned'] as int?,
-      beaten: json['beaten'] as int?,
-      toplay: json['toplay'] as int?,
-      dropped: json['dropped'] as int?,
-      playing: json['playing'] as int?,
+      yet: (json['yet'] as num?)?.toInt(),
+      owned: (json['owned'] as num?)?.toInt(),
+      beaten: (json['beaten'] as num?)?.toInt(),
+      toplay: (json['toplay'] as num?)?.toInt(),
+      dropped: (json['dropped'] as num?)?.toInt(),
+      playing: (json['playing'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$AddedByStatusToJson(AddedByStatus instance) =>
@@ -170,10 +171,10 @@ Map<String, dynamic> _$AddedByStatusToJson(AddedByStatus instance) =>
     };
 
 Developer _$DeveloperFromJson(Map<String, dynamic> json) => Developer(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       slug: json['slug'] as String?,
-      gamesCount: json['games_count'] as int?,
+      gamesCount: (json['games_count'] as num?)?.toInt(),
       imageBackground: json['image_background'] as String?,
       domain: json['domain'] as String?,
       language: $enumDecodeNullable(_$LanguageEnumMap, json['language']),
@@ -194,7 +195,7 @@ const _$LanguageEnumMap = {
 };
 
 EsrbRating _$EsrbRatingFromJson(Map<String, dynamic> json) => EsrbRating(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       slug: json['slug'] as String?,
     );
@@ -240,13 +241,13 @@ Map<String, dynamic> _$PlatformElementToJson(PlatformElement instance) =>
 
 PlatformPlatform _$PlatformPlatformFromJson(Map<String, dynamic> json) =>
     PlatformPlatform(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       slug: json['slug'] as String?,
       image: json['image'],
       yearEnd: json['year_end'],
       yearStart: json['year_start'],
-      gamesCount: json['games_count'] as int?,
+      gamesCount: (json['games_count'] as num?)?.toInt(),
       imageBackground: json['image_background'] as String?,
     );
 
@@ -269,9 +270,9 @@ Map<String, dynamic> _$RequirementsToJson(Requirements instance) =>
     <String, dynamic>{};
 
 Rating _$RatingFromJson(Map<String, dynamic> json) => Rating(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       title: json['title'] as String?,
-      count: json['count'] as int?,
+      count: (json['count'] as num?)?.toInt(),
       percent: (json['percent'] as num?)?.toDouble(),
     );
 
@@ -283,7 +284,7 @@ Map<String, dynamic> _$RatingToJson(Rating instance) => <String, dynamic>{
     };
 
 Store _$StoreFromJson(Map<String, dynamic> json) => Store(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       url: json['url'] as String?,
       store: json['store'] == null
           ? null

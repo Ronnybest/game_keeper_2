@@ -1,5 +1,7 @@
+import 'package:game_keeper/modules/games/game_view/logic/api/model/developer_games_list_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/full_game_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/game_achievements_model.dart';
+import 'package:game_keeper/modules/games/game_view/logic/api/model/game_developer_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/game_reddit_comments_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/game_screenshots_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/where_to_buy_model.dart';
@@ -52,5 +54,16 @@ class GameViewRepositoryImpl implements GameViewRepository {
     required int id,
   }) async {
     return _gameProvider.getWhereToBuy(id: id);
+  }
+
+  @override
+  Future<GameDeveloperModel> getGameDeveloperInfo({required int id}) async {
+    return _gameProvider.getGameDeveloperInfo(id: id);
+  }
+
+  @override
+  Future<DeveloperGamesListModel> getGamesByDeveloper(
+      {required int id, required int page}) async {
+    return _gameProvider.getGamesByDeveloper(id: id, page: page);
   }
 }

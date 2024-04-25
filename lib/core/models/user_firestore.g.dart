@@ -13,16 +13,16 @@ UserFirestore _$UserFirestoreFromJson(Map<String, dynamic> json) =>
       photoUrl: json['photoUrl'] as String?,
       uid: json['uid'] as String?,
       bookMarkedGamesId: (json['bookMarkedGamesId'] as List<dynamic>?)
-          ?.map((e) => e as int)
+          ?.map((e) => (e as num).toInt())
           .toList(),
       currentPlayingGamesId: (json['currentPlayingGamesId'] as List<dynamic>?)
-          ?.map((e) => e as int)
+          ?.map((e) => (e as num).toInt())
           .toList(),
       firendsId: (json['firendsId'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
       hidedGamesId: (json['hidedGamesId'] as List<dynamic>?)
-          ?.map((e) => e as int)
+          ?.map((e) => (e as num).toInt())
           .toList(),
     );
 

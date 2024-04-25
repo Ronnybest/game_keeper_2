@@ -1,7 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:game_keeper/core/constants/constants.dart';
+import 'package:game_keeper/modules/games/game_view/logic/api/model/developer_games_list_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/full_game_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/game_achievements_model.dart';
+import 'package:game_keeper/modules/games/game_view/logic/api/model/game_developer_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/game_reddit_comments_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/game_screenshots_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/where_to_buy_model.dart';
@@ -43,5 +45,16 @@ abstract class GameViewService {
   @GET('games/{id}/stores?key=${AppConstants.publicRawgIoApiKey}')
   Future<WhereToBuyModel> getWhereToBuy({
     @Path('id') required int id,
+  });
+
+  @GET('/developers/{id}?key=${AppConstants.publicRawgIoApiKey}')
+  Future<GameDeveloperModel> getGameDeveloperInfo({
+    @Path('id') required int id,
+  });
+
+  @GET('games?key=${AppConstants.publicRawgIoApiKey}&developers={id}&page={page}')
+  Future<DeveloperGamesListModel> getGamesByDeveloper({
+    @Path('id') required int id,
+    @Path('page') required int page,
   });
 }

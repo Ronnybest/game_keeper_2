@@ -1,7 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:game_keeper/modules/games/game_view/logic/api/model/developer_games_list_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/full_game_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/game_achievements_model.dart';
+import 'package:game_keeper/modules/games/game_view/logic/api/model/game_developer_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/game_reddit_comments_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/game_screenshots_model.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/where_to_buy_model.dart';
@@ -63,6 +65,27 @@ class GameViewBloc extends Bloc<GameViewEvent, GameViewState> {
           emit(GameViewState.loadedPagingGameAchievements(result));
         } catch (e) {
           emit(GameViewState.errorPagingGameAchievements(e));
+        }
+      },
+      fetchGameDeveloperInfo: (_FetchGameDeveloperInfo value) async {
+        try {
+          emit(const GameViewState.loadingGameDeveloperInfo());
+          var developer =
+              await _gameViewRepository.getGameDeveloperInfo(id: value.id);
+
+          emit(GameViewState.loadedGameDeveloperInfo(developer));
+        } catch (e) {
+          emit(GameViewState.errorGameDeveloperInfo(e));
+        }
+      },
+      fetchGamesByDeveloperPaging: (_FetchGamesByDeveloperPaging value) async {
+        try {
+          emit(const GameViewState.loadingGamesByDeveloperPaging());
+          var games = await _gameViewRepository.getGamesByDeveloper(
+              id: value.id, page: value.page);
+          emit(GameViewState.loadedGamesByDeveloperPaging(games));
+        } catch (e) {
+          emit(GameViewState.errorGamesByDeveloperPaging(e));
         }
       },
     );

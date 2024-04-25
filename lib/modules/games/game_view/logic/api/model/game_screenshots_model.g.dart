@@ -9,7 +9,7 @@ part of 'game_screenshots_model.dart';
 GameScreenshotsModel _$GameScreenshotsModelFromJson(
         Map<String, dynamic> json) =>
     GameScreenshotsModel(
-      count: json['count'] as int?,
+      count: (json['count'] as num?)?.toInt(),
       next: json['next'],
       previous: json['previous'],
       results: (json['results'] as List<dynamic>?)
@@ -27,10 +27,10 @@ Map<String, dynamic> _$GameScreenshotsModelToJson(
     };
 
 Result _$ResultFromJson(Map<String, dynamic> json) => Result(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       image: json['image'] as String?,
-      width: json['width'] as int?,
-      height: json['height'] as int?,
+      width: (json['width'] as num?)?.toInt(),
+      height: (json['height'] as num?)?.toInt(),
       isDeleted: json['is_deleted'] as bool?,
     );
 

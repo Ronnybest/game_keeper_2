@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:fast_cached_network_image/fast_cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:game_keeper/core/router/app_router.gr.dart';
 import 'package:game_keeper/modules/games/game_view/logic/api/model/full_game_model.dart';
 import 'package:game_keeper/ui/widgets/gk_shimmer.dart';
 
@@ -65,11 +67,21 @@ class GameHeader extends StatelessWidget {
                       itemCount: game.developers!.length,
                       shrinkWrap: true,
                       itemBuilder: (context, index) {
-                        return Text(
-                          game.developers![index].name!,
-                          softWrap: true,
-                          style: const TextStyle(
-                            fontSize: 15,
+                        return GestureDetector(
+                          onTap: () {
+                            AutoRouter.of(context).push(
+                              GameDeveloperInfoRoute(
+                                developerName: game.developers![index].name!,
+                                developerId: game.developers![index].id!,
+                              ),
+                            );
+                          },
+                          child: Text(
+                            game.developers![index].name!,
+                            softWrap: true,
+                            style: const TextStyle(
+                              fontSize: 15,
+                            ),
                           ),
                         );
                       },
